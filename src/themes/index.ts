@@ -1,0 +1,1 @@
+export { customersTheme } from './customers'
