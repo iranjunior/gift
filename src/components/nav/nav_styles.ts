@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   width: 50%;
+  height: 32px;
 `
 
 type CellProps = {
@@ -27,4 +28,5 @@ type LinkProps = {
 export const Link = styled.a<LinkProps>`
   color: ${(props) =>
     props.active ? customersTheme.color.active : customersTheme.color.disable};
+  font-size: ${customersTheme.font.sizes.extraExtraExtraSmall};
 `

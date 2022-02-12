@@ -11,4 +11,8 @@ export const Container = styled.div`
 
 export const Body = styled.div`
   background-color: ${customersTheme.backgroundColor.active};
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

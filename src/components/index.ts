@@ -1,3 +1,7 @@
 export { Nav } from './nav'
 export { Menu } from './menu'
-export { Main } from './bodies/customer/home'
+export { Main } from './bodies/customer/who_we_some'
+export { FarMeBox } from './bodies/customer/farme_box'
+export { KnowMe } from './bodies/customer/know_me'
+export { Targets } from './bodies/customer/targets'
+export { Numbers } from './bodies/customer/numbers'

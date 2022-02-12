@@ -5,8 +5,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
-  margin: 16px 10%;
+  width: 90%;
+  margin: 16px auto;
   height: 64px;
   padding: 16px 0px;
 `
@@ -29,9 +29,10 @@ export const Option = styled.div`
   padding: 0px 16px;
 `
 
-export const Link = styled.span`
+export const Link = styled.a`
   color: ${customersTheme.color.textMenu};
   white-space: nowrap;
+  text-decoration: none;
 `
 
 export const RequestOrderButton = styled.button`

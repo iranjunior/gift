@@ -5,13 +5,13 @@ import { Cell, Container, Link } from './nav_styles'
 export const Nav = () => (
   <Container>
     <Cell active>
-      <Link active>Para Clients</Link>
+      <Link active>para clientes</Link>
     </Cell>
     <Cell>
-      <Link>Para Medicos</Link>
+      <Link>para instituições</Link>
     </Cell>
     <Cell>
-      <Link>Para Empresas</Link>
+      <Link>para medicos</Link>
     </Cell>
   </Container>
 )
