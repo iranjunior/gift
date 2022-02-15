@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const Subtitle = styled.span`
   font-size: ${customersTheme.font.sizes.extraExtraExtraSmall};
   font-family: 'Clearface ITC Pro', sans-serif;
+  text-transform: uppercase;
 `
 export const Title = styled.span`
   font-size: ${customersTheme.font.sizes.extraLarge};

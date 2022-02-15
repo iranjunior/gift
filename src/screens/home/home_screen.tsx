@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Doubt,
   FarMeBox,
   KnowMe,
   Main,
@@ -7,6 +8,7 @@ import {
   Nav,
   Numbers,
   Targets,
+  Testimonies,
 } from '../../components'
 
 import { Body, Container } from './home_styles'
@@ -21,6 +23,8 @@ export const Home = () => (
       <KnowMe id="conheca-me" />
       <Targets id="objetivos" />
       <Numbers id="numeros" />
+      <Testimonies id="testimonies" />
+      <Doubt id="duvidas" />
     </Body>
   </Container>
 )
