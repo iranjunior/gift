@@ -5,6 +5,7 @@ export const customersTheme = {
     disable: '#342B1D',
     full: '#342B1D',
     white: '#FFF',
+    darkness: '#342B1D',
   },
   font: {
     sizes: {
@@ -25,8 +26,10 @@ export const customersTheme = {
     disable: '#FFF3E2',
     textMenu: '#2C2F30',
     highlight: '#FFC875',
+    highlightLight: '#FFF3E2',
     indicatorActive: '#000000',
     indicatorNeutral: '#999999',
+    primaryLight: '#FFF3E2',
   },
   requestOrder: {
     backgroundColor: '#FFC875',

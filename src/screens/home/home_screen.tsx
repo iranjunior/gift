@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Doubt,
   FarMeBox,
+  Footer,
   KnowMe,
   Main,
   Menu,
@@ -25,6 +26,7 @@ export const Home = () => (
       <Numbers id="numeros" />
       <Testimonies id="testimonies" />
       <Doubt id="duvidas" />
+      <Footer id="sobre" />
     </Body>
   </Container>
 )
