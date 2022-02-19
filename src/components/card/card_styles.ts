@@ -1,20 +1,39 @@
 import styled from 'styled-components'
-import { medicalTheme } from '../../../themes/medical'
+import { medicalTheme, companiesTheme, customersTheme } from '../../themes'
 
-export const Container = styled.div`
-  width: 347px;
-  height: 543px;
-  background-color: ${medicalTheme.backgroundColor.active};
+type ContainerProps = {
+  type: string
+}
+
+type hashMapType = {
+  [key: string]: {
+    backgroundColor: {
+      active: string
+    }
+  }
+}
+
+const hashMap: hashMapType = {
+  doctors: medicalTheme,
+  companies: companiesTheme,
+  customers: customersTheme,
+}
+
+export const Container = styled.div<ContainerProps>`
+  width: 283px;
+  height: 463px;
   border-radius: 8px;
+  padding: 32px;
+  background-color: ${(props) => hashMap[props.type].backgroundColor.active};
 `
 
 export const Content = styled.div`
-  margin: 0 10%;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `
 
 export const KnowMoreButton = styled.button`
@@ -34,6 +53,7 @@ export const TextPrincipal = styled.span`
   font-size: ${medicalTheme.font.sizes.large};
   font-family: 'Clearface ITC Pro', sans-serif;
   text-align: center;
+  height: 115px;
 `
 
 export const Highlight = styled.span`

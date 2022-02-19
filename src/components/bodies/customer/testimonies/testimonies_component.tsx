@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
-import Person1 from '../../../../assets/person_1.png'
-import QuotationIllustration from '../../../../assets/quotation.svg'
+import Person1 from '../../../../assets/images/person_1.png'
+import QuotationIllustration from '../../../../assets/images/quotation.svg'
+import { DataContext } from '../../../../context/data'
+import { Header } from '../../../header'
 
 import {
   Container,
-  Header,
   Content,
-  Subtitle,
-  Title,
   Image,
   Text,
   BlockText,
@@ -23,67 +22,39 @@ type TestimoniesProps = {
   id?: string
 }
 
-const testimonies = [
-  {
-    name: 'Claudia',
-    age: 78,
-    origin: 'Cliente Far.me box',
-    testimony: 'Far.me te apoia no cuidado diário com quem você ama.',
-    image: Person1,
-  },
-  {
-    name: 'Maria',
-    age: 52,
-    origin: 'Cliente Far.me box',
-    testimony: 'Far.me te apoia no cuidado diário com quem você ama. todo dia',
-    image: Person1,
-  },
-  {
-    name: 'Jessica',
-    age: 92,
-    origin: 'Cliente Far.me box',
-    testimony: 'Far.me te apoia no cuidado diário',
-    image: Person1,
-  },
-  {
-    name: 'Reinaldo',
-    age: 84,
-    origin: 'Cliente Far.me box',
-    testimony: 'Far.me ama você.',
-    image: Person1,
-  },
-]
-
 export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
-  const [testimonyActive, setTestimony] = useState(testimonies[0])
+  const {
+    body: { testimonies: pageTestimonies },
+  } = useContext(DataContext)
 
+  const [testimonyActive, setTestimony] = useState(
+    pageTestimonies.testimonies[0]
+  )
+  console.log(testimonyActive)
   return (
     <Container id={id}>
-      <Header>
-        <Subtitle>Depoimentos</Subtitle>
-        <Title>
-          Com a palavra,
-          <br /> nossos Far.membros.
-        </Title>
-      </Header>
+      <Header
+        description={pageTestimonies.description}
+        title={pageTestimonies.title}
+      />
       <Content>
-        {testimonies.map((testimony) => (
+        {pageTestimonies.testimonies.map(({ testimony, age, origin, name }) => (
           <Testimony
-            hidden={testimonyActive.testimony !== testimony.testimony}
-            key={testimony.testimony}
+            hidden={testimonyActive.testimony !== testimony}
+            key={testimony}
           >
             <BlockText>
               <Quotation src={QuotationIllustration} />
-              <TextPrincipal>{testimony.testimony}</TextPrincipal>
+              <TextPrincipal>{testimony}</TextPrincipal>
               <Text>
-                {testimony.name}, {testimony.age} - {testimony.origin}
+                {name}, {age} - {origin}
               </Text>
             </BlockText>
             <Image src={Person1} />
           </Testimony>
         ))}
         <BlockDots>
-          {testimonies.map((testimony) => (
+          {pageTestimonies.testimonies.map((testimony) => (
             <DotIndicator
               key={testimony.testimony.concat(testimony.name)}
               active={testimony.testimony === testimonyActive.testimony}

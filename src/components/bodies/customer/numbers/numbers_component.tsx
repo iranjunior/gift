@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from '../../../../context/data'
 
 import { Carrousel } from '../../../carrousel'
+import { Header } from '../../../header'
 import {
   Container,
   Content,
@@ -18,30 +20,24 @@ type NumbersProps = {
   id?: string
 }
 
-export const Numbers: React.FC<NumbersProps> = ({ id }) => (
-  <Container id={id}>
-    <Content>
-      <Subtitle>Números</Subtitle>
-      <Title>
-        Os impactos da Far.me levando o melhor estar para mais pessoas.{' '}
-      </Title>
-      <BlockNumbers>
-        <BlockNumber>
-          <Number>+70</Number>
-          <SubtitleNumber>Colaboradores.</SubtitleNumber>
-        </BlockNumber>
-        <BlockNumber>
-          <Number>+7.000</Number>
-          <SubtitleNumber>Far.me Boxes produzidas.</SubtitleNumber>
-        </BlockNumber>
-        <BlockNumber>
-          <Number>+3.000</Number>
-          <SubtitleNumber>vidas impactadas.</SubtitleNumber>
-        </BlockNumber>
-      </BlockNumbers>
-      <Message>
-        Pode contar com a <Highlight>gente!</Highlight>
-      </Message>
-    </Content>
-  </Container>
-)
+export const Numbers: React.FC<NumbersProps> = ({ id }) => {
+  const {
+    body: { numbers },
+  } = useContext(DataContext)
+  return (
+    <Container id={id}>
+      <Content>
+        <Header description={numbers.description} title={numbers.title} />
+        <BlockNumbers>
+          {numbers.infos.map((info) => (
+            <BlockNumber key={info.legend}>
+              <Number>{info.value}</Number>
+              <SubtitleNumber>{info.legend}</SubtitleNumber>
+            </BlockNumber>
+          ))}
+        </BlockNumbers>
+        <Message dangerouslySetInnerHTML={{ __html: numbers.message }} />
+      </Content>
+    </Container>
+  )
+}

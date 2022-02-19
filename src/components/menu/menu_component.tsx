@@ -1,5 +1,10 @@
-import React from 'react'
-import LogoFarMe from '../../assets/logotype.svg'
+import React, { useContext } from 'react'
+import LogoFarMe from '../../assets/images/logotype.svg'
+import { DataContext } from '../../context/data'
+import {
+  Blog as BlogType,
+  ButtonRequestQuote as ButtonRequestQuoteType,
+} from '../../context/data/types'
 import {
   Container,
   Link,
@@ -9,27 +14,29 @@ import {
   RequestOrderButton,
 } from './menu_styles'
 
-const options = [
-  { label: 'Quem Somos', to: '#quem-somos' },
-  { label: 'Far.me Box', to: '#farme-box' },
-  { label: 'Clínica', to: '#clinica' },
-  { label: 'Carreiras', to: '#carreiras' },
-  { label: 'Blog', to: '#blog' },
-  { label: 'Contato', to: '#contato' },
-]
-
 export const Menu = () => {
+  const { menu } = useContext(DataContext)
   return (
     <Container>
       <Logo src={LogoFarMe} />
 
       <Options>
-        {options.map((option) => (
-          <Option key={option.to}>
-            <Link href={option.to}>{option.label}</Link>
-          </Option>
-        ))}
-        <RequestOrderButton>Faça seu orçamento</RequestOrderButton>
+        {Object.entries(menu).map(
+          (
+            [, value]: [string, BlogType | ButtonRequestQuoteType],
+            index,
+            { length }
+          ) => {
+            if (index === length - 1)
+              return <RequestOrderButton>{value.label}</RequestOrderButton>
+            const option = value as BlogType
+            return (
+              <Option key={option.href}>
+                <Link href={option.href}>{option.label}</Link>
+              </Option>
+            )
+          }
+        )}
       </Options>
     </Container>
   )

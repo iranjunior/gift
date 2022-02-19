@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   background-color: ${customersTheme.backgroundColor.white};
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 5% 0;
 `
 export const Content = styled.div`
@@ -23,12 +23,12 @@ export const BlockText = styled.div`
   align-items: center;
   gap: 1rem;
 `
-export const Highlight = styled.span`
+export const Title = styled.span`
   font-size: ${customersTheme.font.sizes.extraLarge};
   font-family: 'Clearface ITC Pro', sans-serif;
   text-align: center;
 `
-export const Text = styled.span`
+export const Subtitle = styled.span`
   font-size: ${customersTheme.font.sizes.extraSmall};
   width: 600px;
   text-align: center;

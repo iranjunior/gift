@@ -1,7 +1,5 @@
 import React from 'react'
 
-import HandWithDrugImage from '../../../../assets/hand-with-drug.png'
-
 import {
   Container,
   LeftSide,
@@ -11,21 +9,27 @@ import {
   RequestOrderLink,
   RightSide,
   Image,
-} from './safety_styles'
+} from './content_styles'
 
-export const SafetyContent = () => (
+export type CarouselContentProps = {
+  title: string
+  image: string
+}
+
+export const CarouselContent: React.FC<CarouselContentProps> = ({
+  title,
+  image,
+}) => (
   <Container>
     <LeftSide>
-      <Text>
-        Com informações de rastreabilidade e validade de cada medicamento.
-      </Text>
+      <Text dangerouslySetInnerHTML={{ __html: title }} />
       <ActionWrap>
         <RequestOrderButton>Faça o seu orçamento</RequestOrderButton>
         <RequestOrderLink>sem compromisso</RequestOrderLink>
       </ActionWrap>
     </LeftSide>
     <RightSide>
-      <Image src={HandWithDrugImage} />
+      <Image src={image} />
     </RightSide>
   </Container>
 )

@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "gen-types": "quicktype --lang typescript --out ./src/context/data/types.ts ./src/assets/strings.json"
   },
   "eslintConfig": {
     "extends": [

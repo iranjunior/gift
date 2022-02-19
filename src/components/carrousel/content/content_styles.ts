@@ -1,16 +1,21 @@
 import styled from 'styled-components'
-import { customersTheme } from '../../../../themes'
+import { customersTheme } from '../../../themes'
 
 export const Container = styled.div`
   height: 100%;
+  max-height: 560px;
   width: 100%;
+  max-width: 1080px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
+  border-radius: 8px;
+  background-color: ${customersTheme.color.highlight};
 `
 
 export const LeftSide = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
@@ -42,6 +47,7 @@ export const RequestOrderLink = styled.a`
 
 export const RightSide = styled.div`
   width: 100%;
+  flex: 1;
 `
 
 export const Image = styled.img`

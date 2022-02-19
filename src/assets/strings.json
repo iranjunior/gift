@@ -1,0 +1,299 @@
+{
+    "nav": {
+        "customers": "para clientes",
+        "companies": "para instituições",
+        "doctors": "para instituições"
+    },
+    "menu": {
+        "who-we-are": {
+            "label": "Quem Somos",
+            "href": "#quem-somos"
+        },
+        "farme_box": {
+            "label": "Far.me Box",
+            "href": "#farme-box"
+        },
+        "clinics": {
+            "label": "Clínicas",
+            "href": "#clinics"
+        },
+        "career": {
+            "label": "Carreiras",
+            "href": "#career"
+        },
+        "blog": {
+            "label": "Blog",
+            "href": "https://blog.far.me"
+        },
+        "contact": {
+            "label": "Contato",
+            "href": "#contact"
+        },
+        "button-request-quote": {
+            "label": "Faça seu orçamento"
+        }
+    },
+    "body": {
+        "initial": {
+            "who-we-are": {
+                "title": "<h1>A farmácia<br />que te ajuda a viver <highlight>melhor</highlight>.</h1>",
+                "subtitle": "<p>Aqui, você recebe seus medicamentos de um jeito simples e prático. Com serviços personalizados, levamos mais<br />comodidade e segurança para os seus cuidados com<br />a saúde.</p>"
+            }
+        },
+        "farme_box": {
+            "title": "Viva o seu melhor estar, <br /> conte com a Far.me"
+        },
+        "know_me": {
+            "title": "Conheça a Far.me Box.",
+            "subtitle": "Muito mais que uma caixa de remédios separados por dia e hora. Uma inteligência que analisa cada receita pra ter certeza de que os seus medicamentos não terão interação prejudicial no seu corpo.",
+            "carousel": [
+                {
+                    "label": "Personalizada",
+                    "text": "Uma caixa<br /> personalizada para a sua rotina."
+                },
+                {
+                    "label": "Organizada",
+                    "text": "Com separação por dia, horário e dose."
+                },
+                {
+                    "label": "Funcional",
+                    "text": "Com as orientações para uso dos medicamentos."
+                },
+                {
+                    "label": "Segura",
+                    "text": "Com informações de rastreabilidade e validade de cada medicamento."
+                }
+            ]
+        },
+        "targets": {
+            "title": "Uma solução,<br /> diferentes necessidades.",
+            "subtitle": "A Far.me Box está presente em diversas rotinas,<br /> oferecendo benefícios únicos para cada forma de cuidado.",
+            "cards": [
+                {
+                    "title": "Para quem toma medicamentos<br /> <highlight>todos os dias</highlight>",
+                    "type": "customers",
+                    "text": "Seus medicamentos separados da forma que devem ser tomados e entregues na sua porta a cada 30 dias."
+                },
+                {
+                    "title": "Para as <br /><highlight>instituições</highlight>",
+                    "type": "companies",
+                    "text": "Segurança e organização para manter o foco no paciente. Eleve a régua do cuidado sem ocupar a equipe."
+                },
+                {
+                    "title": "Para <br />complementar<br />o trabalho <highlight> médico</highlight>",
+                    "type": "doctors",
+                    "text": "Facilidade na adesão ao tratamento no pós-consultório e, com isso, maiores chances de sucesso terapêutico."
+                }
+            ]
+        },
+        "numbers": {
+            "description": "Números",
+            "title": "Os impactos da Far.me levando o melhor estar para mais pessoas.",
+            "message": "Pode contar com <highlight>a gente!</highlight>",
+            "infos": [
+                {
+                    "legend": "Colaboradores.",
+                    "value": "+70"
+                },
+                {
+                    "legend": "Far.me Boxes produzidas.",
+                    "value": "+7.000"
+                },
+                {
+                    "legend": "vidas impactadas.",
+                    "value": "+3.000"
+                }
+            ]
+        },
+        "testimonies": {
+            "description": "depoimentos",
+            "title": "Com a palavra,<br /> nossos Far.membros.",
+            "testimonies": [
+                {
+                    "name": "Claudia",
+                    "age": 78,
+                    "origin": "Cliente Far.me box",
+                    "testimony": "Far.me te apoia no cuidado diário com quem você ama.",
+                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                },
+                {
+                    "name": "Maria",
+                    "age": 78,
+                    "origin": "Cliente Far.me box",
+                    "testimony": "Far.me te apoia cuidando diariamente o com quem você ama.",
+                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                },
+                {
+                    "name": "Jessica",
+                    "age": 92,
+                    "origin": "Cliente Far.me box",
+                    "testimony": "Far.me te apoia sempre cuidando de quem você ama.",
+                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                },
+                {
+                    "name": "Reinaldo",
+                    "age": 84,
+                    "origin": "Cliente Far.me box",
+                    "testimony": "Far.me te apoia diariamente cuidando com quem você ama.",
+                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                }
+            ]
+        },
+        "doubts": {
+            "description": "Dúvidas",
+            "title": "Dúvidas frequentes",
+            "doubts": [
+                {
+                    "title": "Como pedir a Far.me Box? ",
+                    "answer": "É só clicar aqui e fazer o seu orçamento para receber o contato de um de nossos vendedores. "
+                },
+                {
+                    "title": "Qual é o preço da Far.me Box? ",
+                    "answer": "Orçamos os seus medicamentos de modo personalizado de acordo com sua preferência por genéricos, similares ou de referência, garantindo que na soma a gente consiga alcançar o melhor preço."
+                },
+                {
+                    "title": "Quais são as formas de pagamento? ",
+                    "answer": "Você pode pagar com cartão de crédito, boleto ou PIX."
+                },
+                {
+                    "title": "O que fazer se os remédios acabarem? ",
+                    "answer": "Pode se tranquilizar: isso não acontece! Enviamos os medicamentos para durarem 30 dias e entregamos a Far.me Box seguinte antes da anterior acabar."
+                },
+                {
+                    "title": "O que fazer quando o médico alterar a receita? ",
+                    "answer": "Temos um time de farmacêuticos disponível para receber qualquer alteração da receita médica. Basta entrar em contato e faremos os ajustes da forma mais adequada."
+                },
+                {
+                    "title": "A Far.me Box é segura? Os medicamentos podem vir errados?  ",
+                    "answer": "Temos um processo rigoroso de múltiplos pontos de checagem, o OCTO.CHECK System. Além disso, somos certificados pela ISO 9001: todas as etapas mantêm o padrão de rastreabilidade de excelência."
+                },
+                {
+                    "title": "Em caso de dúvidas, com quem devo entrar em contato? ",
+                    "answer": "Para dúvidas sobre medicamentos, os clientes Far.me têm acesso ao nosso canal de atendimento farmacêutico.<br /><br />Para dúvidas sobre faturamento, assinatura e alteração de medicamentos, você sempre pode contar com o time de sucesso."
+                }
+            ]
+        }
+    },
+    "footer": {
+        "about": {
+            "title": "Sobre a gente",
+            "text": "Criamos soluções para que o tratamento medicamentoso seja seguido e as pessoas se sintam mais tranquilas e seguras no dia a dia.<br /><br />Viva seu melhor estar, conte com a Far.me."
+        },
+        "invite": "<highlight>Se interessou? </highlight><br />É só preencher o formulário que te responderemos em breve.",
+        "contacts": {
+            "title": "Se preferir, liga pra gente!",
+            "contacts": [
+                {
+                    "location": "Belo Horizonte - MG",
+                    "phone": "31 2528 4229 | 31 98372 3906"
+                },
+                {
+                    "location": "São Paulo - SP",
+                    "phone": "11 3289 8232"
+                }
+            ]
+        },
+        "sections": [
+            {
+                "title": "Serviços",
+                "links": [
+                    {
+                        "title": "Far.me Box",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Far.me Pontual",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Far.me Mensal",
+                        "href": "https://far.me/far-me-boxes"
+                    }
+                ]
+            },
+            {
+                "title": "Institucional",
+                "links": [
+                    {
+                        "title": "Quem somos",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Carreiras",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Blog",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Contato",
+                        "href": "https://far.me/far-me-boxes"
+                    }
+                ]
+            },
+            {
+                "title": "Termos e políticas ",
+                "links": [
+                    {
+                        "title": "Termos e políticas ",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Política de privacidade",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Política de Qualidade",
+                        "href": "https://far.me/far-me-boxes"
+                    }
+                ]
+            },
+            {
+                "title": "Últimos posts",
+                "links": [
+                    {
+                        "title": "Noticia 1",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Noticia 2",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Noticia 3",
+                        "href": "https://far.me/far-me-boxes"
+                    },
+                    {
+                        "title": "Noticia 4",
+                        "href": "https://far.me/far-me-boxes"
+                    }
+                ]
+            }
+        ]
+    },
+    "units": [
+        {
+            "localization": "Belo Horizonte - MG",
+            "infos": [
+                "CNPJ 25.228.539/0001-23 Autorização de Funcionamento - Processo: 355030801-477-000362-1-8",
+                "Autorização/MS: 0.12469.2",
+                "Farmacêutica Responsável: João Carlos Ribeiro Angelon - CRF SP 74626",
+                "Telefone: 11 94052 2689",
+                "E-mail: contato@farme.com.br",
+                "Horário de funcionamento: Segunda a Sexta de 09:00h às 18:00h"
+            ]
+        },
+        {
+            "localization": "São Paulo - SP",
+            "infos": [
+                "Alameda Joaquim Eugênio de Lima, 198",
+                "CNPJ: 03.153.196/0001-42 Alvará Sanitário: 2019080718 Autorização de Funcionamento da Empresa (AFE): 7.48850.4",
+                "Farmacêutica Responsável: Fernanda Castanheira de Freitas - CRF MG 40.004",
+                "Telefone: 31 98371 9337",
+                "E-mail: contato@farme.com.br",
+                "Horário de funcionamento: Segunda a Sexta de 09:00h às 18:00h"
+            ]
+        }
+    ]
+}

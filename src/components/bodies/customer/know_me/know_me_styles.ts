@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   background-color: ${customersTheme.backgroundColor.white};
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 5% 0;
 `
 export const Content = styled.div`

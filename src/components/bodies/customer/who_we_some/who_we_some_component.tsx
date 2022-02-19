@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import ImageHome from '../../../../assets/home-image.png'
+import images from '../../../../assets/images'
+import { DataContext } from '../../../../context/data'
 
 import {
   Container,
@@ -9,27 +10,30 @@ import {
   Image,
   TextPrincipal,
   BlockText,
-  Highlight,
 } from './who_we_some_styles'
 
 type MainProps = {
   id?: string
 }
 
-export const Main: React.FC<MainProps> = ({ id }) => (
-  <Container id={id}>
-    <Content>
-      <BlockText>
-        <TextPrincipal>
-          A farmácia <br /> que te ajuda a viver <Highlight>melhor</Highlight>.
-        </TextPrincipal>
-        <Text>
-          Aqui, você recebe seus medicamentos de um jeito simples e prático. Com
-          serviços personalizados, levamos mais comodidade e segurança para os
-          seus cuidados com a saúde.
-        </Text>
-      </BlockText>
-      <Image src={ImageHome} />
-    </Content>
-  </Container>
-)
+export const Main: React.FC<MainProps> = ({ id }) => {
+  const {
+    body: { initial },
+  } = useContext(DataContext)
+
+  return (
+    <Container id={id}>
+      <Content>
+        <BlockText>
+          <TextPrincipal
+            dangerouslySetInnerHTML={{ __html: initial['who-we-are'].title }}
+          />
+          <Text
+            dangerouslySetInnerHTML={{ __html: initial['who-we-are'].subtitle }}
+          ></Text>
+        </BlockText>
+        <Image src={images.ImageBoxWhoWeAre} />
+      </Content>
+    </Container>
+  )
+}

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import VideoFarMe from '../../../../assets/video-depoiment.mp4'
+import { DataContext } from '../../../../context/data'
+import videos from '../../../../assets/videos'
 
 import { Container, Content, Text, Video } from './farme_box_styles'
 
@@ -8,14 +9,22 @@ type FarMeBoxProps = {
   id?: string
 }
 
-export const FarMeBox: React.FC<FarMeBoxProps> = ({ id }) => (
-  <Container id={id}>
-    <Content>
-      <Text>
-        Viva o seu melhor estar, <br /> conte com a Far.me
-      </Text>
+export const FarMeBox: React.FC<FarMeBoxProps> = ({ id }) => {
+  const {
+    body: { farme_box },
+  } = useContext(DataContext)
+  return (
+    <Container id={id}>
+      <Content>
+        <Text dangerouslySetInnerHTML={{ __html: farme_box.title }} />
 
-      <Video controls autoPlay typeof="video/mp4" src={VideoFarMe} />
-    </Content>
-  </Container>
-)
+        <Video
+          controls
+          autoPlay
+          typeof="video/mp4"
+          src={videos.VideoFarMeBox}
+        />
+      </Content>
+    </Container>
+  )
+}

@@ -1,13 +1,10 @@
 import styled from 'styled-components'
 import { customersTheme } from '../../themes'
 
-export const Container = styled.div``
-
-export const Content = styled.div`
-  width: 1080px;
-  height: 560px;
-  border-radius: 8px;
-  background-color: ${customersTheme.color.highlight};
+export const Container = styled.div`
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
 `
 
 export const Tabs = styled.div`
@@ -17,12 +14,12 @@ export const Tabs = styled.div`
 `
 
 export const Tab = styled.div`
+  height: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 32px;
+  justify-content: space-between;
 `
 
 type TabProps = {
