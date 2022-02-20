@@ -63,9 +63,12 @@ export interface fontFamily {
 export interface Spacing {
   quark: string
   nano: string
+  internal: string
   xxxs: string
   xxs: string
   xs: string
   sm: string
   md: string
+  xl: string
+  xxl: string
 }

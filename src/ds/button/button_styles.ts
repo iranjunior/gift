@@ -6,13 +6,13 @@ type ButtonActionType = {
 }
 
 export const ButtonAction = styled.button<ButtonActionType>`
-  height: 48px;
+  height: ${({ theme }) => theme.spacing.md};
   padding: 0 ${({ theme }) => theme.spacing.xxs};
   width: 100%;
   ${({ variant, customColor }) =>
     variant === 'primary' &&
     css`
-      border-radius: 4px;
+      border-radius: ${({ theme }) => theme.spacing.quark};
       border: none;
       background-color: ${({ theme }) => customColor || theme.primary.default};
 

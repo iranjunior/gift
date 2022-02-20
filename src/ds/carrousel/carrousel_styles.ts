@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  gap: 40px;
+  gap: ${({ theme }) => theme.spacing.sm};
   display: flex;
   flex-direction: column;
 `
@@ -13,7 +13,7 @@ export const Tabs = styled.div`
 `
 
 export const Tab = styled.div`
-  height: 40px;
+  height: ${({ theme }) => theme.spacing.sm};
   width: 100%;
   display: flex;
   flex-direction: column;

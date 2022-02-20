@@ -4,10 +4,9 @@ export const Container = styled.details`
   width: 100%;
   background-color: ${({ theme }) => theme.primary.light};
   border-radius: 8px;
-  padding: 1rem;
+  padding: ${({ theme }) => theme.spacing.internal};
 `
 export const Title = styled.summary`
-  padding: 8px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;

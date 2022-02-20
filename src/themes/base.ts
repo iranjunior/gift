@@ -20,8 +20,11 @@ export const BaseTheme: Base = {
     xxxs: '16px',
     xxs: '24px',
     xs: '32px',
-    sm: '48px',
-    md: '32px',
+    sm: '40px',
+    md: '48px',
+    internal: '20px',
+    xl: '60px',
+    xxl: '80px',
   },
   font: {
     sizes: {

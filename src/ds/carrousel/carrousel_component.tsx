@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { CarouselContent } from './content'
+import { CarrouselContent } from './content/content_component'
 import { Container, Tabs, TabTitle, TabBar, Tab } from './carrousel_styles'
 
 type Props = {
@@ -26,7 +26,7 @@ export const Carrousel: React.FC<CarrouselProps> = ({ content }) => {
           </Tab>
         ))}
       </Tabs>
-      <CarouselContent title={active.text} image={active.image} />
+      <CarrouselContent title={active.text} image={active.image} />
     </Container>
   )
 }

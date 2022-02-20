@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   width: 50%;
-  height: ${({ theme }) => theme.spacing.md};
+  height: ${({ theme }) => theme.spacing.xs};
 `
 
 type CellProps = {

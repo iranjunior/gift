@@ -22,8 +22,8 @@ const hashMap: hashMapType = {
 export const Container = styled.div<ContainerProps>`
   width: 283px;
   height: 463px;
-  border-radius: 8px;
-  padding: 32px;
+  border-radius: ${({ theme }) => theme.spacing.nano};
+  padding: ${({ theme }) => theme.spacing.xs};
   background-color: ${(props) => hashMap[props.type].primary.light};
 `
 
@@ -37,8 +37,8 @@ export const Content = styled.div`
 `
 
 export const Image = styled.img`
-  height: 80px;
-  width: 80px;
+  height: ${({ theme }) => theme.spacing.xxl};
+  width: ${({ theme }) => theme.spacing.xxl};
 `
 
 export const TextPrincipal = styled.span`

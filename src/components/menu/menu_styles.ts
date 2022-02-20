@@ -17,7 +17,7 @@ export const Options = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing.sm};
+  gap: ${({ theme }) => theme.spacing.md};
   width: 65%;
 `
 export const OptionsContainer = styled.div`
