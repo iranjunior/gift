@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-
+import {
+  ContentDiv,
+  rowItensWithGap,
+} from '../../../../ds/styles/common_styles'
 export const Container = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.primary.default};
@@ -19,13 +22,7 @@ export const Message = styled.span`
   font-family: ${({ theme }) => theme.font.family.sliver};
 `
 
-export const Content = styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rem;
-`
+export const Content = ContentDiv
 export const BlockNumber = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,11 +30,7 @@ export const BlockNumber = styled.div`
 `
 
 export const BlockNumbers = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10rem;
+  ${rowItensWithGap({ gap: '10rem', alignItens: 'center' })}
 `
 
 export const Text = styled.span`

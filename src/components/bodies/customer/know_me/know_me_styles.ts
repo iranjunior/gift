@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import {
+  columnItensWithGap,
+  ContentDiv,
+} from '../../../../ds/styles/common_styles'
 
 export const Container = styled.div`
   display: flex;
@@ -6,19 +10,14 @@ export const Container = styled.div`
   width: 100%;
   padding: 5% 0;
 `
-export const Content = styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rem;
-`
+export const Content = ContentDiv
 export const BlockText = styled.div`
   width: 640px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  ${columnItensWithGap({
+    gap: '1rem',
+    alignItens: 'center',
+    justifyContent: 'center',
+  })}
 `
 export const Highlight = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xl};

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ContentDiv } from '../../../../ds/styles/common_styles'
 
 export const Container = styled.div`
   display: flex;
@@ -6,13 +7,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 5% 0;
 `
-export const Content = styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rem;
-`
+export const Content = ContentDiv
 
 export const Text = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xl};

@@ -1,13 +1,11 @@
 import styled from 'styled-components'
+import { columnItensWithGap } from '../../../../ds/styles/common_styles'
 
 export const Container = styled.div`
-  display: flex;
+  ${columnItensWithGap({ gap: '8rem', alignItens: 'center' })}
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
   padding: 5% 0;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rem;
 `
 export const Content = styled.div`
   margin: 0 auto;
@@ -18,9 +16,10 @@ export const Content = styled.div`
   align-items: center;
 `
 export const DoubtsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${columnItensWithGap({
+    gap: '1rem',
+    alignItens: 'center',
+    justifyContent: 'center',
+  })}
   width: 60%;
-  gap: 1rem;
 `

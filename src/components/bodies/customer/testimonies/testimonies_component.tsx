@@ -16,6 +16,7 @@ import {
   Testimony,
   BlockDots,
   DotIndicator,
+  TestimoniesWrapper,
 } from './testimonies_styles'
 
 type TestimoniesProps = {
@@ -33,35 +34,39 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   console.log(testimonyActive)
   return (
     <Container id={id}>
-      <Header
-        description={pageTestimonies.description}
-        title={pageTestimonies.title}
-      />
       <Content>
-        {pageTestimonies.testimonies.map(({ testimony, age, origin, name }) => (
-          <Testimony
-            hidden={testimonyActive.testimony !== testimony}
-            key={testimony}
-          >
-            <BlockText>
-              <Quotation src={QuotationIllustration} />
-              <TextPrincipal>{testimony}</TextPrincipal>
-              <Text>
-                {name}, {age} - {origin}
-              </Text>
-            </BlockText>
-            <Image src={Person1} />
-          </Testimony>
-        ))}
-        <BlockDots>
-          {pageTestimonies.testimonies.map((testimony) => (
-            <DotIndicator
-              key={testimony.testimony.concat(testimony.name)}
-              active={testimony.testimony === testimonyActive.testimony}
-              onClick={() => setTestimony(testimony)}
-            />
-          ))}
-        </BlockDots>
+        <Header
+          description={pageTestimonies.description}
+          title={pageTestimonies.title}
+        />
+        <TestimoniesWrapper>
+          {pageTestimonies.testimonies.map(
+            ({ testimony, age, origin, name }) => (
+              <Testimony
+                hidden={testimonyActive.testimony !== testimony}
+                key={testimony}
+              >
+                <BlockText>
+                  <Quotation src={QuotationIllustration} />
+                  <TextPrincipal>{testimony}</TextPrincipal>
+                  <Text>
+                    {name}, {age} - {origin}
+                  </Text>
+                </BlockText>
+                <Image src={Person1} />
+              </Testimony>
+            )
+          )}
+          <BlockDots>
+            {pageTestimonies.testimonies.map((testimony) => (
+              <DotIndicator
+                key={testimony.testimony.concat(testimony.name)}
+                active={testimony.testimony === testimonyActive.testimony}
+                onClick={() => setTestimony(testimony)}
+              />
+            ))}
+          </BlockDots>
+        </TestimoniesWrapper>
       </Content>
     </Container>
   )

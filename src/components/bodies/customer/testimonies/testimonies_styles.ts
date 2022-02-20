@@ -1,25 +1,18 @@
 import styled from 'styled-components'
+import {
+  ContentDiv,
+  rowItensWithGap,
+} from '../../../../ds/styles/common_styles'
 
 export const Container = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
   padding: 5% 0;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rem;
 `
-export const Content = styled.div`
-  margin: 0 auto;
-  display: flex;
-  height: 480px;
-  width: 85%;
-  max-width: 1500px;
-  justify-content: space-between;
-  align-items: center;
-`
+export const Content = ContentDiv
 export const BlockText = styled.div`
-  width: 30%;
+  width: 420px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -50,6 +43,13 @@ export const Image = styled.img<ImageProps>`
 export const Quotation = styled.img`
   height: 24px;
 `
+export const TestimoniesWrapper = styled.div`
+  ${rowItensWithGap({
+    gap: '60px',
+    alignItens: 'center',
+    justifyContent: 'center',
+  })}
+`
 
 type TestimonyProps = {
   hidden?: boolean
@@ -59,6 +59,7 @@ export const Testimony = styled.div<TestimonyProps>`
   display: ${(props) => (props.hidden ? 'none' : 'flex')};
   opacity: ${(props) => (props.hidden ? 0 : 1)};
   width: 100%;
+  gap: 20rem;
   justify-content: space-between;
   animation: show-testimony 1s ease-in-out;
 
@@ -91,5 +92,4 @@ export const BlockDots = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 4rem;
 `
