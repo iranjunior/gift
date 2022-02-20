@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import { customersTheme } from '../../themes'
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${customersTheme.backgroundColor.darkness};
+  background-color: ${({ theme }) => theme.primary.darkness};
   width: 100%;
   padding: 5% 0;
   flex-direction: column;
@@ -28,37 +27,33 @@ export const AboutInfosImage = styled.img`
   height: 40px;
 `
 export const AboutInfosTitle = styled.span`
-  color: ${customersTheme.color.primaryLight};
-  font-size: ${customersTheme.font.sizes.smallMedium};
-  font-family: 'Clearface ITC Pro', sans-serif;
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.sm};
+  font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutInfosDescription = styled.span`
-  color: ${customersTheme.color.primaryLight};
-  font-size: ${customersTheme.font.sizes.extraExtraSmall};
-  line-height: 20px;
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.xxs};
+  line-height: ${({ theme }) => theme.font.lineHeight.distant};
 `
 
 export const AboutRequestContainer = styled.div`
   display: flex;
   flex-direction: column;
+  button {
+    margin: ${({ theme }) => theme.spacing.xxs} 0;
+    width: 25%;
+  }
 `
 export const AboutRequestTitle = styled.span`
-  color: ${customersTheme.color.primaryLight};
-  font-size: ${customersTheme.font.sizes.extraLarge};
-  font-family: 'Clearface ITC Pro', sans-serif;
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.xl};
+  font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutRequestTitleHighlight = styled.span`
-  font-family: 'Gloria Hallelujah', cursive;
-  color: ${customersTheme.color.primaryLight};
-  font-size: ${customersTheme.font.sizes.extraLarge};
-`
-export const RequestOrderButton = styled.button`
-  background-color: ${customersTheme.requestOrder.backgroundColor};
-  border: none;
-  border-radius: 4px;
-  height: 48px;
-  max-width: 200px;
-  margin-top: 1rem;
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.xl};
+  font-family: ${({ theme }) => theme.font.family.highlight}; ;
 `
 
 export const AboutContactsContainer = styled.div`
@@ -69,9 +64,9 @@ export const AboutContactsContainer = styled.div`
   gap: 2rem;
 `
 export const AboutContactsTitle = styled.span`
-  font-size: ${customersTheme.font.sizes.medium};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  color: ${customersTheme.color.highlightLight};
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.md};
+  font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutContactsPhoneContainer = styled.div`
   display: flex;
@@ -79,24 +74,24 @@ export const AboutContactsPhoneContainer = styled.div`
   align-items: start;
 `
 export const AboutContactsTitleLocation = styled.span`
-  font-size: ${customersTheme.font.sizes.extraSmall};
-  color: ${customersTheme.color.highlightLight};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
+  color: ${({ theme }) => theme.primary.light};
 `
 export const AboutContactsPhoneLocation = styled.span`
-  color: ${customersTheme.color.highlight};
+  color: ${({ theme }) => theme.primary.default};
 `
 export const AboutContactsSocialMedias = styled.div`
   display: flex;
   gap: 1rem;
 `
 export const AboutContactsSocialMediasLogo = styled.img`
-  height: 24px;
+  height: ${({ theme }) => theme.spacing.xxs};
 `
 
 export const Divisor = styled.hr`
   width: 90%;
-  height: 2px;
-  background-color: ${customersTheme.color.indicatorActive};
+  height: 1px;
+  background-color: ${({ theme }) => theme.colors.neutral.darkness};
   margin: 5rem 0;
   border: none;
 `
@@ -114,13 +109,13 @@ export const AboutSection = styled.div`
   gap: 1.5rem;
 `
 export const AboutSectionTitle = styled.span`
-  font-size: ${customersTheme.font.sizes.medium};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  color: ${customersTheme.color.highlightLight};
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.md};
+  font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutSectionLink = styled.a`
-  color: ${customersTheme.color.highlight};
-  font-size: ${customersTheme.font.sizes.extraExtraSmall};
+  color: ${({ theme }) => theme.primary.default};
+  font-size: ${({ theme }) => theme.font.sizes.xxs};
 `
 export const AboutLegalInformationContainer = styled.div`
   width: 90%;
@@ -135,12 +130,12 @@ export const AboutLegalInformationSection = styled.div`
   gap: 2rem;
 `
 export const AboutLegalInformationTitle = styled.span`
-  font-size: ${customersTheme.font.sizes.medium};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  color: ${customersTheme.color.highlightLight};
+  color: ${({ theme }) => theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.md};
+  font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutLegalInformation = styled.span`
-  font-size: ${customersTheme.font.sizes.extraExtraSmall};
-  color: ${customersTheme.color.highlightLight};
-  line-height: 25px;
+  font-size: ${({ theme }) => theme.font.sizes.xxs};
+  color: ${({ theme }) => theme.primary.light};
+  line-height: ${({ theme }) => theme.font.lineHeight.superDistant};
 `

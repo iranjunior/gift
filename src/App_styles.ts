@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components'
+
+export const FarmeStyles = createGlobalStyle`
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -34,3 +37,5 @@ summary::before {
 details[open] > summary::after {
   content: url('./assets/images/up_arrow.svg');
 }
+
+`

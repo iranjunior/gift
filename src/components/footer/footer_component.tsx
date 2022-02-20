@@ -30,9 +30,9 @@ import {
   AboutSectionTitle,
   Container,
   Divisor,
-  RequestOrderButton,
 } from './footer_styles'
 import { DataContext } from '../../context/data'
+import { Button } from '../../ds'
 
 type FooterProps = {
   id?: string
@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
           <AboutRequestTitle
             dangerouslySetInnerHTML={{ __html: footer.invite }}
           />
-          <RequestOrderButton>Preencher formulário</RequestOrderButton>
+          <Button label="Preencher formulário" />
         </AboutRequestContainer>
         <AboutContactsContainer>
           <AboutContactsTitle>{footer.contacts.title}</AboutContactsTitle>

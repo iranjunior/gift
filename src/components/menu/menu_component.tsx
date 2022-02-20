@@ -1,42 +1,54 @@
 import React, { useContext } from 'react'
+import { Button } from '../../ds'
+
 import LogoFarMe from '../../assets/images/logotype.svg'
 import { DataContext } from '../../context/data'
 import {
   Blog as BlogType,
   ButtonRequestQuote as ButtonRequestQuoteType,
 } from '../../context/data/types'
+
 import {
   Container,
   Link,
   Logo,
   Option,
   Options,
-  RequestOrderButton,
+  OptionsContainer,
 } from './menu_styles'
 
 export const Menu = () => {
   const { menu } = useContext(DataContext)
+  console.log(
+    Object.entries(menu).slice(
+      Object.entries(menu).length - 1,
+      Object.entries(menu).length
+    )[0][1] as unknown as ButtonRequestQuoteType
+  )
   return (
     <Container>
       <Logo src={LogoFarMe} />
 
       <Options>
-        {Object.entries(menu).map(
-          (
-            [, value]: [string, BlogType | ButtonRequestQuoteType],
-            index,
-            { length }
-          ) => {
-            if (index === length - 1)
-              return <RequestOrderButton>{value.label}</RequestOrderButton>
-            const option = value as BlogType
-            return (
-              <Option key={option.href}>
-                <Link href={option.href}>{option.label}</Link>
+        <OptionsContainer>
+          {Object.entries(menu)
+            .slice(0, Object.entries(menu).length - 1)
+            .map(([, value]: [string, BlogType]) => (
+              <Option key={value.href}>
+                <Link href={value.href}>{value.label}</Link>
               </Option>
-            )
+            ))}
+        </OptionsContainer>
+        <Button
+          label={
+            (
+              Object.entries(menu).slice(
+                Object.entries(menu).length - 1,
+                Object.entries(menu).length
+              )[0][1] as unknown as ButtonRequestQuoteType
+            )?.label || ''
           }
-        )}
+        />
       </Options>
     </Container>
   )

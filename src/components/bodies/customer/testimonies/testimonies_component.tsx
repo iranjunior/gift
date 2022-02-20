@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import Person1 from '../../../../assets/images/person_1.png'
 import QuotationIllustration from '../../../../assets/images/quotation.svg'
 import { DataContext } from '../../../../context/data'
-import { Header } from '../../../header'
+import { Header } from '../../../../ds'
 
 import {
   Container,

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { customersTheme } from '../../themes'
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,13 +9,13 @@ export const Container = styled.div`
 `
 
 export const Subtitle = styled.span`
-  font-size: ${customersTheme.font.sizes.extraExtraExtraSmall};
-  font-family: 'Clearface ITC Pro', sans-serif;
+  font-size: ${({ theme }) => theme.font.sizes.xxxs};
+  font-family: ${({ theme }) => theme.font.family.sliver};
   text-transform: uppercase;
 `
 export const Title = styled.span`
-  font-size: ${customersTheme.font.sizes.extraLarge};
-  font-family: 'Clearface ITC Pro', sans-serif;
+  font-size: ${({ theme }) => theme.font.sizes.xl};
+  font-family: ${({ theme }) => theme.font.family.sliver};
   width: 60%;
   text-align: center;
 `

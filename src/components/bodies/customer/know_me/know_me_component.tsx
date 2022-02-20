@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
+import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 
-import { Carrousel } from '../../../carrousel'
+import { Carrousel } from '../../../../ds'
 import {
   Container,
   Content,
@@ -9,6 +10,17 @@ import {
   Highlight,
   Text,
 } from './know_me_styles'
+
+type hashMapType = {
+  [key: string]: string
+}
+
+const hashMap: hashMapType = {
+  Personalizada: images.ImageBoxPointingLeft,
+  Organizada: images.ImageBoxPointingCenter,
+  Funcional: images.ImageBoxPointingRight,
+  Segura: images.ImageHandWithDrugs,
+}
 
 type KnowMeProps = {
   id?: string
@@ -18,6 +30,13 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
   const {
     body: { know_me },
   } = useContext(DataContext)
+
+  const buildTabs = () =>
+    know_me.carousel.map(({ label, ...props }) => ({
+      image: hashMap[label],
+      label,
+      ...props,
+    }))
   return (
     <Container id={id}>
       <Content>
@@ -25,7 +44,7 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
           <Highlight dangerouslySetInnerHTML={{ __html: know_me.title }} />
           <Text dangerouslySetInnerHTML={{ __html: know_me.subtitle }} />
         </BlockText>
-        <Carrousel />
+        <Carrousel content={buildTabs()} />
       </Content>
     </Container>
   )

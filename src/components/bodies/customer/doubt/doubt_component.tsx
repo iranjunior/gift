@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../../../context/data'
-import { Header } from '../../../header'
-import { Accordion } from '../../../accordion'
+import { Header } from '../../../../ds'
+import { Accordion } from '../../../../ds'
 
 import { Container, Content, DoubtsContainer } from './doubt_styles'
 

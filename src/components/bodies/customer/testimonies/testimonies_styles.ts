@@ -1,36 +1,16 @@
 import styled from 'styled-components'
-import { customersTheme } from '../../../../themes'
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${customersTheme.backgroundColor.white};
+  background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
-  height: 90vh;
   padding: 5% 0;
   flex-direction: column;
   align-items: center;
-`
-export const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-`
-
-export const Subtitle = styled.span`
-  font-size: ${customersTheme.font.sizes.extraExtraExtraSmall};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  text-transform: uppercase;
-`
-export const Title = styled.span`
-  font-size: ${customersTheme.font.sizes.extraLarge};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  width: 60%;
-  text-align: center;
+  gap: 8rem;
 `
 export const Content = styled.div`
-  margin: 10%;
+  margin: 0 auto;
   display: flex;
   height: 480px;
   width: 85%;
@@ -49,15 +29,15 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Text = styled.span`
-  font-size: ${customersTheme.font.sizes.extraSmall};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
   line-height: 22px;
   letter-spacing: 2%;
   font-family: 'Inter';
 `
 export const TextPrincipal = styled.span`
-  font-size: ${customersTheme.font.sizes.extraLarge};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  line-height: 45px;
+  font-size: ${({ theme }) => theme.font.sizes.xl};
+  font-family: ${({ theme }) => theme.font.family.sliver};
+  line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: center;
 `
 type ImageProps = {
@@ -103,8 +83,8 @@ export const DotIndicator = styled.div<DotIndicatorProps>`
   border-radius: 50%;
   background-color: ${(props) =>
     props.active
-      ? customersTheme.color.highlight
-      : customersTheme.color.indicatorNeutral};
+      ? props.theme.primary.default
+      : props.theme.colors.neutral.default};
   margin: 0.5rem;
 `
 export const BlockDots = styled.div`

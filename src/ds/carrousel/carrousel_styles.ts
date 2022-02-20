@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { customersTheme } from '../../themes'
 
 export const Container = styled.div`
   gap: 40px;
@@ -10,7 +9,7 @@ export const Container = styled.div`
 export const Tabs = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: ${({ theme }) => theme.spacing.xxxs};
 `
 
 export const Tab = styled.div`
@@ -27,19 +26,15 @@ type TabProps = {
 }
 
 export const TabTitle = styled.span<TabProps>`
-  font-size: ${customersTheme.font.sizes.smallMedium};
-  font-family: 'Clearface ITC Pro', sans-serif;
-  color: ${(props) =>
-    props.active
-      ? customersTheme.color.indicatorActive
-      : customersTheme.color.indicatorNeutral};
+  font-size: ${({ theme }) => theme.font.sizes.sm};
+  font-family: ${({ theme }) => theme.font.family.sliver};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.neutral.darkness : theme.colors.neutral.default};
 `
 
 export const TabBar = styled.div<TabProps>`
   height: 2px;
   width: 100%;
-  background-color: ${(props) =>
-    props.active
-      ? customersTheme.color.indicatorActive
-      : customersTheme.color.indicatorNeutral};
+  background-color: ${({ theme, active }) =>
+    active ? theme.colors.neutral.darkness : theme.colors.neutral.default};
 `

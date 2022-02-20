@@ -2,10 +2,10 @@ import React from 'react'
 import IllustrationCalendar from '../../assets/images/illustration_calendar.svg'
 import IllustrationCare from '../../assets/images/illustration_care.svg'
 import IllustrationMedical from '../../assets/images/illustration_medical.svg'
+import { Button } from '../button'
 import {
   Container,
   Content,
-  KnowMoreButton,
   Image,
   TextPrincipal,
   Divisor,
@@ -15,7 +15,7 @@ import {
 type CardProps = {
   title: string
   description: string
-  type: string
+  type: 'doctors' | 'companies' | 'customers'
 }
 
 export const Card: React.FC<CardProps> = ({ title, description, type }) => {
@@ -37,7 +37,7 @@ export const Card: React.FC<CardProps> = ({ title, description, type }) => {
         <TextPrincipal dangerouslySetInnerHTML={{ __html: title }} />
         <Divisor />
         <Text>{description}</Text>
-        <KnowMoreButton>Saiba mais</KnowMoreButton>
+        <Button label="Saiba mais" />
       </Content>
     </Container>
   )

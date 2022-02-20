@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../../../context/data'
 
-import images from '../../../../assets/images'
-
-import { Card } from '../../../card'
+import { Card } from '../../../../ds'
 import {
   Container,
   Content,
@@ -21,6 +19,7 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
   const {
     body: { targets },
   } = useContext(DataContext)
+
   return (
     <Container id={id}>
       <Content>
@@ -34,7 +33,7 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
               key={content.title}
               description={content.text}
               title={content.title}
-              type={content.type}
+              type={content.type as 'doctors' | 'companies' | 'customers'}
             />
           ))}
         </Cards>

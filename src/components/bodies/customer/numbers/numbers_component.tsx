@@ -1,16 +1,12 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../../../context/data'
 
-import { Carrousel } from '../../../carrousel'
-import { Header } from '../../../header'
+import { Header } from '../../../../ds'
 import {
   Container,
   Content,
   BlockNumbers,
   BlockNumber,
-  Highlight,
-  Subtitle,
-  Title,
   Number,
   SubtitleNumber,
   Message,

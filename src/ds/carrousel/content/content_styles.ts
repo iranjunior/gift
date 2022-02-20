@@ -9,8 +9,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
-  border-radius: 8px;
-  background-color: ${customersTheme.color.highlight};
+  border-radius: ${({ theme }) => theme.spacing.nano};
+  background-color: ${({ theme }) => theme.primary.default};
 `
 
 export const LeftSide = styled.div`
@@ -24,27 +24,13 @@ export const LeftSide = styled.div`
 `
 
 export const Text = styled.span`
-  font-size: ${customersTheme.font.sizes.extraExtraLarge};
-  font-family: 'Clearface ITC Pro', sans-serif;
+  font-size: ${({ theme }) => theme.font.sizes.xxl};
+  font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const ActionWrap = styled.div`
   display: flex;
   align-items: center;
 `
-
-export const RequestOrderButton = styled.button`
-  background-color: ${customersTheme.backgroundColor.white};
-  border: none;
-  border-radius: 4px;
-  height: 48px;
-  padding-right: 24px;
-  padding-left: 24px;
-`
-export const RequestOrderLink = styled.a`
-  padding-left: 24px;
-  text-decoration: none;
-`
-
 export const RightSide = styled.div`
   width: 100%;
   flex: 1;

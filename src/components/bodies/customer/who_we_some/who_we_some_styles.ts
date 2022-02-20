@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  width: 90%;
+  width: 100%;
+  justify-content: flex-end;
 `
 export const BlockText = styled.div`
   width: 30%;
@@ -16,17 +17,16 @@ export const Content = styled.div`
   margin: 5%;
   display: flex;
   height: 400px;
-  width: 100%;
+  width: 85%;
   justify-content: space-between;
   align-items: center;
 `
 
 export const Text = styled.div`
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+    line-height: ${({ theme }) => theme.font.lineHeight.distant};
     letter-spacing: 2%;
-    font-family: 'Inter';
     width: 100%;
     margin: 0;
     margin-block-start: 0;
@@ -37,9 +37,8 @@ export const Text = styled.div`
 `
 export const TextPrincipal = styled.div`
   *:not(highlight) {
-    font-size: 64px;
-    line-height: 60px;
-    font-family: 'Clearface ITC Pro', sans-serif;
+    font-size: ${({ theme }) => theme.font.sizes.xxxl};
+    font-family: ${({ theme }) => theme.font.family.sliver};
     font-weight: normal;
     margin: 0;
   }
