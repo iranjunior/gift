@@ -1,5 +1,6 @@
 export { Accordion } from './accordion'
 export { Button, ButtonType } from './button'
 export { Card } from './card'
-export { Header } from './header'
+export { Header, HeaderCentered } from './header'
 export { Carrousel } from './carrousel'
+export { Banner } from './banner'

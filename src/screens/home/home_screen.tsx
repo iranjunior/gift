@@ -1,16 +1,6 @@
 import React from 'react'
-import {
-  Doubt,
-  FarMeBox,
-  Footer,
-  KnowMe,
-  Main,
-  Menu,
-  Nav,
-  Numbers,
-  Targets,
-  Testimonies,
-} from '../../components'
+import { Footer, Menu, Nav } from '../../components'
+import { CustomerBody } from './body'
 
 import { Body, Container } from './home_styles'
 
@@ -19,13 +9,13 @@ export const Home = () => (
     <Nav />
     <Body>
       <Menu />
-      <Main id="quem-somos" />
-      <FarMeBox id="farme-box" />
-      <KnowMe id="conheca-me" />
-      <Targets id="objetivos" />
-      <Numbers id="numeros" />
-      <Testimonies id="testimonies" />
-      <Doubt id="duvidas" />
+      <CustomerBody.Main id="quem-somos" />
+      <CustomerBody.FarMeBox id="farme-box" />
+      <CustomerBody.KnowMe id="conheca-me" />
+      <CustomerBody.Targets id="objetivos" />
+      <CustomerBody.Numbers id="numeros" />
+      <CustomerBody.Testimonies id="testimonies" />
+      <CustomerBody.Doubt id="duvidas" />
       <Footer id="sobre" />
     </Body>
   </Container>

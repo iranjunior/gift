@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '../../ds'
 
 import LogoFarMe from '../../assets/images/logotype.svg'
@@ -19,12 +20,8 @@ import {
 
 export const Menu = () => {
   const { menu } = useContext(DataContext)
-  console.log(
-    Object.entries(menu).slice(
-      Object.entries(menu).length - 1,
-      Object.entries(menu).length
-    )[0][1] as unknown as ButtonRequestQuoteType
-  )
+  const navigate = useNavigate()
+
   return (
     <Container>
       <Logo src={LogoFarMe} />
@@ -35,7 +32,9 @@ export const Menu = () => {
             .slice(0, Object.entries(menu).length - 1)
             .map(([, value]: [string, BlogType]) => (
               <Option key={value.href}>
-                <Link href={value.href}>{value.label}</Link>
+                <Link href={value.href} onClick={() => navigate(value.href)}>
+                  {value.label}
+                </Link>
               </Option>
             ))}
         </OptionsContainer>

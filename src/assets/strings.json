@@ -7,7 +7,7 @@
     "menu": {
         "who-we-are": {
             "label": "Quem Somos",
-            "href": "#quem-somos"
+            "href": "/quem-somos"
         },
         "farme_box": {
             "label": "Far.me Box",
@@ -34,144 +34,229 @@
         }
     },
     "body": {
-        "initial": {
-            "who-we-are": {
-                "title": "<h1>A farmácia<br />que te ajuda a viver <highlight>melhor</highlight>.</h1>",
-                "subtitle": "<p>Aqui, você recebe seus medicamentos de um jeito simples e prático. Com serviços personalizados, levamos mais<br />comodidade e segurança para os seus cuidados com<br />a saúde.</p>"
+        "home": {
+            "initial": {
+                "who-we-are": {
+                    "title": "<h1>A farmácia<br />que te ajuda a viver <highlight>melhor</highlight>.</h1>",
+                    "subtitle": "<p>Aqui, você recebe seus medicamentos de um jeito simples e prático. Com serviços personalizados, levamos mais<br />comodidade e segurança para os seus cuidados com<br />a saúde.</p>"
+                }
+            },
+            "farme_box": {
+                "title": "Viva o seu melhor estar, <br /> conte com a Far.me"
+            },
+            "know_me": {
+                "title": "Conheça a Far.me Box.",
+                "subtitle": "Muito mais que uma caixa de remédios separados por dia e hora. Uma inteligência que analisa cada receita pra ter certeza de que os seus medicamentos não terão interação prejudicial no seu corpo.",
+                "carousel": [
+                    {
+                        "label": "Personalizada",
+                        "text": "Uma caixa<br /> personalizada para a sua rotina."
+                    },
+                    {
+                        "label": "Organizada",
+                        "text": "Com separação por dia, horário e dose."
+                    },
+                    {
+                        "label": "Funcional",
+                        "text": "Com as orientações para uso dos medicamentos."
+                    },
+                    {
+                        "label": "Segura",
+                        "text": "Com informações de rastreabilidade e validade de cada medicamento."
+                    }
+                ]
+            },
+            "targets": {
+                "title": "Uma solução,<br /> diferentes necessidades.",
+                "subtitle": "A Far.me Box está presente em diversas rotinas,<br /> oferecendo benefícios únicos para cada forma de cuidado.",
+                "cards": [
+                    {
+                        "title": "Para quem toma medicamentos<br /> <highlight>todos os dias</highlight>",
+                        "type": "customers",
+                        "text": "Seus medicamentos separados da forma que devem ser tomados e entregues na sua porta a cada 30 dias."
+                    },
+                    {
+                        "title": "Para as <br /><highlight>instituições</highlight>",
+                        "type": "companies",
+                        "text": "Segurança e organização para manter o foco no paciente. Eleve a régua do cuidado sem ocupar a equipe."
+                    },
+                    {
+                        "title": "Para <br />complementar<br />o trabalho <highlight> médico</highlight>",
+                        "type": "doctors",
+                        "text": "Facilidade na adesão ao tratamento no pós-consultório e, com isso, maiores chances de sucesso terapêutico."
+                    }
+                ]
+            },
+            "numbers": {
+                "description": "Números",
+                "title": "Os impactos da Far.me levando o melhor estar para mais pessoas.",
+                "message": "Pode contar com <highlight>a gente!</highlight>",
+                "infos": [
+                    {
+                        "legend": "Colaboradores.",
+                        "value": "+70"
+                    },
+                    {
+                        "legend": "Far.me Boxes produzidas.",
+                        "value": "+7.000"
+                    },
+                    {
+                        "legend": "vidas impactadas.",
+                        "value": "+3.000"
+                    }
+                ]
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra,<br /> nossos Far.membros.",
+                "testimonies": [
+                    {
+                        "name": "Claudia",
+                        "age": 78,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia no cuidado diário com quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Maria",
+                        "age": 78,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia cuidando diariamente o com quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Jessica",
+                        "age": 92,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia sempre cuidando de quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Reinaldo",
+                        "age": 84,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia diariamente cuidando com quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    }
+                ]
+            },
+            "doubts": {
+                "description": "Dúvidas",
+                "title": "Dúvidas frequentes",
+                "doubts": [
+                    {
+                        "title": "Como pedir a Far.me Box? ",
+                        "answer": "É só clicar aqui e fazer o seu orçamento para receber o contato de um de nossos vendedores. "
+                    },
+                    {
+                        "title": "Qual é o preço da Far.me Box? ",
+                        "answer": "Orçamos os seus medicamentos de modo personalizado de acordo com sua preferência por genéricos, similares ou de referência, garantindo que na soma a gente consiga alcançar o melhor preço."
+                    },
+                    {
+                        "title": "Quais são as formas de pagamento? ",
+                        "answer": "Você pode pagar com cartão de crédito, boleto ou PIX."
+                    },
+                    {
+                        "title": "O que fazer se os remédios acabarem? ",
+                        "answer": "Pode se tranquilizar: isso não acontece! Enviamos os medicamentos para durarem 30 dias e entregamos a Far.me Box seguinte antes da anterior acabar."
+                    },
+                    {
+                        "title": "O que fazer quando o médico alterar a receita? ",
+                        "answer": "Temos um time de farmacêuticos disponível para receber qualquer alteração da receita médica. Basta entrar em contato e faremos os ajustes da forma mais adequada."
+                    },
+                    {
+                        "title": "A Far.me Box é segura? Os medicamentos podem vir errados?  ",
+                        "answer": "Temos um processo rigoroso de múltiplos pontos de checagem, o OCTO.CHECK System. Além disso, somos certificados pela ISO 9001: todas as etapas mantêm o padrão de rastreabilidade de excelência."
+                    },
+                    {
+                        "title": "Em caso de dúvidas, com quem devo entrar em contato? ",
+                        "answer": "Para dúvidas sobre medicamentos, os clientes Far.me têm acesso ao nosso canal de atendimento farmacêutico.<br /><br />Para dúvidas sobre faturamento, assinatura e alteração de medicamentos, você sempre pode contar com o time de sucesso."
+                    }
+                ]
             }
         },
-        "farme_box": {
-            "title": "Viva o seu melhor estar, <br /> conte com a Far.me"
-        },
-        "know_me": {
-            "title": "Conheça a Far.me Box.",
-            "subtitle": "Muito mais que uma caixa de remédios separados por dia e hora. Uma inteligência que analisa cada receita pra ter certeza de que os seus medicamentos não terão interação prejudicial no seu corpo.",
-            "carousel": [
-                {
-                    "label": "Personalizada",
-                    "text": "Uma caixa<br /> personalizada para a sua rotina."
-                },
-                {
-                    "label": "Organizada",
-                    "text": "Com separação por dia, horário e dose."
-                },
-                {
-                    "label": "Funcional",
-                    "text": "Com as orientações para uso dos medicamentos."
-                },
-                {
-                    "label": "Segura",
-                    "text": "Com informações de rastreabilidade e validade de cada medicamento."
+        "who_we_are": {
+            "initial": {
+                "who-we-are": {
+                    "title": "<h1>Somos a farmácia que cria <highlight>soluções</highlight> para você viver o seu melhor estar.</h1>"
                 }
-            ]
-        },
-        "targets": {
-            "title": "Uma solução,<br /> diferentes necessidades.",
-            "subtitle": "A Far.me Box está presente em diversas rotinas,<br /> oferecendo benefícios únicos para cada forma de cuidado.",
-            "cards": [
-                {
-                    "title": "Para quem toma medicamentos<br /> <highlight>todos os dias</highlight>",
-                    "type": "customers",
-                    "text": "Seus medicamentos separados da forma que devem ser tomados e entregues na sua porta a cada 30 dias."
+            },
+            "history": {
+                "title": "E a nossa história começou com uma verdade: metade das pessoas não engajam nos seus tratamentos medicamentosos.",
+                "subtitle": "A gente sabe que isso é prejudicial pra todo mundo envolvido.<br /> Por isso, criamos um jeito de contribuir para o tratamento ser seguido, da receita ao dia a dia. Fazemos isso porque aprendemos que não é só sobre os números - tem a ver com a vida das pessoas. "
+            },
+            "declaration": {
+                "title": "Cuidado especializado, descomplicado<br/>e integrado no seu dia a dia.",
+                "declaration": "Nascemos para facilitar o uso de remédios na rotina, melhorar a adesão ao tratamento e reduzir o desperdícios ao longo da cadeia de saúde. <br/></br/>Aliamos eficiência e acompanhamento humanizado para elevar a régua de cuidado no país.<br/><br/>Entendemos o momento de cada um e temos um time à disposição pra tirar suas dúvidas sobre o nosso processo ou sobre o próprio tratamento. <br/><br/>Atuamos em todas as pontas para garantir a melhoria do todo. Da rastreabilidade e checagem da interação dos medicamentos na sua receita até garantir que tudo chegue separadinho na sua casa, nosso trabalho foca em uma coisa: estar do seu lado, todos os dias, pensando sempre no seu melhor estar. "
+            },
+            "arguments": {
+                "card_initial": {
+                    "title": "Cuidado especializado, descomplicado e integrado no seu dia a dia.",
+                    "subtitle": "Nascemos para facilitar o uso de remédios na rotina, melhorar a adesão ao tratamento e reduzir o desperdícios ao longo da cadeia de saúde. "
                 },
-                {
-                    "title": "Para as <br /><highlight>instituições</highlight>",
-                    "type": "companies",
-                    "text": "Segurança e organização para manter o foco no paciente. Eleve a régua do cuidado sem ocupar a equipe."
+                "cards": {
+                    "first": {
+                        "text": "Aliamos eficiência e acompanhamento humanizado para elevar a régua de cuidado no país."
+                    },
+                    "second": {
+                        "text": "Entendemos o momento de cada um e temos um time à disposição pra tirar todas suas dúvidas. "
+                    }
                 },
-                {
-                    "title": "Para <br />complementar<br />o trabalho <highlight> médico</highlight>",
-                    "type": "doctors",
-                    "text": "Facilidade na adesão ao tratamento no pós-consultório e, com isso, maiores chances de sucesso terapêutico."
+                "card_final": {
+                    "title": "Atuamos em todas as pontas para garantir a melhoria do todo",
+                    "subtitle": "Da rastreabilidade e checagem da interação dos medicamentos na sua receita até garantir que tudo chegue separadinho na sua casa, nosso trabalho foca em uma coisa: estar do seu lado, todos os dias, pensando sempre no seu melhor estar. "
                 }
-            ]
-        },
-        "numbers": {
-            "description": "Números",
-            "title": "Os impactos da Far.me levando o melhor estar para mais pessoas.",
-            "message": "Pode contar com <highlight>a gente!</highlight>",
-            "infos": [
-                {
-                    "legend": "Colaboradores.",
-                    "value": "+70"
-                },
-                {
-                    "legend": "Far.me Boxes produzidas.",
-                    "value": "+7.000"
-                },
-                {
-                    "legend": "vidas impactadas.",
-                    "value": "+3.000"
-                }
-            ]
-        },
-        "testimonies": {
-            "description": "depoimentos",
-            "title": "Com a palavra,<br /> nossos Far.membros.",
-            "testimonies": [
-                {
-                    "name": "Claudia",
-                    "age": 78,
-                    "origin": "Cliente Far.me box",
-                    "testimony": "Far.me te apoia no cuidado diário com quem você ama.",
-                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                },
-                {
-                    "name": "Maria",
-                    "age": 78,
-                    "origin": "Cliente Far.me box",
-                    "testimony": "Far.me te apoia cuidando diariamente o com quem você ama.",
-                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                },
-                {
-                    "name": "Jessica",
-                    "age": 92,
-                    "origin": "Cliente Far.me box",
-                    "testimony": "Far.me te apoia sempre cuidando de quem você ama.",
-                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                },
-                {
-                    "name": "Reinaldo",
-                    "age": 84,
-                    "origin": "Cliente Far.me box",
-                    "testimony": "Far.me te apoia diariamente cuidando com quem você ama.",
-                    "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                }
-            ]
-        },
-        "doubts": {
-            "description": "Dúvidas",
-            "title": "Dúvidas frequentes",
-            "doubts": [
-                {
-                    "title": "Como pedir a Far.me Box? ",
-                    "answer": "É só clicar aqui e fazer o seu orçamento para receber o contato de um de nossos vendedores. "
-                },
-                {
-                    "title": "Qual é o preço da Far.me Box? ",
-                    "answer": "Orçamos os seus medicamentos de modo personalizado de acordo com sua preferência por genéricos, similares ou de referência, garantindo que na soma a gente consiga alcançar o melhor preço."
-                },
-                {
-                    "title": "Quais são as formas de pagamento? ",
-                    "answer": "Você pode pagar com cartão de crédito, boleto ou PIX."
-                },
-                {
-                    "title": "O que fazer se os remédios acabarem? ",
-                    "answer": "Pode se tranquilizar: isso não acontece! Enviamos os medicamentos para durarem 30 dias e entregamos a Far.me Box seguinte antes da anterior acabar."
-                },
-                {
-                    "title": "O que fazer quando o médico alterar a receita? ",
-                    "answer": "Temos um time de farmacêuticos disponível para receber qualquer alteração da receita médica. Basta entrar em contato e faremos os ajustes da forma mais adequada."
-                },
-                {
-                    "title": "A Far.me Box é segura? Os medicamentos podem vir errados?  ",
-                    "answer": "Temos um processo rigoroso de múltiplos pontos de checagem, o OCTO.CHECK System. Além disso, somos certificados pela ISO 9001: todas as etapas mantêm o padrão de rastreabilidade de excelência."
-                },
-                {
-                    "title": "Em caso de dúvidas, com quem devo entrar em contato? ",
-                    "answer": "Para dúvidas sobre medicamentos, os clientes Far.me têm acesso ao nosso canal de atendimento farmacêutico.<br /><br />Para dúvidas sobre faturamento, assinatura e alteração de medicamentos, você sempre pode contar com o time de sucesso."
-                }
-            ]
+            },
+            "our_people": {
+                "title": "Nossos<br />especialistas",
+                "subtitle": "Conheça quem faz da Far.me o primeiro serviço de<br /> assinatura de medicamentos e cuidado farmacêutico<br /> do país. ",
+                "people": [
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 2",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 3",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 4",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 5",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 6",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 7",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    },
+                    {
+                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
+                        "name": "Nome do profissional 8",
+                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                    }
+                ]
+            },
+            "banner": {
+                "title": "Far.me é a farmácia <br/>que cuida do seu <br/>melhor estar. ",
+                "subtitle": "Entregamos seus remédios onde e quando precisar <br/>e simplificamos o cuidado com a sua saúde. "
+            }
         }
     },
     "footer": {

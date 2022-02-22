@@ -34,6 +34,7 @@ export const BaseTheme: Base = {
       xs: '16px',
       sm: '20px',
       md: '24px',
+      ml: '28px',
       lg: '32px',
       xl: '40px',
       xxl: '48px',

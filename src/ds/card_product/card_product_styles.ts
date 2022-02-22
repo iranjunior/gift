@@ -9,19 +9,26 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
   border-radius: ${({ theme }) => theme.spacing.nano};
-  background-color: ${({ theme }) => theme.primary.default};
+  background-color: transparent;
+  align-items: center;
 `
 
 export const LeftSide = styled.div`
+  width: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  padding: 0 ${({ theme }) => theme.spacing.xl};
 `
 
 export const RightSide = styled.div`
   width: 100%;
   flex: 1;
+  display: flex
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 `

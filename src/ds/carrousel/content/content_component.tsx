@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components'
 import { Button, ButtonType } from '../../button'
 import { CardProduct } from '../../card_product'
 
-import { Text, ActionWrap, Image } from './content_styles'
+import { Text, ActionWrap, Image, Container } from './content_styles'
 
 export type CarrouselContentProps = {
   title: string
@@ -30,5 +30,9 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
 
   const RightSide = () => <Image src={image} />
 
-  return <CardProduct leftSide={LeftSide} rightSide={RightSide} />
+  return (
+    <Container>
+      <CardProduct leftSide={LeftSide} rightSide={RightSide} />
+    </Container>
+  )
 }

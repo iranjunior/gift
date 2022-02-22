@@ -34,6 +34,7 @@ export interface fontSize {
   xs: string
   sm: string
   md: string
+  ml: string
   lg: string
   xl: string
   xxl: string

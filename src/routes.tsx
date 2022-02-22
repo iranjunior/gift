@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Contact } from './screens/contact'
+import { WhoWeSome } from './screens/who_we_some'
 import { Home } from './screens/home'
 
 const routes = [
@@ -15,6 +16,12 @@ const routes = [
     path: '/contato',
     name: 'contact',
     component: <Contact />,
+    exact: true,
+  },
+  {
+    path: '/quem-somos',
+    name: 'WhoWeSome',
+    component: <WhoWeSome />,
     exact: true,
   },
 ]

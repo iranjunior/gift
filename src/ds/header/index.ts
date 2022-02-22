@@ -1,1 +1,1 @@
-export { Header } from './header_component'
+export { Header, HeaderCentered } from './header_component'
