@@ -1,6 +1,8 @@
 export { Accordion } from './accordion'
 export { Button, ButtonType } from './button'
 export { Card } from './card'
+export { CardImage } from './card_image'
+export { CardProduct } from './card_product'
 export { Header, HeaderCentered } from './header'
 export { Carrousel } from './carrousel'
 export { Banner } from './banner'

@@ -11,7 +11,7 @@
         },
         "farme_box": {
             "label": "Far.me Box",
-            "href": "#farme-box"
+            "href": "/farme-box"
         },
         "clinics": {
             "label": "Clínicas",
@@ -256,6 +256,110 @@
             "banner": {
                 "title": "Far.me é a farmácia <br/>que cuida do seu <br/>melhor estar. ",
                 "subtitle": "Entregamos seus remédios onde e quando precisar <br/>e simplificamos o cuidado com a sua saúde. "
+            }
+        },
+        "farme_box": {
+            "initial": {
+                "title": "<legend>Far.me box</legend><br /><principal>A tranquilidade que você merece pra <br/>se cuidar e organizar a sua rotina. </principal>"
+            },
+            "arguments": {
+                "title": "A solução feita pra você que faz uso de remédios todos os dias.",
+                "cards": {
+                    "first": "E que prefere <highlight>receber</highlight><br />seu tratamento em casa do que ir à farmácia <br />toda hora.",
+                    "second": "Que quer <highlight>evitar</highlight> se confundir com as doses, datas e horários de diferentes remédios. ",
+                    "third": "Que busca <highlight>segurança</highlight> pra seguir o tratamento do melhor jeito."
+                }
+            },
+            "carousel": [
+                {
+                    "label": "Orçamento",
+                    "text": "Você faz o seu<br /> orçamento."
+                },
+                {
+                    "label": "Análise",
+                    "text": "Nós analisamos."
+                },
+                {
+                    "label": "Entrega",
+                    "text": "Você passa <br />a receber a sua box <br />a cada 30 dias, separada por dia, horário e dose. "
+                }
+            ],
+            "reasons": {
+                "title": "Benefícios pra atingir <br />o seu melhor estar.",
+                "reasons": [
+                    {
+                        "id": "cost",
+                        "title": "Melhor <br/>custo benefício",
+                        "text": "Coleta gratuita da prescrição para medicamentos controlados"
+                    },
+                    {
+                        "id": "customization",
+                        "title": "Personalize seu<br /> tratamento",
+                        "text": "Orçamento personalizado - com medicamentos de referência, genéricos ou similares - de acordo com a sua escolha."
+                    },
+                    {
+                        "id": "delivery",
+                        "title": "Frete<br/>grátis",
+                        "text": "Entrega grátis para <br />pedidos a partir de R$ 70."
+                    },
+                    {
+                        "id": "price",
+                        "title": "Preço Fixo",
+                        "text": "Preço fixo, salvo<br />reajuste anual da Anvisa."
+                    },
+                    {
+                        "id": "cancel",
+                        "title": "Cancelamento grátis",
+                        "text": "Sem taxas, fácil <br />e sem burocracia."
+                    }
+                ]
+            },
+            "farme_box": {
+                "title": "Veja mais sobre <br />a Far.me Box."
+            },
+            "pharmaceutical_analysis": {
+                "card": {
+                    "title": "Análise farmacêutica",
+                    "subtitle": "Análise das prescrições de todos os medicamentos em uso para evitar interações e efeitos indesejados.<br />Feita via inteligência artificial em software para máxima precisão."
+                }
+            },
+            "banner": {
+                "title": "E com a <highlight>Clínica Far.me</highlight>, o seu<br /> cuidado com a saúde vai além. ",
+                "subtitle": "Sabia que a forma como você usa um ou mais medicamentos influencia na sua adaptação ao tratamento?"
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra, nossos Far.membros <br />que usam a Far.me Box.",
+                "testimonies": [
+                    {
+                        "name": "Claudia",
+                        "age": 78,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia no cuidado diário com quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Maria",
+                        "age": 78,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia cuidando diariamente o com quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Jessica",
+                        "age": 92,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia sempre cuidando de quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Reinaldo",
+                        "age": 84,
+                        "origin": "Cliente Far.me box",
+                        "testimony": "Far.me te apoia diariamente cuidando com quem você ama.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    }
+                ]
             }
         }
     },

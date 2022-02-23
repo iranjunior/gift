@@ -30,6 +30,7 @@ export interface colors {
 export interface fontSize {
   xxxxs: string
   xxxs: string
+
   xxs: string
   xs: string
   sm: string
@@ -64,6 +65,7 @@ export interface fontFamily {
 export interface Spacing {
   quark: string
   nano: string
+  bit: string
   internal: string
   xxxs: string
   xxs: string

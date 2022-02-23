@@ -23,6 +23,7 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         image={images.ImageBannerOlderWoman}
         title={banner.title}
         subtitle={banner.subtitle}
+        button={{ text: 'Faça um orçamento' }}
       />
     </Container>
   )

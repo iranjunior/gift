@@ -17,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
   background-size: cover;
 `
 export const BlockText = styled.div`
-  width: 30%;
+  width: 535px;
   display: flex;
   flex-direction: column;
   gap: 1rem;

@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 100%;
-  max-height: 560px;
+  height: 560px;
   width: 100%;
   max-width: 1080px;
   display: grid;
@@ -14,7 +13,8 @@ export const Container = styled.div`
 `
 
 export const LeftSide = styled.div`
-  width: 100%;
+  width: 540px;
+  height: 560px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -24,7 +24,8 @@ export const LeftSide = styled.div`
 `
 
 export const RightSide = styled.div`
-  width: 100%;
+  width: 540px;
+  height: 560px;
   flex: 1;
   display: flex
   flex-direction: column;

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Contact } from './screens/contact'
 import { WhoWeSome } from './screens/who_we_some'
 import { Home } from './screens/home'
+import { FarMeBox } from './screens/farme_box'
 
 const routes = [
   {
@@ -22,6 +23,12 @@ const routes = [
     path: '/quem-somos',
     name: 'WhoWeSome',
     component: <WhoWeSome />,
+    exact: true,
+  },
+  {
+    path: '/farme-box',
+    name: 'FarMeBox',
+    component: <FarMeBox />,
     exact: true,
   },
 ]

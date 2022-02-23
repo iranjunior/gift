@@ -4,7 +4,9 @@ import { Container, LeftSide, RightSide } from './card_product_styles'
 
 export type CardProductProps = {
   leftSide: () => JSX.Element
+  customLeftSideStyle?: React.CSSProperties
   rightSide: () => JSX.Element
+  customRightSideStyle?: React.CSSProperties
 }
 
 type RightSideContentProps = {
@@ -25,11 +27,17 @@ export const LeftSideContent: React.FC<LeftSideContentProps> = ({ children }) =>
 export const CardProduct: React.FC<CardProductProps> = ({
   leftSide,
   rightSide,
+  customLeftSideStyle,
+  customRightSideStyle,
 }) => {
   return (
     <Container>
-      <LeftSide>{React.createElement(leftSide)}</LeftSide>
-      <RightSide>{React.createElement(rightSide)}</RightSide>
+      <LeftSide style={customLeftSideStyle}>
+        {React.createElement(leftSide)}
+      </LeftSide>
+      <RightSide style={customRightSideStyle}>
+        {React.createElement(rightSide)}
+      </RightSide>
     </Container>
   )
 }

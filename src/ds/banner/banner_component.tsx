@@ -14,6 +14,9 @@ type BannerProps = {
   id?: string
   title?: string
   subtitle?: string
+  button?: {
+    text: string
+  }
 }
 
 export const Banner: React.FC<BannerProps> = ({
@@ -21,6 +24,7 @@ export const Banner: React.FC<BannerProps> = ({
   title,
   subtitle,
   image,
+  button,
 }) => {
   return (
     <Container id={id} image={image}>
@@ -36,7 +40,7 @@ export const Banner: React.FC<BannerProps> = ({
               }}
             />
           ) : null}
-          <Button label="Faça um orçamento" />
+          {button ? <Button label={button.text} /> : null}
         </BlockText>
       </Content>
     </Container>

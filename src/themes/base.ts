@@ -17,6 +17,7 @@ export const BaseTheme: Base = {
   spacing: {
     quark: '4px',
     nano: '8px',
+    bit: '12px',
     xxxs: '16px',
     xxs: '24px',
     xs: '32px',

@@ -1,9 +1,16 @@
 import React from 'react'
 import { useTheme } from 'styled-components'
 import { Button, ButtonType } from '../../button'
-import { CardProduct } from '../../card_product'
 
-import { Text, ActionWrap, Image, Container } from './content_styles'
+import {
+  Text,
+  ActionWrap,
+  Image,
+  Container,
+  ContainerCard,
+  LeftSide,
+  RightSide,
+} from './content_styles'
 
 export type CarrouselContentProps = {
   title: string
@@ -15,7 +22,7 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
   image,
 }) => {
   const { colors } = useTheme()
-  const LeftSide = () => (
+  const LeftSideContent = () => (
     <>
       <Text dangerouslySetInnerHTML={{ __html: title }} />
       <ActionWrap>
@@ -28,11 +35,18 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
     </>
   )
 
-  const RightSide = () => <Image src={image} />
+  const RightSideContent = () => <Image src={image} />
 
   return (
     <Container>
-      <CardProduct leftSide={LeftSide} rightSide={RightSide} />
+      <ContainerCard>
+        <LeftSide>
+          <LeftSideContent />
+        </LeftSide>
+        <RightSide>
+          <RightSideContent />
+        </RightSide>
+      </ContainerCard>
     </Container>
   )
 }

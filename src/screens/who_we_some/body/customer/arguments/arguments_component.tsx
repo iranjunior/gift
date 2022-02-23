@@ -3,7 +3,7 @@ import images from '../../../../../assets/images'
 import IllustrationPerson from '../../../../../assets/images/illustration_person.svg'
 import IllustrationCare from '../../../../../assets/images/illustration_care.svg'
 import { DataContext } from '../../../../../context/data'
-import { CardProduct } from '../../../../../ds/card_product'
+import { CardImage } from '../../../../../ds/card_image'
 
 import {
   BlockText,
@@ -51,7 +51,7 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
   return (
     <Container id={id}>
       <Content>
-        <CardProduct leftSide={LeftSideInitial} rightSide={RightSideInitial} />
+        <CardImage leftSide={LeftSideInitial} rightSide={RightSideInitial} />
         <ContentContainer>
           <ContentCard>
             <ContentCardIcon src={IllustrationCare} />
@@ -66,7 +66,7 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
             />
           </ContentCard>
         </ContentContainer>
-        <CardProduct leftSide={LeftSideFinal} rightSide={RightSideFinal} />
+        <CardImage leftSide={LeftSideFinal} rightSide={RightSideFinal} />
       </Content>
     </Container>
   )

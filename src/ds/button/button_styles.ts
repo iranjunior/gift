@@ -7,7 +7,7 @@ type ButtonActionType = {
 
 export const ButtonAction = styled.button<ButtonActionType>`
   height: ${({ theme }) => theme.spacing.md};
-  padding: 0 ${({ theme }) => theme.spacing.xxs};
+  padding: 0 ${({ theme }) => theme.spacing.bit};
   width: 100%;
   ${({ variant, customColor }) =>
     variant === 'primary' &&
