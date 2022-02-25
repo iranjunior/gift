@@ -9,6 +9,7 @@ export default {
   ImageBill: require('./images/bill.png'),
   ImagePerson: require('./images/person_2.png'),
   ImagePeopleInStore: require('./images/people-in-store.png'),
+  ImagePeopleInLab: require('./images/person-in-lab.png'),
   ImageBoxReceived: require('./images/box-received.png'),
   ImageOldManPhone: require('./images/old-man-phone.png'),
   ImageOldWomanInComputer: require('./images/old-woman-in-computer.png'),

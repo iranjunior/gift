@@ -5,6 +5,7 @@ import { Contact } from './screens/contact'
 import { WhoWeSome } from './screens/who_we_some'
 import { Home } from './screens/home'
 import { FarMeBox } from './screens/farme_box'
+import { Careers } from './screens/careers'
 
 const routes = [
   {
@@ -29,6 +30,12 @@ const routes = [
     path: '/farme-box',
     name: 'FarMeBox',
     component: <FarMeBox />,
+    exact: true,
+  },
+  {
+    path: '/carreiras',
+    name: 'Careers',
+    component: <Careers />,
     exact: true,
   },
 ]

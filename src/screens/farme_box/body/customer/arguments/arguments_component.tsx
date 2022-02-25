@@ -64,20 +64,6 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
           leftSide={LeftSideThirdCard}
           rightSide={RightSideThirdCard}
         />
-        {/* <ContentContainer>
-          <ContentCard>
-            <ContentCardIcon src={IllustrationCare} />
-            <ContentCardText
-              dangerouslySetInnerHTML={{ __html: cards.first.text }}
-            />
-          </ContentCard>
-          <ContentCard>
-            <ContentCardIcon src={IllustrationPerson} />
-            <ContentCardText
-              dangerouslySetInnerHTML={{ __html: cards.second.text }}
-            />
-          </ContentCard>
-        </ContentContainer> */}
       </Content>
     </Container>
   )

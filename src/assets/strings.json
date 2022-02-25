@@ -19,7 +19,7 @@
         },
         "career": {
             "label": "Carreiras",
-            "href": "#career"
+            "href": "/carreiras"
         },
         "blog": {
             "label": "Blog",
@@ -360,6 +360,115 @@
                         "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
                     }
                 ]
+            }
+        },
+        "careers": {
+            "initial": {
+                "title": "<h1>Já pensou em<br /><highlight>revolucionar</highlight> a saúde?<br />Vem ser um far.mezeir@.</h1>"
+            },
+            "summary": {
+                "title": "Nascemos com um um propósito claro e revolucionário por essência: ressignificar a saúde das pessoas, criando soluções para que elas vivam o seu melhor estar.  ",
+                "highlight": "Valoriza o aprendizado e companheirismo",
+                "text": "Somos o primeiro serviço de assinatura de medicamentos e cuidado farmacêutico do Brasil. Viemos ao mundo para elevar a régua de cuidado no nosso país.<br />Com a missão de promover um mercado de saúde mais humano, acolhedor e justo. E pra chegar lá, percorremos um caminho feito de muita inovação e tecnologia, sempre com nosso jeito:"
+            },
+            "reasons": [
+                {
+                    "id": "DrivenByChallenges",
+                    "title": "Movido por desafios"
+                },
+                {
+                    "id": "DreamBig",
+                    "title": "Que sonha grande"
+                },
+                {
+                    "id": "ValuesLearningAndCompanionship",
+                    "title": "Valoriza o aprendizado e companheirismo"
+                },
+                {
+                    "id": "Courage",
+                    "title": "Tem atitude e coragem <br />pra mudar"
+                }
+            ],
+            "values": {
+                "title": "Valores",
+                "subtitle": "A nossa maneira de pensar, agir e comunicar no dia a dia. Eles guiam nossas ações e decisões; representam o que acreditamos e do que não abrimos mão. Tudo pensado pra construir uma empresa que dê orgulho a todos!",
+                "values": [
+                    {
+                        "id": "01",
+                        "title": "Cuidar <br/>das pessoas.",
+                        "text": "A Far.me é feita por pessoas e para as pessoas: priorizamos relações humanizadas e transparentes. "
+                    },
+                    {
+                        "id": "02",
+                        "title": "Aprender para<br />evoluir.",
+                        "text": "A gente muda sempre! Pra quem vive o dinamismo da Far.me, aprender é uma paixão e premissa para fazer parte."
+                    },
+                    {
+                        "id": "03",
+                        "title": "Simplificar o<br />complexo.",
+                        "text": "Mantemos o foco no essencial e no que vai dar mais resultado no momento. Menos é mais! "
+                    },
+                    {
+                        "id": "04",
+                        "title": "Pensar grande<br />e ir além.",
+                        "text": "Somos obcecados por resultados e por impactar vidas. Agimos como don@s e buscamos alta performance com máxima excelência."
+                    },
+                    {
+                        "id": "05",
+                        "title": "Começar pela<br />solução.",
+                        "text": "Mantemos o foco no essencial e no que vai dar mais resultado no momento. Menos é mais! "
+                    },
+                    {
+                        "id": "06",
+                        "title": "Ouvir para<br />colaborar.",
+                        "text": "Ouvimos as pessoas para agir na transformação e juntar forças. A Far.me nasceu da escuta e isso está na nossa essência."
+                    }
+                ]
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra,<br />noss@s far.mezeir@s.",
+                "testimonies": [
+                    {
+                        "name": "Claudia",
+                        "age": 78,
+                        "origin": "Cliente - Far.me box",
+                        "testimony": "Voluptate mollit ad est qui officia reprehenderit anim adipisicing cupidatat cillum ea.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Maria",
+                        "age": 78,
+                        "origin": "Clinica Esperança",
+                        "testimony": "Minim aute laboris commodo est in quis ut nulla pariatur.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Pedro",
+                        "age": 71,
+                        "origin": "Clinica Abraço",
+                        "testimony": "Lorem et est velit dolor.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Ricardo",
+                        "age": 32,
+                        "origin": "Colaborador Far.me",
+                        "testimony": "Velit nostrud aute cillum tempor irure commodo.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    },
+                    {
+                        "name": "Josafa",
+                        "age": 27,
+                        "origin": "Cliente -  Far.me box",
+                        "testimony": "Consequat ullamco in consectetur irure dolore anim veniam sunt ut.",
+                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                    }
+                ]
+            },
+            "banner": {
+                "title": "Quer <highlight>revolucionar</highlight/><br />a saúde?",
+                "subtitle": "Conheça nossas vagas abertas. <br />Hoje, atuamos em BH e em SP e somos 100% remotos."
             }
         }
     },

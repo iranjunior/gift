@@ -18,29 +18,17 @@ export interface Types {
 export interface Body {
     home:       Home;
     who_we_are: WhoWeAre;
-    farme_box:  BodyFarmeBox;
+    farme_box:  FarmeBox;
+    careers:    Careers;
 }
 
-export interface BodyFarmeBox {
-    initial:                 InitialClass;
-    arguments:               FarmeBoxArguments;
-    carousel:                Carousel[];
-    reasons:                 Reasons;
-    farme_box:               InitialClass;
-    pharmaceutical_analysis: PharmaceuticalAnalysis;
-    banner:                  Banner;
-    testimonies:             Testimonies;
-}
-
-export interface FarmeBoxArguments {
-    title: string;
-    cards: PurpleCards;
-}
-
-export interface PurpleCards {
-    first:  string;
-    second: string;
-    third:  string;
+export interface Careers {
+    initial:     FarmeBoxClass;
+    summary:     Summary;
+    reasons:     Reason[];
+    values:      Values;
+    testimonies: Testimonies;
+    banner:      Banner;
 }
 
 export interface Banner {
@@ -48,28 +36,19 @@ export interface Banner {
     subtitle: string;
 }
 
-export interface Carousel {
-    label: string;
-    text:  string;
-}
-
-export interface InitialClass {
+export interface FarmeBoxClass {
     title: string;
-}
-
-export interface PharmaceuticalAnalysis {
-    card: Banner;
-}
-
-export interface Reasons {
-    title:   string;
-    reasons: Reason[];
 }
 
 export interface Reason {
     id:    string;
     title: string;
-    text:  string;
+}
+
+export interface Summary {
+    title:     string;
+    highlight: string;
+    text:      string;
 }
 
 export interface Testimonies {
@@ -86,9 +65,57 @@ export interface Testimony {
     image:     string;
 }
 
+export interface Values {
+    title:    string;
+    subtitle: string;
+    values:   Value[];
+}
+
+export interface Value {
+    id:    string;
+    title: string;
+    text:  string;
+}
+
+export interface FarmeBox {
+    initial:                 FarmeBoxClass;
+    arguments:               FarmeBoxArguments;
+    carousel:                Carousel[];
+    reasons:                 Reasons;
+    farme_box:               FarmeBoxClass;
+    pharmaceutical_analysis: PharmaceuticalAnalysis;
+    banner:                  Banner;
+    testimonies:             Testimonies;
+}
+
+export interface FarmeBoxArguments {
+    title: string;
+    cards: PurpleCards;
+}
+
+export interface PurpleCards {
+    first:  string;
+    second: string;
+    third:  string;
+}
+
+export interface Carousel {
+    label: string;
+    text:  string;
+}
+
+export interface PharmaceuticalAnalysis {
+    card: Banner;
+}
+
+export interface Reasons {
+    title:   string;
+    reasons: Value[];
+}
+
 export interface Home {
-    initial:     HomeInitial;
-    farme_box:   InitialClass;
+    initial:     PurpleInitial;
+    farme_box:   FarmeBoxClass;
     know_me:     KnowMe;
     targets:     Targets;
     numbers:     Numbers;
@@ -107,7 +134,7 @@ export interface Doubt {
     answer: string;
 }
 
-export interface HomeInitial {
+export interface PurpleInitial {
     "who-we-are": Banner;
 }
 
@@ -171,7 +198,7 @@ export interface Declaration {
 }
 
 export interface WhoWeAreInitial {
-    "who-we-are": InitialClass;
+    "who-we-are": FarmeBoxClass;
 }
 
 export interface OurPeople {
@@ -403,48 +430,31 @@ const typeMap: any = {
     "Body": o([
         { json: "home", js: "home", typ: r("Home") },
         { json: "who_we_are", js: "who_we_are", typ: r("WhoWeAre") },
-        { json: "farme_box", js: "farme_box", typ: r("BodyFarmeBox") },
+        { json: "farme_box", js: "farme_box", typ: r("FarmeBox") },
+        { json: "careers", js: "careers", typ: r("Careers") },
     ], false),
-    "BodyFarmeBox": o([
-        { json: "initial", js: "initial", typ: r("InitialClass") },
-        { json: "arguments", js: "arguments", typ: r("FarmeBoxArguments") },
-        { json: "carousel", js: "carousel", typ: a(r("Carousel")) },
-        { json: "reasons", js: "reasons", typ: r("Reasons") },
-        { json: "farme_box", js: "farme_box", typ: r("InitialClass") },
-        { json: "pharmaceutical_analysis", js: "pharmaceutical_analysis", typ: r("PharmaceuticalAnalysis") },
-        { json: "banner", js: "banner", typ: r("Banner") },
+    "Careers": o([
+        { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
+        { json: "summary", js: "summary", typ: r("Summary") },
+        { json: "reasons", js: "reasons", typ: a(r("Reason")) },
+        { json: "values", js: "values", typ: r("Values") },
         { json: "testimonies", js: "testimonies", typ: r("Testimonies") },
-    ], false),
-    "FarmeBoxArguments": o([
-        { json: "title", js: "title", typ: "" },
-        { json: "cards", js: "cards", typ: r("PurpleCards") },
-    ], false),
-    "PurpleCards": o([
-        { json: "first", js: "first", typ: "" },
-        { json: "second", js: "second", typ: "" },
-        { json: "third", js: "third", typ: "" },
+        { json: "banner", js: "banner", typ: r("Banner") },
     ], false),
     "Banner": o([
         { json: "title", js: "title", typ: "" },
         { json: "subtitle", js: "subtitle", typ: "" },
     ], false),
-    "Carousel": o([
-        { json: "label", js: "label", typ: "" },
-        { json: "text", js: "text", typ: "" },
-    ], false),
-    "InitialClass": o([
+    "FarmeBoxClass": o([
         { json: "title", js: "title", typ: "" },
-    ], false),
-    "PharmaceuticalAnalysis": o([
-        { json: "card", js: "card", typ: r("Banner") },
-    ], false),
-    "Reasons": o([
-        { json: "title", js: "title", typ: "" },
-        { json: "reasons", js: "reasons", typ: a(r("Reason")) },
     ], false),
     "Reason": o([
         { json: "id", js: "id", typ: "" },
         { json: "title", js: "title", typ: "" },
+    ], false),
+    "Summary": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "highlight", js: "highlight", typ: "" },
         { json: "text", js: "text", typ: "" },
     ], false),
     "Testimonies": o([
@@ -459,9 +469,49 @@ const typeMap: any = {
         { json: "testimony", js: "testimony", typ: "" },
         { json: "image", js: "image", typ: "" },
     ], false),
+    "Values": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "subtitle", js: "subtitle", typ: "" },
+        { json: "values", js: "values", typ: a(r("Value")) },
+    ], false),
+    "Value": o([
+        { json: "id", js: "id", typ: "" },
+        { json: "title", js: "title", typ: "" },
+        { json: "text", js: "text", typ: "" },
+    ], false),
+    "FarmeBox": o([
+        { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
+        { json: "arguments", js: "arguments", typ: r("FarmeBoxArguments") },
+        { json: "carousel", js: "carousel", typ: a(r("Carousel")) },
+        { json: "reasons", js: "reasons", typ: r("Reasons") },
+        { json: "farme_box", js: "farme_box", typ: r("FarmeBoxClass") },
+        { json: "pharmaceutical_analysis", js: "pharmaceutical_analysis", typ: r("PharmaceuticalAnalysis") },
+        { json: "banner", js: "banner", typ: r("Banner") },
+        { json: "testimonies", js: "testimonies", typ: r("Testimonies") },
+    ], false),
+    "FarmeBoxArguments": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "cards", js: "cards", typ: r("PurpleCards") },
+    ], false),
+    "PurpleCards": o([
+        { json: "first", js: "first", typ: "" },
+        { json: "second", js: "second", typ: "" },
+        { json: "third", js: "third", typ: "" },
+    ], false),
+    "Carousel": o([
+        { json: "label", js: "label", typ: "" },
+        { json: "text", js: "text", typ: "" },
+    ], false),
+    "PharmaceuticalAnalysis": o([
+        { json: "card", js: "card", typ: r("Banner") },
+    ], false),
+    "Reasons": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "reasons", js: "reasons", typ: a(r("Value")) },
+    ], false),
     "Home": o([
-        { json: "initial", js: "initial", typ: r("HomeInitial") },
-        { json: "farme_box", js: "farme_box", typ: r("InitialClass") },
+        { json: "initial", js: "initial", typ: r("PurpleInitial") },
+        { json: "farme_box", js: "farme_box", typ: r("FarmeBoxClass") },
         { json: "know_me", js: "know_me", typ: r("KnowMe") },
         { json: "targets", js: "targets", typ: r("Targets") },
         { json: "numbers", js: "numbers", typ: r("Numbers") },
@@ -477,7 +527,7 @@ const typeMap: any = {
         { json: "title", js: "title", typ: "" },
         { json: "answer", js: "answer", typ: "" },
     ], false),
-    "HomeInitial": o([
+    "PurpleInitial": o([
         { json: "who-we-are", js: "who-we-are", typ: r("Banner") },
     ], false),
     "KnowMe": o([
@@ -530,7 +580,7 @@ const typeMap: any = {
         { json: "declaration", js: "declaration", typ: "" },
     ], false),
     "WhoWeAreInitial": o([
-        { json: "who-we-are", js: "who-we-are", typ: r("InitialClass") },
+        { json: "who-we-are", js: "who-we-are", typ: r("FarmeBoxClass") },
     ], false),
     "OurPeople": o([
         { json: "title", js: "title", typ: "" },
