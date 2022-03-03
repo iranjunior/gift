@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import { Contact } from './screens/contact'
 import { WhoWeSome } from './screens/who_we_some'
 import { Home } from './screens/home'
@@ -12,40 +11,64 @@ const routes = [
     path: '/',
     name: 'home',
     component: <Home />,
-    exact: true,
+    routes: [
+      {
+        path: 'contato',
+        name: 'contact',
+        component: <Contact />,
+        exact: true,
+      },
+      {
+        path: 'quem-somos',
+        name: 'WhoWeSome',
+        component: <WhoWeSome />,
+        exact: true,
+      },
+      {
+        path: 'farme-box',
+        name: 'FarMeBox',
+        component: <FarMeBox />,
+        exact: true,
+      },
+      {
+        path: 'carreiras',
+        name: 'Careers',
+        component: <Careers />,
+        exact: true,
+      },
+    ],
   },
   {
-    path: '/contato',
-    name: 'contact',
-    component: <Contact />,
-    exact: true,
+    path: 'para-instituicoes',
+    name: 'companies',
+    component: <Home />,
+    routes: [],
   },
   {
-    path: '/quem-somos',
-    name: 'WhoWeSome',
-    component: <WhoWeSome />,
-    exact: true,
-  },
-  {
-    path: '/farme-box',
-    name: 'FarMeBox',
-    component: <FarMeBox />,
-    exact: true,
-  },
-  {
-    path: '/carreiras',
-    name: 'Careers',
-    component: <Careers />,
-    exact: true,
+    path: 'para-medicos',
+    name: 'doctors',
+    component: <Home />,
+    routes: [],
   },
 ]
 
-export const Router: React.FC = () => (
-  <BrowserRouter>
-    <Routes>
-      {routes.map((route) => (
-        <Route key={route.name} path={route.path} element={route.component} />
-      ))}
-    </Routes>
-  </BrowserRouter>
-)
+export const Router: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {routes.map((route) => (
+          <Route key={route.name} path={route.path} element={route.component}>
+            {route.routes.map((subroute) => (
+              <Route
+                key={subroute.name}
+                path={subroute.path}
+                element={subroute.component}
+              />
+            ))}
+          </Route>
+        ))}
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}

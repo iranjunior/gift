@@ -18,6 +18,10 @@ export const Cell = styled.div<CellProps>`
   width: 100%;
   display: flex;
   justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 type LinkProps = {
   active?: boolean

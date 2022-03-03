@@ -15,10 +15,10 @@ export const BlockImage = styled.div``
 export const Content = styled.div`
   margin: 5%;
   display: flex;
-  height: 420px;
   justify-content: space-between;
   align-items: center;
-  gap: 24rem;
+  column-gap: 24rem;
+  flex-wrap: wrap;
 `
 export const TextPrincipal = styled.div`
   *:not(highlight) {
@@ -33,5 +33,5 @@ export const TextPrincipal = styled.div`
 `
 
 export const Image = styled.img`
-  height: 100%;
+  height: 420px;
 `

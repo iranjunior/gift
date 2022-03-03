@@ -33,7 +33,6 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   const [testimonyActive, setTestimony] = useState(
     pageTestimonies.testimonies[0]
   )
-  console.log(testimonyActive)
   return (
     <Container id={id}>
       <Content>
