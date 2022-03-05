@@ -29,7 +29,9 @@ type KnowMeProps = {
 export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
   const {
     body: {
-      home: { know_me },
+      home: {
+        customers: { know_me },
+      },
     },
   } = useContext(DataContext)
 

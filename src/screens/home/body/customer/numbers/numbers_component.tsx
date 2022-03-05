@@ -19,7 +19,9 @@ type NumbersProps = {
 export const Numbers: React.FC<NumbersProps> = ({ id }) => {
   const {
     body: {
-      home: { numbers },
+      home: {
+        customers: { numbers },
+      },
     },
   } = useContext(DataContext)
   return (

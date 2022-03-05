@@ -13,7 +13,9 @@ type FarMeBoxProps = {
 export const FarMeBox: React.FC<FarMeBoxProps> = ({ id }) => {
   const {
     body: {
-      home: { farme_box: pageFarmeBox },
+      home: {
+        customers: { farme_box: pageFarmeBox },
+      },
     },
   } = useContext(DataContext)
   return (

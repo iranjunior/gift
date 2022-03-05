@@ -14,10 +14,15 @@ export const Subtitle = styled.span`
   font-family: ${({ theme }) => theme.font.family.sliver};
   text-transform: uppercase;
 `
-export const Title = styled.span`
+
+type TitleProps = {
+  full?: boolean
+}
+
+export const Title = styled.span<TitleProps>`
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  width: 60%;
+  width: ${({ full }) => (full ? '100%' : '60%')};
   text-align: center;
 `
 

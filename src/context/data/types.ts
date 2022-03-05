@@ -114,7 +114,48 @@ export interface Reasons {
 }
 
 export interface Home {
-    initial:     PurpleInitial;
+    customers: Customers;
+    companies: Companies;
+}
+
+export interface Companies {
+    initial:      CompaniesInitial;
+    advantage:    Advantage;
+    how_working:  HowWorking;
+    banner:       Banner;
+    card_product: CardProduct;
+    our_posts:    OurPosts;
+}
+
+export interface Advantage {
+    title:      string;
+    subtitle:   string;
+    advantages: Value[];
+}
+
+export interface CardProduct {
+    legend:   string;
+    title:    string;
+    subtitle: string;
+}
+
+export interface HowWorking {
+    title:     string;
+    subtitle:  string;
+    arguments: Value[];
+}
+
+export interface CompaniesInitial {
+    "who-we-are": Banner;
+}
+
+export interface OurPosts {
+    description: string;
+    title:       string;
+}
+
+export interface Customers {
+    initial:     CompaniesInitial;
     farme_box:   FarmeBoxClass;
     know_me:     KnowMe;
     targets:     Targets;
@@ -132,10 +173,6 @@ export interface Doubts {
 export interface Doubt {
     title:  string;
     answer: string;
-}
-
-export interface PurpleInitial {
-    "who-we-are": Banner;
 }
 
 export interface KnowMe {
@@ -510,7 +547,41 @@ const typeMap: any = {
         { json: "reasons", js: "reasons", typ: a(r("Value")) },
     ], false),
     "Home": o([
-        { json: "initial", js: "initial", typ: r("PurpleInitial") },
+        { json: "customers", js: "customers", typ: r("Customers") },
+        { json: "companies", js: "companies", typ: r("Companies") },
+    ], false),
+    "Companies": o([
+        { json: "initial", js: "initial", typ: r("CompaniesInitial") },
+        { json: "advantage", js: "advantage", typ: r("Advantage") },
+        { json: "how_working", js: "how_working", typ: r("HowWorking") },
+        { json: "banner", js: "banner", typ: r("Banner") },
+        { json: "card_product", js: "card_product", typ: r("CardProduct") },
+        { json: "our_posts", js: "our_posts", typ: r("OurPosts") },
+    ], false),
+    "Advantage": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "subtitle", js: "subtitle", typ: "" },
+        { json: "advantages", js: "advantages", typ: a(r("Value")) },
+    ], false),
+    "CardProduct": o([
+        { json: "legend", js: "legend", typ: "" },
+        { json: "title", js: "title", typ: "" },
+        { json: "subtitle", js: "subtitle", typ: "" },
+    ], false),
+    "HowWorking": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "subtitle", js: "subtitle", typ: "" },
+        { json: "arguments", js: "arguments", typ: a(r("Value")) },
+    ], false),
+    "CompaniesInitial": o([
+        { json: "who-we-are", js: "who-we-are", typ: r("Banner") },
+    ], false),
+    "OurPosts": o([
+        { json: "description", js: "description", typ: "" },
+        { json: "title", js: "title", typ: "" },
+    ], false),
+    "Customers": o([
+        { json: "initial", js: "initial", typ: r("CompaniesInitial") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBoxClass") },
         { json: "know_me", js: "know_me", typ: r("KnowMe") },
         { json: "targets", js: "targets", typ: r("Targets") },
@@ -526,9 +597,6 @@ const typeMap: any = {
     "Doubt": o([
         { json: "title", js: "title", typ: "" },
         { json: "answer", js: "answer", typ: "" },
-    ], false),
-    "PurpleInitial": o([
-        { json: "who-we-are", js: "who-we-are", typ: r("Banner") },
     ], false),
     "KnowMe": o([
         { json: "title", js: "title", typ: "" },

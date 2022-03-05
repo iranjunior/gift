@@ -10,7 +10,7 @@ import {
   Image,
   TextPrincipal,
   BlockText,
-} from './who_we_some_styles'
+} from './initial_styles'
 
 type MainProps = {
   id?: string
@@ -19,7 +19,9 @@ type MainProps = {
 export const Main: React.FC<MainProps> = ({ id }) => {
   const {
     body: {
-      home: { initial },
+      home: {
+        companies: { initial },
+      },
     },
   } = useContext(DataContext)
 
@@ -34,7 +36,7 @@ export const Main: React.FC<MainProps> = ({ id }) => {
             dangerouslySetInnerHTML={{ __html: initial['who-we-are'].subtitle }}
           ></Text>
         </BlockText>
-        <Image src={images.ImageBoxWhoWeAre} />
+        <Image src={images.ImageMedicalCare} />
       </Content>
     </Container>
   )

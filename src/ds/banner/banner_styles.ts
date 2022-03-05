@@ -15,6 +15,7 @@ export const Container = styled.div<ContainerProps>`
     ),
     url(${(props) => props.image});
   background-size: cover;
+  height: 640px;
 `
 export const BlockText = styled.div`
   width: 535px;

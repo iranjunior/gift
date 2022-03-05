@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import IllustrationNotes from '../../../../../assets/images/illustrations_notes.svg'
+import IllustrationNotes from '../../../../../assets/images/illustration_notes.svg'
 import { DataContext } from '../../../../../context/data'
 
 import {

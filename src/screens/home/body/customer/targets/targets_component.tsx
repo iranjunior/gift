@@ -11,7 +11,9 @@ type TargetsProps = {
 export const Targets: React.FC<TargetsProps> = ({ id }) => {
   const {
     body: {
-      home: { targets },
+      home: {
+        customers: { targets },
+      },
     },
   } = useContext(DataContext)
 

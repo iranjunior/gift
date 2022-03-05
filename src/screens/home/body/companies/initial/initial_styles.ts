@@ -24,7 +24,7 @@ export const Content = styled.div`
 
 export const Text = styled.div`
   p {
-    font-size: ${({ theme }) => theme.font.sizes.xxs};
+    font-size: ${({ theme }) => theme.font.sizes.xs};
     line-height: ${({ theme }) => theme.font.lineHeight.distant};
     letter-spacing: 2%;
     width: 100%;
@@ -41,6 +41,7 @@ export const TextPrincipal = styled.div`
     font-family: ${({ theme }) => theme.font.family.sliver};
     font-weight: normal;
     margin: 0;
+    line-height: ${({ theme }) => theme.font.lineHeight.medium};
   }
 `
 

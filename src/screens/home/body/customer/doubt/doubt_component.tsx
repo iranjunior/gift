@@ -12,7 +12,9 @@ type DoubtProps = {
 export const Doubt: React.FC<DoubtProps> = ({ id }) => {
   const {
     body: {
-      home: { doubts: pageDoubts },
+      home: {
+        customers: { doubts: pageDoubts },
+      },
     },
   } = useContext(DataContext)
 

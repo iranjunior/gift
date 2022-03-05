@@ -8,7 +8,10 @@ type ButtonActionType = {
 export const ButtonAction = styled.button<ButtonActionType>`
   height: ${({ theme }) => theme.spacing.md};
   padding: 0 ${({ theme }) => theme.spacing.bit};
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   ${({ variant, customColor }) =>
     variant === 'primary' &&
     css`
@@ -63,3 +66,5 @@ export const ButtonAction = styled.button<ButtonActionType>`
       }
     `}
 `
+
+export const Image = styled.img``

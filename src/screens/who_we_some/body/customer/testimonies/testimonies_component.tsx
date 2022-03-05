@@ -26,7 +26,9 @@ type TestimoniesProps = {
 export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   const {
     body: {
-      home: { testimonies: pageTestimonies },
+      home: {
+        customers: { testimonies: pageTestimonies },
+      },
     },
   } = useContext(DataContext)
 

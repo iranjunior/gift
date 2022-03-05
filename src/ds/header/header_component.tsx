@@ -12,16 +12,17 @@ import {
 type HeaderProps = {
   description: string
   title: string
+  full?: boolean
 }
 type HeaderCenteredProps = {
   subtitle?: string
   title: string
 }
 
-export const Header: React.FC<HeaderProps> = ({ description, title }) => (
+export const Header: React.FC<HeaderProps> = ({ description, title, full }) => (
   <Container>
     <Subtitle>{description}</Subtitle>
-    <Title dangerouslySetInnerHTML={{ __html: title }} />
+    <Title full={full} dangerouslySetInnerHTML={{ __html: title }} />
   </Container>
 )
 
