@@ -12,10 +12,6 @@ export const Container = styled.div`
 `
 export const Content = ContentDiv
 
-export const Video = styled.video`
-  width: 1080px;
-`
-
 export const ContainerCards = styled.div`
   margin: 0 auto;
   display: flex;

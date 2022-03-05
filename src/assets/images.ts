@@ -19,4 +19,6 @@ export default {
   ImageBannerOlderWoman: require('./images/banner2.png'),
   ImageMedicalCare: require('./images/medical-care.png'),
   ImageOldWomanSited: require('./images/old-woman-sited.png'),
+  ImageWomanWithTablet: require('./images/woman-with-tablet.png'),
+  ImageAsianOldWoman: require('./images/asian-old-woman.png'),
 }

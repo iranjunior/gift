@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { Footer, Menu, Nav } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { CustomerBody, CompaniesBody } from './body'
+import { CustomerBody, CompaniesBody, DoctorsBody } from './body'
 
 import { Body, Container } from './home_styles'
 
@@ -28,6 +28,7 @@ export const Home = () => {
         <Menu />
         {subject === Subject.customer && <Customer />}
         {subject === Subject.companies && <Companies />}
+        {subject === Subject.doctors && <Doctors />}
         <Footer id="sobre" />
       </Body>
     </Container>
@@ -57,5 +58,17 @@ const Companies = () => (
     <CompaniesBody.Numbers id="numeros" />
     <CompaniesBody.Testimonies id="testimonies" />
     <CompaniesBody.Doubt id="duvidas" />
+  </>
+)
+const Doctors = () => (
+  <>
+    <DoctorsBody.Main id="quem-somos" />
+    <DoctorsBody.HowWorking id="como-funciona" />
+    <DoctorsBody.Banner id="banner" />
+    <DoctorsBody.CardProduct id="farme-box" />
+    <DoctorsBody.OurPosts id="nossos-posts" />
+    <DoctorsBody.Numbers id="numeros" />
+    <DoctorsBody.Testimonies id="testimonies" />
+    <DoctorsBody.Doubt id="duvidas" />
   </>
 )

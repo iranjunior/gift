@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { columnItensWithGap } from '../styles/common_styles'
 
 type ContainerProps = {
   image: string
@@ -23,7 +24,7 @@ export const BlockText = styled.div`
   flex-direction: column;
   gap: 1rem;
   button {
-    width: 50%;
+    width: 200px;
   }
 `
 export const BlockImage = styled.div``
@@ -51,8 +52,13 @@ export const Text = styled.span`
   text-align: start;
   color: ${({ theme }) => theme.colors.neutral.lightness};
 `
-export const TextPrincipal = styled.span`
-  font-size: ${({ theme }) => theme.font.sizes.xl};
+type TextPrincipalProps = {
+  compact?: boolean
+}
+
+export const TextPrincipal = styled.span<TextPrincipalProps>`
+  font-size: ${({ theme, compact }) =>
+    compact ? theme.font.sizes.lg : theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: start;
@@ -68,4 +74,19 @@ export const TextPrincipal = styled.span`
 
 export const Image = styled.img`
   height: 100%;
+`
+
+export const HighlightsContainer = styled.div`
+  ${columnItensWithGap({ gap: '1rem' })}
+`
+export const Highlight = styled.div`
+  display: flex;
+  gap: 1rem;
+  span {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+  }
+`
+export const CheckIcon = styled.img`
+  height: ${({ theme }) => theme.spacing.xxs};
+  width: ${({ theme }) => theme.spacing.xxs};
 `

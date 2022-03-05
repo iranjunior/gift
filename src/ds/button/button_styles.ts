@@ -3,14 +3,19 @@ import styled, { css } from 'styled-components'
 type ButtonActionType = {
   variant?: 'primary' | 'secondary' | 'ghost'
   customColor?: string
+  hasArrow?: boolean
 }
 
 export const ButtonAction = styled.button<ButtonActionType>`
   height: ${({ theme }) => theme.spacing.md};
   padding: 0 ${({ theme }) => theme.spacing.bit};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${({ hasArrow }) =>
+    hasArrow &&
+    css`
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    `}
 
   ${({ variant, customColor }) =>
     variant === 'primary' &&

@@ -1,12 +1,17 @@
 import React from 'react'
 import { Button } from '..'
 
+import Icon from '../../assets/images/check.svg'
+
 import {
   Container,
   Content,
   Text,
   TextPrincipal,
   BlockText,
+  HighlightsContainer,
+  Highlight,
+  CheckIcon,
 } from './banner_styles'
 
 type BannerProps = {
@@ -14,6 +19,7 @@ type BannerProps = {
   id?: string
   title?: string
   subtitle?: string
+  highlights?: string[]
   button?: {
     text: string
   }
@@ -23,6 +29,7 @@ export const Banner: React.FC<BannerProps> = ({
   id,
   title,
   subtitle,
+  highlights,
   image,
   button,
 }) => {
@@ -31,7 +38,10 @@ export const Banner: React.FC<BannerProps> = ({
       <Content>
         <BlockText>
           {title ? (
-            <TextPrincipal dangerouslySetInnerHTML={{ __html: title }} />
+            <TextPrincipal
+              compact={!!highlights}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
           ) : null}
           {subtitle ? (
             <Text
@@ -39,6 +49,20 @@ export const Banner: React.FC<BannerProps> = ({
                 __html: subtitle,
               }}
             />
+          ) : null}
+          {highlights ? (
+            <HighlightsContainer>
+              {highlights.map((highlight, index) => (
+                <Highlight key={highlight.split(' ')[0].concat(`-${index}`)}>
+                  <CheckIcon src={Icon} />
+                  <Text
+                    dangerouslySetInnerHTML={{
+                      __html: highlight,
+                    }}
+                  />
+                </Highlight>
+              ))}
+            </HighlightsContainer>
           ) : null}
           {button ? <Button label={button.text} /> : null}
         </BlockText>

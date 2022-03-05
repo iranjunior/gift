@@ -253,6 +253,87 @@
                     "description": "Nosso blog",
                     "title": "Confira os nossos posts."
                 }
+            },
+            "doctors": {
+                "initial": {
+                    "who-we-are": {
+                        "title": "<h1>O complemento <highlight>seguro</highlight> para o tratamento dos seus pacientes.</h1>",
+                        "subtitle": "<p>Você prescreve o tratamento e nós auxiliamos para fazer acontecer na casa do paciente.<br />Com soluções inovadoras, facilitamos a rotina de quem faz uso contínuo de medicamentos - tudo pensando no melhor estar de cada um.</p>"
+                    }
+                },
+                "how_working": {
+                    "title": "Como funciona?",
+                    "subtitle": "Com a Far.me Box, entregamos os medicamentos do paciente já organizados por dose, dia e horário. É assim que facilitamos a adesão ao tratamento – tudo com uma experiência única de acompanhamento farmacêutico.",
+                    "arguments": [
+                        {
+                            "id": "prescription",
+                            "title": "A prescrição<br />é recebida.",
+                            "text": "O paciente compartilha sua prescrição, física ou online, com a gente. No caso de medicamentos controlados, coletamos a receita gratuitamente."
+                        },
+                        {
+                            "id": "delivery",
+                            "title": "Nós<br />facilitamos.",
+                            "text": "A partir da sua prescrição, entregamos os medicamentos ao seu paciente, auxiliando na continuidade do tratamento no pós-consultório. E você  tem acesso a dados clínicos farmacoterapêuticos."
+                        },
+                        {
+                            "id": "farmebox",
+                            "title": "Continuidade<br />no tratamento",
+                            "text": "Após o envio das prescrições e assinatura de termo de fornecimento de medicamentos, a instituição passa a receber a box a cada 30 dias."
+                        }
+                    ]
+                },
+                "banner": {
+                    "title": "Apoio farmacêutico exclusivo para todos os clientes Far.me e um suporte para a sua atuação médica.",
+                    "subtitle": "Sabia que a forma como você usa um ou mais medicamentos influencia na sua adaptação ao tratamento?",
+                    "highlight": [
+                        "Oferecemos um sistema adicional que sinaliza possíveis riscos de interação medicamentosa e superdosagens.",
+                        "Atuamos de forma complementar às orientações realizadas no consultório, aumentando a efetividade do tratamento prescrito<br/>na outra ponta: a casa do seu paciente.",
+                        "Realizamos a conciliação de todas as prescrições do paciente, <br />obtendo uma análise global do tratamento medicamentoso."
+                    ]
+                },
+                "card_product": {
+                    "legend": "Far.me Box",
+                    "title": "Complemento seguro para o <highlight>tratamento contínuo</highlight> do paciente.",
+                    "subtitle": "Entrega programada dos medicamentos a cada 30 dias em box personalizada, já separados por dose, dia e horário."
+                },
+                "our_posts": {
+                    "description": "Nosso blog",
+                    "title": "Confira os nossos posts."
+                },
+                "doubts": {
+                    "description": "Dúvidas",
+                    "title": "Dúvidas frequentes",
+                    "doubts": [
+                        {
+                            "title": "Como o paciente pede a Far.me Box? ",
+                            "answer": "É só clicar aqui e fazer o orçamento para receber o contato de um de nossos vendedores. "
+                        },
+                        {
+                            "title": "Qual é o preço da Far.me Box? ",
+                            "answer": "Orçamos os seus medicamentos de modo personalizado de acordo com sua preferência por genéricos, similares ou de referência, garantindo que na soma a gente consiga alcançar o melhor preço."
+                        },
+                        {
+                            "title": "Quais são as formas de pagamento? ",
+                            "answer": "Você pode pagar com cartão de crédito, boleto ou PIX."
+                        },
+                        {
+                            "title": "O que fazer se os remédios acabarem? ",
+                            "answer": "Pode se tranquilizar: isso não acontece! Enviamos os medicamentos para durarem 30 dias e entregamos a Far.me Box seguinte antes da anterior acabar."
+                        },
+                        {
+                            "title": "O que fazer quando o médico alterar a receita? ",
+                            "answer": "Temos um time de farmacêuticos disponível para receber qualquer alteração da receita médica. Basta entrar em contato e faremos os ajustes da forma mais adequada."
+                        },
+                        {
+                            "title": "A Far.me Box é segura? Os medicamentos podem vir errados?  ",
+                            "answer": "Temos um processo rigoroso de múltiplos pontos de checagem, o OCTO.CHECK System. Além disso, somos certificados pela ISO 9001: todas as etapas mantêm o padrão de rastreabilidade de excelência."
+                        },
+                        {
+                            "title": "Em caso de dúvidas, com quem devo entrar em contato? ",
+                            "answer": "Para dúvidas sobre medicamentos, os clientes Far.me têm acesso ao nosso canal de atendimento farmacêutico.<br /><br />Para dúvidas sobre faturamento, assinatura e alteração de medicamentos, você sempre pode contar com o time de sucesso."
+                        }
+                    ]
+                }
             }
         },
         "who_we_are": {
