@@ -1,1 +1,1 @@
-export { SubjectContext, SubjectProvider, connectSubject } from './context'
+export { SubjectContext, SubjectProvider } from './context'

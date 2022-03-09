@@ -10,6 +10,7 @@ export const Container = styled.div`
   border-radius: ${({ theme }) => theme.spacing.nano};
   background-color: transparent;
   align-items: center;
+  position: relative;
 `
 
 export const LeftSide = styled.div`
@@ -29,4 +30,17 @@ export const RightSide = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+`
+export const ArrowContainer = styled.div<ArrowType>`
+  position: absolute;
+  bottom: -10%;
+  z-index: 10;
+  left: ${({ reverse }) => (reverse ? '35%' : '45%')};
+`
+type ArrowType = {
+  reverse?: boolean
+}
+
+export const Arrow = styled.img<ArrowType>`
+  transform: ${({ reverse }) => (reverse ? 'rotateY(180deg)' : 'rotate(0deg)')};
 `

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { Subject } from './subject'
 
 type SubjectContextType = {
@@ -7,7 +7,7 @@ type SubjectContextType = {
 }
 
 export const SubjectContext = createContext<SubjectContextType>({
-  subject: Subject.customer,
+  subject: Subject.doctors,
   setSubject: () => null,
 })
 
@@ -17,18 +17,12 @@ type SubjectProps = {
 
 export const SubjectProvider = ({ children }: SubjectProps) => {
   const [state, setState] = useState(Subject.customer)
+  useEffect(() => {
+    console.trace('state', state)
+  }, [state])
   return (
     <SubjectContext.Provider value={{ subject: state, setSubject: setState }}>
       {children}
     </SubjectContext.Provider>
   )
 }
-
-export const connectSubject =
-  (Child: React.ReactElement) => (props: JSX.IntrinsicAttributes) => {
-    const subject = React.useContext(SubjectContext)
-    return React.cloneElement(Child, {
-      subject,
-      ...props,
-    })
-  }

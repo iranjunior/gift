@@ -21,4 +21,10 @@ export default {
   ImageOldWomanSited: require('./images/old-woman-sited.png'),
   ImageWomanWithTablet: require('./images/woman-with-tablet.png'),
   ImageAsianOldWoman: require('./images/asian-old-woman.png'),
+  ImagePhoneAtHand: require('./images/phone-at-hand.png'),
+  ImageOldManWithAPhone: require('./images/old-man-with-a-phone.png'),
+  ImageWatchDoctor: require('./images/watch-doctor.png'),
+  ImageManWithHeadphone: require('./images/man-with-headphone.png'),
+  ImagePharmaceuticalWoman: require('./images/pharmaceutical-woman.png'),
+  ImageWomanAtTree: require('./images/woman-at-tree.png'),
 }

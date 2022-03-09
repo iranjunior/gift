@@ -11,6 +11,7 @@ export const Home = () => {
   const { subject, setSubject } = useContext(SubjectContext)
   const location = useLocation()
   useEffect(() => {
+    console.trace('location.pathname', location.pathname)
     if (location.pathname === '/') {
       setSubject(Subject.customer)
     }

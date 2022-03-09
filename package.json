@@ -26,6 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --fix",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "gen-types": "quicktype --lang typescript --out ./src/context/data/types.ts ./src/assets/strings.json"
   },
   "eslintConfig": {

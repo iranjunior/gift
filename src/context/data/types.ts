@@ -19,6 +19,7 @@ export interface Body {
     home:       Home;
     who_we_are: WhoWeAre;
     farme_box:  FarmeBox;
+    clinics:    Clinics;
     careers:    Careers;
 }
 
@@ -28,10 +29,10 @@ export interface Careers {
     reasons:     Reason[];
     values:      Values;
     testimonies: Testimonies;
-    banner:      HistoryClass;
+    banner:      InitialClass;
 }
 
-export interface HistoryClass {
+export interface InitialClass {
     title:    string;
     subtitle: string;
 }
@@ -77,6 +78,25 @@ export interface Value {
     text:  string;
 }
 
+export interface Clinics {
+    initial:   InitialClass;
+    arguments: Argument[];
+    topics:    Topics;
+    banner:    InitialClass;
+}
+
+export interface Argument {
+    title:         string;
+    text:          string;
+    label_button?: string;
+}
+
+export interface Topics {
+    title:    string;
+    subtitle: string;
+    topics:   string[];
+}
+
 export interface FarmeBox {
     initial:                 FarmeBoxClass;
     arguments:               FarmeBoxArguments;
@@ -84,7 +104,7 @@ export interface FarmeBox {
     reasons:                 Reasons;
     farme_box:               FarmeBoxClass;
     pharmaceutical_analysis: PharmaceuticalAnalysis;
-    banner:                  HistoryClass;
+    banner:                  InitialClass;
     testimonies:             Testimonies;
 }
 
@@ -105,7 +125,7 @@ export interface Carousel {
 }
 
 export interface PharmaceuticalAnalysis {
-    card: HistoryClass;
+    card: InitialClass;
 }
 
 export interface Reasons {
@@ -123,7 +143,7 @@ export interface Companies {
     initial:      CompaniesInitial;
     advantage:    Advantage;
     how_working:  HowWorking;
-    banner:       HistoryClass;
+    banner:       InitialClass;
     card_product: CardProduct;
     our_posts:    OurPosts;
 }
@@ -147,7 +167,7 @@ export interface HowWorking {
 }
 
 export interface CompaniesInitial {
-    "who-we-are": HistoryClass;
+    "who-we-are": InitialClass;
 }
 
 export interface OurPosts {
@@ -223,17 +243,17 @@ export interface DoctorsBanner {
 
 export interface WhoWeAre {
     initial:     WhoWeAreInitial;
-    history:     HistoryClass;
+    history:     InitialClass;
     declaration: Declaration;
     arguments:   WhoWeAreArguments;
     our_people:  OurPeople;
-    banner:      HistoryClass;
+    banner:      InitialClass;
 }
 
 export interface WhoWeAreArguments {
-    card_initial: HistoryClass;
+    card_initial: InitialClass;
     cards:        FluffyCards;
-    card_final:   HistoryClass;
+    card_final:   InitialClass;
 }
 
 export interface FluffyCards {
@@ -299,12 +319,12 @@ export interface Link {
 }
 
 export interface Menu {
-    "who-we-are":           Blog;
-    farme_box:              Blog;
-    clinics:                Blog;
-    career:                 Blog;
+    "who-we-are":           Career;
+    farme_box:              Career;
+    clinics:                Career;
+    career:                 Career;
     blog:                   Blog;
-    contact:                Blog;
+    contact:                Career;
     "button-request-quote": ButtonRequestQuote;
 }
 
@@ -315,6 +335,12 @@ export interface Blog {
 
 export interface ButtonRequestQuote {
     label: string;
+}
+
+export interface Career {
+    label:   string;
+    href:    string;
+    context: string;
 }
 
 export interface Nav {
@@ -484,6 +510,7 @@ const typeMap: any = {
         { json: "home", js: "home", typ: r("Home") },
         { json: "who_we_are", js: "who_we_are", typ: r("WhoWeAre") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBox") },
+        { json: "clinics", js: "clinics", typ: r("Clinics") },
         { json: "careers", js: "careers", typ: r("Careers") },
     ], false),
     "Careers": o([
@@ -492,9 +519,9 @@ const typeMap: any = {
         { json: "reasons", js: "reasons", typ: a(r("Reason")) },
         { json: "values", js: "values", typ: r("Values") },
         { json: "testimonies", js: "testimonies", typ: r("Testimonies") },
-        { json: "banner", js: "banner", typ: r("HistoryClass") },
+        { json: "banner", js: "banner", typ: r("InitialClass") },
     ], false),
-    "HistoryClass": o([
+    "InitialClass": o([
         { json: "title", js: "title", typ: "" },
         { json: "subtitle", js: "subtitle", typ: "" },
     ], false),
@@ -532,6 +559,22 @@ const typeMap: any = {
         { json: "title", js: "title", typ: "" },
         { json: "text", js: "text", typ: "" },
     ], false),
+    "Clinics": o([
+        { json: "initial", js: "initial", typ: r("InitialClass") },
+        { json: "arguments", js: "arguments", typ: a(r("Argument")) },
+        { json: "topics", js: "topics", typ: r("Topics") },
+        { json: "banner", js: "banner", typ: r("InitialClass") },
+    ], false),
+    "Argument": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "text", js: "text", typ: "" },
+        { json: "label_button", js: "label_button", typ: u(undefined, "") },
+    ], false),
+    "Topics": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "subtitle", js: "subtitle", typ: "" },
+        { json: "topics", js: "topics", typ: a("") },
+    ], false),
     "FarmeBox": o([
         { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
         { json: "arguments", js: "arguments", typ: r("FarmeBoxArguments") },
@@ -539,7 +582,7 @@ const typeMap: any = {
         { json: "reasons", js: "reasons", typ: r("Reasons") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBoxClass") },
         { json: "pharmaceutical_analysis", js: "pharmaceutical_analysis", typ: r("PharmaceuticalAnalysis") },
-        { json: "banner", js: "banner", typ: r("HistoryClass") },
+        { json: "banner", js: "banner", typ: r("InitialClass") },
         { json: "testimonies", js: "testimonies", typ: r("Testimonies") },
     ], false),
     "FarmeBoxArguments": o([
@@ -556,7 +599,7 @@ const typeMap: any = {
         { json: "text", js: "text", typ: "" },
     ], false),
     "PharmaceuticalAnalysis": o([
-        { json: "card", js: "card", typ: r("HistoryClass") },
+        { json: "card", js: "card", typ: r("InitialClass") },
     ], false),
     "Reasons": o([
         { json: "title", js: "title", typ: "" },
@@ -571,7 +614,7 @@ const typeMap: any = {
         { json: "initial", js: "initial", typ: r("CompaniesInitial") },
         { json: "advantage", js: "advantage", typ: r("Advantage") },
         { json: "how_working", js: "how_working", typ: r("HowWorking") },
-        { json: "banner", js: "banner", typ: r("HistoryClass") },
+        { json: "banner", js: "banner", typ: r("InitialClass") },
         { json: "card_product", js: "card_product", typ: r("CardProduct") },
         { json: "our_posts", js: "our_posts", typ: r("OurPosts") },
     ], false),
@@ -591,7 +634,7 @@ const typeMap: any = {
         { json: "arguments", js: "arguments", typ: a(r("Value")) },
     ], false),
     "CompaniesInitial": o([
-        { json: "who-we-are", js: "who-we-are", typ: r("HistoryClass") },
+        { json: "who-we-are", js: "who-we-are", typ: r("InitialClass") },
     ], false),
     "OurPosts": o([
         { json: "description", js: "description", typ: "" },
@@ -655,16 +698,16 @@ const typeMap: any = {
     ], false),
     "WhoWeAre": o([
         { json: "initial", js: "initial", typ: r("WhoWeAreInitial") },
-        { json: "history", js: "history", typ: r("HistoryClass") },
+        { json: "history", js: "history", typ: r("InitialClass") },
         { json: "declaration", js: "declaration", typ: r("Declaration") },
         { json: "arguments", js: "arguments", typ: r("WhoWeAreArguments") },
         { json: "our_people", js: "our_people", typ: r("OurPeople") },
-        { json: "banner", js: "banner", typ: r("HistoryClass") },
+        { json: "banner", js: "banner", typ: r("InitialClass") },
     ], false),
     "WhoWeAreArguments": o([
-        { json: "card_initial", js: "card_initial", typ: r("HistoryClass") },
+        { json: "card_initial", js: "card_initial", typ: r("InitialClass") },
         { json: "cards", js: "cards", typ: r("FluffyCards") },
-        { json: "card_final", js: "card_final", typ: r("HistoryClass") },
+        { json: "card_final", js: "card_final", typ: r("InitialClass") },
     ], false),
     "FluffyCards": o([
         { json: "first", js: "first", typ: r("First") },
@@ -717,12 +760,12 @@ const typeMap: any = {
         { json: "href", js: "href", typ: "" },
     ], false),
     "Menu": o([
-        { json: "who-we-are", js: "who-we-are", typ: r("Blog") },
-        { json: "farme_box", js: "farme_box", typ: r("Blog") },
-        { json: "clinics", js: "clinics", typ: r("Blog") },
-        { json: "career", js: "career", typ: r("Blog") },
+        { json: "who-we-are", js: "who-we-are", typ: r("Career") },
+        { json: "farme_box", js: "farme_box", typ: r("Career") },
+        { json: "clinics", js: "clinics", typ: r("Career") },
+        { json: "career", js: "career", typ: r("Career") },
         { json: "blog", js: "blog", typ: r("Blog") },
-        { json: "contact", js: "contact", typ: r("Blog") },
+        { json: "contact", js: "contact", typ: r("Career") },
         { json: "button-request-quote", js: "button-request-quote", typ: r("ButtonRequestQuote") },
     ], false),
     "Blog": o([
@@ -731,6 +774,11 @@ const typeMap: any = {
     ], false),
     "ButtonRequestQuote": o([
         { json: "label", js: "label", typ: "" },
+    ], false),
+    "Career": o([
+        { json: "label", js: "label", typ: "" },
+        { json: "href", js: "href", typ: "" },
+        { json: "context", js: "context", typ: "" },
     ], false),
     "Nav": o([
         { json: "customers", js: "customers", typ: "" },

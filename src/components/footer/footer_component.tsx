@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 
-import ImageLogo from '../../assets/images/logo_yellow.svg'
-import ImageLinkedinLogo from '../../assets/images/linkedin_logo.svg'
-import ImageInstagramLogo from '../../assets/images/instagram_logo.svg'
-import ImageFacebookLogo from '../../assets/images/facebook_logo.svg'
+import { ReactComponent as ImageLogo } from '../../assets/images/logo_yellow.svg'
+import { ReactComponent as ImageLinkedinLogo } from '../../assets/images/linkedin_logo.svg'
+import { ReactComponent as ImageInstagramLogo } from '../../assets/images/instagram_logo.svg'
+import { ReactComponent as ImageFacebookLogo } from '../../assets/images/facebook_logo.svg'
 
 import {
   AboutContactsContainer,
@@ -45,7 +45,9 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
     <Container id={id}>
       <AboutContainer>
         <AboutInfosContainer>
-          <AboutInfosImage src={ImageLogo} />
+          <AboutInfosImage>
+            <ImageLogo />
+          </AboutInfosImage>
           <AboutInfosTitle>{footer.about.title}</AboutInfosTitle>
           <AboutInfosDescription
             dangerouslySetInnerHTML={{ __html: footer.about.text }}
@@ -70,9 +72,15 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
             </AboutContactsPhoneContainer>
           ))}
           <AboutContactsSocialMedias>
-            <AboutContactsSocialMediasLogo src={ImageFacebookLogo} />
-            <AboutContactsSocialMediasLogo src={ImageInstagramLogo} />
-            <AboutContactsSocialMediasLogo src={ImageLinkedinLogo} />
+            <AboutContactsSocialMediasLogo>
+              <ImageFacebookLogo />
+            </AboutContactsSocialMediasLogo>
+            <AboutContactsSocialMediasLogo>
+              <ImageInstagramLogo />
+            </AboutContactsSocialMediasLogo>
+            <AboutContactsSocialMediasLogo>
+              <ImageLinkedinLogo />
+            </AboutContactsSocialMediasLogo>
           </AboutContactsSocialMedias>
         </AboutContactsContainer>
       </AboutContainer>

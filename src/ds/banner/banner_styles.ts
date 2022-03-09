@@ -60,7 +60,7 @@ export const TextPrincipal = styled.span<TextPrincipalProps>`
   font-size: ${({ theme, compact }) =>
     compact ? theme.font.sizes.lg : theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.distant};
+  line-height: ${({ theme }) => theme.font.lineHeight.medium};
   text-align: start;
   color: ${({ theme }) => theme.colors.neutral.lightness};
 
@@ -78,15 +78,4 @@ export const Image = styled.img`
 
 export const HighlightsContainer = styled.div`
   ${columnItensWithGap({ gap: '1rem' })}
-`
-export const Highlight = styled.div`
-  display: flex;
-  gap: 1rem;
-  span {
-    font-size: ${({ theme }) => theme.font.sizes.xxs};
-  }
-`
-export const CheckIcon = styled.img`
-  height: ${({ theme }) => theme.spacing.xxs};
-  width: ${({ theme }) => theme.spacing.xxs};
 `

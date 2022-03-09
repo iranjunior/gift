@@ -8,19 +8,16 @@ import { Cell, Container, Link } from './nav_styles'
 
 export const Nav = () => {
   const data = useContext(DataContext)
-  const { setSubject, subject } = useContext(SubjectContext)
+  const { subject } = useContext(SubjectContext)
   const navigate = useNavigate()
 
   const _onClick = (value: string) => {
     if (value === 'customers') {
-      setSubject(Subject.customer)
       navigate('/')
     } else if (value === 'companies') {
-      setSubject(Subject.companies)
-      navigate('para-instituicoes')
+      navigate('/para-instituicoes')
     } else if (value === 'doctors') {
-      setSubject(Subject.doctors)
-      navigate('para-medicos')
+      navigate('/para-medicos')
     }
   }
 
@@ -37,7 +34,7 @@ export const Nav = () => {
         <Cell
           key={value}
           active={isActive(index)}
-          onClick={() => _onClick(subj)}
+          onClick={!isActive(index) ? () => _onClick(subj) : () => null}
         >
           <Link active={isActive(index)}>{value}</Link>
         </Cell>

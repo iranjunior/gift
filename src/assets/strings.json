@@ -7,19 +7,23 @@
     "menu": {
         "who-we-are": {
             "label": "Quem Somos",
-            "href": "/quem-somos"
+            "href": "/quem-somos",
+            "context": "companies"
         },
         "farme_box": {
             "label": "Far.me Box",
-            "href": "/farme-box"
+            "href": "/farme-box",
+            "context": "customers"
         },
         "clinics": {
             "label": "Clínicas",
-            "href": "#clinics"
+            "href": "/para-medicos/clinicas",
+            "context": "doctors"
         },
         "career": {
             "label": "Carreiras",
-            "href": "/carreiras"
+            "href": "/carreiras",
+            "context": "customers"
         },
         "blog": {
             "label": "Blog",
@@ -27,7 +31,8 @@
         },
         "contact": {
             "label": "Contato",
-            "href": "#contact"
+            "href": "#contact",
+            "context": "customers"
         },
         "button-request-quote": {
             "label": "Faça seu orçamento"
@@ -521,6 +526,42 @@
                         "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
                     }
                 ]
+            }
+        },
+        "clinics": {
+            "initial": {
+                "title": "<legend>Far.me clínica</legend><br /><principal>Cuidado aliado à <highlight>tecnologia</highlight>, isso é Clínica Far.me.</principal>",
+                "subtitle": "<p>Acompanhamento e cuidado humanizado sem pagar a mais por isso.</p>"
+            },
+            "arguments": [
+                {
+                    "title": "Digital<br/><highlight>e inteligente</highlight>.",
+                    "text": "Por meio de inteligência artificial, atribuímos um score a cada medicamento em uso. É desse jeito que identificamos se existe um alerta clínico para ser discutido com o médico e outros profissionais envolvidos no seu tratamento.",
+                    "label_button": "Confira os itens que analisamos"
+                },
+                {
+                    "title": "Contato direto<br />com <highlight>você<!highlight>!",
+                    "text": "Contato direto com você, o responsável ou o médico sempre que houver uma possibilidade de alteração na prescrição. E com a consulta farmacêutica, você pode entender como está seguindo o seu tratamento. <br />O atendimento é feito por e-mail, WhatsApp ou telefone. E acontece de segunda à sexta, das 9h às 18h. "
+                },
+                {
+                    "title": "Ainda com<br /><highlight>dúvidas?</highlight>",
+                    "text": "Aqui, você também tem acesso ao nosso canal de atendimento farmacêutico. Nele respondemos às suas perguntas sobre os medicamentos usados. ",
+                    "label_button": "Acesse o canal"
+                }
+            ],
+            "topics": {
+                "title": "<h1>O que perguntar ao<br/><highlight>farmacêutico?</highlight></h1>",
+                "subtitle": "Tire todas as suas dúvidas sobre o uso e o armazenamento dos seus medicamentos. Olha só o que você pode perguntar:",
+                "topics": [
+                    "Esqueci de tomar uma dose. O que devo fazer?",
+                    "Posso tomar o remédio em jejum?",
+                    "Posso partir esse comprimido?",
+                    "Estou com alguns sintomas. Pode ser efeito do medicamento em uso?"
+                ]
+            },
+            "banner": {
+                "title": "Far.me é a farmácia<br />que cuida do seu<br /><highlight>melhor estar.</highlight>",
+                "subtitle": "Entregamos seus remédios onde e quando precisar e simplificamos o cuidado com a sua saúde."
             }
         },
         "careers": {

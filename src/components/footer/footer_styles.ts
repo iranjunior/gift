@@ -23,8 +23,13 @@ export const AboutInfosContainer = styled.div`
   gap: 1rem;
   width: 60%;
 `
-export const AboutInfosImage = styled.img`
+export const AboutInfosImage = styled.div`
   height: 40px;
+  svg {
+    path {
+      fill: ${({ theme }) => theme.primary.default};
+    }
+  }
 `
 export const AboutInfosTitle = styled.span`
   color: ${({ theme }) => theme.primary.light};
@@ -84,8 +89,16 @@ export const AboutContactsSocialMedias = styled.div`
   display: flex;
   gap: 1rem;
 `
-export const AboutContactsSocialMediasLogo = styled.img`
+export const AboutContactsSocialMediasLogo = styled.div`
   height: ${({ theme }) => theme.spacing.xxs};
+  svg {
+    stroke: ${({ theme }) => theme.primary.dark};
+    fill: ${({ theme }) => theme.primary.default};
+    path {
+      fill: ${({ theme }) => theme.primary.default};
+      stroke: ${({ theme }) => theme.primary.dark};
+    }
+  }
 `
 
 export const Divisor = styled.hr`

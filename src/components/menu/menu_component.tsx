@@ -4,10 +4,7 @@ import { Button } from '../../ds'
 
 import LogoFarMe from '../../assets/images/logotype.svg'
 import { DataContext } from '../../context/data'
-import {
-  Blog as BlogType,
-  ButtonRequestQuote as ButtonRequestQuoteType,
-} from '../../context/data/types'
+import { ButtonRequestQuote as ButtonRequestQuoteType } from '../../context/data/types'
 
 import {
   Container,
@@ -17,6 +14,12 @@ import {
   Options,
   OptionsContainer,
 } from './menu_styles'
+
+type MenuItemType = {
+  label: string
+  href: string
+  context?: string
+}
 
 export const Menu = () => {
   const { menu } = useContext(DataContext)
@@ -30,7 +33,7 @@ export const Menu = () => {
         <OptionsContainer>
           {Object.entries(menu)
             .slice(0, Object.entries(menu).length - 1)
-            .map(([, value]: [string, BlogType]) => (
+            .map(([, value]: [string, MenuItemType]) => (
               <Option key={value.href}>
                 <Link href={value.href} onClick={() => navigate(value.href)}>
                   {value.label}

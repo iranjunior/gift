@@ -3,6 +3,8 @@ import { Button } from '..'
 
 import Icon from '../../assets/images/check.svg'
 
+import { CheckedItem } from '../checked_item'
+
 import {
   Container,
   Content,
@@ -10,8 +12,6 @@ import {
   TextPrincipal,
   BlockText,
   HighlightsContainer,
-  Highlight,
-  CheckIcon,
 } from './banner_styles'
 
 type BannerProps = {
@@ -53,14 +53,10 @@ export const Banner: React.FC<BannerProps> = ({
           {highlights ? (
             <HighlightsContainer>
               {highlights.map((highlight, index) => (
-                <Highlight key={highlight.split(' ')[0].concat(`-${index}`)}>
-                  <CheckIcon src={Icon} />
-                  <Text
-                    dangerouslySetInnerHTML={{
-                      __html: highlight,
-                    }}
-                  />
-                </Highlight>
+                <CheckedItem
+                  key={highlight.split(' ')[0].concat(`-${index}`)}
+                  text={highlight}
+                />
               ))}
             </HighlightsContainer>
           ) : null}
