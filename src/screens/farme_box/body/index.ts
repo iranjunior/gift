@@ -1,3 +1,10 @@
-import * as CustomerBody from './customer'
-
-export { CustomerBody }
+export { History } from './history'
+export { Declaration } from './declaration'
+export { Arguments } from './arguments'
+export { Main } from './initial'
+export { OurPeople } from './our_people'
+export { Banner } from './banner'
+export { KnowMe } from './know_me'
+export { Reasons } from './reasons'
+export { FarMeBox } from './farme_box'
+export { PharmaceuticalAnalysis } from './pharmaceutical_analysis'

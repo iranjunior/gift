@@ -1,5 +1,4 @@
-import * as CustomerBody from './customer'
-import * as CompaniesBody from './companies'
-import * as DoctorsBody from './doctors'
-
-export { CustomerBody, CompaniesBody, DoctorsBody }
+export { FarMeBox } from './farme_box'
+export { KnowMe } from './know_me'
+export { Targets } from './targets'
+export { Main } from './initial'

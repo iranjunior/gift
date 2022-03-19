@@ -17,6 +17,7 @@ type HeaderProps = {
 type HeaderCenteredProps = {
   subtitle?: string
   title: string
+  legend?: string
 }
 
 export const Header: React.FC<HeaderProps> = ({ description, title, full }) => (
@@ -29,8 +30,10 @@ export const Header: React.FC<HeaderProps> = ({ description, title, full }) => (
 export const HeaderCentered: React.FC<HeaderCenteredProps> = ({
   subtitle,
   title,
+  legend,
 }) => (
   <BlockText>
+    {legend ? <Subtitle dangerouslySetInnerHTML={{ __html: legend }} /> : null}
     <Highlight dangerouslySetInnerHTML={{ __html: title }} />
     {subtitle ? <Text dangerouslySetInnerHTML={{ __html: subtitle }} /> : null}
   </BlockText>

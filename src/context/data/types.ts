@@ -16,11 +16,15 @@ export interface Types {
 }
 
 export interface Body {
-    home:       Home;
-    who_we_are: WhoWeAre;
-    farme_box:  FarmeBox;
-    clinics:    Clinics;
-    careers:    Careers;
+    home:          Home;
+    for_customers: ForCustomers;
+    for_companies: ForCompanies;
+    for_doctors:   ForDoctors;
+    common_pages:  CommonPages;
+    who_we_are:    WhoWeAre;
+    farme_box:     FarmeBox;
+    clinics:       Clinics;
+    careers:       Careers;
 }
 
 export interface Careers {
@@ -97,6 +101,35 @@ export interface Topics {
     topics:   string[];
 }
 
+export interface CommonPages {
+    numbers:     Numbers;
+    testimonies: Testimonies;
+    doubts:      Doubts;
+}
+
+export interface Doubts {
+    description: string;
+    title:       string;
+    doubts:      Doubt[];
+}
+
+export interface Doubt {
+    title:  string;
+    answer: string;
+}
+
+export interface Numbers {
+    description: string;
+    title:       string;
+    message:     string;
+    infos:       Info[];
+}
+
+export interface Info {
+    legend: string;
+    value:  string;
+}
+
 export interface FarmeBox {
     initial:                 FarmeBoxClass;
     arguments:               FarmeBoxArguments;
@@ -133,14 +166,8 @@ export interface Reasons {
     reasons: Value[];
 }
 
-export interface Home {
-    customers: Customers;
-    companies: Companies;
-    doctors:   Doctors;
-}
-
-export interface Companies {
-    initial:      CompaniesInitial;
+export interface ForCompanies {
+    initial:      ForCompaniesInitial;
     advantage:    Advantage;
     how_working:  HowWorking;
     banner:       InitialClass;
@@ -152,6 +179,7 @@ export interface Advantage {
     title:      string;
     subtitle:   string;
     advantages: Value[];
+    legend?:    string;
 }
 
 export interface CardProduct {
@@ -166,7 +194,7 @@ export interface HowWorking {
     arguments: Value[];
 }
 
-export interface CompaniesInitial {
+export interface ForCompaniesInitial {
     "who-we-are": InitialClass;
 }
 
@@ -175,43 +203,41 @@ export interface OurPosts {
     title:       string;
 }
 
-export interface Customers {
-    initial:     CompaniesInitial;
-    farme_box:   FarmeBoxClass;
-    know_me:     KnowMe;
-    targets:     Targets;
-    numbers:     Numbers;
-    testimonies: Testimonies;
-    doubts:      Doubts;
+export interface ForCustomers {
+    initial:      InitialClass;
+    how_working:  HowWorking;
+    banner:       InitialClass;
+    advantages:   Advantage;
+    card_product: CardProduct;
+    our_posts:    OurPosts;
 }
 
-export interface Doubts {
-    description: string;
-    title:       string;
-    doubts:      Doubt[];
+export interface ForDoctors {
+    initial:      ForCompaniesInitial;
+    how_working:  HowWorking;
+    banner:       ForDoctorsBanner;
+    card_product: CardProduct;
+    our_posts:    OurPosts;
+    doubts:       Doubts;
 }
 
-export interface Doubt {
-    title:  string;
-    answer: string;
+export interface ForDoctorsBanner {
+    title:     string;
+    subtitle:  string;
+    highlight: string[];
+}
+
+export interface Home {
+    initial:   InitialClass;
+    farme_box: FarmeBoxClass;
+    know_me:   KnowMe;
+    targets:   Targets;
 }
 
 export interface KnowMe {
     title:    string;
     subtitle: string;
     carousel: Carousel[];
-}
-
-export interface Numbers {
-    description: string;
-    title:       string;
-    message:     string;
-    infos:       Info[];
-}
-
-export interface Info {
-    legend: string;
-    value:  string;
 }
 
 export interface Targets {
@@ -224,21 +250,6 @@ export interface Card {
     title: string;
     type:  string;
     text:  string;
-}
-
-export interface Doctors {
-    initial:      CompaniesInitial;
-    how_working:  HowWorking;
-    banner:       DoctorsBanner;
-    card_product: CardProduct;
-    our_posts:    OurPosts;
-    doubts:       Doubts;
-}
-
-export interface DoctorsBanner {
-    title:     string;
-    subtitle:  string;
-    highlight: string[];
 }
 
 export interface WhoWeAre {
@@ -508,6 +519,10 @@ const typeMap: any = {
     ], false),
     "Body": o([
         { json: "home", js: "home", typ: r("Home") },
+        { json: "for_customers", js: "for_customers", typ: r("ForCustomers") },
+        { json: "for_companies", js: "for_companies", typ: r("ForCompanies") },
+        { json: "for_doctors", js: "for_doctors", typ: r("ForDoctors") },
+        { json: "common_pages", js: "common_pages", typ: r("CommonPages") },
         { json: "who_we_are", js: "who_we_are", typ: r("WhoWeAre") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBox") },
         { json: "clinics", js: "clinics", typ: r("Clinics") },
@@ -575,6 +590,30 @@ const typeMap: any = {
         { json: "subtitle", js: "subtitle", typ: "" },
         { json: "topics", js: "topics", typ: a("") },
     ], false),
+    "CommonPages": o([
+        { json: "numbers", js: "numbers", typ: r("Numbers") },
+        { json: "testimonies", js: "testimonies", typ: r("Testimonies") },
+        { json: "doubts", js: "doubts", typ: r("Doubts") },
+    ], false),
+    "Doubts": o([
+        { json: "description", js: "description", typ: "" },
+        { json: "title", js: "title", typ: "" },
+        { json: "doubts", js: "doubts", typ: a(r("Doubt")) },
+    ], false),
+    "Doubt": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "answer", js: "answer", typ: "" },
+    ], false),
+    "Numbers": o([
+        { json: "description", js: "description", typ: "" },
+        { json: "title", js: "title", typ: "" },
+        { json: "message", js: "message", typ: "" },
+        { json: "infos", js: "infos", typ: a(r("Info")) },
+    ], false),
+    "Info": o([
+        { json: "legend", js: "legend", typ: "" },
+        { json: "value", js: "value", typ: "" },
+    ], false),
     "FarmeBox": o([
         { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
         { json: "arguments", js: "arguments", typ: r("FarmeBoxArguments") },
@@ -605,13 +644,8 @@ const typeMap: any = {
         { json: "title", js: "title", typ: "" },
         { json: "reasons", js: "reasons", typ: a(r("Value")) },
     ], false),
-    "Home": o([
-        { json: "customers", js: "customers", typ: r("Customers") },
-        { json: "companies", js: "companies", typ: r("Companies") },
-        { json: "doctors", js: "doctors", typ: r("Doctors") },
-    ], false),
-    "Companies": o([
-        { json: "initial", js: "initial", typ: r("CompaniesInitial") },
+    "ForCompanies": o([
+        { json: "initial", js: "initial", typ: r("ForCompaniesInitial") },
         { json: "advantage", js: "advantage", typ: r("Advantage") },
         { json: "how_working", js: "how_working", typ: r("HowWorking") },
         { json: "banner", js: "banner", typ: r("InitialClass") },
@@ -622,6 +656,7 @@ const typeMap: any = {
         { json: "title", js: "title", typ: "" },
         { json: "subtitle", js: "subtitle", typ: "" },
         { json: "advantages", js: "advantages", typ: a(r("Value")) },
+        { json: "legend", js: "legend", typ: u(undefined, "") },
     ], false),
     "CardProduct": o([
         { json: "legend", js: "legend", typ: "" },
@@ -633,45 +668,44 @@ const typeMap: any = {
         { json: "subtitle", js: "subtitle", typ: "" },
         { json: "arguments", js: "arguments", typ: a(r("Value")) },
     ], false),
-    "CompaniesInitial": o([
+    "ForCompaniesInitial": o([
         { json: "who-we-are", js: "who-we-are", typ: r("InitialClass") },
     ], false),
     "OurPosts": o([
         { json: "description", js: "description", typ: "" },
         { json: "title", js: "title", typ: "" },
     ], false),
-    "Customers": o([
-        { json: "initial", js: "initial", typ: r("CompaniesInitial") },
+    "ForCustomers": o([
+        { json: "initial", js: "initial", typ: r("InitialClass") },
+        { json: "how_working", js: "how_working", typ: r("HowWorking") },
+        { json: "banner", js: "banner", typ: r("InitialClass") },
+        { json: "advantages", js: "advantages", typ: r("Advantage") },
+        { json: "card_product", js: "card_product", typ: r("CardProduct") },
+        { json: "our_posts", js: "our_posts", typ: r("OurPosts") },
+    ], false),
+    "ForDoctors": o([
+        { json: "initial", js: "initial", typ: r("ForCompaniesInitial") },
+        { json: "how_working", js: "how_working", typ: r("HowWorking") },
+        { json: "banner", js: "banner", typ: r("ForDoctorsBanner") },
+        { json: "card_product", js: "card_product", typ: r("CardProduct") },
+        { json: "our_posts", js: "our_posts", typ: r("OurPosts") },
+        { json: "doubts", js: "doubts", typ: r("Doubts") },
+    ], false),
+    "ForDoctorsBanner": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "subtitle", js: "subtitle", typ: "" },
+        { json: "highlight", js: "highlight", typ: a("") },
+    ], false),
+    "Home": o([
+        { json: "initial", js: "initial", typ: r("InitialClass") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBoxClass") },
         { json: "know_me", js: "know_me", typ: r("KnowMe") },
         { json: "targets", js: "targets", typ: r("Targets") },
-        { json: "numbers", js: "numbers", typ: r("Numbers") },
-        { json: "testimonies", js: "testimonies", typ: r("Testimonies") },
-        { json: "doubts", js: "doubts", typ: r("Doubts") },
-    ], false),
-    "Doubts": o([
-        { json: "description", js: "description", typ: "" },
-        { json: "title", js: "title", typ: "" },
-        { json: "doubts", js: "doubts", typ: a(r("Doubt")) },
-    ], false),
-    "Doubt": o([
-        { json: "title", js: "title", typ: "" },
-        { json: "answer", js: "answer", typ: "" },
     ], false),
     "KnowMe": o([
         { json: "title", js: "title", typ: "" },
         { json: "subtitle", js: "subtitle", typ: "" },
         { json: "carousel", js: "carousel", typ: a(r("Carousel")) },
-    ], false),
-    "Numbers": o([
-        { json: "description", js: "description", typ: "" },
-        { json: "title", js: "title", typ: "" },
-        { json: "message", js: "message", typ: "" },
-        { json: "infos", js: "infos", typ: a(r("Info")) },
-    ], false),
-    "Info": o([
-        { json: "legend", js: "legend", typ: "" },
-        { json: "value", js: "value", typ: "" },
     ], false),
     "Targets": o([
         { json: "title", js: "title", typ: "" },
@@ -682,19 +716,6 @@ const typeMap: any = {
         { json: "title", js: "title", typ: "" },
         { json: "type", js: "type", typ: "" },
         { json: "text", js: "text", typ: "" },
-    ], false),
-    "Doctors": o([
-        { json: "initial", js: "initial", typ: r("CompaniesInitial") },
-        { json: "how_working", js: "how_working", typ: r("HowWorking") },
-        { json: "banner", js: "banner", typ: r("DoctorsBanner") },
-        { json: "card_product", js: "card_product", typ: r("CardProduct") },
-        { json: "our_posts", js: "our_posts", typ: r("OurPosts") },
-        { json: "doubts", js: "doubts", typ: r("Doubts") },
-    ], false),
-    "DoctorsBanner": o([
-        { json: "title", js: "title", typ: "" },
-        { json: "subtitle", js: "subtitle", typ: "" },
-        { json: "highlight", js: "highlight", typ: a("") },
     ], false),
     "WhoWeAre": o([
         { json: "initial", js: "initial", typ: r("WhoWeAreInitial") },

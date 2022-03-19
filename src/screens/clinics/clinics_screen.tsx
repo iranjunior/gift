@@ -1,13 +1,13 @@
-import React, { useContext, useEffect } from 'react'
-import { Footer, Menu, Nav } from '../../components'
+import React, { useContext, useLayoutEffect } from 'react'
+import { Footer, Menu, Nav, Testimonies } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { DoctorsBody } from './body'
+import { Main, Arguments, Topics, Banner } from './body'
 import { Body, Container } from './clinics_styles'
 
 export const Clinics = () => {
   const { setSubject } = useContext(SubjectContext)
-  useEffect(() => {
+  useLayoutEffect(() => {
     setSubject(Subject.doctors)
   }, [])
 
@@ -16,11 +16,11 @@ export const Clinics = () => {
       <Nav />
       <Body>
         <Menu />
-        <DoctorsBody.Main id="apresentacao" />
-        <DoctorsBody.Arguments id="argumentos" />
-        <DoctorsBody.Topics id="topicos" />
-        <DoctorsBody.Testimonies id="depoimentos" />
-        <DoctorsBody.Banner id="banner" />
+        <Main id="apresentacao" />
+        <Arguments id="argumentos" />
+        <Topics id="topicos" />
+        <Testimonies id="depoimentos" />
+        <Banner id="banner" />
         <Footer id="sobre" />
       </Body>
     </Container>

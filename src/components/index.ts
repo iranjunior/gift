@@ -1,3 +1,6 @@
 export { Nav } from './nav'
 export { Menu } from './menu'
 export { Footer } from './footer'
+export { Doubt } from './doubt'
+export { Numbers } from './numbers'
+export { Testimonies } from './testimonies'

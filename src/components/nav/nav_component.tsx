@@ -14,7 +14,7 @@ export const Nav = () => {
 
   const _onClick = (value: string) => {
     if (value === 'customers' && location.pathname !== '/para-clientes') {
-      navigate('/')
+      navigate('/para-clientes')
     } else if (
       value === 'companies' &&
       location.pathname !== '/para-instituicoes'
