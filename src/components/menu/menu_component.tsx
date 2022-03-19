@@ -4,7 +4,7 @@ import { Button } from '../../ds'
 
 import LogoFarMe from '../../assets/images/logotype.svg'
 import { ReactComponent as CloseIcon } from '../../assets/images/close_icon.svg'
-import { ReactComponent as MenuIcon } from '../../assets/images/hamburger_icon.svg'
+import { ReactComponent as HamburguerIcon } from '../../assets/images/hamburger_icon.svg'
 import { DataContext } from '../../context/data'
 import { ButtonRequestQuote as ButtonRequestQuoteType } from '../../context/data/types'
 
@@ -30,6 +30,8 @@ export const Menu = () => {
   const [showModal, setShowModal] = useState(false)
   const { menu } = useContext(DataContext)
   const navigate = useNavigate()
+
+  const MenuIcon = () => (showModal ? <CloseIcon /> : <HamburguerIcon />)
 
   return (
     <>
@@ -62,7 +64,7 @@ export const Menu = () => {
           <HamburgerMenu
             onClick={() => {
               console.log('click')
-              setShowModal(true)
+              setShowModal((prev) => !prev)
             }}
           >
             <MenuIcon />
@@ -70,13 +72,9 @@ export const Menu = () => {
         </Content>
       </Container>
       <MenuModal show={showModal}>
-        <Container>
+        <Container isVertical>
           {' '}
           <Content isVertical>
-            <LogoMobileContainer>
-              <Logo onClick={() => navigate('/')} src={LogoFarMe} />
-              <CloseIcon onClick={() => setShowModal(false)} />
-            </LogoMobileContainer>
             <Options showOptions isVertical>
               {Object.entries(menu)
                 .slice(0, Object.entries(menu).length - 1)

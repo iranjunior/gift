@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { DataContext } from '../../context/data'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
@@ -10,14 +10,17 @@ export const Nav = () => {
   const data = useContext(DataContext)
   const { subject } = useContext(SubjectContext)
   const navigate = useNavigate()
+  const location = useLocation()
 
   const _onClick = (value: string) => {
-    console.log(value)
-    if (value === 'customers') {
+    if (value === 'customers' && location.pathname !== '/para-clientes') {
       navigate('/')
-    } else if (value === 'companies') {
+    } else if (
+      value === 'companies' &&
+      location.pathname !== '/para-instituicoes'
+    ) {
       navigate('/para-instituicoes')
-    } else if (value === 'doctors') {
+    } else if (value === 'doctors' && location.pathname !== '/para-medicos') {
       navigate('/para-medicos')
     }
   }
@@ -38,7 +41,7 @@ export const Nav = () => {
           <Cell
             key={value}
             active={isActive(index)}
-            onClick={!isActive(index) ? () => _onClick(subj) : () => null}
+            onClick={() => _onClick(subj)}
           >
             <Link active={isActive(index)}>{showText(value)}</Link>
           </Cell>

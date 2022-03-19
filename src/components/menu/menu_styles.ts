@@ -4,12 +4,14 @@ import styled, { css } from 'styled-components'
 type ContentProps = {
   isVertical?: boolean
 }
+type ContainerProps = ContentProps
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 0 ${({ theme }) => theme.spacing.internal};
+  margin: 0
+    ${({ theme, isVertical }) => (isVertical ? '0' : theme.spacing.internal)};
   position: fixed;
   z-index: 200;
   top: ${({ theme }) => theme.spacing.xs};
@@ -77,7 +79,7 @@ export const Options = styled.div<OptionsProps>`
             margin-top: 30%;
           }
           div:first-child {
-            margin-top: 15%;
+            margin-top: 35%;
           }
         `}
 `
