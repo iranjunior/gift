@@ -27,6 +27,7 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         subtitle={banner.subtitle}
         highlights={banner.highlight}
         button={{ text: 'Saiba mais' }}
+        positionImageInTablet="right"
       />
     </Container>
   )

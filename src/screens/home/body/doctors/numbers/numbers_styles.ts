@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components'
 import {
   ContentDiv,
@@ -27,10 +28,24 @@ export const BlockNumber = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    align-items: center;
+  }
 `
 
 export const BlockNumbers = styled.div`
   ${rowItensWithGap({ gap: '10rem', alignItens: 'center' })}
+  flex-wrap: wrap;
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}),
+    (width: ${({ theme }) => theme.breakpoints.desktop}) {
+    overflow: scroll;
+    width: 100vw;
+    ${rowItensWithGap({
+      gap: '5rem',
+      alignItens: 'center',
+      justifyContent: 'center',
+    })}
+  }
 `
 
 export const Text = styled.span`

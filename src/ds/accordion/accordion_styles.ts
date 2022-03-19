@@ -8,6 +8,7 @@ export const Container = styled.details`
 `
 export const Title = styled.summary`
   width: 100%;
+  max-width: 860px;
   display: flex;
   justify-content: space-between;
   align-items: center;

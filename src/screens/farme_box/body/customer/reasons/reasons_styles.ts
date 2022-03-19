@@ -51,6 +51,9 @@ export const ContainerCards = styled.div`
   column-gap: 1rem;
   width: 70%;
   flex-wrap: wrap;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    row-gap: 2rem;
+  }
 `
 export const ContentCard = styled.div`
   ${columnItensWithGap({
@@ -86,4 +89,12 @@ export const ContainerButtons = styled.div`
     alignItens: 'center',
   })}
   width: 336px;
+  flex-wrap: wrap;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    flex-wrap: wrap;
+    button {
+      width: 80%;
+    }
+  }
 `

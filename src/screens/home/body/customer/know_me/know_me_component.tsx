@@ -3,13 +3,7 @@ import images from '../../../../../assets/images'
 import { DataContext } from '../../../../../context/data'
 
 import { Carrousel, HeaderCentered } from '../../../../../ds'
-import {
-  Container,
-  Content,
-  BlockText,
-  Highlight,
-  Text,
-} from './know_me_styles'
+import { Container, Content } from './know_me_styles'
 
 type hashMapType = {
   [key: string]: string
@@ -45,7 +39,7 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
     <Container id={id}>
       <Content>
         <HeaderCentered title={know_me.title} subtitle={know_me.subtitle} />
-        <Carrousel content={buildTabs()} />
+        <Carrousel content={buildTabs()} imageSizeInTablet="contain" />
       </Content>
     </Container>
   )

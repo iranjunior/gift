@@ -24,35 +24,44 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       clinics: { arguments: points },
     },
   } = useContext(DataContext)
-  const RightSideFirstCard = () => (
+  const isTablet = window.innerWidth < 1024
+  const TextFirstCard = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: points[0].title }} />
       <Text dangerouslySetInnerHTML={{ __html: points[0].text }} />
       {!!points[0].label_button && <Button label={points[0].label_button} />}
     </BlockText>
   )
+  const ImageFirstCard = () => <Image src={images.ImageOldManWithAPhone} />
 
-  const LeftSideFirstCard = () => <Image src={images.ImageOldManWithAPhone} />
+  const RightSideFirstCard = () => <TextFirstCard />
+  const LeftSideFirstCard = () => <ImageFirstCard />
 
-  const RightSideSecondFinal = () => <Image src={images.ImageWatchDoctor} />
+  const ImageSecondCard = () => <Image src={images.ImageWatchDoctor} />
 
-  const LeftSideSecondFinal = () => (
+  const TextSecondCard = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: points[1].title }} />
       <Text dangerouslySetInnerHTML={{ __html: points[1].text }} />
       {!!points[1].label_button && <Button label={points[1].label_button} />}
     </BlockText>
   )
+  const RightSideSecondFinal = () =>
+    isTablet ? <TextSecondCard /> : <ImageSecondCard />
+  const LeftSideSecondFinal = () =>
+    isTablet ? <ImageSecondCard /> : <TextSecondCard />
 
-  const RightSideThirdCard = () => (
+  const TextThirdCard = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: points[2].title }} />
       <Text dangerouslySetInnerHTML={{ __html: points[2].text }} />
       {!!points[2].label_button && <Button label={points[2].label_button} />}
     </BlockText>
   )
+  const ImageThirdCard = () => <Image src={images.ImageManWithHeadphone} />
 
-  const LeftSideThirdCard = () => <Image src={images.ImageManWithHeadphone} />
+  const RightSideThirdCard = () => <TextThirdCard />
+  const LeftSideThirdCard = () => <ImageThirdCard />
 
   return (
     <Container id={id}>
@@ -60,18 +69,18 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
         <CardImage
           leftSide={LeftSideFirstCard}
           rightSide={RightSideFirstCard}
-          showArrow
+          showArrow={!isTablet}
         />
         <CardImage
           leftSide={LeftSideSecondFinal}
           rightSide={RightSideSecondFinal}
-          showArrow
+          showArrow={!isTablet}
           arrowReversed
         />
         <CardImage
           leftSide={LeftSideThirdCard}
           rightSide={RightSideThirdCard}
-          showArrow
+          showArrow={!isTablet}
         />
       </Content>
     </Container>

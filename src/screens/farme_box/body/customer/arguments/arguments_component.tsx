@@ -24,29 +24,39 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
-  const RightSideFirstCard = () => (
+  const isTablet = window.innerWidth < 1024
+
+  const TextFirstCard = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: cards.first }} />
     </BlockText>
   )
+  const ImageFirstCard = () => <Image src={images.ImageBoxReceived} />
 
-  const LeftSideFirstCard = () => <Image src={images.ImageBoxReceived} />
+  const RightSideFirstCard = () => <TextFirstCard />
+  const LeftSideFirstCard = () => <ImageFirstCard />
 
-  const RightSideSecondFinal = () => <Image src={images.ImageBill} />
+  const ImageSecondCard = () => <Image src={images.ImageBill} />
 
-  const LeftSideSecondFinal = () => (
+  const TextSecondFinal = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: cards.second }} />
     </BlockText>
   )
+  const RightSideSecondCard = () =>
+    isTablet ? <TextSecondFinal /> : <ImageSecondCard />
+  const LeftSideSecondCard = () =>
+    isTablet ? <ImageSecondCard /> : <TextSecondFinal />
 
-  const RightSideThirdCard = () => (
+  const TextThirdCard = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: cards.third }} />
     </BlockText>
   )
+  const ImageThirdCard = () => <Image src={images.ImageOldManPhone} />
 
-  const LeftSideThirdCard = () => <Image src={images.ImageOldManPhone} />
+  const RightSideThirdCard = () => <TextThirdCard />
+  const LeftSideThirdCard = () => <ImageThirdCard />
 
   return (
     <Container id={id}>
@@ -57,8 +67,8 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
           rightSide={RightSideFirstCard}
         />
         <CardImage
-          leftSide={LeftSideSecondFinal}
-          rightSide={RightSideSecondFinal}
+          leftSide={LeftSideSecondCard}
+          rightSide={RightSideSecondCard}
         />
         <CardImage
           leftSide={LeftSideThirdCard}

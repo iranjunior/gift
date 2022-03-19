@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled, { css } from 'styled-components'
 
 type columnItensWithGapArgs = {
@@ -28,4 +29,20 @@ export const ContentDiv = styled.div`
     alignItens: 'center',
     justifyContent: 'center',
   })}
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    ${columnItensWithGap({
+      gap: '2rem',
+      alignItens: 'center',
+      justifyContent: 'center',
+    })}
+    padding: ${({ theme }) => theme.spacing.internal} 0;
+    width: calc(100% - (${({ theme }) => theme.spacing.internal} * 2));
+  }
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1080px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    padding: ${({ theme }) => theme.spacing.internal} 0;
+    width: calc(100% - (${({ theme }) => theme.spacing.internal} * 2));
+  }
 `

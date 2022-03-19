@@ -11,4 +11,6 @@ export const Content = ContentDiv
 export const Cards = styled.div`
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 `

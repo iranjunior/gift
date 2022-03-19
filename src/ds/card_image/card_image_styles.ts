@@ -11,6 +11,13 @@ export const Container = styled.div`
   background-color: transparent;
   align-items: center;
   position: relative;
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    height: auto;
+    grid-gap: ${({ theme }) => theme.spacing.internal};
+  }
 `
 
 export const LeftSide = styled.div`
@@ -20,6 +27,10 @@ export const LeftSide = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
+    height: auto;
+  }
 `
 
 export const RightSide = styled.div`
@@ -30,6 +41,11 @@ export const RightSide = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
+    height: auto;
+  }
 `
 export const ArrowContainer = styled.div<ArrowType>`
   position: absolute;

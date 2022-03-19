@@ -1,4 +1,5 @@
 import { Base } from './interface'
+
 export const BaseTheme: Base = {
   colors: {
     neutral: {
@@ -26,6 +27,11 @@ export const BaseTheme: Base = {
     internal: '20px',
     xl: '60px',
     xxl: '80px',
+  },
+  breakpoints: {
+    tablet: '768px',
+    phone: '425px',
+    desktop: '1024px',
   },
   font: {
     sizes: {

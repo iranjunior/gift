@@ -44,7 +44,7 @@
                 "initial": {
                     "who-we-are": {
                         "title": "<h1>A farmácia<br />que te ajuda a viver <highlight>melhor</highlight>.</h1>",
-                        "subtitle": "<p>Aqui, você recebe seus medicamentos de um jeito simples e prático. Com serviços personalizados, levamos mais<br />comodidade e segurança para os seus cuidados com<br />a saúde.</p>"
+                        "subtitle": "<p>Aqui, você recebe seus medicamentos de um jeito simples e prático. Com serviços personalizados, levamos mais<br responsive='only-desktop' /> comodidade e segurança para os seus cuidados com<br responsive='only-desktop' /> a saúde.</p>"
                     }
                 },
                 "farme_box": {
@@ -74,7 +74,7 @@
                 },
                 "targets": {
                     "title": "Uma solução,<br /> diferentes necessidades.",
-                    "subtitle": "A Far.me Box está presente em diversas rotinas,<br /> oferecendo benefícios únicos para cada forma de cuidado.",
+                    "subtitle": "A Far.me Box está presente em diversas rotinas, oferecendo benefícios únicos para cada forma de cuidado.",
                     "cards": [
                         {
                             "title": "Para quem toma medicamentos<br /> <highlight>todos os dias</highlight>",
@@ -184,7 +184,7 @@
             "companies": {
                 "initial": {
                     "who-we-are": {
-                        "title": "<h1>Somos <br/>o seu braço <highlight>farmacêutico</highlight>.</h1>",
+                        "title": "<h1>Somos <br/>o seu braço <br responsive='only-desktop' /> <highlight>farmacêutico</highlight>.</h1>",
                         "subtitle": "<p>Oferecemos segurança e organização para você manter o foco no residente. <br />Eleve o cuidado da sua instituição sem ocupar a equipe e tenha o apoio de especialistas para tirar dúvidas sobre medicamentos.</p>"
                     }
                 },
@@ -431,7 +431,7 @@
             "arguments": {
                 "title": "A solução feita pra você que faz uso de remédios todos os dias.",
                 "cards": {
-                    "first": "E que prefere <highlight>receber</highlight><br />seu tratamento em casa do que ir à farmácia <br />toda hora.",
+                    "first": "E que prefere <highlight>receber</highlight><br responsive='only-desktop' /> seu tratamento em casa do que ir à farmácia <br responsive='only-desktop' /> toda hora.",
                     "second": "Que quer <highlight>evitar</highlight> se confundir com as doses, datas e horários de diferentes remédios. ",
                     "third": "Que busca <highlight>segurança</highlight> pra seguir o tratamento do melhor jeito."
                 }
@@ -535,16 +535,16 @@
             },
             "arguments": [
                 {
-                    "title": "Digital<br/><highlight>e inteligente</highlight>.",
+                    "title": "Digital<br responsive='only-desktop' /> <highlight>e inteligente</highlight>.",
                     "text": "Por meio de inteligência artificial, atribuímos um score a cada medicamento em uso. É desse jeito que identificamos se existe um alerta clínico para ser discutido com o médico e outros profissionais envolvidos no seu tratamento.",
                     "label_button": "Confira os itens que analisamos"
                 },
                 {
-                    "title": "Contato direto<br />com <highlight>você<!highlight>!",
+                    "title": "Contato direto<br responsive='only-desktop' /> com <highlight>você<!highlight>!",
                     "text": "Contato direto com você, o responsável ou o médico sempre que houver uma possibilidade de alteração na prescrição. E com a consulta farmacêutica, você pode entender como está seguindo o seu tratamento. <br />O atendimento é feito por e-mail, WhatsApp ou telefone. E acontece de segunda à sexta, das 9h às 18h. "
                 },
                 {
-                    "title": "Ainda com<br /><highlight>dúvidas?</highlight>",
+                    "title": "Ainda com<br responsive='only-desktop' /> <highlight>dúvidas?</highlight>",
                     "text": "Aqui, você também tem acesso ao nosso canal de atendimento farmacêutico. Nele respondemos às suas perguntas sobre os medicamentos usados. ",
                     "label_button": "Acesse o canal"
                 }

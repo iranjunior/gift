@@ -4,6 +4,7 @@ export interface Theme extends Base {
 
 export interface Base {
   spacing: Spacing
+  breakpoints: Breakpoints
   font: {
     sizes: fontSize
     lineHeight: lineHeight
@@ -74,4 +75,9 @@ export interface Spacing {
   md: string
   xl: string
   xxl: string
+}
+export interface Breakpoints {
+  desktop: string
+  tablet: string
+  phone: string
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../../../../context/data'
-import { Accordion } from '../../../../../ds'
+import { Accordion, Header } from '../../../../../ds'
 
 import { Container, Content, DoubtsContainer } from './doubt_styles'
 
@@ -19,6 +19,7 @@ export const Doubt: React.FC<DoubtProps> = ({ id }) => {
 
   return (
     <Container id={id}>
+      <Header description={pageDoubts.description} title={pageDoubts.title} />
       <Content>
         <DoubtsContainer>
           {pageDoubts.doubts.map((doubt) => (

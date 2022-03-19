@@ -1,8 +1,10 @@
+/* eslint-disable indent */
 import styled from 'styled-components'
 import { columnItensWithGap } from '../styles/common_styles'
 
 type ContainerProps = {
   image: string
+  positionImageInTablet?: 'center' | 'left' | 'right'
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -11,12 +13,16 @@ export const Container = styled.div<ContainerProps>`
   justify-content: flex-end;
   background: linear-gradient(
       to right,
-      ${(props) => `${props.theme.colors.neutral.darkness}66`},
+      ${(props) => `${props.theme.colors.neutral.darkness}80`},
       transparent
     ),
     url(${(props) => props.image});
   background-size: cover;
+  background-position: center;
   height: 640px;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    background-position: ${(props) => props.positionImageInTablet ?? 'center'};
+  }
 `
 export const BlockText = styled.div`
   width: 535px;
@@ -25,6 +31,13 @@ export const BlockText = styled.div`
   gap: 1rem;
   button {
     width: 200px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    button {
+      width: 100%;
+    }
   }
 `
 export const BlockImage = styled.div``
@@ -36,6 +49,11 @@ export const Content = styled.div`
   width: 85%;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin: 16px auto;
+    align-items: flex-end;
+    height: auto;
+  }
 `
 
 export const Text = styled.span`
@@ -51,6 +69,9 @@ export const Text = styled.span`
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: start;
   color: ${({ theme }) => theme.colors.neutral.lightness};
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.font.sizes.xs};
+  }
 `
 type TextPrincipalProps = {
   compact?: boolean
@@ -69,6 +90,11 @@ export const TextPrincipal = styled.span<TextPrincipalProps>`
     font-family: ${({ theme }) => theme.font.family.sliver};
     font-weight: normal;
     margin: 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme, compact }) =>
+      compact ? theme.font.sizes.xs : theme.font.sizes.sm};
   }
 `
 

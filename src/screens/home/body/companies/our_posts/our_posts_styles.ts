@@ -13,6 +13,9 @@ export const Content = styled(ContentDiv)`
   button {
     align-self: flex-end;
     width: 200px;
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      display: none;
+    }
   }
   gap: 0;
 `

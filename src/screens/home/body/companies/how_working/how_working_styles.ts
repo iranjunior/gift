@@ -9,12 +9,9 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
   padding: 5% 0;
+  flex-wrap: wrap;
 `
 export const Content = ContentDiv
-
-export const Video = styled.video`
-  width: 1080px;
-`
 
 export const ContainerCards = styled.div`
   margin: 0 auto;
@@ -24,6 +21,9 @@ export const ContainerCards = styled.div`
   column-gap: 1rem;
   align-items: flex-start;
   flex-wrap: wrap;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    row-gap: 2rem;
+  }
 `
 export const ContentCard = styled.div`
   ${columnItensWithGap({
@@ -32,6 +32,11 @@ export const ContentCard = styled.div`
     alignItens: 'center',
   })}
   width: 310px;
+  height: 224px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: auto;
+  }
 }
 `
 export const ContentCardIcon = styled.img`
@@ -49,4 +54,9 @@ export const ContentCardText = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xxs};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: center;
+`
+
+export const Video = styled.video`
+  max-width: 1080px;
+  width: 90%;
 `

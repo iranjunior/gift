@@ -9,7 +9,7 @@ import {
   Image,
   TextPrincipal,
   BlockText,
-} from './who_we_some_styles'
+} from './initial_styles'
 
 type MainProps = {
   id?: string

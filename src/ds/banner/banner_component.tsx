@@ -23,6 +23,7 @@ type BannerProps = {
   button?: {
     text: string
   }
+  positionImageInTablet?: 'center' | 'left' | 'right'
 }
 
 export const Banner: React.FC<BannerProps> = ({
@@ -32,9 +33,14 @@ export const Banner: React.FC<BannerProps> = ({
   highlights,
   image,
   button,
+  positionImageInTablet,
 }) => {
   return (
-    <Container id={id} image={image}>
+    <Container
+      id={id}
+      positionImageInTablet={positionImageInTablet}
+      image={image}
+    >
       <Content>
         <BlockText>
           {title ? (

@@ -6,14 +6,20 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
   padding: 5% 0;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    ${columnItensWithGap({ gap: '2rem', alignItens: 'center' })}
+  }
 `
 export const Content = styled.div`
   margin: 0 auto;
   display: flex;
-  width: 85%;
+  width: 100%;
   max-width: 1500px;
   justify-content: center;
   align-items: center;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
+  }
 `
 export const DoubtsContainer = styled.div`
   ${columnItensWithGap({
@@ -21,5 +27,7 @@ export const DoubtsContainer = styled.div`
     alignItens: 'center',
     justifyContent: 'center',
   })}
-  width: 60%;
+
+  width: 80%;
+  max-width: 860px;
 `

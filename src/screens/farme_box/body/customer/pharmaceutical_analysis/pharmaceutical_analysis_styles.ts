@@ -11,7 +11,6 @@ export const Container = styled.div`
   padding: 5% 0;
 `
 export const Content = ContentDiv
-
 export const BlockText = styled.div`
   ${columnItensWithGap({
     gap: '1rem',
@@ -19,6 +18,12 @@ export const BlockText = styled.div`
     alignItens: 'flex-start',
   })}
   padding: 0 60px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-end;
+  }
 `
 
 export const TextPrincipal = styled.span`
@@ -26,6 +31,10 @@ export const TextPrincipal = styled.span`
   font-family: ${({ theme }) => theme.font.family.sliver};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.font.sizes.md};
+  }
 `
 export const Text = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xs};
@@ -33,6 +42,10 @@ export const Text = styled.span`
   letter-spacing: 2%;
   font-family: 'Inter';
   text-align: start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+  }
 `
 
 type ImageProps = {
@@ -41,4 +54,8 @@ type ImageProps = {
 
 export const Image = styled.img<ImageProps>`
   height: 100%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    height: auto;
+  }
 `

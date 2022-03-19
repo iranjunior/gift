@@ -11,9 +11,13 @@ type Props = {
 
 type CarrouselProps = {
   content: Array<Props>
+  imageSizeInTablet?: 'cover' | 'contain'
 }
 
-export const Carrousel: React.FC<CarrouselProps> = ({ content }) => {
+export const Carrousel: React.FC<CarrouselProps> = ({
+  content,
+  imageSizeInTablet,
+}) => {
   const [active, setActive] = useState(content[0])
 
   return (
@@ -26,7 +30,11 @@ export const Carrousel: React.FC<CarrouselProps> = ({ content }) => {
           </Tab>
         ))}
       </Tabs>
-      <CarrouselContent title={active.text} image={active.image} />
+      <CarrouselContent
+        title={active.text}
+        image={active.image}
+        imageSizeInTablet={imageSizeInTablet}
+      />
     </Container>
   )
 }

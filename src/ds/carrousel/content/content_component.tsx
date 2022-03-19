@@ -15,11 +15,13 @@ import {
 export type CarrouselContentProps = {
   title: string
   image: string
+  imageSizeInTablet?: 'cover' | 'contain'
 }
 
 export const CarrouselContent: React.FC<CarrouselContentProps> = ({
   title,
   image,
+  imageSizeInTablet,
 }) => {
   const { colors } = useTheme()
   const LeftSideContent = () => (
@@ -35,7 +37,9 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
     </>
   )
 
-  const RightSideContent = () => <Image src={image} />
+  const RightSideContent = () => (
+    <Image sizeInTablet={imageSizeInTablet} src={image} />
+  )
 
   return (
     <Container>

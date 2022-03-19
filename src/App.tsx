@@ -4,7 +4,12 @@ import { DataProvider } from './context/data'
 import { SubjectProvider, SubjectContext } from './context/subject'
 import data from './assets/strings.json'
 import { ThemeProvider } from 'styled-components'
-import { companiesTheme, customersTheme, medicalTheme } from './themes'
+import {
+  companiesTheme,
+  customersTheme,
+  medicalTheme,
+  GlobalStyle,
+} from './themes'
 import { Subject } from './context/subject/subject'
 import { Theme } from './themes/interface'
 
@@ -21,6 +26,7 @@ function App() {
         <SubjectContext.Consumer>
           {(value) => (
             <ThemeProvider theme={getThemeBySubject(value.subject)}>
+              <GlobalStyle />
               <div className="App">
                 <Router />
               </div>

@@ -18,6 +18,10 @@ export const BlockText = styled.div`
   gap: 1rem;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
+  }
 `
 export const BlockImage = styled.div``
 
@@ -32,6 +36,10 @@ export const TextPrincipal = styled.span`
   font-family: ${({ theme }) => theme.font.family.sliver};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: center;
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+  }
 `
 type ImageProps = {
   square?: boolean
@@ -39,6 +47,11 @@ type ImageProps = {
 
 export const Image = styled.img<ImageProps>`
   height: 100%;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
 `
 export const Quotation = styled.img`
   height: 24px;
@@ -59,7 +72,7 @@ export const Testimony = styled.div<TestimonyProps>`
   display: ${(props) => (props.hidden ? 'none' : 'flex')};
   opacity: ${(props) => (props.hidden ? 0 : 1)};
   width: 100%;
-  gap: 20rem;
+  gap: 20%;
   justify-content: space-between;
   animation: show-testimony 1s ease-in-out;
 
@@ -72,6 +85,12 @@ export const Testimony = styled.div<TestimonyProps>`
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
   }
 `
 type DotIndicatorProps = {
@@ -92,4 +111,8 @@ export const BlockDots = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    display: none;
+  }
 `

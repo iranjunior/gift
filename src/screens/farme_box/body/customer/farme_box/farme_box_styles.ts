@@ -6,9 +6,11 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
   padding: 5% 0;
+  flex-wrap: wrap;
 `
 export const Content = ContentDiv
 
 export const Video = styled.video`
-  width: 1080px;
+  max-width: 1080px;
+  width: 90%;
 `

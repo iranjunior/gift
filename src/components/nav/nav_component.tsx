@@ -4,7 +4,7 @@ import { DataContext } from '../../context/data'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
 
-import { Cell, Container, Link } from './nav_styles'
+import { Cell, Container, Link, Content } from './nav_styles'
 
 export const Nav = () => {
   const data = useContext(DataContext)
@@ -12,6 +12,7 @@ export const Nav = () => {
   const navigate = useNavigate()
 
   const _onClick = (value: string) => {
+    console.log(value)
     if (value === 'customers') {
       navigate('/')
     } else if (value === 'companies') {
@@ -27,18 +28,22 @@ export const Nav = () => {
     if (subject === Subject.doctors && index === 2) return true
     return false
   }
+  const isMobile = window.innerWidth < 768
 
+  const showText = (value: string) => (isMobile ? value.split(' ')[1] : value)
   return (
     <Container>
-      {Object.entries(data.nav).map(([subj, value], index) => (
-        <Cell
-          key={value}
-          active={isActive(index)}
-          onClick={!isActive(index) ? () => _onClick(subj) : () => null}
-        >
-          <Link active={isActive(index)}>{value}</Link>
-        </Cell>
-      ))}
+      <Content>
+        {Object.entries(data.nav).map(([subj, value], index) => (
+          <Cell
+            key={value}
+            active={isActive(index)}
+            onClick={!isActive(index) ? () => _onClick(subj) : () => null}
+          >
+            <Link active={isActive(index)}>{showText(value)}</Link>
+          </Cell>
+        ))}
+      </Content>
     </Container>
   )
 }

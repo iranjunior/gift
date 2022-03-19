@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -13,6 +14,9 @@ export const AboutContainer = styled.div`
   grid-template-columns: 1fr 2fr 1fr;
   padding: 0 5%;
   gap: 2rem;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const AboutInfosContainer = styled.div`
@@ -22,6 +26,9 @@ export const AboutInfosContainer = styled.div`
   align-items: start;
   gap: 1rem;
   width: 60%;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
+  }
 `
 export const AboutInfosImage = styled.div`
   height: 40px;
@@ -48,17 +55,32 @@ export const AboutRequestContainer = styled.div`
   button {
     margin: ${({ theme }) => theme.spacing.xxs} 0;
     width: 25%;
+    @media (max-width: calc(${({ theme }) =>
+        theme.breakpoints.desktop} - 1px)) {
+      width: 75%;
+    }
+  }
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
   }
 `
 export const AboutRequestTitle = styled.span`
   color: ${({ theme }) => theme.primary.light};
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+  }
 `
 export const AboutRequestTitleHighlight = styled.span`
   color: ${({ theme }) => theme.primary.light};
   font-size: ${({ theme }) => theme.font.sizes.xl};
-  font-family: ${({ theme }) => theme.font.family.highlight}; ;
+  font-family: ${({ theme }) => theme.font.family.highlight};
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+  }
 `
 
 export const AboutContactsContainer = styled.div`
@@ -113,6 +135,10 @@ export const AboutSectionsContainer = styled.div`
   display: flex;
   width: 90%;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    gap: 2rem;
+  }
 `
 export const AboutSection = styled.div`
   display: flex;
@@ -120,6 +146,9 @@ export const AboutSection = styled.div`
   align-items: start;
   justify-content: space-evenly;
   gap: 1.5rem;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    width: 100%;
+  }
 `
 export const AboutSectionTitle = styled.span`
   color: ${({ theme }) => theme.primary.light};
@@ -135,6 +164,10 @@ export const AboutLegalInformationContainer = styled.div`
   gap: 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    grid-template-columns: 1fr;
+  }
 `
 export const AboutLegalInformationSection = styled.div`
   display: flex;

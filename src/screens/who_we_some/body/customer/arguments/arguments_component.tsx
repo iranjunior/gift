@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import images from '../../../../../assets/images'
 import IllustrationPerson from '../../../../../assets/images/illustration_person.svg'
 import IllustrationCare from '../../../../../assets/images/illustration_care.svg'
@@ -30,23 +30,35 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
-  const RightSideInitial = () => (
+
+  const [isTablet, setTablet] = useState(window.innerWidth < 1024)
+
+  useEffect(() => setTablet(window.innerWidth < 1024), [window.innerWidth])
+
+  const TextCardInitial = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: card_initial.title }} />
       <Text dangerouslySetInnerHTML={{ __html: card_initial.subtitle }} />
     </BlockText>
   )
+  const ImageCardInitial = () => <Image src={images.ImagePersonReceivedBox} />
 
-  const LeftSideInitial = () => <Image src={images.ImagePersonReceivedBox} />
+  const RightSideInitial = () => <TextCardInitial />
+  const LeftSideInitial = () => <ImageCardInitial />
 
-  const RightSideFinal = () => <Image src={images.ImageBill} />
+  const ImageCardFinal = () => <Image src={images.ImageBill} />
 
-  const LeftSideFinal = () => (
+  const TextCardFinal = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: card_final.title }} />
       <Text dangerouslySetInnerHTML={{ __html: card_final.subtitle }} />
     </BlockText>
   )
+
+  const RightSideFinal = () =>
+    isTablet ? <TextCardFinal /> : <ImageCardFinal />
+  const LeftSideFinal = () =>
+    isTablet ? <ImageCardFinal /> : <ImageCardFinal />
 
   return (
     <Container id={id}>

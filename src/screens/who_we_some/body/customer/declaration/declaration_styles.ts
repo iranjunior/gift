@@ -18,6 +18,10 @@ export const BlockText = styled.div`
     justifyContent: 'center',
     alignItens: 'flex-start',
   })}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+  }
 `
 export const BlockImage = styled.div``
 
@@ -26,10 +30,18 @@ export const Text = styled.span`
   line-height: ${({ theme }) => theme.font.lineHeight.superDistant};
   letter-spacing: 2%;
   font-family: 'Inter';
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+  }
 `
 export const TextPrincipal = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.lg};
   font-family: ${({ theme }) => theme.font.family.sliver};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.font.sizes.md};
+  }
 `
