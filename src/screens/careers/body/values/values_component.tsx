@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { DataContext } from '../../../../context/data'
 
 import { HeaderCentered } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 import {
   Container,
   Content,
@@ -16,6 +17,7 @@ import {
 
 type ValuesProps = {
   id?: string
+  className?: string
 }
 
 export const Values: React.FC<ValuesProps> = ({ id }) => {
@@ -24,9 +26,11 @@ export const Values: React.FC<ValuesProps> = ({ id }) => {
       careers: { values },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <HeaderCentered title={values.title} subtitle={values.subtitle} />
         <ValuesContainer>

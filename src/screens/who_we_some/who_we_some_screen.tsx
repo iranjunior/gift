@@ -25,7 +25,7 @@ export const WhoWeSome = () => {
         <Menu />
         <Main id="quem-somos" />
         <History id="historia" />
-        <Testimonies id="testimonies" />
+        <Testimonies id="depoimentos" />
         <Declaration id="declaracao" />
         <Numbers id="numeros" />
         <Arguments id="argumentos" />

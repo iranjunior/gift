@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import ImageBoxWhoWeAre from '../../../../assets/images/who_we_are_initial.svg'
 import { DataContext } from '../../../../context/data'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 import {
   Container,
@@ -13,6 +14,7 @@ import {
 
 type MainProps = {
   id?: string
+  className?: string
 }
 
 export const Main: React.FC<MainProps> = ({ id }) => {
@@ -21,9 +23,11 @@ export const Main: React.FC<MainProps> = ({ id }) => {
       who_we_are: { initial },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <BlockText>
           <TextPrincipal

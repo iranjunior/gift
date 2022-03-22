@@ -36,6 +36,7 @@ import { Button } from '../../ds'
 
 type FooterProps = {
   id?: string
+  className?: string
 }
 
 export const Footer: React.FC<FooterProps> = ({ id }) => {

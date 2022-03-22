@@ -1,12 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import { DataContext } from '../../../../context/data'
 import { Button, ButtonType, Header } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 import { Container, Content } from './our_posts_styles'
 
 type OurPostsProps = {
   id?: string
+  className?: string
 }
 
 export const OurPosts: React.FC<OurPostsProps> = ({ id }) => {
@@ -17,9 +19,11 @@ export const OurPosts: React.FC<OurPostsProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <Header full description={description} title={title} />
         <Button type={ButtonType.Ghost} label="Ver todos os posts" hasArrow />

@@ -16,6 +16,7 @@ export type CardImageProps = {
   customRightSideStyle?: React.CSSProperties
   showArrow?: boolean
   arrowReversed?: boolean
+  ref?: React.ForwardedRef<HTMLDivElement>
 }
 
 type RightSideContentProps = {
@@ -33,16 +34,17 @@ type LeftSideContentProps = {
 export const LeftSideContent: React.FC<LeftSideContentProps> = ({ children }) =>
   React.createElement(children)
 
-export const CardImage: React.FC<CardImageProps> = ({
+const Card: React.FC<CardImageProps> = ({
   leftSide,
   rightSide,
   customLeftSideStyle,
   customRightSideStyle,
   showArrow,
   arrowReversed,
+  ref,
 }) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <LeftSide style={customLeftSideStyle}>
         {React.createElement(leftSide)}
       </LeftSide>
@@ -57,3 +59,7 @@ export const CardImage: React.FC<CardImageProps> = ({
     </Container>
   )
 }
+
+export const CardImage = React.forwardRef<HTMLDivElement, CardImageProps>(
+  (props, ref) => <Card ref={ref} {...props} />
+)

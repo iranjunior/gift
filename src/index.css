@@ -37,3 +37,19 @@ summary::before {
 details[open] > summary::after {
   content: url('./assets/images/up_arrow.svg');
 }
+
+
+@keyframes show-Slide {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide {
+  animation: show-Slide 1s ease-in-out;
+}

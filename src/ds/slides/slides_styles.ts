@@ -35,19 +35,6 @@ export const Slide = styled.div<SlideProps>`
 
   justify-content: space-between;
 
-  animation: show-Slide 1s ease-in-out;
-
-  @keyframes show-Slide {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 2rem;
     justify-content: center;

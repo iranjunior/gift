@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import images from '../../../../assets/images'
 import { Button, CardProduct as CardProductComponent } from '../../../../ds'
@@ -15,9 +15,11 @@ import {
   RightSideContainer,
   Image,
 } from './card_product_styles'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type CardProductProps = {
   id?: string
+  className?: string
 }
 
 export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
@@ -26,6 +28,8 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
       for_companies: { card_product },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   const LeftSide = () => (
     <LeftSideContainer>
@@ -48,7 +52,7 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
   )
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <CardProductComponent leftSide={LeftSide} rightSide={RightSide} />
       </Content>

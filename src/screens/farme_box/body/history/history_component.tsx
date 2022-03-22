@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import { DataContext } from '../../../../context/data'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 import {
   Container,
@@ -12,6 +13,7 @@ import {
 
 type HistoryProps = {
   id?: string
+  className?: string
 }
 
 export const History: React.FC<HistoryProps> = ({ id }) => {
@@ -20,9 +22,11 @@ export const History: React.FC<HistoryProps> = ({ id }) => {
       who_we_are: { history },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: history.title }} />

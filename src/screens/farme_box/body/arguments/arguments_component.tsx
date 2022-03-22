@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { CardImage } from '../../../../ds/card_image'
@@ -11,9 +11,11 @@ import {
   TextPrincipal,
 } from './arguments_styles'
 import { HeaderCentered } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type ArgumentsProps = {
   id?: string
+  className?: string
 }
 
 export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
@@ -24,6 +26,9 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
+
   const isTablet = window.innerWidth < 1024
 
   const TextFirstCard = () => (
@@ -59,7 +64,7 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
   const LeftSideThirdCard = () => <ImageThirdCard />
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <HeaderCentered title={title} />
         <CardImage

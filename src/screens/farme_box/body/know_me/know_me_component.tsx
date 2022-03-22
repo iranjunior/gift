@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 
 import { Carrousel } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 import { Container, Content } from './know_me_styles'
 
 type hashMapType = {
@@ -17,6 +18,7 @@ const hashMap: hashMapType = {
 
 type KnowMeProps = {
   id?: string
+  className?: string
 }
 
 export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
@@ -25,6 +27,8 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
       farme_box: { carousel },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   const buildTabs = () =>
     carousel.map(({ label, ...props }) => ({
@@ -33,7 +37,7 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
       ...props,
     }))
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <Carrousel content={buildTabs()} />
       </Content>

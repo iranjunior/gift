@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import { DataContext } from '../../../../context/data'
 
@@ -17,9 +17,11 @@ import {
   ContainerButtons,
 } from './how_working_styles'
 import { HeaderCentered, Button, ButtonType } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type HowWorkingProps = {
   id?: string
+  className?: string
 }
 type hashMapIllustrationsType = {
   [key: string]: string
@@ -39,9 +41,11 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <HeaderCentered title={title} subtitle={subtitle} />
         <ContainerCards>

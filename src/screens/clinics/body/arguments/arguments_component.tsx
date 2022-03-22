@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { CardImage } from '../../../../ds/card_image'
@@ -13,9 +13,11 @@ import {
 } from './arguments_styles'
 
 import { Button } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type ArgumentsProps = {
   id?: string
+  className?: string
 }
 
 export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
@@ -24,6 +26,9 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       clinics: { arguments: points },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
+
   const isTablet = window.innerWidth < 1024
   const TextFirstCard = () => (
     <BlockText>
@@ -64,7 +69,7 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
   const LeftSideThirdCard = () => <ImageThirdCard />
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <CardImage
           leftSide={LeftSideFirstCard}

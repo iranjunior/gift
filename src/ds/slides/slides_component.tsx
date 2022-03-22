@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
   Container,
@@ -24,12 +24,37 @@ type SlidesProps = {
 
 export const Slides: React.FC<SlidesProps> = ({ id, slides, reversed }) => {
   const [slideActive, setSlide] = useState(slides[0])
+  const [stopped, setStop] = useState(false)
+  let timeout: NodeJS.Timeout
+  const interval = async () => {
+    await new Promise(() => {
+      timeout = setTimeout(() => {
+        const nextSlide = slides[slides.indexOf(slideActive) + 1] ?? slides[0]
+        setSlide(nextSlide)
+      }, 5000)
+    })
+  }
+
+  useEffect(() => {
+    if (!stopped) {
+      interval()
+    }
+  }, [slideActive, stopped])
+
   return (
-    <Container id={id}>
+    <Container
+      onMouseEnter={() => {
+        setStop(true)
+        clearTimeout(timeout)
+      }}
+      onMouseLeave={() => setStop(false)}
+      id={id}
+    >
       <Content>
         <SlideWrapper>
           {slides.map(({ LeftSide, RightSide, key }) => (
             <Slide
+              className="animate-slide"
               reversed={reversed}
               hidden={slideActive.key !== key}
               key={key}

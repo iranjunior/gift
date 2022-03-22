@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import { DataContext } from '../../../../context/data'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 import {
   Container,
@@ -13,6 +14,7 @@ import {
 
 type SummaryProps = {
   id?: string
+  className?: string
 }
 
 export const Summary: React.FC<SummaryProps> = ({ id }) => {
@@ -21,9 +23,11 @@ export const Summary: React.FC<SummaryProps> = ({ id }) => {
       careers: { summary },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: summary.title }} />

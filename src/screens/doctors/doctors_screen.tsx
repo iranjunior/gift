@@ -29,7 +29,7 @@ export const ForDoctors = () => {
         <CardProduct id="farme-box" />
         <OurPosts id="nossos-posts" />
         <Numbers id="numeros" />
-        <Testimonies id="testimonies" />
+        <Testimonies id="depoimentos" />
         <Doubt id="duvidas" />
         <Footer id="sobre" />
       </Body>

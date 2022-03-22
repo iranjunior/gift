@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { DataContext } from '../../../../context/data'
 import IllustrationWinnings from '../../../../assets/images/illustration_winnings.svg'
 import IllustrationBook from '../../../../assets/images/illustration_book.svg'
@@ -18,9 +18,11 @@ import {
   Main,
 } from './advantage_styles'
 import { Button, ButtonType, HeaderCentered } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type AdvantageProps = {
   id?: string
+  className?: string
 }
 type hashMapIllustrationsType = {
   [key: string]: string
@@ -42,9 +44,11 @@ export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <HeaderCentered title={title} subtitle={subtitle} />
         <Main>

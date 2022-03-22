@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { DataContext } from '../../../../context/data'
 import IllustrationCare from '../../../../assets/images/illustration_care.svg'
 import IllustrationBox from '../../../../assets/images/illustration_box.svg'
@@ -14,9 +14,11 @@ import {
   ContainerCards,
   Main,
 } from './reasons_styles'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type ReasonsProps = {
   id?: string
+  className?: string
 }
 type hashMapIllustrationsType = {
   [key: string]: string
@@ -35,9 +37,11 @@ export const Reasons: React.FC<ReasonsProps> = ({ id }) => {
       careers: { reasons },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <Main>
           <ContainerCards>

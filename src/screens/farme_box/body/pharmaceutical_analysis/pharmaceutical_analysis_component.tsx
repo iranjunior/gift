@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { CardImage } from '../../../../ds/card_image'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 import {
   BlockText,
@@ -14,6 +15,7 @@ import {
 
 type PharmaceuticalAnalysisProps = {
   id?: string
+  className?: string
 }
 
 export const PharmaceuticalAnalysis: React.FC<PharmaceuticalAnalysisProps> = ({
@@ -26,6 +28,9 @@ export const PharmaceuticalAnalysis: React.FC<PharmaceuticalAnalysisProps> = ({
       },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
+
   const LeftSide = () => (
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: card.title }} />
@@ -36,7 +41,7 @@ export const PharmaceuticalAnalysis: React.FC<PharmaceuticalAnalysisProps> = ({
   const RightSide = () => <Image src={images.ImageDoctorWihPhone} />
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <CardImage leftSide={LeftSide} rightSide={RightSide} />
       </Content>

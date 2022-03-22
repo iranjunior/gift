@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import Person1 from '../../assets/images/person_1.png'
 import QuotationIllustration from '../../assets/images/quotation.svg'
 import { DataContext } from '../../context/data'
 import { Header, Slides } from '../../ds'
+import { useIntersection } from '../../hooks/useIntersection'
 
 import {
   Container,
@@ -17,6 +18,7 @@ import {
 
 type TestimoniesProps = {
   id?: string
+  className?: string
 }
 
 export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
@@ -25,6 +27,8 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
       common_pages: { testimonies: pageTestimonies },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '0px', true)
 
   type LeftSideProps = {
     testimony: string
@@ -49,7 +53,7 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   )
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <Header
           description={pageTestimonies.description}

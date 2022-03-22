@@ -127,7 +127,7 @@ export interface Numbers {
 
 export interface Info {
     legend: string;
-    value:  string;
+    value:  number;
 }
 
 export interface FarmeBox {
@@ -612,7 +612,7 @@ const typeMap: any = {
     ], false),
     "Info": o([
         { json: "legend", js: "legend", typ: "" },
-        { json: "value", js: "value", typ: "" },
+        { json: "value", js: "value", typ: 0 },
     ], false),
     "FarmeBox": o([
         { json: "initial", js: "initial", typ: r("FarmeBoxClass") },

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { DataContext } from '../../../../context/data'
 import Person1 from '../../../../assets/images/person_1.png'
 
@@ -13,9 +13,11 @@ import {
 } from './advantage_styles'
 
 import { HeaderCentered, Slides } from '../../../../ds'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type AdvantageProps = {
   id?: string
+  className?: string
 }
 
 export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
@@ -26,6 +28,8 @@ export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
 
   const LeftSide = () => <Image src={Person1} />
 
@@ -41,7 +45,7 @@ export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
   )
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content>
         <HeaderCentered legend={legend} title={title} subtitle={subtitle} />
         <Main>

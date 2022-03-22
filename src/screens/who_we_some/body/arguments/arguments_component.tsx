@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import images from '../../../../assets/images'
 import IllustrationPerson from '../../../../assets/images/illustration_person.svg'
 import IllustrationCare from '../../../../assets/images/illustration_care.svg'
@@ -17,9 +17,11 @@ import {
   Text,
   TextPrincipal,
 } from './arguments_styles'
+import { useIntersection } from '../../../../hooks/useIntersection'
 
 type ArgumentsProps = {
   id?: string
+  className?: string
 }
 
 export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
@@ -30,6 +32,12 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       },
     },
   } = useContext(DataContext)
+  const firstRef = useRef(null as unknown as HTMLDivElement)
+  const secondRef = useRef(null as unknown as HTMLDivElement)
+  const thirdRef = useRef(null as unknown as HTMLDivElement)
+  useIntersection(firstRef, '50px', true)
+  useIntersection(secondRef, '100px', true)
+  useIntersection(thirdRef, '50px', true)
 
   const [isTablet, setTablet] = useState(window.innerWidth < 1024)
 
@@ -63,8 +71,12 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
   return (
     <Container id={id}>
       <Content>
-        <CardImage leftSide={LeftSideInitial} rightSide={RightSideInitial} />
-        <ContentContainer>
+        <CardImage
+          ref={firstRef}
+          leftSide={LeftSideInitial}
+          rightSide={RightSideInitial}
+        />
+        <ContentContainer ref={secondRef}>
           <ContentCard>
             <ContentCardIcon src={IllustrationCare} />
             <ContentCardText
@@ -78,7 +90,11 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
             />
           </ContentCard>
         </ContentContainer>
-        <CardImage leftSide={LeftSideFinal} rightSide={RightSideFinal} />
+        <CardImage
+          ref={thirdRef}
+          leftSide={LeftSideFinal}
+          rightSide={RightSideFinal}
+        />
       </Content>
     </Container>
   )

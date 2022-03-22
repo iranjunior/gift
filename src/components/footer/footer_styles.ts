@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.footer`
   display: flex;
   background-color: ${({ theme }) => theme.primary.darkness};
   width: 100%;

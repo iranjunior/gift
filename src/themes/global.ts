@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background-color: ${({ theme }) => theme.primary.darkness};
+    background-color: transparent;
   }
   
 `

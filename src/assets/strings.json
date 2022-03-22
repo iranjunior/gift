@@ -27,7 +27,7 @@
         },
         "blog": {
             "label": "Blog",
-            "href": "https://blog.far.me"
+            "href": "https://blog.farme.com.br/"
         },
         "contact": {
             "label": "Contato",
@@ -330,15 +330,15 @@
                 "infos": [
                     {
                         "legend": "Colaboradores.",
-                        "value": "+70"
+                        "value": 70
                     },
                     {
                         "legend": "Far.me Boxes produzidas.",
-                        "value": "+7.000"
+                        "value": 7000
                     },
                     {
                         "legend": "vidas impactadas.",
-                        "value": "+3.000"
+                        "value": 3000
                     }
                 ]
             },
