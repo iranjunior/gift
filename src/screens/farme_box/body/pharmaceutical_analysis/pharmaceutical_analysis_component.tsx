@@ -42,7 +42,7 @@ export const PharmaceuticalAnalysis: React.FC<PharmaceuticalAnalysisProps> = ({
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <CardImage leftSide={LeftSide} rightSide={RightSide} />
       </Content>
     </Container>

@@ -46,7 +46,7 @@ export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered legend={legend} title={title} subtitle={subtitle} />
         <Main>
           <Slides

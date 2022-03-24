@@ -27,8 +27,8 @@ export const Numbers: React.FC<NumbersProps> = ({ id }) => {
   useIntersection(ref, '0px', true)
 
   return (
-    <Container ref={ref} id={id}>
-      <Content>
+    <Container id={id}>
+      <Content ref={ref}>
         <Header description={numbers.description} title={numbers.title} />
         <BlockNumbers>
           {numbers.infos.map((info) => (

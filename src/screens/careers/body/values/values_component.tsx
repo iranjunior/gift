@@ -31,7 +31,7 @@ export const Values: React.FC<ValuesProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={values.title} subtitle={values.subtitle} />
         <ValuesContainer>
           {values.values.map((value) => (

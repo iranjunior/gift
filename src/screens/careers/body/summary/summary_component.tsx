@@ -28,7 +28,7 @@ export const Summary: React.FC<SummaryProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: summary.title }} />
           <Highlight dangerouslySetInnerHTML={{ __html: summary.highlight }} />

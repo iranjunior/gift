@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Button } from '..'
-
-import Icon from '../../assets/images/check.svg'
+import { useIntersection } from '../../hooks/useIntersection'
 
 import { CheckedItem } from '../checked_item'
 
@@ -35,13 +34,16 @@ export const Banner: React.FC<BannerProps> = ({
   button,
   positionImageInTablet,
 }) => {
+  const ref = useRef(null as unknown as HTMLDivElement)
+  useIntersection(ref, '100px', true)
+
   return (
     <Container
       id={id}
       positionImageInTablet={positionImageInTablet}
       image={image}
     >
-      <Content>
+      <Content ref={ref}>
         <BlockText>
           {title ? (
             <TextPrincipal

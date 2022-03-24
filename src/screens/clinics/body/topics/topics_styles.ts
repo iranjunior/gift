@@ -6,6 +6,8 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+
+  background-color: ${({ theme }) => theme.primary.light};
 `
 export const BlockText = styled.div`
   width: 35%;

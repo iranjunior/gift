@@ -53,8 +53,8 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   )
 
   return (
-    <Container ref={ref} id={id}>
-      <Content>
+    <Container id={id}>
+      <Content ref={ref}>
         <Header
           description={pageTestimonies.description}
           title={pageTestimonies.title}

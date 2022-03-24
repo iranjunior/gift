@@ -22,7 +22,7 @@ export const FarMeBox: React.FC<FarMeBoxProps> = ({ id, ...props }) => {
   useIntersection(ref, '100px', true)
   return (
     <Container ref={ref} {...props} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={pageFarmeBox.title} />
 
         <Video

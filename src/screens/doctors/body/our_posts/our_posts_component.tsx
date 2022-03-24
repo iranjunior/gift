@@ -24,7 +24,7 @@ export const OurPosts: React.FC<OurPostsProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <Header full description={description} title={title} />
         <Button type={ButtonType.Ghost} label="Ver todos os posts" hasArrow />
       </Content>

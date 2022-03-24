@@ -27,7 +27,7 @@ export const Declaration: React.FC<DeclarationProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <BlockText>
           <TextPrincipal
             dangerouslySetInnerHTML={{ __html: declaration.title }}

@@ -65,7 +65,7 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={title} />
         <CardImage
           leftSide={LeftSideFirstCard}

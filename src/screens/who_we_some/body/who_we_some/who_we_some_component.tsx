@@ -28,7 +28,7 @@ export const Main: React.FC<MainProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <BlockText>
           <TextPrincipal
             dangerouslySetInnerHTML={{ __html: initial['who-we-are'].title }}

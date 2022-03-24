@@ -33,7 +33,7 @@ export const Topics: React.FC<TopicsProps> = ({ id }) => {
   const theme = useTheme()
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: topics.title }} />
           <Text dangerouslySetInnerHTML={{ __html: topics.subtitle }} />

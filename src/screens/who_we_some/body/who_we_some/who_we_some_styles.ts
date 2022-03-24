@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: flex-end;
   flex-wrap: nowrap;
   margin-top: calc(${({ theme }) => theme.spacing.internal} * 3);
+  background-color: ${({ theme }) => theme.primary.light};
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     justify-content: center;
     flex-wrap: wrap;

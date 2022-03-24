@@ -9,7 +9,7 @@ export const Container = styled.div`
 `
 
 export const Body = styled.div`
-  background-color: ${({ theme }) => theme.primary.light};
+  background-color: ${({ theme }) => theme.colors.neutral.lightness};
 
   justify-content: center;
   display: flex;

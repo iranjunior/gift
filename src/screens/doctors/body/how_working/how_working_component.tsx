@@ -45,7 +45,7 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={title} subtitle={subtitle} />
         <ContainerCards>
           {reasons

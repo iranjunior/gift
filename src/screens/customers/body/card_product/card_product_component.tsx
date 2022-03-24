@@ -53,7 +53,7 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <CardProductComponent leftSide={LeftSide} rightSide={RightSide} />
       </Content>
     </Container>

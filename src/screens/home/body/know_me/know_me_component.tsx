@@ -38,7 +38,7 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id, ...props }) => {
     }))
   return (
     <Container ref={ref} {...props} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={know_me.title} subtitle={know_me.subtitle} />
         <Carrousel content={buildTabs()} imageSizeInTablet="contain" />
       </Content>

@@ -30,7 +30,7 @@ export const OurPeople: React.FC<OurPeopleProps> = () => {
 
   return (
     <Container ref={ref}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered
           title={our_people.title}
           subtitle={our_people.subtitle}

@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 100%;
   justify-content: center;
   flex-wrap: nowrap;
+  background-color: ${({ theme }) => theme.primary.light};
   margin-top: calc(${({ theme }) => theme.spacing.internal} * 3);
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     flex-wrap: wrap;

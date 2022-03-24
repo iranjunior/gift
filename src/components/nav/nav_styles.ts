@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
-  height: calc(${({ theme }) => theme.spacing.xs});
-  position: fixed;
+  height: calc(
+    ${({ theme }) => theme.spacing.xs} + ${({ theme }) => theme.font.sizes.xxxs}
+  );
+
   background-color: ${({ theme }) => theme.primary.darkness};
   position: fixed;
   top: 0;
@@ -15,6 +17,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100%;
@@ -30,6 +34,7 @@ export const Cell = styled.div<CellProps>`
     active ? theme.primary.light : theme.primary.darkness};
 
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +48,9 @@ type LinkProps = {
 }
 export const Link = styled.a<LinkProps>`
   color: ${({ active, theme }) =>
-    active ? theme.primary.darkness : theme.primary.light};.
-  font-size: ${({ theme }) => theme.font.sizes.xxxs};
-  height: calc(${({ theme }) => theme.spacing.xs});
+    active ? theme.primary.darkness : theme.primary.light};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
+
   align-items: center;
   align-self: center;
-  
 `

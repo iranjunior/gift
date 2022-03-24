@@ -34,10 +34,10 @@ summary::before {
   transform-origin: 0.2rem 50%;
   transition: 0.25s transform ease;
 }
+
 details[open] > summary::after {
   content: url('./assets/images/up_arrow.svg');
 }
-
 
 @keyframes show-Slide {
   from {

@@ -21,7 +21,7 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={targets.title} subtitle={targets.subtitle} />
 
         <Cards>

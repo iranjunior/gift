@@ -49,7 +49,7 @@ export const Reasons: React.FC<ReasonsProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={title} />
         <Main>
           <ContainerCards>

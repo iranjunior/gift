@@ -27,7 +27,7 @@ export const History: React.FC<HistoryProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: history.title }} />
           <Text dangerouslySetInnerHTML={{ __html: history.subtitle }} />

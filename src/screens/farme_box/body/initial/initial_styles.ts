@@ -3,8 +3,9 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: nowrap;
+  background-color: ${({ theme }) => theme.primary.light};
   margin-top: calc(${({ theme }) => theme.spacing.internal} * 3);
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     justify-content: center;
@@ -25,7 +26,7 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 5%;
+  margin: 8% 5%;
   display: flex;
   height: 400px;
   width: 100%;

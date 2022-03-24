@@ -14,7 +14,9 @@ export const Container = styled.div<ContainerProps>`
     ${({ theme, isVertical }) => (isVertical ? '0' : theme.spacing.internal)};
   position: fixed;
   z-index: 200;
-  top: ${({ theme }) => theme.spacing.xs};
+  top: calc(
+    ${({ theme }) => theme.spacing.xs} + ${({ theme }) => theme.font.sizes.xxxs}
+  );
   background-color: ${({ theme }) => theme.primary.light};
 `
 export const Content = styled.div<ContentProps>`
@@ -23,7 +25,7 @@ export const Content = styled.div<ContentProps>`
   justify-content: space-between;
   width: 90%;
   height: 64px;
-  padding-bottom: ${({ theme }) => theme.spacing.internal};
+  padding: ${({ theme }) => theme.spacing.internal} 0;
 
   ${({ isVertical }) =>
     isVertical &&

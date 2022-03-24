@@ -23,7 +23,7 @@ export const FarMeBox: React.FC<FarMeBoxProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Content>
+      <Content ref={ref}>
         <HeaderCentered title={pageFarmeBox.title} />
 
         <Video
