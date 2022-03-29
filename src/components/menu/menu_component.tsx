@@ -6,7 +6,6 @@ import LogoFarMe from '../../assets/images/logotype.svg'
 import { ReactComponent as CloseIcon } from '../../assets/images/close_icon.svg'
 import { ReactComponent as HamburguerIcon } from '../../assets/images/hamburger_icon.svg'
 import { DataContext } from '../../context/data'
-import { ButtonRequestQuote as ButtonRequestQuoteType } from '../../context/data/types'
 
 import {
   Container,
@@ -14,16 +13,20 @@ import {
   HamburgerMenu,
   Link,
   Logo,
-  LogoMobileContainer,
+  DropdownContainer,
+  DropdownItem,
+  DropdownContent,
+  DropdownTitle,
+  DropdownItemLabel,
   Option,
   Options,
 } from './menu_styles'
 import { MenuModal } from './menu_modal'
 
-type MenuItemType = {
+type CTAType = {
   label: string
   href: string
-  context?: string
+  isCTA: boolean
 }
 
 export const Menu = () => {
@@ -40,15 +43,24 @@ export const Menu = () => {
           <Logo onClick={() => navigate('/')} src={LogoFarMe} />
 
           <Options>
-            {Object.entries(menu)
-              .slice(0, Object.entries(menu).length - 1)
-              .map(([, value]: [string, MenuItemType]) => (
+            {menu.slice(0, menu.length - 1).map((value) =>
+              value.options ? (
+                <DropdownContainer key={value.label}>
+                  <DropdownTitle>{value.label}</DropdownTitle>
+                  <DropdownContent>
+                    {value.options.map((option) => (
+                      <DropdownItem key={option.href}>
+                        <DropdownItemLabel>{option.label}</DropdownItemLabel>
+                      </DropdownItem>
+                    ))}
+                  </DropdownContent>
+                </DropdownContainer>
+              ) : (
                 <Option key={value.href}>
-                  <Link href={value.href} onClick={() => navigate(value.href)}>
-                    {value.label}
-                  </Link>
+                  <Link href={value.href}>{value.label}</Link>
                 </Option>
-              ))}
+              )
+            )}
 
             <Button
               label={
@@ -56,7 +68,7 @@ export const Menu = () => {
                   Object.entries(menu).slice(
                     Object.entries(menu).length - 1,
                     Object.entries(menu).length
-                  )[0][1] as unknown as ButtonRequestQuoteType
+                  )[0][1] as unknown as CTAType
                 )?.label || ''
               }
             />
@@ -76,29 +88,13 @@ export const Menu = () => {
           {' '}
           <Content isVertical>
             <Options showOptions isVertical>
-              {Object.entries(menu)
-                .slice(0, Object.entries(menu).length - 1)
-                .map(([, value]: [string, MenuItemType]) => (
-                  <Option key={value.href}>
-                    <Link
-                      href={value.href}
-                      onClick={() => navigate(value.href)}
-                    >
-                      {value.label}
-                    </Link>
-                  </Option>
-                ))}
+              {menu.slice(0, menu.length - 1).map((value) => (
+                <Option key={value.href}>
+                  <Link href={value.href}>{value.label}</Link>
+                </Option>
+              ))}
 
-              <Button
-                label={
-                  (
-                    Object.entries(menu).slice(
-                      Object.entries(menu).length - 1,
-                      Object.entries(menu).length
-                    )[0][1] as unknown as ButtonRequestQuoteType
-                  )?.label || ''
-                }
-              />
+              <Button label={menu.at(menu.length - 1)?.label || ''} />
             </Options>
           </Content>
         </Container>

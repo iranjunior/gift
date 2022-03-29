@@ -9,7 +9,7 @@
 
 export interface Types {
     nav:    Nav;
-    menu:   Menu;
+    menu:   Menu[];
     body:   Body;
     footer: Footer;
     units:  Unit[];
@@ -330,28 +330,16 @@ export interface Link {
 }
 
 export interface Menu {
-    "who-we-are":           Career;
-    farme_box:              Career;
-    clinics:                Career;
-    career:                 Career;
-    blog:                   Blog;
-    contact:                Career;
-    "button-request-quote": ButtonRequestQuote;
+    label:    string;
+    href?:    string;
+    context?: string;
+    options?: Option[];
+    isCTA?:   boolean;
 }
 
-export interface Blog {
+export interface Option {
     label: string;
     href:  string;
-}
-
-export interface ButtonRequestQuote {
-    label: string;
-}
-
-export interface Career {
-    label:   string;
-    href:    string;
-    context: string;
 }
 
 export interface Nav {
@@ -512,7 +500,7 @@ function r(name: string) {
 const typeMap: any = {
     "Types": o([
         { json: "nav", js: "nav", typ: r("Nav") },
-        { json: "menu", js: "menu", typ: r("Menu") },
+        { json: "menu", js: "menu", typ: a(r("Menu")) },
         { json: "body", js: "body", typ: r("Body") },
         { json: "footer", js: "footer", typ: r("Footer") },
         { json: "units", js: "units", typ: a(r("Unit")) },
@@ -781,25 +769,15 @@ const typeMap: any = {
         { json: "href", js: "href", typ: "" },
     ], false),
     "Menu": o([
-        { json: "who-we-are", js: "who-we-are", typ: r("Career") },
-        { json: "farme_box", js: "farme_box", typ: r("Career") },
-        { json: "clinics", js: "clinics", typ: r("Career") },
-        { json: "career", js: "career", typ: r("Career") },
-        { json: "blog", js: "blog", typ: r("Blog") },
-        { json: "contact", js: "contact", typ: r("Career") },
-        { json: "button-request-quote", js: "button-request-quote", typ: r("ButtonRequestQuote") },
+        { json: "label", js: "label", typ: "" },
+        { json: "href", js: "href", typ: u(undefined, "") },
+        { json: "context", js: "context", typ: u(undefined, "") },
+        { json: "options", js: "options", typ: u(undefined, a(r("Option"))) },
+        { json: "isCTA", js: "isCTA", typ: u(undefined, true) },
     ], false),
-    "Blog": o([
+    "Option": o([
         { json: "label", js: "label", typ: "" },
         { json: "href", js: "href", typ: "" },
-    ], false),
-    "ButtonRequestQuote": o([
-        { json: "label", js: "label", typ: "" },
-    ], false),
-    "Career": o([
-        { json: "label", js: "label", typ: "" },
-        { json: "href", js: "href", typ: "" },
-        { json: "context", js: "context", typ: "" },
     ], false),
     "Nav": o([
         { json: "customers", js: "customers", typ: "" },

@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components'
-
+import IconArrowDown from '../../assets/images/down_arrow.svg'
 type ContentProps = {
   isVertical?: boolean
 }
@@ -141,3 +141,27 @@ export const LogoMobileContainer = styled.div`
   width: fill-available;
   align-items: center;
 `
+
+export const DropdownContainer = styled.details`
+  margin: 0 ${({ theme }) => theme.spacing.nano};
+  position: relative;
+`
+export const DropdownTitle = styled.summary`
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+export const DropdownContent = styled.div`
+  position: absolute;
+  left: -${({ theme }) => theme.spacing.nano};
+  top: ${({ theme }) => theme.spacing.sm};
+  width: 200px;
+  z-index: 200;
+  background-color: ${({ theme }) => theme.primary.light};
+  border-radius: ${({ theme }) => theme.spacing.nano};
+`
+export const DropdownItem = styled.div`
+  padding: ${({ theme }) => theme.spacing.internal};
+`
+export const DropdownItemLabel = styled.span``

@@ -15,8 +15,11 @@ export const Accordion: React.FC<AccordionProps> = ({
   id,
   key,
 }) => (
-  <Container id={id} key={key}>
-    <Title>{title}</Title>
-    <Answer dangerouslySetInnerHTML={{ __html: answer }} />
+  <Container className="accordion" id={id} key={key}>
+    <Title className="accordion-title">{title}</Title>
+    <Answer
+      className="accordion-body"
+      dangerouslySetInnerHTML={{ __html: answer }}
+    />
   </Container>
 )

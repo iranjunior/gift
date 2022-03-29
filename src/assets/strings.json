@@ -4,40 +4,55 @@
         "companies": "para instituições",
         "doctors": "para medicos"
     },
-    "menu": {
-        "who-we-are": {
+    "menu": [
+        {
             "label": "Quem Somos",
             "href": "/para-clientes/quem-somos",
             "context": "companies"
         },
-        "farme_box": {
+        {
             "label": "Far.me Box",
             "href": "/para-clientes/farme-box",
             "context": "customers"
         },
-        "clinics": {
+        {
             "label": "Clínicas",
             "href": "/para-medicos/clinicas",
             "context": "doctors"
         },
-        "career": {
+        {
             "label": "Carreiras",
             "href": "/para-clientes/carreiras",
             "context": "customers"
         },
-        "blog": {
+        {
             "label": "Blog",
-            "href": "https://blog.farme.com.br/"
+            "options": [
+                {
+                    "label": "Para clientes",
+                    "href": "http://blog.farme"
+                },
+                {
+                    "label": "Para instituições",
+                    "href": "http://blog.farme"
+                },
+                {
+                    "label": "Para médicos",
+                    "href": "http://blog.farme"
+                }
+            ]
         },
-        "contact": {
+        {
             "label": "Contato",
             "href": "#contact",
             "context": "customers"
         },
-        "button-request-quote": {
-            "label": "Faça seu orçamento"
+        {
+            "label": "Faça seu orçamento",
+            "href": "https://farme.com.br/orcamento",
+            "isCTA": true
         }
-    },
+    ],
     "body": {
         "home": {
             "initial": {

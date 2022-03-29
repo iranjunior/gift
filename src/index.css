@@ -18,24 +18,24 @@ highlight {
   font-weight: normal;
 }
 
-details > summary {
+.accordion > .accordion-title {
   list-style-type: none;
 }
 
-details > summary::-webkit-details-marker {
+.accordion > .accordion-title::-webkit-details-marker {
   display: none;
 }
 
-details > summary::after {
+.accordion > .accordion-title::after {
   content: url('./assets/images/down_arrow.svg');
 }
-summary::before {
+.accordion-title::before {
   transform: rotate(0);
   transform-origin: 0.2rem 50%;
   transition: 0.25s transform ease;
 }
 
-details[open] > summary::after {
+.accordion[open] > .accordion-title::after {
   content: url('./assets/images/up_arrow.svg');
 }
 
