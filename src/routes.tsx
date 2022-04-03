@@ -9,6 +9,7 @@ import { Clinics } from './screens/clinics'
 import { ForCustomers } from './screens/customers'
 import { ForCompanies } from './screens/companies'
 import { ForDoctors } from './screens/doctors'
+import { PSP } from './screens/psp'
 
 const routes = [
   {
@@ -60,6 +61,12 @@ const routes = [
         path: 'clinicas',
         name: 'clinics',
         component: <Clinics />,
+        exact: true,
+      },
+      {
+        path: 'psp',
+        name: 'psp',
+        component: <PSP />,
         exact: true,
       },
     ],

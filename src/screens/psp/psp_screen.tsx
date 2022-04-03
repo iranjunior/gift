@@ -1,22 +1,14 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import {
-  Doubt,
-  Footer,
-  Menu,
-  Nav,
-  Numbers,
-  Testimonies,
-} from '../../components'
+import { Footer, Menu, Nav, Testimonies } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { Main, FarMeBox, KnowMe, Targets } from './body'
+import { Main, Arguments, HowWorking, Datas } from './body'
+import { Body, Container } from './psp_styles'
 
-import { Body, Container } from './home_styles'
-
-export const Home = () => {
+export const PSP = () => {
   const { setSubject } = useContext(SubjectContext)
   useLayoutEffect(() => {
-    setSubject(Subject.customer)
+    setSubject(Subject.doctors)
   }, [])
 
   return (
@@ -25,12 +17,10 @@ export const Home = () => {
       <Body>
         <Menu />
         <Main id="quem-somos" />
-        <FarMeBox id="farme-box" />
-        <KnowMe id="conheca-nos" />
-        <Targets id="objetivos" />
-        <Numbers id="nossos-numeros" />
+        <HowWorking id="como-funciona" />
+        <Arguments id="argumentos" />
+        <Datas id="dados" />
         <Testimonies id="depoimentos" />
-        <Doubt id="duvidas-frequentes" />
         <Footer id="sobre" />
       </Body>
     </Container>

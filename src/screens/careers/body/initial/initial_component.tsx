@@ -27,7 +27,7 @@ export const Main: React.FC<MainProps> = ({ id }) => {
   useIntersection(ref, '100px', true)
 
   return (
-    <Container ref={ref} id={id}>
+    <Container id={id}>
       <Content ref={ref}>
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: initial.title }} />

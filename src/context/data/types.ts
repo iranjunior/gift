@@ -23,6 +23,7 @@ export interface Body {
     common_pages:  CommonPages;
     who_we_are:    WhoWeAre;
     farme_box:     FarmeBox;
+    psp:           Psp;
     clinics:       Clinics;
     careers:       Careers;
 }
@@ -93,6 +94,8 @@ export interface Argument {
     title:         string;
     text:          string;
     label_button?: string;
+    type?:         string;
+    points?:       string[];
 }
 
 export interface Topics {
@@ -252,6 +255,29 @@ export interface Card {
     text:  string;
 }
 
+export interface Psp {
+    initial:     FarmeBoxClass;
+    how_working: HowWorking;
+    arguments:   PspArguments;
+    datas:       Datas;
+}
+
+export interface PspArguments {
+    cards: FluffyCards;
+}
+
+export interface FluffyCards {
+    first:  Argument;
+    second: Argument;
+    third:  Argument;
+    fourth: Argument;
+}
+
+export interface Datas {
+    title:    string;
+    sections: OurPosts[];
+}
+
 export interface WhoWeAre {
     initial:     WhoWeAreInitial;
     history:     InitialClass;
@@ -263,11 +289,11 @@ export interface WhoWeAre {
 
 export interface WhoWeAreArguments {
     card_initial: InitialClass;
-    cards:        FluffyCards;
+    cards:        TentacledCards;
     card_final:   InitialClass;
 }
 
-export interface FluffyCards {
+export interface TentacledCards {
     first:  First;
     second: First;
 }
@@ -513,6 +539,7 @@ const typeMap: any = {
         { json: "common_pages", js: "common_pages", typ: r("CommonPages") },
         { json: "who_we_are", js: "who_we_are", typ: r("WhoWeAre") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBox") },
+        { json: "psp", js: "psp", typ: r("Psp") },
         { json: "clinics", js: "clinics", typ: r("Clinics") },
         { json: "careers", js: "careers", typ: r("Careers") },
     ], false),
@@ -572,6 +599,8 @@ const typeMap: any = {
         { json: "title", js: "title", typ: "" },
         { json: "text", js: "text", typ: "" },
         { json: "label_button", js: "label_button", typ: u(undefined, "") },
+        { json: "type", js: "type", typ: u(undefined, "") },
+        { json: "points", js: "points", typ: u(undefined, a("")) },
     ], false),
     "Topics": o([
         { json: "title", js: "title", typ: "" },
@@ -705,6 +734,25 @@ const typeMap: any = {
         { json: "type", js: "type", typ: "" },
         { json: "text", js: "text", typ: "" },
     ], false),
+    "Psp": o([
+        { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
+        { json: "how_working", js: "how_working", typ: r("HowWorking") },
+        { json: "arguments", js: "arguments", typ: r("PspArguments") },
+        { json: "datas", js: "datas", typ: r("Datas") },
+    ], false),
+    "PspArguments": o([
+        { json: "cards", js: "cards", typ: r("FluffyCards") },
+    ], false),
+    "FluffyCards": o([
+        { json: "first", js: "first", typ: r("Argument") },
+        { json: "second", js: "second", typ: r("Argument") },
+        { json: "third", js: "third", typ: r("Argument") },
+        { json: "fourth", js: "fourth", typ: r("Argument") },
+    ], false),
+    "Datas": o([
+        { json: "title", js: "title", typ: "" },
+        { json: "sections", js: "sections", typ: a(r("OurPosts")) },
+    ], false),
     "WhoWeAre": o([
         { json: "initial", js: "initial", typ: r("WhoWeAreInitial") },
         { json: "history", js: "history", typ: r("InitialClass") },
@@ -715,10 +763,10 @@ const typeMap: any = {
     ], false),
     "WhoWeAreArguments": o([
         { json: "card_initial", js: "card_initial", typ: r("InitialClass") },
-        { json: "cards", js: "cards", typ: r("FluffyCards") },
+        { json: "cards", js: "cards", typ: r("TentacledCards") },
         { json: "card_final", js: "card_final", typ: r("InitialClass") },
     ], false),
-    "FluffyCards": o([
+    "TentacledCards": o([
         { json: "first", js: "first", typ: r("First") },
         { json: "second", js: "second", typ: r("First") },
     ], false),

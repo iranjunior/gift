@@ -20,7 +20,7 @@ type MainProps = {
 export const Main: React.FC<MainProps> = ({ id }) => {
   const {
     body: {
-      farme_box: { initial },
+      psp: { initial },
     },
   } = useContext(DataContext)
   const ref = useRef(null as unknown as HTMLDivElement)
@@ -32,7 +32,7 @@ export const Main: React.FC<MainProps> = ({ id }) => {
         <BlockText>
           <TextPrincipal dangerouslySetInnerHTML={{ __html: initial.title }} />
         </BlockText>
-        <Image src={images.ImageCoverFameBox} />
+        <Image src={images.ImageOldWomanWithSmile} />
       </Content>
     </Container>
   )

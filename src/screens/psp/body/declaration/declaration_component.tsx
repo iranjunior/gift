@@ -1,38 +1,39 @@
 import React, { useContext, useRef } from 'react'
 
-import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { useIntersection } from '../../../../hooks/useIntersection'
 
 import {
   Container,
   Content,
-  Image,
-  TextPrincipal,
+  Text,
   BlockText,
-} from './initial_styles'
+  TextPrincipal,
+} from './declaration_styles'
 
-type MainProps = {
+type DeclarationProps = {
   id?: string
   className?: string
 }
 
-export const Main: React.FC<MainProps> = ({ id }) => {
+export const Declaration: React.FC<DeclarationProps> = ({ id }) => {
   const {
     body: {
-      farme_box: { initial },
+      who_we_are: { declaration },
     },
   } = useContext(DataContext)
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content ref={ref}>
         <BlockText>
-          <TextPrincipal dangerouslySetInnerHTML={{ __html: initial.title }} />
+          <TextPrincipal
+            dangerouslySetInnerHTML={{ __html: declaration.title }}
+          />
+          <Text dangerouslySetInnerHTML={{ __html: declaration.declaration }} />
         </BlockText>
-        <Image src={images.ImageCoverFameBox} />
       </Content>
     </Container>
   )

@@ -1,38 +1,37 @@
 import React, { useContext, useRef } from 'react'
 
-import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { useIntersection } from '../../../../hooks/useIntersection'
 
 import {
   Container,
   Content,
-  Image,
-  TextPrincipal,
+  Text,
   BlockText,
-} from './initial_styles'
+  TextPrincipal,
+} from './history_styles'
 
-type MainProps = {
+type HistoryProps = {
   id?: string
   className?: string
 }
 
-export const Main: React.FC<MainProps> = ({ id }) => {
+export const History: React.FC<HistoryProps> = ({ id }) => {
   const {
     body: {
-      farme_box: { initial },
+      who_we_are: { history },
     },
   } = useContext(DataContext)
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
   return (
-    <Container id={id}>
+    <Container ref={ref} id={id}>
       <Content ref={ref}>
         <BlockText>
-          <TextPrincipal dangerouslySetInnerHTML={{ __html: initial.title }} />
+          <TextPrincipal dangerouslySetInnerHTML={{ __html: history.title }} />
+          <Text dangerouslySetInnerHTML={{ __html: history.subtitle }} />
         </BlockText>
-        <Image src={images.ImageCoverFameBox} />
       </Content>
     </Container>
   )

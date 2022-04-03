@@ -613,6 +613,79 @@
                 ]
             }
         },
+        "psp": {
+            "initial": {
+                "title": "<principal>Cuidado aliado à entrega de medicamentos, isso é <highlight>Clínica</highlight> Far.me.</principal>"
+            },
+            "how_working": {
+                "title": "Como funciona?",
+                "subtitle": "Entregamos medicamentos de alto custo e acompanhamos o paciente para o uso e armazenamento seguros.",
+                "arguments": [
+                    {
+                        "id": "health",
+                        "title": "Operadoras de saúde, hospitais ou clínicas",
+                        "text": "Primeiro, analisamos a solicitação da entrega dos medicamentos para os pacientes."
+                    },
+                    {
+                        "id": "delivery",
+                        "title": "Distribuidoras <br />de medicamentos",
+                        "text": "Em seguida, as distribuidoras<br/>recebem a solicitação <br/>e fazem a entrega."
+                    },
+                    {
+                        "id": "central",
+                        "title": "Central de atendimento Far.me",
+                        "text": "Por fim, oferecemos atendimento ao paciente para garantir o uso correto ao longo do processo terapêutico."
+                    }
+                ]
+            },
+            "arguments": {
+                "cards": {
+                    "first": {
+                        "title": "Nosso Programa <br/>de <highlight>Suporte</highlight> ao<br/>Paciente.",
+                        "type": "customers",
+                        "text": "Pensado para promover o melhor uso dos fármacos e dos resultados em saúde. Nele, o paciente tem acesso exclusivo a conteúdos sobre o uso de medicamentos. E além disso, geramos dados conforme a demanda da empresa solicitante. Tudo feito com atenção aos detalhes, cuidado e um atendimento humano. ",
+                        "label_button": "Confira os itens que analisamos"
+                    },
+                    "second": {
+                        "title": "Atuamos em<br/><highlight>todo</highlight> o Brasil.",
+                        "type": "coverage",
+                        "text": "Atendendo diferentes tipos de clientes:",
+                        "points": [
+                            "Clínicas",
+                            "Hospitais",
+                            "Operadoras de saúde"
+                        ]
+                    },
+                    "third": {
+                        "title": "<highlight>Análise</highlight><br />de dados!",
+                        "type": "analytics",
+                        "text": "Por meio de inteligência artificial, atribuímos um score a cada medicamento em uso. É desse jeito que identificamos se existe um alerta clínico para ser discutido com o médico e outros profissionais envolvidos no tratamento."
+                    },
+                    "fourth": {
+                        "title": "Atendimento <br />farmacêutico.",
+                        "type": "attendance",
+                        "text": "Acesso ao canal de contato com nossos especialistas. Nele, respondemos às perguntas sobre os medicamentos usados. "
+                    }
+                }
+            },
+            "datas": {
+                "title": "Os dados que geramos:",
+                "sections": [
+                    {
+                        "title": "Monitoramento<br />farmacêutico",
+                        "description": "Notificação de RAM<br />Medicamento por atendimento<br />Paciente por medicamento<br />Prescritos por medicamento"
+                    },
+                    {
+                        "title": "Saving",
+                        "description": "Medicamento por faturamento<br/>Economia farmacêutica<br/>Pedido incorreto<br/>Dados incorretos"
+                    },
+                    {
+                        "title": "Atendimento",
+                        "description": "Endereço incorreto<br/>Entrega incorreta<br/>Dúvidas"
+                    }
+                ]
+            }
+        },
         "clinics": {
             "initial": {
                 "title": "<legend>Far.me clínica</legend><br /><principal>Cuidado aliado à <highlight>tecnologia</highlight>, isso é Clínica Far.me.</principal>",
