@@ -1,6 +1,5 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components'
-import IconArrowDown from '../../assets/images/down_arrow.svg'
 type ContentProps = {
   isVertical?: boolean
 }
@@ -18,6 +17,11 @@ export const Container = styled.div<ContainerProps>`
     ${({ theme }) => theme.spacing.xs} + ${({ theme }) => theme.font.sizes.xxxs}
   );
   background-color: ${({ theme }) => theme.primary.light};
+  ${({ isVertical }) =>
+    isVertical &&
+    css`
+      height: 85%;
+    `}
 `
 export const Content = styled.div<ContentProps>`
   display: flex;
