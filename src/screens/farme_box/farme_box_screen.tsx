@@ -1,5 +1,12 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import { Footer, Menu, Nav, Doubt, Testimonies } from '../../components'
+import {
+  Footer,
+  Menu,
+  Nav,
+  Doubt,
+  Testimonies,
+  CallToAction,
+} from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
 import {
@@ -34,6 +41,7 @@ export const FarMeBox = () => {
         <Banner id="banner" />
         <Testimonies id="depoimentos" />
         <Footer id="sobre" />
+        <CallToAction />
       </Body>
     </Container>
   )

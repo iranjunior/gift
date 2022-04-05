@@ -12,6 +12,7 @@ type ButtonProps = {
   label?: string
   type?: ButtonType
   customColor?: string
+  customColorLabel?: string
   hasArrow?: boolean
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }

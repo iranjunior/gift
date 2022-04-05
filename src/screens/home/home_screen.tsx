@@ -1,5 +1,6 @@
 import React, { useContext, useLayoutEffect } from 'react'
 import {
+  CallToAction,
   Doubt,
   Footer,
   Menu,
@@ -32,6 +33,7 @@ export const Home = () => {
         <Testimonies id="depoimentos" />
         <Doubt id="duvidas-frequentes" />
         <Footer id="sobre" />
+        <CallToAction />
       </Body>
     </Container>
   )

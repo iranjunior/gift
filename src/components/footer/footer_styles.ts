@@ -8,6 +8,10 @@ export const Container = styled.footer`
   padding: 5% 0;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    padding-bottom: ${({ theme }) => theme.spacing.xxl};
+  }
 `
 export const AboutContainer = styled.div`
   display: grid;

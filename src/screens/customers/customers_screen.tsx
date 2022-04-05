@@ -6,6 +6,7 @@ import {
   Numbers,
   Testimonies,
   Doubt,
+  CallToAction,
 } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
@@ -40,6 +41,7 @@ export const ForCustomers = () => {
         <Testimonies id="depoimentos" />
         <Doubt id="duvidas" />
         <Footer id="sobre" />
+        <CallToAction />
       </Body>
     </Container>
   )

@@ -1,5 +1,12 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import { Footer, Menu, Nav, Testimonies, Numbers } from '../../components'
+import {
+  Footer,
+  Menu,
+  Nav,
+  Testimonies,
+  Numbers,
+  CallToAction,
+} from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
 import {
@@ -32,6 +39,7 @@ export const WhoWeSome = () => {
         <OurPeople id="nosso-especialistas" />
         <Banner id="banner" />
         <Footer id="sobre" />
+        <CallToAction />
       </Body>
     </Container>
   )

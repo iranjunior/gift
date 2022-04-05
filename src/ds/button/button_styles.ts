@@ -3,12 +3,19 @@ import styled, { css } from 'styled-components'
 type ButtonActionType = {
   variant?: 'primary' | 'secondary' | 'ghost'
   customColor?: string
+  customColorLabel?: string
   hasArrow?: boolean
 }
 
 export const ButtonAction = styled.button<ButtonActionType>`
   height: ${({ theme }) => theme.spacing.md};
   padding: 0 ${({ theme }) => theme.spacing.bit};
+  ${({ customColorLabel }) =>
+    customColorLabel &&
+    css`
+      color: ${customColorLabel};
+    `}
+
   ${({ hasArrow }) =>
     hasArrow &&
     css`

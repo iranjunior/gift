@@ -11,7 +11,7 @@ body {
 }
 @font-face {
   font-family: 'Clearface ITC Pro';
-  src: url('../public/ClearfaceStd-Regular.otf') format('opentype');
+  src: local('../public/ClearfaceStd-Regular.otf') url('../public/ClearfaceStd-Regular.otf') format('opentype');
 }
 highlight {
   font-family: 'Gloria Hallelujah';
