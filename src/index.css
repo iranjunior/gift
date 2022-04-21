@@ -29,6 +29,14 @@ highlight {
 .accordion > .accordion-title::after {
   content: url('./assets/images/down_arrow.svg');
 }
+
+.collapsible > .collapsible-title::after {
+  background-image: url('./assets/images/down_arrow.svg');
+  background-size: 18px 18px;
+  height: 18px;
+  width: 18px;
+  content: "";
+}
 .accordion-title::before {
   transform: rotate(0);
   transform-origin: 0.2rem 50%;
@@ -38,6 +46,17 @@ highlight {
 .accordion[open] > .accordion-title::after {
   content: url('./assets/images/up_arrow.svg');
 }
+
+
+.collapsible[open] > .collapsible-title::after {
+  background-image: url('./assets/images/up_arrow.svg');
+  background-size: 18px 18px;
+  height: 18px;
+  width: 18px;
+  content: "";
+}
+
+
 
 @keyframes show-Slide {
   from {

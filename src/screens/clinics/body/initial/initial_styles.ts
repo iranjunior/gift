@@ -3,14 +3,14 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: nowrap;
   background-color: ${({ theme }) => theme.primary.light};
-  margin-top: calc(${({ theme }) => theme.spacing.internal} * 4);
+  margin-top: calc(${({ theme }) => theme.spacing.internal} * 3);
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: calc(${({ theme }) => theme.spacing.internal} * 6);
+    margin-top: calc(${({ theme }) => theme.spacing.internal} * 5);
   }
 `
 export const BlockText = styled.div`

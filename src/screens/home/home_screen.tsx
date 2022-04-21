@@ -22,7 +22,6 @@ export const Home = () => {
 
   return (
     <Container>
-      <Nav />
       <Body>
         <Menu />
         <Main id="quem-somos" />

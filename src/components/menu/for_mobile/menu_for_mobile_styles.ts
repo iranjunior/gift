@@ -5,43 +5,75 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 0 ${({ theme }) => theme.spacing.internal};
+  margin: 0;
   position: fixed;
   z-index: 200;
   top: 0;
   background-color: ${({ theme }) => theme.primary.light};
+  height: fill-available;
 `
+
+export const ContainerBar = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  background-color: ${({ theme }) => theme.primary.light};
+  height: auto;
+`
+
 export const Content = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  margin: 0 ${({ theme }) => theme.spacing.internal};
-  height: 64px;
+  width: 90%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: fill-available;
+  justify-content: space-evenly;
   padding: ${({ theme }) => theme.spacing.internal} 0;
+`
+export const ContentBar = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  padding: ${({ theme }) => theme.spacing.internal};
 `
 
 export const Logo = styled.img`
   height: 64px;
 `
-export const Space = styled.div`
-  flex-grow: 1;
-`
+
 export const Options = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
   }
 
+  display: flex;
+  width: fill-available;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 90%;
+
   button {
-    width: 20%;
+    width: 90%;
+    margin-top: 30%;
+    position: absolute;
+    bottom: calc(${({ theme }) => theme.spacing.internal} * 4);
   }
-  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
-    display: none;
+`
+
+export const OptionsMain = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  div:first-child {
+    margin-top: 35%;
   }
 `
 
@@ -51,7 +83,8 @@ export const Option = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 ${({ theme }) => theme.spacing.nano};
+  margin: ${({ theme }) => theme.spacing.nano}
+    ${({ theme }) => theme.spacing.nano};
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     a {
       font-size: ${({ theme }) => theme.font.sizes.lg};
@@ -64,6 +97,16 @@ export const Link = styled.a`
   color: ${({ theme }) => theme.primary.darkness};
   white-space: nowrap;
   text-decoration: none;
+  font-size: ${({ theme }) => theme.font.sizes.lg};
+  font-family: ${({ theme }) => theme.font.family.sliver};
+  display: flex;
+
+  svg {
+    height: ${({ theme }) => theme.font.sizes.md};
+    width: ${({ theme }) => theme.font.sizes.md};
+    align-self: flex-end;
+    margin-bottom: ${({ theme }) => theme.spacing.quark};
+  }
 `
 
 export const HamburgerMenu = styled.div`
@@ -127,7 +170,6 @@ export const DropdownTitle = styled.summary<SummaryType>`
   align-items: center;
   font-weight: ${({ highlight }) => (highlight ? 'bold' : 'normal')};
   font-family: ${({ theme }) => theme.font.family.default};
-  white-space: nowrap;
 
   ${({ open }) =>
     open &&

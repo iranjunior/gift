@@ -29,7 +29,6 @@ export const ForCompanies = () => {
 
   return (
     <Container>
-      <Nav />
       <Body>
         <Menu />
         <Main id="quem-somos" />

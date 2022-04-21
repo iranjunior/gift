@@ -26,26 +26,79 @@
             "context": "customers"
         },
         {
-            "label": "Blog",
+            "label": "Para Quem",
             "options": [
                 {
-                    "label": "Para clientes",
-                    "href": "http://blog.farme"
+                    "label": "Para você",
+                    "href": "/para-clientes"
                 },
                 {
                     "label": "Para instituições",
-                    "href": "http://blog.farme"
+                    "href": "/para-instituicoes"
                 },
                 {
                     "label": "Para médicos",
-                    "href": "http://blog.farme"
+                    "href": "/para-medicos"
                 }
             ]
+        },
+        {
+            "label": "Blog",
+            "href": "http://blog.farme",
+            "context": "customers"
         },
         {
             "label": "Contato",
             "href": "#contact",
             "context": "customers"
+        },
+        {
+            "label": "Faça seu orçamento",
+            "href": "https://farme.com.br/orcamento",
+            "isCTA": true
+        }
+    ],
+    "menu_for_mobile": [
+        {
+            "label": "Quem Somos",
+            "href": "/para-clientes/quem-somos"
+        },
+        {
+            "label": "Far.me Box",
+            "href": "/para-clientes/farme-box"
+        },
+        {
+            "label": "Clínicas",
+            "href": "/para-medicos/clinicas"
+        },
+        {
+            "label": "Carreiras",
+            "href": "/para-clientes/carreiras"
+        },
+        {
+            "label": "Para Quem",
+            "options": [
+                {
+                    "label": "Para você",
+                    "href": "/para-clientes"
+                },
+                {
+                    "label": "Para instituições",
+                    "href": "/para-instituicoes"
+                },
+                {
+                    "label": "Para médicos",
+                    "href": "/para-medicos"
+                }
+            ]
+        },
+        {
+            "label": "Blog",
+            "href": "http://blog.farme"
+        },
+        {
+            "label": "Contato",
+            "href": "#contact"
         },
         {
             "label": "Faça seu orçamento",

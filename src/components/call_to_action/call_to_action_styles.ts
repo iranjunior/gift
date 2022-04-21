@@ -15,6 +15,6 @@ export const Container = styled.div`
   }
 
   button {
-    width: 80vw;
+    width: calc(100vw - (${({ theme }) => theme.spacing.internal} * 2));
   }
 `

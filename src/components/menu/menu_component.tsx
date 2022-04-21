@@ -1,16 +1,14 @@
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '../../ds'
 
 import LogoFarMe from '../../assets/images/logotype.svg'
-import { ReactComponent as CloseIcon } from '../../assets/images/close_icon.svg'
-import { ReactComponent as HamburguerIcon } from '../../assets/images/hamburger_icon.svg'
 import { DataContext } from '../../context/data'
+import { Option as OptionType } from '../../context/data/types'
 
 import {
   Container,
   Content,
-  HamburgerMenu,
   Link,
   Logo,
   DropdownContainer,
@@ -20,8 +18,9 @@ import {
   DropdownItemLabel,
   Option,
   Options,
+  Space,
 } from './menu_styles'
-import { MenuModal } from './menu_modal'
+import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
 
 type CTAType = {
   label: string
@@ -29,27 +28,66 @@ type CTAType = {
   isCTA: boolean
 }
 
+type StateType = {
+  activeSection?: string
+}
+type HashMapPathToSection = {
+  [key: string]: string
+}
+const hashMapPathToActiveSection: HashMapPathToSection = {
+  '/para-medicos': 'Para médicos',
+  '/para-instituicoes': 'Para instituições',
+  '/para-clientes': 'Para você',
+}
+
 export const Menu = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [openCollapsible, setOpenCollapsible] = useState(false)
   const { menu } = useContext(DataContext)
   const navigate = useNavigate()
+  const location = useLocation()
+  const state = location.state as StateType
+  const path = location.pathname
 
-  const MenuIcon = () => (showModal ? <CloseIcon /> : <HamburguerIcon />)
+  const [activeSection] = useState(
+    state?.activeSection || hashMapPathToActiveSection[path]
+  )
+
+  const onClickOption = (option: OptionType) => {
+    navigate(option.href, { state: { activeSection: option.label } })
+  }
+  const isNotDesktop = window.innerWidth < 1024
+
+  if (isNotDesktop) {
+    return <MenuForMobile />
+  }
 
   return (
     <>
       <Container>
         <Content>
           <Logo onClick={() => navigate('/')} src={LogoFarMe} />
-
+          <Space />
           <Options>
             {menu.slice(0, menu.length - 1).map((value) =>
               value.options ? (
-                <DropdownContainer key={value.label}>
-                  <DropdownTitle>{value.label}</DropdownTitle>
+                <DropdownContainer
+                  className="collapsible"
+                  key={value.label}
+                  onClick={() => setOpenCollapsible(!openCollapsible)}
+                >
+                  <DropdownTitle
+                    open={openCollapsible}
+                    highlight={!!activeSection}
+                    className="collapsible-title"
+                  >
+                    {activeSection ?? value.label}
+                  </DropdownTitle>
                   <DropdownContent>
                     {value.options.map((option) => (
-                      <DropdownItem key={option.href}>
+                      <DropdownItem
+                        onClick={() => onClickOption(option)}
+                        key={option.href}
+                      >
                         <DropdownItemLabel>{option.label}</DropdownItemLabel>
                       </DropdownItem>
                     ))}
@@ -73,32 +111,8 @@ export const Menu = () => {
               }
             />
           </Options>
-          <HamburgerMenu
-            onClick={() => {
-              console.log('click')
-              setShowModal((prev) => !prev)
-            }}
-          >
-            <MenuIcon />
-          </HamburgerMenu>
         </Content>
       </Container>
-      <MenuModal show={showModal}>
-        <Container isVertical>
-          {' '}
-          <Content isVertical>
-            <Options showOptions isVertical>
-              {menu.slice(0, menu.length - 1).map((value) => (
-                <Option key={value.href}>
-                  <Link href={value.href}>{value.label}</Link>
-                </Option>
-              ))}
-
-              <Button label={menu.at(menu.length - 1)?.label || ''} />
-            </Options>
-          </Content>
-        </Container>
-      </MenuModal>
     </>
   )
 }

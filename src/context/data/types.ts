@@ -8,11 +8,12 @@
 // match the expected interface, even if the JSON is valid.
 
 export interface Types {
-    nav:    Nav;
-    menu:   Menu[];
-    body:   Body;
-    footer: Footer;
-    units:  Unit[];
+    nav:             Nav;
+    menu:            Menu[];
+    menu_for_mobile: Menu[];
+    body:            Body;
+    footer:          Footer;
+    units:           Unit[];
 }
 
 export interface Body {
@@ -527,6 +528,7 @@ const typeMap: any = {
     "Types": o([
         { json: "nav", js: "nav", typ: r("Nav") },
         { json: "menu", js: "menu", typ: a(r("Menu")) },
+        { json: "menu_for_mobile", js: "menu_for_mobile", typ: a(r("Menu")) },
         { json: "body", js: "body", typ: r("Body") },
         { json: "footer", js: "footer", typ: r("Footer") },
         { json: "units", js: "units", typ: a(r("Unit")) },
