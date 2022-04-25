@@ -29,6 +29,8 @@ export const BlockText = styled.div`
     button {
       width: 100%;
       max-width: 400px;
+      font-size: ${({ theme }) => theme.font.sizes.xxs};
+      margin-top: ${({ theme }) => theme.spacing.internal};
     }
   }
 `

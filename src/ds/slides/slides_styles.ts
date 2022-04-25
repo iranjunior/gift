@@ -40,6 +40,9 @@ export const Slide = styled.div<SlideProps>`
     justify-content: center;
     flex-wrap: ${({ reversed }) => (reversed ? 'wrap' : 'wrap-reverse')};
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
+  }
 `
 type DotIndicatorProps = {
   active?: boolean

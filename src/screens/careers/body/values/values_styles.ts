@@ -18,11 +18,12 @@ export const ValuesContainer = styled.div`
 
 export const Value = styled.div`
   width: 310px;
-  gap: 1rem;
   display: flex;
+  margin: 1rem 0;
 `
 export const ValueFirst = styled.div`
   display: flex;
+  margin-top: -8px;
 `
 export const ValueNumber = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xxxl};
@@ -55,4 +56,7 @@ export const ValueDescription = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.font.sizes.xxs};
   }
+`
+export const Spacer = styled.div`
+  width: 2rem;
 `

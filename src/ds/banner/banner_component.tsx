@@ -43,8 +43,8 @@ export const Banner: React.FC<BannerProps> = ({
       positionImageInTablet={positionImageInTablet}
       image={image}
     >
-      <Content ref={ref}>
-        <BlockText>
+      <Content>
+        <BlockText ref={ref}>
           {title ? (
             <TextPrincipal
               compact={!!highlights}

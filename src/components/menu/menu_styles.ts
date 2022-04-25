@@ -5,10 +5,10 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 0 ${({ theme }) => theme.spacing.internal};
   position: fixed;
   z-index: 200;
   top: 0;
+  left: 0;
   background-color: ${({ theme }) => theme.primary.light};
 `
 export const Content = styled.div`

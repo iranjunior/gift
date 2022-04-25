@@ -39,6 +39,11 @@ export const BlockText = styled.div`
       width: 100%;
     }
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    button {
+      margin: ${({ theme }) => theme.spacing.nano} auto;
+    }
+  }
 `
 export const BlockImage = styled.div``
 
@@ -70,7 +75,7 @@ export const Text = styled.span`
   text-align: start;
   color: ${({ theme }) => theme.colors.neutral.lightness};
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.font.sizes.xs};
+    font-size: ${({ theme }) => theme.font.sizes.sm};
   }
 `
 type TextPrincipalProps = {
@@ -94,7 +99,11 @@ export const TextPrincipal = styled.span<TextPrincipalProps>`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme, compact }) =>
-      compact ? theme.font.sizes.xs : theme.font.sizes.sm};
+      compact ? theme.font.sizes.sm : theme.font.sizes.md};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.internal} 0;
   }
 `
 

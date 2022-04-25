@@ -69,6 +69,9 @@ export const ContentContainer = styled.div`
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 2rem;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
+  }
 `
 export const ContentCard = styled.div`
   ${columnItensWithGap({

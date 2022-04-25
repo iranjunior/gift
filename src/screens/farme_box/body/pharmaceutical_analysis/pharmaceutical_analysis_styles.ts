@@ -33,7 +33,7 @@ export const TextPrincipal = styled.span`
   text-align: start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.font.sizes.md};
+    font-size: ${({ theme }) => theme.font.sizes.xl};
   }
 `
 export const Text = styled.span`
@@ -44,7 +44,7 @@ export const Text = styled.span`
   text-align: start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.font.sizes.xxs};
+    font-size: ${({ theme }) => theme.font.sizes.xs};
   }
 `
 

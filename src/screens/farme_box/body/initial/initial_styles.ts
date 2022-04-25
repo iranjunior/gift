@@ -56,6 +56,9 @@ export const Text = styled.div`
   }
 `
 export const TextPrincipal = styled.div`
+  display: flex;
+  flex-direction: column;
+
   *:not(highlight) {
     font-size: ${({ theme }) => theme.font.sizes.xl};
     font-family: ${({ theme }) => theme.font.family.sliver};

@@ -19,6 +19,10 @@ export const BlockText = styled.div`
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
+  }
 `
 export const BlockImage = styled.div``
 

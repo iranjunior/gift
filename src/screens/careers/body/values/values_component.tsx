@@ -13,6 +13,7 @@ import {
   ValueTitle,
   ValueDescription,
   ValueSecond,
+  Spacer,
 } from './values_styles'
 
 type ValuesProps = {
@@ -39,6 +40,7 @@ export const Values: React.FC<ValuesProps> = ({ id }) => {
               <ValueFirst>
                 <ValueNumber dangerouslySetInnerHTML={{ __html: value.id }} />
               </ValueFirst>
+              <Spacer />
               <ValueSecond>
                 <ValueTitle dangerouslySetInnerHTML={{ __html: value.title }} />
                 <ValueDescription>{value.text}</ValueDescription>

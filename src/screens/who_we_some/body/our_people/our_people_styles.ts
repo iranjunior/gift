@@ -28,6 +28,9 @@ export const Card = styled.div`
   width: 310px;
   justify-content: space-between;
   gap: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
+  }
 `
 export const CardImage = styled.img``
 export const CardTitle = styled.span`

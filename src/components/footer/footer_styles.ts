@@ -51,14 +51,19 @@ export const AboutInfosDescription = styled.span`
   color: ${({ theme }) => theme.primary.light};
   font-size: ${({ theme }) => theme.font.sizes.xxs};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} 0;
+  }
 `
 
 export const AboutRequestContainer = styled.div`
   display: flex;
   flex-direction: column;
   button {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
     margin: ${({ theme }) => theme.spacing.xxs} 0;
-    width: 25%;
+    width: 40%;
     @media (max-width: calc(${({ theme }) =>
         theme.breakpoints.desktop} - 1px)) {
       width: 75%;
@@ -92,12 +97,12 @@ export const AboutContactsContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
-  gap: 2rem;
 `
 export const AboutContactsTitle = styled.span`
   color: ${({ theme }) => theme.primary.light};
   font-size: ${({ theme }) => theme.font.sizes.md};
   font-family: ${({ theme }) => theme.font.family.sliver};
+  margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutContactsPhoneContainer = styled.div`
   display: flex;
@@ -107,9 +112,11 @@ export const AboutContactsPhoneContainer = styled.div`
 export const AboutContactsTitleLocation = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xs};
   color: ${({ theme }) => theme.primary.light};
+  margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutContactsPhoneLocation = styled.span`
   color: ${({ theme }) => theme.primary.default};
+  margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutContactsSocialMedias = styled.div`
   display: flex;
@@ -131,7 +138,7 @@ export const Divisor = styled.hr`
   width: 90%;
   height: 1px;
   background-color: ${({ theme }) => theme.colors.neutral.darkness};
-  margin: 5rem 0;
+  margin: 2rem 0;
   border: none;
 `
 
@@ -149,7 +156,8 @@ export const AboutSection = styled.div`
   flex-direction: column;
   align-items: start;
   justify-content: space-evenly;
-  gap: 1.5rem;
+  flex-grow: 2;
+  margin: 1rem 0;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
   }
@@ -162,6 +170,7 @@ export const AboutSectionTitle = styled.span`
 export const AboutSectionLink = styled.a`
   color: ${({ theme }) => theme.primary.default};
   font-size: ${({ theme }) => theme.font.sizes.xxs};
+  margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutLegalInformationContainer = styled.div`
   width: 90%;

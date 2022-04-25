@@ -37,6 +37,7 @@ export const Content = styled.div`
 
   button {
     width: 100%;
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
   }
 `
 
@@ -53,7 +54,7 @@ export const TextPrincipal = styled.span`
   height: 115px;
 `
 export const Text = styled.span`
-  font-size: ${({ theme }) => theme.font.sizes.xxs};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
   text-align: center;
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
 `

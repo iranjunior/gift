@@ -14,6 +14,11 @@ export const Text = styled.span`
     padding: 0;
     margin: 0;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin-top: ${({ theme }) => theme.spacing.nano};
+    margin-bottom: ${({ theme }) => theme.spacing.nano};
+  }
 `
 export const ActionWrap = styled.div`
   display: flex;
@@ -30,12 +35,19 @@ export const ActionWrap = styled.div`
 
   button {
     width: 187px;
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
 
     @media (max-width: calc(${({ theme }) =>
         theme.breakpoints.desktop} - 1px)) {
       width: 100%;
       padding: 0;
       margin: 0 ${({ theme }) => theme.spacing.xxxs};
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    button {
+      margin-top: ${({ theme }) => theme.spacing.nano};
+      margin-bottom: ${({ theme }) => theme.spacing.nano};
     }
   }
 `

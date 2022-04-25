@@ -13,4 +13,9 @@ export const Cards = styled.div`
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    div {
+      margin: ${({ theme }) => theme.spacing.nano} 0;
+    }
+  }
 `

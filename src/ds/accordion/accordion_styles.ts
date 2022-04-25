@@ -5,6 +5,7 @@ export const Container = styled.details`
   background-color: ${({ theme }) => theme.primary.light};
   border-radius: 8px;
   padding: ${({ theme }) => theme.spacing.internal};
+  margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const Title = styled.summary`
   width: 100%;

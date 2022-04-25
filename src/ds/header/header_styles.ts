@@ -26,7 +26,10 @@ export const Title = styled.span<TitleProps>`
   text-align: center;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.tablet} - 1px)) {
-    font-size: ${({ theme }) => theme.font.sizes.sm};
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    font-size: ${({ theme }) => theme.font.sizes.md};
   }
 `
 
@@ -41,6 +44,10 @@ export const BlockText = styled.div`
     width: auto;
     margin: 0 ${({ theme }) => theme.spacing.xxxs};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
+  }
 `
 export const Highlight = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xl};
@@ -48,7 +55,7 @@ export const Highlight = styled.span`
   text-align: center;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.tablet} - 1px)) {
-    font-size: ${({ theme }) => theme.font.sizes.sm};
+    font-size: ${({ theme }) => theme.font.sizes.lg};
   }
 `
 export const Text = styled.span`

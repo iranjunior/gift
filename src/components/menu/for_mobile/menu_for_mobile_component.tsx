@@ -53,7 +53,7 @@ export const MenuForMobile = () => {
     }
     return showModal ? <CloseIcon /> : <HamburguerIcon />
   }
-
+  const lastItem = menu[menu.length - 1]
   return (
     <>
       <ContainerBar>
@@ -89,20 +89,20 @@ export const MenuForMobile = () => {
               <Options>
                 <OptionsMain>
                   {itensMobile.options.map((value, index) => (
-                    <Option key={value.href}>
+                    <Option isExpanded={value.isExpansive} key={value.href}>
                       {value.isExpansive ? (
                         <Link
                           onClick={() =>
                             setItensMobile({
                               subSectionActive: true,
                               // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                              options: menu
-                                .at(index)!
-                                .options!.map(({ href, label }) => ({
+                              options: menu[index]!.options!.map(
+                                ({ href, label }) => ({
                                   label,
                                   href,
                                   isExpansive: false,
-                                })),
+                                })
+                              ),
                             })
                           }
                         >
@@ -114,7 +114,7 @@ export const MenuForMobile = () => {
                     </Option>
                   ))}
                 </OptionsMain>
-                <Button label={menu.at(menu.length - 1)?.label || ''} />
+                <Button label={lastItem.label || ''} />
               </Options>
             </Content>
           </Container>

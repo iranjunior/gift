@@ -90,11 +90,20 @@ export const ContainerButtons = styled.div`
   })}
   width: 336px;
   flex-wrap: wrap;
+
+  button {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100%;
     flex-wrap: wrap;
     button {
       width: 80%;
     }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
   }
 `

@@ -35,8 +35,6 @@ export const BlockNumbers = styled.div`
   flex-wrap: wrap;
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}),
     (width: ${({ theme }) => theme.breakpoints.desktop}) {
-    overflow: scroll;
-    width: 100vw;
     ${rowItensWithGap({
       gap: '5rem',
       alignItens: 'center',

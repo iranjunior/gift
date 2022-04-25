@@ -18,6 +18,10 @@ export const Container = styled.div`
     height: auto;
     grid-gap: ${({ theme }) => theme.spacing.internal};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: ${({ theme }) => theme.spacing.nano} auto;
+  }
 `
 
 export const LeftSide = styled.div`

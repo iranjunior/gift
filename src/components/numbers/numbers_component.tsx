@@ -29,7 +29,7 @@ export const Numbers: React.FC<NumbersProps> = ({ id }) => {
   return (
     <Container id={id}>
       <Content ref={ref}>
-        <Header description={numbers.description} title={numbers.title} />
+        <Header full description={numbers.description} title={numbers.title} />
         <BlockNumbers>
           {numbers.infos.map((info) => (
             <BlockNumber key={info.legend}>

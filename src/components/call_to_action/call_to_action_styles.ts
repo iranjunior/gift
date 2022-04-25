@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: ${({ theme }) => theme.spacing.internal};
   background-color: ${({ theme }) => theme.primary.darkness};
   display: none;
-  width: 100vw;
+  width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: flex;
@@ -15,6 +15,6 @@ export const Container = styled.div`
   }
 
   button {
-    width: calc(100vw - (${({ theme }) => theme.spacing.internal} * 2));
+    width: calc(100% - (${({ theme }) => theme.spacing.internal} * 2));
   }
 `

@@ -9,6 +9,7 @@ export const Container = styled.div`
   position: fixed;
   z-index: 200;
   top: 0;
+  left: 0;
   background-color: ${({ theme }) => theme.primary.light};
   height: fill-available;
 `
@@ -21,6 +22,7 @@ export const ContainerBar = styled.div`
   position: fixed;
   z-index: 200;
   top: 0;
+  left: 0;
   background-color: ${({ theme }) => theme.primary.light};
   height: auto;
 `
@@ -31,7 +33,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   height: fill-available;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding: ${({ theme }) => theme.spacing.internal} 0;
 `
 export const ContentBar = styled.div`
@@ -73,11 +75,15 @@ export const OptionsMain = styled.div`
   flex-direction: column;
 
   div:first-child {
-    margin-top: 35%;
+    margin-top: 50%;
   }
 `
 
-export const Option = styled.div`
+type OptionType = {
+  isExpanded: boolean
+}
+
+export const Option = styled.div<OptionType>`
   display: flex;
   flex: 1;
   flex-direction: column;

@@ -21,17 +21,27 @@ export const Doubt: React.FC<DoubtProps> = ({ id }) => {
 
   return (
     <Container ref={ref} id={id}>
-      <Header description={pageDoubts.description} title={pageDoubts.title} />
+      <Header
+        full
+        description={pageDoubts.description}
+        title={pageDoubts.title}
+      />
       <Content>
         <DoubtsContainer>
-          {pageDoubts.doubts.map((doubt) => (
-            <Accordion
-              id={doubt.title.replaceAll(' ', '-').toLocaleLowerCase()}
-              key={doubt.title}
-              title={doubt.title}
-              answer={doubt.answer}
-            />
-          ))}
+          {pageDoubts.doubts
+            .map(({ title, ...doubt }) => ({
+              id: title.replaceAll(' ', '-').toLocaleLowerCase(),
+              title,
+              ...doubt,
+            }))
+            .map((doubt) => (
+              <Accordion
+                id={id}
+                key={id}
+                title={doubt.title}
+                answer={doubt.answer}
+              />
+            ))}
         </DoubtsContainer>
       </Content>
     </Container>
