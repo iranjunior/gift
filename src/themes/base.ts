@@ -63,7 +63,7 @@ export const BaseTheme: Base = {
     family: {
       default: 'Inter',
       highlight: 'Gloria Hallelujah',
-      sliver: 'Clearface ITC Pro',
+      sliver: 'ITC Clearface Std',
     },
   },
 }

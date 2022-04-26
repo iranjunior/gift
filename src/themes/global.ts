@@ -32,4 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: transparent;
   }
   
+  button {
+    color: ${({ theme }) => theme.primary.darkness};
+  }
 `
