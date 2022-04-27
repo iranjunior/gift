@@ -20,12 +20,19 @@ highlight {
   font-family: 'Gloria Hallelujah';
   font-weight: normal;
 }
+details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+details > summary::-webkit-details-marker /* Safari */ {
+  display: none;
+}
 
 .accordion > .accordion-title {
   list-style-type: none;
 }
 
 .accordion > .accordion-title::-webkit-details-marker {
+  display: none;
+}
+.accordion > .accordion-title::marker {
   display: none;
 }
 

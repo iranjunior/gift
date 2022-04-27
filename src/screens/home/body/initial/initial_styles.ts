@@ -13,7 +13,8 @@ export const Container = styled.div`
   }
 `
 export const BlockText = styled.div`
-  width: 30%;
+  width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -86,6 +87,9 @@ export const TextPrincipal = styled.div`
 
 export const Image = styled.img`
   height: 100%;
+  width: 100%;
+  max-width: 540px;
+  object-fit: cover;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
