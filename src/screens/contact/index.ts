@@ -1,1 +1,1 @@
-export { Contact } from './contact_screen'
+export { ContactForLeads, ContactForCustomers } from './contact_screen'

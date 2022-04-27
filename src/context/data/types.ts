@@ -27,6 +27,7 @@ export interface Body {
     psp:           Psp;
     clinics:       Clinics;
     careers:       Careers;
+    contact:       BodyContact;
 }
 
 export interface Careers {
@@ -132,6 +133,11 @@ export interface Numbers {
 export interface Info {
     legend: string;
     value:  number;
+}
+
+export interface BodyContact {
+    for_leads:     InitialClass;
+    for_customers: InitialClass;
 }
 
 export interface FarmeBox {
@@ -338,10 +344,10 @@ export interface About {
 
 export interface Contacts {
     title:    string;
-    contacts: Contact[];
+    contacts: ContactElement[];
 }
 
-export interface Contact {
+export interface ContactElement {
     location: string;
     phone:    string;
 }
@@ -365,8 +371,9 @@ export interface Menu {
 }
 
 export interface Option {
-    label: string;
-    href:  string;
+    label:          string;
+    href:           string;
+    isSanctionable: boolean;
 }
 
 export interface Nav {
@@ -544,6 +551,7 @@ const typeMap: any = {
         { json: "psp", js: "psp", typ: r("Psp") },
         { json: "clinics", js: "clinics", typ: r("Clinics") },
         { json: "careers", js: "careers", typ: r("Careers") },
+        { json: "contact", js: "contact", typ: r("BodyContact") },
     ], false),
     "Careers": o([
         { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
@@ -632,6 +640,10 @@ const typeMap: any = {
     "Info": o([
         { json: "legend", js: "legend", typ: "" },
         { json: "value", js: "value", typ: 0 },
+    ], false),
+    "BodyContact": o([
+        { json: "for_leads", js: "for_leads", typ: r("InitialClass") },
+        { json: "for_customers", js: "for_customers", typ: r("InitialClass") },
     ], false),
     "FarmeBox": o([
         { json: "initial", js: "initial", typ: r("FarmeBoxClass") },
@@ -804,9 +816,9 @@ const typeMap: any = {
     ], false),
     "Contacts": o([
         { json: "title", js: "title", typ: "" },
-        { json: "contacts", js: "contacts", typ: a(r("Contact")) },
+        { json: "contacts", js: "contacts", typ: a(r("ContactElement")) },
     ], false),
-    "Contact": o([
+    "ContactElement": o([
         { json: "location", js: "location", typ: "" },
         { json: "phone", js: "phone", typ: "" },
     ], false),
@@ -828,6 +840,7 @@ const typeMap: any = {
     "Option": o([
         { json: "label", js: "label", typ: "" },
         { json: "href", js: "href", typ: "" },
+        { json: "isSanctionable", js: "isSanctionable", typ: true },
     ], false),
     "Nav": o([
         { json: "customers", js: "customers", typ: "" },

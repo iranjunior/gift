@@ -1,6 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Contact } from './screens/contact/contact_screen'
+import {
+  ContactForLeads,
+  ContactForCustomers,
+} from './screens/contact/contact_screen'
 import { WhoWeSome } from './screens/who_we_some'
 import { Home } from './screens/home'
 import { FarMeBox } from './screens/farme_box'
@@ -18,12 +21,6 @@ const routes = [
     component: <ForCustomers />,
     exact: true,
     routes: [
-      {
-        path: 'contato',
-        name: 'contact',
-        component: <Contact />,
-        exact: true,
-      },
       {
         path: 'quem-somos',
         name: 'WhoWeSome',
@@ -67,6 +64,20 @@ const routes = [
         path: 'psp',
         name: 'psp',
         component: <PSP />,
+        exact: true,
+      },
+    ],
+  },
+  {
+    path: '/contato',
+    name: 'contact',
+    component: <ContactForLeads />,
+    exact: true,
+    routes: [
+      {
+        path: 'cliente',
+        name: 'contact-customers',
+        component: <ContactForCustomers />,
         exact: true,
       },
     ],
