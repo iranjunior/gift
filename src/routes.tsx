@@ -1,6 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, matchPath } from 'react-router-dom'
-import { Contact } from './screens/contact'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Contact } from './screens/contact/contact_screen'
 import { WhoWeSome } from './screens/who_we_some'
 import { Home } from './screens/home'
 import { FarMeBox } from './screens/farme_box'

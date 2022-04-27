@@ -29,7 +29,7 @@
             "label": "Para Quem",
             "options": [
                 {
-                    "label": "Para você",
+                    "label": "Você ou quem você ama",
                     "href": "/para-clientes"
                 },
                 {
@@ -49,7 +49,7 @@
         },
         {
             "label": "Contato",
-            "href": "#contact",
+            "href": "/para-clientes/contato",
             "context": "customers"
         },
         {
@@ -79,15 +79,15 @@
             "label": "Para Quem",
             "options": [
                 {
-                    "label": "Para você",
+                    "label": "Você ou quem você ama",
                     "href": "/para-clientes"
                 },
                 {
-                    "label": "Para instituições",
+                    "label": "Intituições de cuidado",
                     "href": "/para-instituicoes"
                 },
                 {
-                    "label": "Para médicos",
+                    "label": "Médicos",
                     "href": "/para-medicos"
                 }
             ]
@@ -98,7 +98,7 @@
         },
         {
             "label": "Contato",
-            "href": "#contact"
+            "href": "/para-clientes/contato"
         },
         {
             "label": "Faça seu orçamento",
@@ -109,15 +109,15 @@
     "body": {
         "home": {
             "initial": {
-                "title": "<h1>A farmácia<br />que te ajuda a viver <highlight>melhor</highlight>.</h1>",
-                "subtitle": "<p>Aqui, você recebe seus medicamentos de um jeito simples e prático. Com serviços personalizados, levamos mais<br responsive='only-desktop' /> comodidade e segurança para os seus cuidados com<br responsive='only-desktop' /> a saúde.</p>"
+                "title": "<h1>Mais do que medicamentos, um <highlight>cuidado completo</highlight></h1>",
+                "subtitle": "<p>Receba seus remédios organizados em casa a cada 30 dias aliados a um cuidado de alto nível: acompanhamento farmacêutico gratuito e personalizado em todo o tratamento.</p>"
             },
             "farme_box": {
-                "title": "Viva o seu melhor estar, <br /> conte com a Far.me"
+                "title": "Viva o seu máximo,<br />conte com a Far.me."
             },
             "know_me": {
                 "title": "Conheça a Far.me Box.",
-                "subtitle": "Muito mais que uma caixa de remédios separados por dia e hora. Uma inteligência que analisa cada receita pra ter certeza de que os seus medicamentos não terão interação prejudicial no seu corpo.",
+                "subtitle": "Muito mais do que uma caixa de remédios separados por dose, dia e hora. Uma inteligência que analisa cada receita para evitar possíveis efeitos adversos, interações prejudiciais e qualquer obstáculo ao sucesso do seu tratamento",
                 "carousel": [
                     {
                         "label": "Personalizada",
@@ -139,12 +139,12 @@
             },
             "targets": {
                 "title": "Uma solução,<br /> diferentes necessidades.",
-                "subtitle": "A Far.me Box está presente em diversas rotinas, oferecendo benefícios únicos para cada forma de cuidado.",
+                "subtitle": " Far.me Box atende a múltiplas demandas na área da saúde, oferecendo benefícios únicos para cada forma de cuidado",
                 "cards": [
                     {
                         "title": "Para quem toma medicamentos<br /> <highlight>todos os dias</highlight>",
                         "type": "customers",
-                        "text": "Seus medicamentos separados da forma que devem ser tomados e entregues na sua porta a cada 30 dias."
+                        "text": "Seus medicamentos separados da forma como devem ser tomados e entregues na sua porta a cada 30 dias."
                     },
                     {
                         "title": "Para as <br /><highlight>instituições</highlight>",
@@ -154,40 +154,40 @@
                     {
                         "title": "Para <br />complementar<br />o trabalho <highlight> médico</highlight>",
                         "type": "doctors",
-                        "text": "Facilidade na adesão ao tratamento no pós-consultório e, com isso, maiores chances de sucesso terapêutico."
+                        "text": "Facilidade na adesão ao tratamento no pós-consulta e parceria farmacêutica para maiores chances de sucesso terapêutico"
                     }
                 ]
             }
         },
         "for_customers": {
             "initial": {
-                "title": "<h1>A farmácia que <highlight>facilita</highlight><br responsive='only-desktop'/> a sua vida. </h1>",
-                "subtitle": "<p>Entregamos seus remédios onde e quando quiser. Assim, simplificamos o seu cuidado com a saúde para que você possa atingir o seu melhor estar. </p>"
+                "title": "<h1>Muito mais cuidado e comodidade para a rotina <highlight>a sua ou a de quem você ama</highlight></h1>",
+                "subtitle": "<p>Entregamos os medicamentos que você precisa de forma programada e oferecemos apoio especializado para o máximo bem-estar no tratamento.</p>"
             },
             "how_working": {
                 "title": "Como funciona?",
-                "subtitle": "Com a Far.me Box, você tem seus remédios entregues a cada 30 dias, já separados por dose, dia e horário.",
+                "subtitle": "Com a Far.me Box, você ou quem você ama recebem os remédios a cada 30 dias, já separados por dose, dia e horário.",
                 "arguments": [
                     {
                         "id": "request",
                         "title": "Faça o seu <br/>orçamento",
-                        "text": "Aqui, você orça tudo o que precisa para o seu tratamento e nós nos empenhamos para conseguir os melhores preços na soma <br />dos seus remédios. "
+                        "text": "Aqui, você orça tudo o que precisa para o tratamento e nós nos empenhamos para conseguir os melhores preços na soma dos remédios"
                     },
                     {
                         "id": "notes",
                         "title": "Conte com uma análise e atendimento personalizado",
-                        "text": "Em seguida, nossa equipe de farmacêuticos verificará a disponibilidade e possível descontos dos itens."
+                        "text": "Em seguida, nossa equipe de farmacêuticos verificará a disponibilidade e possíveis descontos dos itens."
                     },
                     {
                         "id": "drugs",
                         "title": "Receba seus<br />medicamentos",
-                        "text": "Após o cadastro e envio das receitas,sua box será preparada e você passa a receber seus medicamentos a cada 30 dias."
+                        "text": "Após o cadastro e o envio das receitas, a box personalizada será preparada e enviada a cada 30 dias"
                     }
                 ]
             },
             "banner": {
                 "title": "O cuidado da sua saúde é <br />completo com a Clínica Far.me.",
-                "subtitle": "Sem taxas extras, você conta com o suporte contínuo dos nossos <br/>farmacêuticos para tirar dúvidas sobre medicamentos, evitar efeitos indesejados e possíveis interações. "
+                "subtitle": "Sem taxas extras, você conta com o acompanhamento contínuo dos nossos <br/>farmacêuticos para tirar dúvidas sobre medicamentos, evitar efeitos indesejados e possíveis interações. "
             },
             "advantages": {
                 "legend": "Benefícios",
@@ -223,19 +223,19 @@
             },
             "card_product": {
                 "legend": "Far.me Box",
-                "title": "A solução pra você se cuidar e <highlight>organizar</highlight>a sua rotina.",
-                "subtitle": "Seus remédios separados da forma que devem ser tomados e entregues na sua porta a cada 30 dias."
+                "title": "A solução que alia praticidade e cuidado na rotina do tratamento",
+                "subtitle": "Seus medicamentos prontos para uso e com entrega programada a cada 30 dias."
             },
             "our_posts": {
                 "description": "Nosso blog",
-                "title": "Confira os nossos posts."
+                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde"
             }
         },
         "for_companies": {
             "initial": {
                 "who-we-are": {
-                    "title": "<h1>Somos <br/>o seu braço <br responsive='only-desktop' /> <highlight>farmacêutico</highlight>.</h1>",
-                    "subtitle": "<p>Oferecemos segurança e organização para você manter o foco no residente. <br />Eleve o cuidado da sua instituição sem ocupar a equipe e tenha o apoio de especialistas para tirar dúvidas sobre medicamentos.</p>"
+                    "title": "<h1>Gestão farmacêutica para agregar valor à sua instituição e <highlight>valorizar</highlight> o tempo da sua equipe.</h1>",
+                    "subtitle": "<p>Oferecemos segurança e organização na rotina de medicação para você manter o foco no residente</p>"
                 }
             },
             "advantage": {
@@ -296,8 +296,8 @@
                 ]
             },
             "banner": {
-                "title": "Cuidado completo para a saúde dos seus residentes com a Clínica Far.me.",
-                "subtitle": "Sem taxas extras, você conta com o suporte contínuo dos nossos <br />farmacêuticos para tirar dúvidas sobre medicamentos, evitar efeitos indesejados e possíveis interações medicamentosas. "
+                "title": "Complemento de alto nível para o melhor cuidado dos residentes com a Clínica Far.me",
+                "subtitle": "Sem taxas extras, os residentes, sua equipe e os familiares contam com o apoio contínuo dos nossos farmacêuticos para tirar dúvidas sobre medicamentos, evitar efeitos indesejados e possíveis interações medicamentosas. "
             },
             "card_product": {
                 "legend": "Far.me Box",
@@ -306,19 +306,19 @@
             },
             "our_posts": {
                 "description": "Nosso blog",
-                "title": "Confira os nossos posts."
+                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde"
             }
         },
         "for_doctors": {
             "initial": {
                 "who-we-are": {
-                    "title": "<h1>O complemento <highlight>seguro</highlight> para o tratamento dos seus pacientes.</h1>",
-                    "subtitle": "<p>Você prescreve o tratamento e nós auxiliamos para fazer acontecer na casa do paciente.<br />Com soluções inovadoras, facilitamos a rotina de quem faz uso contínuo de medicamentos - tudo pensando no melhor estar de cada um.</p>"
+                    "title": "<h1>O complemento <highlight>seguro</highlight> para o tratamento dos seus pacientes no pós-consultório</h1>",
+                    "subtitle": "<p>Você prescreve o tratamento e nós ajudamos a fazer acontecer na casa do paciente. Facilitamos a adesão ao tratamento medicamentoso e realizamos a conciliação das prescrições tudo para aumentar as chances de sucesso terapêutico sem perder de vista o bem-estar.</p>"
                 }
             },
             "how_working": {
                 "title": "Como funciona?",
-                "subtitle": "Com a Far.me Box, entregamos os medicamentos do paciente já organizados por dose, dia e horário. É assim que facilitamos a adesão ao tratamento – tudo com uma experiência única de acompanhamento farmacêutico.",
+                "subtitle": "Com a Far.me Box, entregamos os medicamentos do paciente a cada 30 dias, já organizados por dose, dia e horário. É assim que facilitamos a adesão ao tratamento prescrito tudo com uma experiência única de acompanhamento farmacêutico",
                 "arguments": [
                     {
                         "id": "prescription",
@@ -328,20 +328,20 @@
                     {
                         "id": "delivery",
                         "title": "Nós<br />facilitamos.",
-                        "text": "A partir da sua prescrição, entregamos os medicamentos ao seu paciente, auxiliando na continuidade do tratamento no pós-consultório. E você  tem acesso a dados clínicos farmacoterapêuticos."
+                        "text": "A partir da sua prescrição, entregamos os medicamentos ao seu paciente, auxiliando na continuidade do tratamento no pós-consultório. Com você, compartilhamos estudos e dados clínicos farmacoterapêuticos"
                     },
                     {
                         "id": "farmebox",
                         "title": "Continuidade<br />no tratamento",
-                        "text": "Após o envio das prescrições e assinatura de termo de fornecimento de medicamentos, a instituição passa a receber a box a cada 30 dias."
+                        "text": "Além de praticidade e segurança na rotina dos medicamentos, seu paciente recebe apoio farmacêutico contínuo e gratuito para maior bem-estar."
                     }
                 ]
             },
             "banner": {
                 "title": "Apoio farmacêutico exclusivo para todos os clientes Far.me e um suporte para a sua atuação médica.",
-                "subtitle": "Sabia que a forma como você usa um ou mais medicamentos influencia na sua adaptação ao tratamento?",
+                "subtitle": "",
                 "highlight": [
-                    "Oferecemos um sistema adicional que sinaliza possíveis riscos de interação medicamentosa e superdosagens.",
+                    "Utilizamos um sistema inteligente adicional que sinaliza possíveis riscos de interação medicamentosa e superdosagens",
                     "Atuamos de forma complementar às orientações realizadas no consultório, aumentando a efetividade do tratamento prescrito<br/>na outra ponta: a casa do seu paciente.",
                     "Realizamos a conciliação de todas as prescrições do paciente, <br />obtendo uma análise global do tratamento medicamentoso."
                 ]
@@ -353,7 +353,7 @@
             },
             "our_posts": {
                 "description": "Nosso blog",
-                "title": "Confira os nossos posts."
+                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde"
             },
             "doubts": {
                 "description": "Dúvidas",
@@ -393,7 +393,7 @@
         "common_pages": {
             "numbers": {
                 "description": "Números",
-                "title": "Os impactos da Far.me levando o melhor estar para mais pessoas.",
+                "title": "Os impactos da Far.me ressignificando a saúde de cada vez mais pessoas",
                 "message": "Pode contar com <highlight>a gente!</highlight>",
                 "infos": [
                     {
@@ -887,10 +887,10 @@
     },
     "footer": {
         "about": {
-            "title": "Sobre a gente",
-            "text": "Criamos soluções para que o tratamento medicamentoso seja seguido e as pessoas se sintam mais tranquilas e seguras no dia a dia.<br /><br />Viva seu melhor estar, conte com a Far.me."
+            "title": "Sobre nós",
+            "text": "Criamos soluções inovadoras para facilitar o correto tratamento medicamentoso e ressignificar a relação das pessoas com sua saúde e qualidade de vida.<br /><br />Viva o seu máximo, conte com a Far.me"
         },
-        "invite": "<highlight>Se interessou? </highlight><br />É só preencher o formulário que te responderemos em breve.",
+        "invite": "<highlight>Se interessou? </highlight><br />É só preencher o formulário e retornaremos em breve",
         "contacts": {
             "title": "Se preferir, liga pra gente!",
             "contacts": [
