@@ -10,7 +10,7 @@
 export interface Types {
     nav:             Nav;
     menu:            Menu[];
-    menu_for_mobile: Menu[];
+    menu_for_mobile: MenuForMobile[];
     body:            Body;
     footer:          Footer;
     units:           Unit[];
@@ -371,9 +371,16 @@ export interface Menu {
 }
 
 export interface Option {
-    label:          string;
-    href:           string;
-    isSanctionable: boolean;
+    label:           string;
+    href:            string;
+    isSanctionable?: boolean;
+}
+
+export interface MenuForMobile {
+    label:    string;
+    href?:    string;
+    options?: Option[];
+    isCTA?:   boolean;
 }
 
 export interface Nav {
@@ -535,7 +542,7 @@ const typeMap: any = {
     "Types": o([
         { json: "nav", js: "nav", typ: r("Nav") },
         { json: "menu", js: "menu", typ: a(r("Menu")) },
-        { json: "menu_for_mobile", js: "menu_for_mobile", typ: a(r("Menu")) },
+        { json: "menu_for_mobile", js: "menu_for_mobile", typ: a(r("MenuForMobile")) },
         { json: "body", js: "body", typ: r("Body") },
         { json: "footer", js: "footer", typ: r("Footer") },
         { json: "units", js: "units", typ: a(r("Unit")) },
@@ -840,7 +847,13 @@ const typeMap: any = {
     "Option": o([
         { json: "label", js: "label", typ: "" },
         { json: "href", js: "href", typ: "" },
-        { json: "isSanctionable", js: "isSanctionable", typ: true },
+        { json: "isSanctionable", js: "isSanctionable", typ: u(undefined, true) },
+    ], false),
+    "MenuForMobile": o([
+        { json: "label", js: "label", typ: "" },
+        { json: "href", js: "href", typ: u(undefined, "") },
+        { json: "options", js: "options", typ: u(undefined, a(r("Option"))) },
+        { json: "isCTA", js: "isCTA", typ: u(undefined, true) },
     ], false),
     "Nav": o([
         { json: "customers", js: "customers", typ: "" },

@@ -5,10 +5,9 @@ export const Container = styled.div`
   width: 100%;
   justify-content: center;
   flex-wrap: nowrap;
-  margin-top: calc(${({ theme }) => theme.spacing.internal} * 2);
   background-color: ${({ theme }) => theme.primary.light};
+  margin-top: calc(${({ theme }) => theme.spacing.internal} * 2);
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
-    justify-content: center;
     flex-wrap: wrap;
     margin-top: calc(${({ theme }) => theme.spacing.internal} * 5);
   }
@@ -82,7 +81,7 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
   max-width: 540px;
-  object-fit: cover;
+  object-fit: none;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
