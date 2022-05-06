@@ -38,6 +38,7 @@ export const Options = styled.div`
   }
 
   button {
+    margin-left: ${({ theme }) => theme.spacing.internal};
     width: 20%;
   }
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
@@ -88,7 +89,7 @@ export const Modal = styled.div<ModalProps>`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   height: 100%;
   width: 100%;
   background-color: ${({ theme }) => theme.primary.light};

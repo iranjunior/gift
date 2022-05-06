@@ -30,15 +30,18 @@
             "options": [
                 {
                     "label": "Você ou quem você ama",
-                    "href": "/para-clientes"
+                    "href": "/para-clientes",
+                    "isSanctionable": true
                 },
                 {
                     "label": "Para instituições",
-                    "href": "/para-instituicoes"
+                    "href": "/para-instituicoes",
+                    "isSanctionable": true
                 },
                 {
                     "label": "Para médicos",
-                    "href": "/para-medicos"
+                    "href": "/para-medicos",
+                    "isSanctionable": true
                 }
             ]
         },
@@ -49,8 +52,18 @@
         },
         {
             "label": "Contato",
-            "href": "/para-clientes/contato",
-            "context": "customers"
+            "options": [
+                {
+                    "label": "Quero saber mais",
+                    "href": "/contato",
+                    "isSanctionable": false
+                },
+                {
+                    "label": "Já sou cliente",
+                    "href": "/contato/cliente",
+                    "isSanctionable": false
+                }
+            ]
         },
         {
             "label": "Faça seu orçamento",
@@ -98,7 +111,18 @@
         },
         {
             "label": "Contato",
-            "href": "/para-clientes/contato"
+            "options": [
+                {
+                    "label": "Quero saber mais",
+                    "href": "/contato",
+                    "isSanctionable": false
+                },
+                {
+                    "label": "Já sou cliente",
+                    "href": "/contato/cliente",
+                    "isSanctionable": false
+                }
+            ]
         },
         {
             "label": "Faça seu orçamento",
@@ -882,6 +906,16 @@
             "banner": {
                 "title": "Quer <highlight>revolucionar</highlight/><br />a saúde?",
                 "subtitle": "Conheça nossas vagas abertas. <br />Hoje, atuamos em BH e em SP e somos 100% remotos."
+            }
+        },
+        "contact": {
+            "for_leads": {
+                "title": "Vamos lá",
+                "subtitle": "Nós organizamos seus medicamentos de acordo com a hora, a data e a posologia prescritos!"
+            },
+            "for_customers": {
+                "title": "Já é um Far.membro?",
+                "subtitle": "Se tiver alguma dúvida, utilize os nossos canais de comunicação."
             }
         }
     },

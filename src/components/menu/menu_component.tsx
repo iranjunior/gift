@@ -31,6 +31,9 @@ type CTAType = {
 type StateType = {
   activeSection?: string
 }
+type OpenCollapsibleType = {
+  [key: string]: boolean
+}
 type HashMapPathToSection = {
   [key: string]: string
 }
@@ -41,7 +44,9 @@ const hashMapPathToActiveSection: HashMapPathToSection = {
 }
 
 export const Menu = () => {
-  const [openCollapsible, setOpenCollapsible] = useState(false)
+  const [openCollapsible, setOpenCollapsible] = useState<OpenCollapsibleType>(
+    {}
+  )
   const { menu } = useContext(DataContext)
   const navigate = useNavigate()
   const location = useLocation()
@@ -60,6 +65,18 @@ export const Menu = () => {
   if (isNotDesktop) {
     return <MenuForMobile />
   }
+  const onClickDropdown = (isSanctionable: boolean, option: OptionType) => {
+    if (isSanctionable) onClickOption(option)
+    else {
+      updateOpenCollapsible(option.label)
+      navigate(option.href)
+    }
+  }
+  const updateOpenCollapsible = (key: string) =>
+    setOpenCollapsible((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }))
 
   return (
     <>
@@ -68,24 +85,31 @@ export const Menu = () => {
           <Logo onClick={() => navigate('/')} src={LogoFarMe} />
           <Space />
           <Options>
-            {menu.slice(0, menu.length - 1).map((value) =>
-              value.options ? (
+            {menu.slice(0, menu.length - 1).map((value) => {
+              const isSanctionable = value.options?.every(
+                ({ isSanctionable }) => isSanctionable ?? false
+              )
+              return value.options ? (
                 <DropdownContainer
                   className="collapsible"
                   key={value.label}
-                  onClick={() => setOpenCollapsible(!openCollapsible)}
+                  onClick={() => updateOpenCollapsible(value.label)}
                 >
                   <DropdownTitle
-                    open={openCollapsible}
-                    highlight={!!activeSection}
+                    open={openCollapsible[value.label]}
+                    highlight={!!activeSection && !!isSanctionable}
                     className="collapsible-title"
                   >
-                    {activeSection ?? value.label}
+                    {isSanctionable
+                      ? activeSection ?? value.label
+                      : value.label}
                   </DropdownTitle>
                   <DropdownContent>
                     {value.options.map((option) => (
                       <DropdownItem
-                        onClick={() => onClickOption(option)}
+                        onClick={() =>
+                          onClickDropdown(!!isSanctionable, option)
+                        }
                         key={option.href}
                       >
                         <DropdownItemLabel>{option.label}</DropdownItemLabel>
@@ -98,7 +122,7 @@ export const Menu = () => {
                   <Link href={value.href}>{value.label}</Link>
                 </Option>
               )
-            )}
+            })}
 
             <Button
               label={
