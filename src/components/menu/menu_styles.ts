@@ -135,6 +135,10 @@ export const DropdownTitle = styled.summary<SummaryType>`
   font-family: ${({ theme }) => theme.font.family.default};
   white-space: nowrap;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   ${({ open }) =>
     open &&
     css`

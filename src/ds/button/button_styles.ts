@@ -1,8 +1,10 @@
+/* eslint-disable indent */
 import styled, { css } from 'styled-components'
 
 type ButtonActionType = {
   variant?: 'primary' | 'secondary' | 'ghost'
   customColor?: string
+  customColorHover?: string
   customColorLabel?: string
   hasArrow?: boolean
 }
@@ -10,6 +12,11 @@ type ButtonActionType = {
 export const ButtonAction = styled.button<ButtonActionType>`
   height: ${({ theme }) => theme.spacing.md};
   padding: 0 ${({ theme }) => theme.spacing.bit};
+
+  &:hover {
+    cursor: pointer;
+  }
+
   ${({ customColorLabel }) =>
     customColorLabel &&
     css`
@@ -24,7 +31,7 @@ export const ButtonAction = styled.button<ButtonActionType>`
       align-items: center;
     `}
 
-  ${({ variant, customColor }) =>
+  ${({ variant, customColor, customColorHover }) =>
     variant === 'primary' &&
     css`
       border-radius: ${({ theme }) => theme.spacing.quark};
@@ -32,7 +39,8 @@ export const ButtonAction = styled.button<ButtonActionType>`
       background-color: ${({ theme }) => customColor || theme.primary.default};
 
       &:hover {
-        background-color: ${({ theme }) => customColor || theme.primary.light};
+        background-color: ${({ theme }) =>
+          customColorHover || theme.primary.light};
         opacity: ${customColor ? 0.8 : 1};
       }
 
@@ -43,7 +51,7 @@ export const ButtonAction = styled.button<ButtonActionType>`
       }
     `}
 
-  ${({ variant, customColor }) =>
+  ${({ variant, customColor, customColorHover }) =>
     variant === 'secondary' &&
     css`
       border: 1px solid ${({ theme }) => customColor || theme.primary.dark};
@@ -51,7 +59,8 @@ export const ButtonAction = styled.button<ButtonActionType>`
       border-radius: 4px;
 
       &:hover {
-        border-color: ${({ theme }) => customColor || theme.primary.darkness};
+        border-color: ${({ theme }) =>
+          customColorHover || theme.primary.darkness};
         opacity: ${customColor ? 0.8 : 1};
       }
 

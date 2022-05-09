@@ -16,6 +16,7 @@ import {
   Image,
 } from './card_product_styles'
 import { useIntersection } from '../../../../hooks/useIntersection'
+import { useTheme } from 'styled-components'
 
 type CardProductProps = {
   id?: string
@@ -28,6 +29,7 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
       for_customers: { card_product },
     },
   } = useContext(DataContext)
+  const theme = useTheme()
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
@@ -42,7 +44,7 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
           dangerouslySetInnerHTML={{ __html: card_product.subtitle }}
         />
       </LeftSideHeader>
-      <Button label="Saiba mais" />
+      <Button customColorHover={theme.primary.dark} label="Saiba mais" />
     </LeftSideContainer>
   )
   const RightSide = () => (
