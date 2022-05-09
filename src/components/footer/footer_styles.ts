@@ -147,6 +147,7 @@ export const AboutSectionsContainer = styled.div`
   width: 90%;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 2rem;
   }
