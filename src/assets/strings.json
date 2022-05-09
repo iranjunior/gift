@@ -16,8 +16,8 @@
             "context": "customers"
         },
         {
-            "label": "Clínicas",
-            "href": "/para-medicos/clinicas",
+            "label": "Clínica",
+            "href": "/para-medicos/clinica",
             "context": "doctors"
         },
         {
@@ -81,8 +81,8 @@
             "href": "/para-clientes/farme-box"
         },
         {
-            "label": "Clínicas",
-            "href": "/para-medicos/clinicas"
+            "label": "Clínica",
+            "href": "/para-medicos/clinica"
         },
         {
             "label": "Carreiras",

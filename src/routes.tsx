@@ -55,8 +55,8 @@ const routes = [
     exact: true,
     routes: [
       {
-        path: 'clinicas',
-        name: 'clinics',
+        path: 'clinica',
+        name: 'clinic',
         component: <Clinics />,
         exact: true,
       },

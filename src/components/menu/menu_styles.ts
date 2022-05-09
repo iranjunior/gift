@@ -145,12 +145,19 @@ export const DropdownContent = styled.div`
   position: absolute;
   left: -${({ theme }) => theme.spacing.nano};
   top: ${({ theme }) => theme.spacing.sm};
-  width: 200px;
+  width: 240px;
   z-index: 200;
   background-color: ${({ theme }) => theme.primary.default};
   border-radius: ${({ theme }) => theme.spacing.nano};
+  display: flex;
+  flex-flow: column;
 `
 export const DropdownItem = styled.div`
   padding: ${({ theme }) => theme.spacing.internal};
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.primary.light}4d;
+  }
 `
 export const DropdownItemLabel = styled.span``
