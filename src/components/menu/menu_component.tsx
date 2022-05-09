@@ -4,7 +4,10 @@ import { Button } from '../../ds'
 
 import LogoFarMe from '../../assets/images/logotype.svg'
 import { DataContext } from '../../context/data'
-import { Option as OptionType } from '../../context/data/types'
+import {
+  Option as OptionType,
+  Menu as MenuType,
+} from '../../context/data/types'
 
 import {
   Container,
@@ -56,6 +59,9 @@ export const Menu = () => {
   const [activeSection] = useState(
     state?.activeSection || hashMapPathToActiveSection[path]
   )
+  const isCurrentPage = (item: MenuType) => {
+    return item.href && location.pathname.includes(item.href)
+  }
 
   const onClickOption = (option: OptionType) => {
     navigate(option.href, { state: { activeSection: option.label } })
@@ -119,7 +125,9 @@ export const Menu = () => {
                 </DropdownContainer>
               ) : (
                 <Option key={value.href}>
-                  <Link href={value.href}>{value.label}</Link>
+                  <Link highlight={!!isCurrentPage(value)} href={value.href}>
+                    {value.label}
+                  </Link>
                 </Option>
               )
             })}

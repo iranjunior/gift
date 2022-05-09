@@ -99,12 +99,17 @@ export const Option = styled.div<OptionType>`
   }
 `
 
-export const Link = styled.a`
+type LinkProps = {
+  highlight?: boolean
+}
+
+export const Link = styled.a<LinkProps>`
   color: ${({ theme }) => theme.primary.darkness};
   white-space: nowrap;
   text-decoration: none;
   font-size: ${({ theme }) => theme.font.sizes.lg};
   font-family: ${({ theme }) => theme.font.family.sliver};
+  font-weight: ${({ highlight }) => (highlight ? 'bold' : 'normal')};
   display: flex;
 
   svg {

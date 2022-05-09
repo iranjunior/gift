@@ -61,10 +61,15 @@ export const Option = styled.div`
   }
 `
 
-export const Link = styled.a`
+type LinkProps = {
+  highlight?: boolean
+}
+
+export const Link = styled.a<LinkProps>`
   color: ${({ theme }) => theme.primary.darkness};
   white-space: nowrap;
   text-decoration: none;
+  font-weight: ${({ highlight }) => (highlight ? 'bold' : 'normal')};
 `
 
 export const HamburgerMenu = styled.div`

@@ -8,6 +8,7 @@ import { ReactComponent as HamburguerIcon } from '../../../assets/images/hamburg
 import { ReactComponent as ChevronIcon } from '../../../assets/images/chevron.svg'
 import { ReactComponent as ArrowRightIcon } from '../../../assets/images/arrow_right.svg'
 import { DataContext } from '../../../context/data'
+import { Menu as MenuType } from '../../../context/data/types'
 
 import {
   Container,
@@ -54,6 +55,11 @@ export const MenuForMobile = () => {
     return showModal ? <CloseIcon /> : <HamburguerIcon />
   }
   const lastItem = menu[menu.length - 1]
+
+  const isCurrentPage = (item: MenuType) => {
+    return item.href && location.pathname.includes(item.href)
+  }
+
   return (
     <>
       <ContainerBar>
@@ -109,7 +115,12 @@ export const MenuForMobile = () => {
                           {value.label} <ArrowRightIcon />
                         </Link>
                       ) : (
-                        <Link href={value.href}>{value.label}</Link>
+                        <Link
+                          highlight={!!isCurrentPage(value)}
+                          href={value.href}
+                        >
+                          {value.label}
+                        </Link>
                       )}
                     </Option>
                   ))}
