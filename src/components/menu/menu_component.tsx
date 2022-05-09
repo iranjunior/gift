@@ -24,7 +24,6 @@ import {
   Space,
 } from './menu_styles'
 import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
-import { useTheme } from 'styled-components'
 
 type CTAType = {
   label: string
@@ -51,7 +50,6 @@ export const Menu = () => {
   const [openCollapsible, setOpenCollapsible] = useState<OpenCollapsibleType>(
     {}
   )
-  const theme = useTheme()
   const { menu } = useContext(DataContext)
   const navigate = useNavigate()
   const location = useLocation()
@@ -135,7 +133,6 @@ export const Menu = () => {
             })}
 
             <Button
-              customColorHover={theme.primary.dark}
               label={
                 (
                   Object.entries(menu).slice(

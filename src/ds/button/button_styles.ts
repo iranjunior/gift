@@ -40,7 +40,8 @@ export const ButtonAction = styled.button<ButtonActionType>`
 
       &:hover {
         background-color: ${({ theme }) =>
-          customColorHover || theme.primary.light};
+          customColorHover || theme.primary.darkness};
+        color: ${({ theme }) => theme.primary.default};
         opacity: ${customColor ? 0.8 : 1};
       }
 
@@ -59,8 +60,9 @@ export const ButtonAction = styled.button<ButtonActionType>`
       border-radius: 4px;
 
       &:hover {
-        border-color: ${({ theme }) =>
+        background-color: ${({ theme }) =>
           customColorHover || theme.primary.darkness};
+        color: ${({ theme }) => theme.colors.neutral.lightness};
         opacity: ${customColor ? 0.8 : 1};
       }
 
