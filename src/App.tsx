@@ -12,6 +12,7 @@ import {
 } from './themes'
 import { Subject } from './context/subject/subject'
 import { Theme } from './themes/interface'
+import { CookiesAlertComponent } from './components/cookies_alert'
 
 function App() {
   const getThemeBySubject = (subject: Subject): Theme => {
@@ -30,6 +31,7 @@ function App() {
               <div className="App">
                 <Router />
               </div>
+              <CookiesAlertComponent />
             </ThemeProvider>
           )}
         </SubjectContext.Consumer>

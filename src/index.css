@@ -13,9 +13,23 @@ body {
 }
 @font-face {
   font-family: 'Clearface ITC Pro';
-  src: local('../public/ClearfaceStd-Regular.otf') url('../public/ClearfaceStd-Regular.otf') format('opentype');
+  src: local('../public/ClearfaceStd-Regular.otf')
+    url('../public/ClearfaceStd-Regular.otf') format('opentype');
 }
-@font-face {font-family: "ITC Clearface Std"; src: url("//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.eot"); src: url("//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.woff") format("woff"), url("//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.svg#ITC Clearface Std") format("svg"); }
+@font-face {
+  font-family: 'ITC Clearface Std';
+  src: url('//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.eot');
+  src: url('//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/b0cc4fe77d43f15314c1e266b2d8272d.svg#ITC Clearface Std')
+      format('svg');
+}
 highlight {
   font-family: 'Gloria Hallelujah';
   font-weight: normal;
@@ -45,7 +59,7 @@ details > summary::-webkit-details-marker /* Safari */ {
   background-size: 18px 18px;
   height: 18px;
   width: 18px;
-  content: "";
+  content: '';
 }
 .accordion-title::before {
   transform: rotate(0);
@@ -57,16 +71,13 @@ details > summary::-webkit-details-marker /* Safari */ {
   content: url('./assets/images/up_arrow.svg');
 }
 
-
 .collapsible[open] > .collapsible-title::after {
   background-image: url('./assets/images/up_arrow.svg');
   background-size: 18px 18px;
   height: 18px;
   width: 18px;
-  content: "";
+  content: '';
 }
-
-
 
 @keyframes show-Slide {
   from {
@@ -81,4 +92,29 @@ details > summary::-webkit-details-marker /* Safari */ {
 
 .animate-slide {
   animation: show-Slide 1s ease-in-out;
+}
+
+.cookie-alert {
+  width: 100%;
+  max-width: 304px;
+  right: 0;
+}
+
+.cookie-alert-title {
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: 'ITC Clearface Std';
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.cookie-alert-text {
+  font-family: 'Inter';
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.cookie-consent-container {
+  bottom: 40% !important;
 }
