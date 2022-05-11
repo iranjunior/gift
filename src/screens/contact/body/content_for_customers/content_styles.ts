@@ -115,8 +115,9 @@ export const RowContacts = styled.div`
   align-items: center;
   margin-bottom: ${({ theme }) => theme.spacing.internal};
 `
-export const Contact = styled.div`
+export const Contact = styled.a`
   font-size: ${({ theme }) => theme.font.sizes.md};
   font-family: ${({ theme }) => theme.font.family.sliver};
   margin-left: ${({ theme }) => theme.spacing.internal};
+  color: ${({ theme }) => theme.colors.neutral.darkness};
 `

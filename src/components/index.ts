@@ -1,4 +1,4 @@
-export { Nav } from './nav'
+export { NavBanner } from './navbanner'
 export { Menu } from './menu'
 export { Footer } from './footer'
 export { Doubt } from './doubt'

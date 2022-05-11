@@ -1,8 +1,6 @@
 {
-    "nav": {
-        "customers": "para clientes",
-        "companies": "para instituições",
-        "doctors": "para medicos"
+    "navbanner": {
+        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> por venda fechada! <a href=\"https://google.com\">Clique aqui e saiba mais.</a>"
     },
     "menu": [
         {

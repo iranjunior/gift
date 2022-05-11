@@ -2,7 +2,6 @@ import React, { useContext, useLayoutEffect } from 'react'
 import {
   Footer,
   Menu,
-  Nav,
   Doubt,
   Testimonies,
   CallToAction,
@@ -28,7 +27,6 @@ export const FarMeBox = () => {
 
   return (
     <Container>
-      <Nav />
       <Body>
         <Menu />
         <Main id="quem-somos" />

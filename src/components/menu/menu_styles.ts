@@ -1,20 +1,30 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
+type ContainerProps = {
+  fixed: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   width: 100%;
   justify-content: center;
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 0;
+  flex-direction: column;
+
   background-color: ${({ theme }) => theme.primary.light};
+  ${({ fixed }) =>
+    fixed &&
+    css`
+      position: fixed;
+      z-index: 200;
+      top: 0;
+      left: 0;
+    `}
 `
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 95%;
   justify-content: space-between;
   margin: 0 ${({ theme }) => theme.spacing.internal};
   height: 64px;
@@ -98,6 +108,8 @@ export const Modal = styled.div<ModalProps>`
   height: 100%;
   width: 100%;
   background-color: ${({ theme }) => theme.primary.light};
+
+  overflow-y: scroll;
 `
 
 export const LogoMobileContainer = styled.div`

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Router } from './routes'
 import { DataProvider } from './context/data'
 import { SubjectProvider, SubjectContext } from './context/subject'
@@ -13,6 +13,8 @@ import {
 import { Subject } from './context/subject/subject'
 import { Theme } from './themes/interface'
 import { CookiesAlertComponent } from './components/cookies_alert'
+import { initialValueStorageSession } from './storage/initial_value'
+// import { NavBanner } from './components'
 
 function App() {
   const getThemeBySubject = (subject: Subject): Theme => {
@@ -21,6 +23,11 @@ function App() {
     if (subject === Subject.doctors) return medicalTheme
     return customersTheme
   }
+  const storage = window.sessionStorage
+  if (storage.getItem('farme') === null) {
+    storage.setItem('farme', JSON.stringify(initialValueStorageSession))
+  }
+
   return (
     <DataProvider value={data}>
       <SubjectProvider>

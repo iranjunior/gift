@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '../../ds'
 
@@ -24,6 +24,8 @@ import {
   Space,
 } from './menu_styles'
 import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
+import { NavBanner } from '../navbanner'
+import { useIntersection } from '../../hooks/useIntersection'
 
 type CTAType = {
   label: string
@@ -46,7 +48,11 @@ const hashMapPathToActiveSection: HashMapPathToSection = {
   '/para-clientes': 'Para você',
 }
 
-export const Menu = () => {
+type MenuComponentProps = {
+  wasScrolled?: boolean
+}
+
+const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
   const [openCollapsible, setOpenCollapsible] = useState<OpenCollapsibleType>(
     {}
   )
@@ -86,7 +92,8 @@ export const Menu = () => {
 
   return (
     <>
-      <Container>
+      <Container fixed={!!wasScrolled}>
+        <NavBanner />
         <Content>
           <Logo onClick={() => navigate('/')} src={LogoFarMe} />
           <Space />
@@ -147,4 +154,21 @@ export const Menu = () => {
       </Container>
     </>
   )
+}
+
+export const Menu = () => {
+  const scrolledCheck = () => window.scrollY > 51
+  const [wasScrolled, setWasScrolled] = useState(scrolledCheck())
+  window.addEventListener('scroll', () => {
+    if (scrolledCheck() && !wasScrolled) {
+      setWasScrolled(true)
+    } else if (!scrolledCheck() && wasScrolled) {
+      setWasScrolled(false)
+    }
+  })
+
+  if (wasScrolled) {
+    return <MenuComponent wasScrolled />
+  }
+  return <MenuComponent />
 }

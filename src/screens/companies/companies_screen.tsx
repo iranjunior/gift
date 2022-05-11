@@ -2,7 +2,6 @@ import React, { useContext, useLayoutEffect } from 'react'
 import {
   Footer,
   Menu,
-  Nav,
   Numbers,
   Doubt,
   Testimonies,

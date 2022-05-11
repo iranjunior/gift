@@ -2,7 +2,6 @@ import React, { useContext, useLayoutEffect } from 'react'
 import {
   Footer,
   Menu,
-  Nav,
   Testimonies,
   Numbers,
   CallToAction,
@@ -27,7 +26,6 @@ export const WhoWeSome = () => {
 
   return (
     <Container>
-      <Nav />
       <Body>
         <Menu />
         <Main id="quem-somos" />

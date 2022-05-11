@@ -6,10 +6,8 @@ export const Container = styled.div`
   justify-content: center;
   flex-wrap: nowrap;
   background-color: ${({ theme }) => theme.primary.light};
-  margin-top: calc(${({ theme }) => theme.spacing.internal} * 2);
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     flex-wrap: wrap;
-    margin-top: calc(${({ theme }) => theme.spacing.internal} * 5);
   }
 `
 export const BlockText = styled.div`

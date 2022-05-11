@@ -8,7 +8,7 @@
 // match the expected interface, even if the JSON is valid.
 
 export interface Types {
-    nav:             Nav;
+    navbanner:       Navbanner;
     menu:            Menu[];
     menu_for_mobile: MenuForMobile[];
     body:            Body;
@@ -301,11 +301,11 @@ export interface WhoWeAreArguments {
 }
 
 export interface TentacledCards {
-    first:  First;
-    second: First;
+    first:  Navbanner;
+    second: Navbanner;
 }
 
-export interface First {
+export interface Navbanner {
     text: string;
 }
 
@@ -381,12 +381,6 @@ export interface MenuForMobile {
     href?:    string;
     options?: Option[];
     isCTA?:   boolean;
-}
-
-export interface Nav {
-    customers: string;
-    companies: string;
-    doctors:   string;
 }
 
 export interface Unit {
@@ -540,7 +534,7 @@ function r(name: string) {
 
 const typeMap: any = {
     "Types": o([
-        { json: "nav", js: "nav", typ: r("Nav") },
+        { json: "navbanner", js: "navbanner", typ: r("Navbanner") },
         { json: "menu", js: "menu", typ: a(r("Menu")) },
         { json: "menu_for_mobile", js: "menu_for_mobile", typ: a(r("MenuForMobile")) },
         { json: "body", js: "body", typ: r("Body") },
@@ -788,10 +782,10 @@ const typeMap: any = {
         { json: "card_final", js: "card_final", typ: r("InitialClass") },
     ], false),
     "TentacledCards": o([
-        { json: "first", js: "first", typ: r("First") },
-        { json: "second", js: "second", typ: r("First") },
+        { json: "first", js: "first", typ: r("Navbanner") },
+        { json: "second", js: "second", typ: r("Navbanner") },
     ], false),
-    "First": o([
+    "Navbanner": o([
         { json: "text", js: "text", typ: "" },
     ], false),
     "Declaration": o([
@@ -854,11 +848,6 @@ const typeMap: any = {
         { json: "href", js: "href", typ: u(undefined, "") },
         { json: "options", js: "options", typ: u(undefined, a(r("Option"))) },
         { json: "isCTA", js: "isCTA", typ: u(undefined, true) },
-    ], false),
-    "Nav": o([
-        { json: "customers", js: "customers", typ: "" },
-        { json: "companies", js: "companies", typ: "" },
-        { json: "doctors", js: "doctors", typ: "" },
     ], false),
     "Unit": o([
         { json: "localization", js: "localization", typ: "" },

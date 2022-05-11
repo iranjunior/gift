@@ -4,7 +4,6 @@ import {
   Doubt,
   Footer,
   Menu,
-  Nav,
   Numbers,
   Testimonies,
 } from '../../components'

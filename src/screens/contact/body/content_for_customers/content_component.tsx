@@ -46,15 +46,19 @@ export const ContentForCustomers: React.FC<ContentProps> = ({
       <ContainerContacts>
         <RowContacts>
           <Logo src={WhatsAppIcon} />
-          <Contact>Whatsapp</Contact>
+          <Contact href="https://api.whatsapp.com/send?phone=5531983722426">
+            (31) 98372-2426
+          </Contact>
         </RowContacts>
         <RowContacts>
           <Logo src={PhoneIcon} />
-          <Contact>(00) 0000-0000</Contact>
+          <Contact href="tel:31983722426">(31) 98372-2426</Contact>
         </RowContacts>
         <RowContacts>
           <Logo src={LetterIcon} />
-          <Contact>email@email.com.br</Contact>
+          <Contact href="mailto:farmembro@farme.com.br">
+            farmembro@farme.com.br
+          </Contact>
         </RowContacts>
       </ContainerContacts>
     </Container>

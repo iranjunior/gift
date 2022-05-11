@@ -1,30 +1,36 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components'
 
+type ContainerProps = {
+  fixed: boolean
+  show: boolean
+}
+
 export const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
   margin: 0;
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 0;
   background-color: ${({ theme }) => theme.primary.light};
   height: fill-available;
 `
 
-export const ContainerBar = styled.div`
-  display: flex;
+export const ContainerBar = styled.div<ContainerProps>`
+  display: ${({ show }) => (show ? 'flex' : 'none')};
   width: 100%;
   justify-content: center;
   margin: 0;
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 0;
   background-color: ${({ theme }) => theme.primary.light};
   height: auto;
+  flex-direction: column;
+  ${({ fixed }) =>
+    fixed &&
+    css`
+      position: fixed;
+      z-index: 200;
+      top: 0;
+      left: 0;
+    `}
 `
 
 export const Content = styled.div`
@@ -32,7 +38,7 @@ export const Content = styled.div`
   width: 90%;
   flex-direction: column;
   align-items: flex-start;
-  height: fill-available;
+  height: 100%;
   justify-content: flex-start;
   padding: ${({ theme }) => theme.spacing.internal} 0;
 `
@@ -40,7 +46,7 @@ export const ContentBar = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   height: 10%;
   padding: ${({ theme }) => theme.spacing.internal};
 `
@@ -59,23 +65,20 @@ export const Options = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 90%;
-
-  button {
-    width: 90%;
-    margin-top: 30%;
-    position: absolute;
-    bottom: calc(${({ theme }) => theme.spacing.internal} * 4);
-  }
+  height: 100%;
 `
 
 export const OptionsMain = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  overflow: scroll;
 
   div:first-child {
-    margin-top: 50%;
+    margin-top: ${({ theme }) => theme.spacing.internal};
+  }
+  div:last-child {
+    margin-bottom: calc(${({ theme }) => theme.spacing.internal} * 3);
   }
 `
 
@@ -133,21 +136,6 @@ export const HamburgerMenu = styled.div`
   }
 `
 
-type ModalProps = {
-  show: boolean
-}
-
-export const Modal = styled.div<ModalProps>`
-  display: ${({ show }) => (show ? 'block' : 'none')};
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  background-color: ${({ theme }) => theme.primary.light};
-`
-
 export const LogoMobileContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -201,3 +189,21 @@ export const DropdownItem = styled.div`
   padding: ${({ theme }) => theme.spacing.internal};
 `
 export const DropdownItemLabel = styled.span``
+
+export const ContainerExpandedOptions = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  margin-top: ${({ theme }) => theme.spacing.internal};
+  background-color: ${({ theme }) => theme.primary.light};
+  padding: ${({ theme }) => theme.spacing.internal};
+
+  button {
+    width: 100%;
+  }
+`
