@@ -20,21 +20,22 @@ export const BlockText = styled.div`
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
+    max-width: 100%;
   }
 `
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 8% 5%;
+  margin: 8% 15%;
   display: flex;
   height: 400px;
   width: 100%;
-  max-width: 1120px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    margin: 5%;
     gap: 1rem;
     height: auto;
     flex-wrap: wrap;
@@ -83,15 +84,7 @@ export const TextPrincipal = styled.div`
     margin: 0;
   }
 `
-
-export const Image = styled.img`
-  height: 100%;
-  width: 100%;
-  max-width: 540px;
-  object-fit: cover;
-
-  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
-    width: 100%;
-    height: auto;
-  }
+export const Video = styled.video`
+  max-width: 622px;
+  width: 90%;
 `

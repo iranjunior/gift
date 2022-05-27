@@ -32,9 +32,8 @@ export const FarMeBox = () => {
         <Main id="quem-somos" />
         <Arguments id="argumentos" />
         <KnowMe id="conheca-nos" />
-        <Reasons id="razoes" />
         <FarMeBoxComponent id="farme-box" />
-        <PharmaceuticalAnalysis id="analise-farmaceutica" />
+        <Reasons id="razoes" />
         <Doubt id="duvidas-frequentes" />
         <Banner id="banner" />
         <Testimonies id="depoimentos" />

@@ -28,13 +28,6 @@ export const TextPrincipal = styled.span`
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: start;
 `
-type ImageProps = {
-  square?: boolean
-}
-
-export const Image = styled.img<ImageProps>`
-  height: 100%;
-`
 export const Main = styled.div`
   ${columnItensWithGap({
     gap: '2rem',
@@ -66,8 +59,8 @@ export const ContentCard = styled.div`
 }
 `
 export const ContentCardIcon = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   align-self: center;
 `
 export const ContentCardTitle = styled.span`

@@ -15,6 +15,7 @@ import {
   Arguments,
   OurPeople,
   Banner,
+  TestimoniesEmployee,
 } from './body'
 import { Body, Container } from './who_we_some_styles'
 
@@ -30,7 +31,7 @@ export const WhoWeSome = () => {
         <Menu />
         <Main id="quem-somos" />
         <History id="historia" />
-        <Testimonies id="depoimentos" />
+        <TestimoniesEmployee id="depoimentos" />
         <Declaration id="declaracao" />
         <Numbers id="numeros" />
         <Arguments id="argumentos" />

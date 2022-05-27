@@ -13,22 +13,25 @@ import {
 } from './content_styles'
 
 export type CarrouselContentProps = {
-  title: string
+  title?: string
   image: string
   imageSizeInTablet?: 'cover' | 'contain'
+  onlyImagens?: boolean
 }
 
 export const CarrouselContent: React.FC<CarrouselContentProps> = ({
   title,
   image,
   imageSizeInTablet,
+  onlyImagens,
 }) => {
   const { colors } = useTheme()
   const LeftSideContent = () => (
     <>
-      <Text dangerouslySetInnerHTML={{ __html: title }} />
+      <Text dangerouslySetInnerHTML={{ __html: title! }} />
       <ActionWrap>
         <Button
+          onClick={() => window.open('https://app.farme.com.br/orcamento')}
           customColor={colors.neutral.lightness}
           label="Faça o seu orçamento"
         ></Button>
@@ -43,13 +46,19 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
 
   return (
     <Container>
-      <ContainerCard>
-        <LeftSide>
-          <LeftSideContent />
-        </LeftSide>
-        <RightSide>
-          <RightSideContent />
-        </RightSide>
+      <ContainerCard onlyImagens={onlyImagens}>
+        {onlyImagens ? (
+          <Image src={image} sizeInTablet={imageSizeInTablet} />
+        ) : (
+          <>
+            <LeftSide>
+              <LeftSideContent />
+            </LeftSide>
+            <RightSide>
+              <RightSideContent />
+            </RightSide>
+          </>
+        )}
       </ContainerCard>
     </Container>
   )

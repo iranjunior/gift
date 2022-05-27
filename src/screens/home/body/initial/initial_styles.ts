@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: nowrap;
   background-color: ${({ theme }) => theme.primary.light};
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
@@ -19,6 +19,8 @@ export const BlockText = styled.div`
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
+    max-width: 100%;
+    margin: 0 5%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin-bottom: ${({ theme }) => theme.spacing.internal};
@@ -27,17 +29,17 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 5%;
+  margin: 5% 0 0 10%;
   display: flex;
-  height: 400px;
+  height: 500px;
   width: 100%;
-  max-width: 1120px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 1rem;
+    margin: 5% 0;
     height: auto;
     flex-wrap: wrap;
   }
@@ -86,7 +88,6 @@ export const TextPrincipal = styled.div`
 export const Image = styled.img`
   height: 100%;
   width: 100%;
-  max-width: 540px;
   object-fit: cover;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {

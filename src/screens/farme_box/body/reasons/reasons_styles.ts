@@ -33,7 +33,7 @@ type ImageProps = {
 }
 
 export const Image = styled.img<ImageProps>`
-  height: 100%;
+  height: 104px;
 `
 export const Main = styled.div`
   ${columnItensWithGap({
@@ -58,23 +58,25 @@ export const ContainerCards = styled.div`
 export const ContentCard = styled.div`
   ${columnItensWithGap({
     gap: '1rem',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItens: 'center',
   })}
   width: 310px;
-  height: 224px;
+  height: 250px;
 }
 `
 export const ContentCardIcon = styled.img`
   width: 80px;
   height: 80px;
   align-self: center;
+  justify-self: flex-start;
 `
 export const ContentCardTitle = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.ml};
   font-family: ${({ theme }) => theme.font.family.sliver};
   line-height: ${({ theme }) => theme.font.lineHeight.medium};
   text-align: center;
+  height: 64px;
 `
 export const ContentCardText = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xxs};

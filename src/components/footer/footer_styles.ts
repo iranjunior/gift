@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Container = styled.footer`
   display: flex;
-  background-color: ${({ theme }) => theme.primary.darkness};
+  background-color: ${({ theme }) => theme.colors.base.darkness};
   width: 100%;
   padding: 5% 0;
   flex-direction: column;
@@ -38,17 +38,17 @@ export const AboutInfosImage = styled.div`
   height: 40px;
   svg {
     path {
-      fill: ${({ theme }) => theme.primary.default};
+      fill: ${({ theme }) => theme.colors.base.default};
     }
   }
 `
 export const AboutInfosTitle = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.sm};
   font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutInfosDescription = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.xxs};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
 
@@ -74,7 +74,7 @@ export const AboutRequestContainer = styled.div`
   }
 `
 export const AboutRequestTitle = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
 
@@ -83,7 +83,7 @@ export const AboutRequestTitle = styled.span`
   }
 `
 export const AboutRequestTitleHighlight = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.highlight};
 
@@ -99,10 +99,10 @@ export const AboutContactsContainer = styled.div`
   align-items: start;
 `
 export const AboutContactsTitle = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.md};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  margin: ${({ theme }) => theme.spacing.nano} 0;
+  margin-bottom: ${({ theme }) => theme.spacing.internal};
 `
 export const AboutContactsPhoneContainer = styled.div`
   display: flex;
@@ -111,11 +111,11 @@ export const AboutContactsPhoneContainer = styled.div`
 `
 export const AboutContactsTitleLocation = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xs};
-  color: ${({ theme }) => theme.primary.light};
-  margin: ${({ theme }) => theme.spacing.nano} 0;
+  color: ${({ theme }) => theme.colors.base.light};
+  margin-top: ${({ theme }) => theme.spacing.nano};
 `
 export const AboutContactsPhoneLocation = styled.span`
-  color: ${({ theme }) => theme.primary.default};
+  color: ${({ theme }) => theme.colors.base.default};
   margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutContactsSocialMedias = styled.div`
@@ -125,11 +125,11 @@ export const AboutContactsSocialMedias = styled.div`
 export const AboutContactsSocialMediasLogo = styled.div`
   height: ${({ theme }) => theme.spacing.xxs};
   svg {
-    stroke: ${({ theme }) => theme.primary.dark};
-    fill: ${({ theme }) => theme.primary.default};
+    stroke: ${({ theme }) => theme.colors.base.dark};
+    fill: ${({ theme }) => theme.colors.base.default};
     path {
-      fill: ${({ theme }) => theme.primary.default};
-      stroke: ${({ theme }) => theme.primary.dark};
+      fill: ${({ theme }) => theme.colors.base.default};
+      stroke: ${({ theme }) => theme.colors.base.dark};
     }
   }
 `
@@ -157,6 +157,7 @@ export const AboutSection = styled.div`
   flex-direction: column;
   align-items: start;
   justify-content: space-evenly;
+  max-width: 300px;
   flex-grow: 2;
   margin: 1rem 0;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
@@ -164,13 +165,14 @@ export const AboutSection = styled.div`
   }
 `
 export const AboutSectionTitle = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.md};
   font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutSectionLink = styled.a`
-  color: ${({ theme }) => theme.primary.default};
+  color: ${({ theme }) => theme.colors.base.default};
   font-size: ${({ theme }) => theme.font.sizes.xxs};
+  line-height: ${({ theme }) => theme.font.lineHeight.distant};
   margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutLegalInformationContainer = styled.div`
@@ -190,12 +192,12 @@ export const AboutLegalInformationSection = styled.div`
   gap: 2rem;
 `
 export const AboutLegalInformationTitle = styled.span`
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.md};
   font-family: ${({ theme }) => theme.font.family.sliver};
 `
 export const AboutLegalInformation = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xxs};
-  color: ${({ theme }) => theme.primary.light};
+  color: ${({ theme }) => theme.colors.base.light};
   line-height: ${({ theme }) => theme.font.lineHeight.superDistant};
 `

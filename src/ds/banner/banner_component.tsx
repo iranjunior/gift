@@ -21,6 +21,7 @@ type BannerProps = {
   highlights?: string[]
   button?: {
     text: string
+    onClick?: () => void
   }
   positionImageInTablet?: 'center' | 'left' | 'right'
 }
@@ -68,7 +69,9 @@ export const Banner: React.FC<BannerProps> = ({
               ))}
             </HighlightsContainer>
           ) : null}
-          {button ? <Button label={button.text} /> : null}
+          {button ? (
+            <Button onClick={button.onClick} label={button.text} />
+          ) : null}
         </BlockText>
       </Content>
     </Container>

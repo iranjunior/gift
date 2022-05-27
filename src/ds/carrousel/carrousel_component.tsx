@@ -5,18 +5,20 @@ import { Container, Tabs, TabTitle, TabBar, Tab } from './carrousel_styles'
 
 type Props = {
   label: string
-  text: string
   image: string
+  text?: string
 }
 
 type CarrouselProps = {
   content: Array<Props>
   imageSizeInTablet?: 'cover' | 'contain'
+  onlyImagens?: boolean
 }
 
 export const Carrousel: React.FC<CarrouselProps> = ({
   content,
   imageSizeInTablet,
+  onlyImagens,
 }) => {
   const [active, setActive] = useState(content[0])
 
@@ -31,6 +33,7 @@ export const Carrousel: React.FC<CarrouselProps> = ({
         ))}
       </Tabs>
       <CarrouselContent
+        onlyImagens={onlyImagens}
         title={active.text}
         image={active.image}
         imageSizeInTablet={imageSizeInTablet}

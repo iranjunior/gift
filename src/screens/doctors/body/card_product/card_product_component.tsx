@@ -47,7 +47,7 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
   )
   const RightSide = () => (
     <RightSideContainer>
-      <Image src={images.ImageBoxPointingLeft} />
+      <Image src={images.ImageBoxPointingRight} />
     </RightSideContainer>
   )
 

@@ -5,6 +5,8 @@ export const Container = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
   display: flex;
   flex-direction: column;
+  width: 100%;
+
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100vw;
   }
@@ -58,7 +60,7 @@ export const Tabs = styled.div`
 `
 
 export const Tab = styled.div`
-  height: ${({ theme }) => theme.spacing.sm};
+  min-height: ${({ theme }) => theme.spacing.sm};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -67,7 +69,18 @@ export const Tab = styled.div`
   margin: 0 ${({ theme }) => theme.spacing.nano};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-    width: 120px;
+    min-width: 120px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    span {
+      color: ${({ theme }) => theme.colors.base.default};
+    }
+    div {
+      background-color: ${({ theme }) => theme.colors.base.default};
+    }
   }
 `
 
@@ -88,6 +101,6 @@ export const TabBar = styled.div<TabProps>`
   background-color: ${({ theme, active }) =>
     active ? theme.colors.neutral.darkness : theme.colors.neutral.default};
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-    width: 120px;
+    min-width: 120px;
   }
 `

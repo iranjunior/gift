@@ -1,11 +1,19 @@
 import styled from 'styled-components'
+import images from '../../../../assets/images'
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
   flex-wrap: nowrap;
-  background-color: ${({ theme }) => theme.primary.light};
+  background-image: linear-gradient(
+      to right,
+      ${(props) => `${props.theme.colors.neutral.darkness}7E`},
+      ${(props) => `${props.theme.colors.neutral.darkness}7E`}
+    ),
+    url(${images.ImageBannerWhoWeSome});
+  background-size: cover;
+
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     flex-wrap: wrap;
   }
@@ -55,6 +63,7 @@ export const Text = styled.div`
   }
 `
 export const TextPrincipal = styled.div`
+  color: ${({ theme }) => theme.primary.light};
   *:not(highlight) {
     font-size: ${({ theme }) => theme.font.sizes.xl};
     font-family: ${({ theme }) => theme.font.family.sliver};

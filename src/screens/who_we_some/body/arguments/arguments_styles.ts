@@ -12,7 +12,8 @@ export const Container = styled.div`
   justify-content: center;
 `
 export const Content = styled(ContentDiv)`
-  margin: ${({ theme }) => theme.spacing.internal};
+  gap: 0rem;
+  width: 100%;
 `
 export const BlockText = styled.div`
   ${columnItensWithGap({
@@ -61,13 +62,17 @@ export const Image = styled.img<ImageProps>`
   }
 `
 export const ContentContainer = styled.div`
-  margin: 0 auto;
+  margin: 4rem auto;
+  padding: 8rem 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  width: 100%;
+  background-color: ${({ theme }) => theme.primary.light};
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 2rem;
+    padding: 2rem 0;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin: ${({ theme }) => theme.spacing.nano} auto;
@@ -80,12 +85,12 @@ export const ContentCard = styled.div`
     alignItens: 'flex-start',
   })}
   width: 310px;
-  height: 224px;
+  height: 250px;
 }
 `
 export const ContentCardIcon = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 106px;
+  height: 106px;
   align-self: center;
 `
 export const ContentCardText = styled.span`

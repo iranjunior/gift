@@ -1,8 +1,8 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import { CallToAction, Footer, Menu, Testimonies } from '../../components'
+import { CallToAction, Footer, Menu } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { Main, Arguments, Topics, Banner } from './body'
+import { Main, Arguments, Topics, Banner, Testimonies } from './body'
 import { Body, Container } from './clinics_styles'
 
 export const Clinics = () => {

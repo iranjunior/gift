@@ -7,9 +7,12 @@ export const Container = styled.div`
   width: 100%;
   padding: 5% 0;
 `
-export const Content = ContentDiv
+export const Content = styled(ContentDiv)`
+  width: 100%;
+  gap: 2rem;
+`
 export const BlockText = styled.div`
-  width: 420px;
+  width: 518px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -33,9 +36,9 @@ export const Text = styled.span`
   font-family: 'Inter';
 `
 export const TextPrincipal = styled.span`
-  font-size: ${({ theme }) => theme.font.sizes.xl};
+  font-size: ${({ theme }) => theme.font.sizes.lg};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.distant};
+  line-height: ${({ theme }) => theme.font.lineHeight.medium};
   text-align: center;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {

@@ -23,29 +23,25 @@ export const LeftSideContainer = styled.div`
   justify-content: space-between;
   height: 100%;
   background-color: ${({ theme }) => theme.primary.light};
+  padding: 2rem;
   border-radius: ${({ theme }) => theme.spacing.nano} 0 0
     ${({ theme }) => theme.spacing.nano};
   button {
     max-width: 187px;
-    margin: ${({ theme }) => theme.spacing.internal};
   }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 1rem;
     border-radius: ${({ theme }) => theme.spacing.nano}
       ${({ theme }) => theme.spacing.nano} 0px 0px;
-
-    width: 100%;
     button {
-      width: calc(100% - ${({ theme }) => theme.spacing.internal} * 2);
+      width: 100%;
       max-width: 100%;
-      margin: ${({ theme }) => theme.spacing.internal};
     }
   }
 `
 export const LeftSideHeader = styled.div`
   ${columnItensWithGap({ gap: '1rem', alignItens: 'flex-start' })}
-  padding: ${({ theme }) => theme.spacing.internal};
 `
 export const LeftSideLegend = styled.span`
   text-transform: uppercase;
@@ -64,6 +60,7 @@ export const LeftSideTitle = styled.span`
 export const LeftSideSubtitle = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xs};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
+  width: 80%;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     font-size: ${({ theme }) => theme.font.sizes.xs};

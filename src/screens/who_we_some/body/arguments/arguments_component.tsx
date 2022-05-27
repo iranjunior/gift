@@ -49,12 +49,12 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       <Text dangerouslySetInnerHTML={{ __html: card_initial.subtitle }} />
     </BlockText>
   )
-  const ImageCardInitial = () => <Image src={images.ImagePersonReceivedBox} />
+  const ImageCardInitial = () => <Image src={images.ImageMosaicFarme} />
 
   const RightSideInitial = () => <TextCardInitial />
   const LeftSideInitial = () => <ImageCardInitial />
 
-  const ImageCardFinal = () => <Image src={images.ImageBill} />
+  const ImageCardFinal = () => <Image src={images.ImageCheckingBoxesFarme} />
 
   const TextCardFinal = () => (
     <BlockText>

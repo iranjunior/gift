@@ -42,8 +42,8 @@ export const Content = styled.div`
 `
 
 export const Image = styled.img`
-  height: ${({ theme }) => theme.spacing.xxl};
-  width: ${({ theme }) => theme.spacing.xxl};
+  height: ${({ theme }) => theme.spacing.xxxl};
+  width: ${({ theme }) => theme.spacing.xxxl};
 `
 
 export const TextPrincipal = styled.span`

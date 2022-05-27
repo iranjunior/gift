@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import { DataContext } from '../../../../context/data'
-import Person1 from '../../../../assets/images/person_1.png'
+import images from '../../../../assets/images'
 
 import {
   Container,
@@ -14,6 +14,13 @@ import {
 
 import { HeaderCentered, Slides } from '../../../../ds'
 import { useIntersection } from '../../../../hooks/useIntersection'
+
+const hashMapIdToImage: { [key: string]: string } = {
+  cost: images.ImagePillsInHand,
+  safety: images.ImageWifeAndHusband,
+  convenience: images.ImagePillsStackInHand,
+  support: images.ImageDoctorAtPhone,
+}
 
 type AdvantageProps = {
   id?: string
@@ -31,7 +38,10 @@ export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
-  const LeftSide = () => <Image src={Person1} />
+  type LeftSideProps = {
+    image: string
+  }
+  const LeftSide = ({ image }: LeftSideProps) => <Image src={image} />
 
   type RightSideProps = {
     highlight: string
@@ -50,11 +60,18 @@ export const Advantage: React.FC<AdvantageProps> = ({ id }) => {
         <HeaderCentered legend={legend} title={title} subtitle={subtitle} />
         <Main>
           <Slides
-            slides={advantages.map(({ title, text, id }) => ({
-              LeftSide: <LeftSide />,
-              RightSide: <RightSide highlight={title} text={text} />,
-              key: id,
-            }))}
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            slides={advantages!
+              .map(({ id, ...itens }) => ({
+                image: hashMapIdToImage[id],
+                id,
+                ...itens,
+              }))
+              .map(({ title, text, id, image }) => ({
+                LeftSide: <LeftSide image={image} />,
+                RightSide: <RightSide highlight={title} text={text} />,
+                key: id,
+              }))}
             reversed
           />
         </Main>

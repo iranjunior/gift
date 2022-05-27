@@ -5,6 +5,7 @@ import IllustrationPhoneInHand from '../../../../assets/images/illustration_phon
 import IllustrationRunning from '../../../../assets/images/illustration_running.svg'
 import IllustrationOkay from '../../../../assets/images/illustration_okay.svg'
 import IllustrationPositive from '../../../../assets/images/illustration_positive.svg'
+import IllustrationLupaPill from '../../../../assets/images/illustration_pill_lupa.svg'
 
 import {
   Container,
@@ -34,6 +35,7 @@ const hashMapIllustrations: hashMapIllustrationsType = {
   delivery: IllustrationRunning,
   price: IllustrationOkay,
   cancel: IllustrationPositive,
+  lupa: IllustrationLupaPill,
 }
 
 export const Reasons: React.FC<ReasonsProps> = ({ id }) => {

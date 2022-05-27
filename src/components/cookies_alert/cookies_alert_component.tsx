@@ -1,5 +1,6 @@
 import React from 'react'
 import CookieConsent from 'react-cookie-consent'
+import { BaseTheme } from '../../themes/base'
 
 export const CookiesAlertComponent = () => {
   const isDesktop = window.innerWidth >= 1024
@@ -16,7 +17,7 @@ export const CookiesAlertComponent = () => {
         width: '100%',
         maxWidth: '304px',
         borderRadius: '8px',
-        backgroundColor: '#fff',
+        backgroundColor: BaseTheme.colors.base.default,
         color: '#000',
         display: 'flex',
         flexDirection: 'column',
@@ -51,7 +52,16 @@ export const CookiesAlertComponent = () => {
         Nós armazenamos dados temporários para melhorar a sua experiência de
         navegação e recomendar conteúdo de seu interesse. Ao utilizar nossos
         serviços, você concorda com a nossa{' '}
-        <a href="https://google.com">Política de Privacidade</a>.
+        <a
+          style={{
+            color: '#000',
+            fontWeight: 'bold',
+          }}
+          href="https://assets.farme.com.br/pdfs/farme_cookies.pdf"
+        >
+          Política de Privacidade
+        </a>
+        .
       </span>
     </CookieConsent>
   )

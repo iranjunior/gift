@@ -1,15 +1,15 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import {
-  Footer,
-  Menu,
-  Numbers,
-  Testimonies,
-  Doubt,
-  CallToAction,
-} from '../../components'
+import { Footer, Menu, Numbers, Doubt, CallToAction } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { Main, HowWorking, Banner, CardProduct, OurPosts } from './body'
+import {
+  Main,
+  HowWorking,
+  Banner,
+  CardProduct,
+  OurPosts,
+  TestimoniesEmployee,
+} from './body'
 
 import { Body, Container } from './doctors_styles'
 
@@ -28,7 +28,7 @@ export const ForDoctors = () => {
         <CardProduct id="farme-box" />
         <OurPosts id="nossos-posts" />
         <Numbers id="numeros" />
-        <Testimonies id="depoimentos" />
+        <TestimoniesEmployee id="depoimentos" />
         <Doubt id="duvidas" />
         <Footer id="sobre" />
         <CallToAction />

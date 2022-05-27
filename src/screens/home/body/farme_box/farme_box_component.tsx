@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import { HeaderCentered } from '../../../../ds'
 import { DataContext } from '../../../../context/data'
@@ -14,23 +14,57 @@ type FarMeBoxProps = {
 
 export const FarMeBox: React.FC<FarMeBoxProps> = ({ id, ...props }) => {
   const ref = useRef(null as unknown as HTMLDivElement)
+  const refVideo = useRef(null as unknown as HTMLVideoElement)
   const {
     body: {
       home: { farme_box: pageFarmeBox },
     },
   } = useContext(DataContext)
+  const [showControl, setShowControl] = useState(false)
   useIntersection(ref, '100px', true)
+  useIntersection(refVideo, '5px', true)
+
+  useEffect(() => {
+    document.getElementById('video')?.addEventListener('pause', () => {
+      setShowControl(true)
+    })
+    document.getElementById('video')?.addEventListener('playing', () => {
+      setShowControl(false)
+    })
+  }, [])
+  const onClickMask = () => {
+    refVideo.current?.play()
+  }
+
   return (
     <Container ref={ref} {...props} id={id}>
       <Content ref={ref}>
         <HeaderCentered title={pageFarmeBox.title} />
-
-        <Video
-          controls
-          autoPlay
-          typeof="video/mp4"
-          src={videos.VideoFarMeBox}
-        />
+        <div
+          style={{
+            position: 'relative',
+            width: '90%',
+          }}
+          id="video-container"
+          onClickCapture={() => console.log('onClickCapture')}
+        >
+          <div
+            style={{
+              display: showControl ? 'block' : 'none',
+            }}
+            className="mask"
+            onClick={onClickMask}
+          />
+          <Video
+            ref={refVideo}
+            controls
+            autoPlay
+            muted
+            typeof="video/mp4"
+            src={videos.VideoFarMeBox}
+            id="video"
+          ></Video>
+        </div>
       </Content>
     </Container>
   )

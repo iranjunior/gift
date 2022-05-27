@@ -16,9 +16,15 @@ type CardProps = {
   title: string
   description: string
   type: 'doctors' | 'companies' | 'customers'
+  onClick?: () => void
 }
 
-export const Card: React.FC<CardProps> = ({ title, description, type }) => {
+export const Card: React.FC<CardProps> = ({
+  title,
+  description,
+  type,
+  onClick,
+}) => {
   const selectImage = () => {
     if (type === 'customers') {
       return <Image src={IllustrationCalendar} />
@@ -36,8 +42,8 @@ export const Card: React.FC<CardProps> = ({ title, description, type }) => {
         {selectImage()}
         <TextPrincipal dangerouslySetInnerHTML={{ __html: title }} />
         <Divisor />
-        <Text>{description}</Text>
-        <Button label="Saiba mais" />
+        <Text dangerouslySetInnerHTML={{ __html: description }} />
+        <Button onClick={onClick} label="Saiba mais" />
       </Content>
     </Container>
   )

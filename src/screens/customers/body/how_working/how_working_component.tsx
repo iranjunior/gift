@@ -68,7 +68,10 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
             ))}
         </ContainerCards>
         <ContainerButtons>
-          <Button label="Faça o seu orçamento" />
+          <Button
+            label="Faça o seu orçamento"
+            onClick={() => window.open('https://farme.com.br/orcamento')}
+          />
           <Button label="sem compromisso" type={ButtonType.Ghost} />
         </ContainerButtons>
       </Content>

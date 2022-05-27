@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const BlockText = styled.div`
   width: 30%;
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   gap: 1rem;

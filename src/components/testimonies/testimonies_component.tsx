@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react'
 
-import Person1 from '../../assets/images/person_1.png'
+import { people } from '../../assets/images'
 import QuotationIllustration from '../../assets/images/quotation.svg'
 import { DataContext } from '../../context/data'
 import { Header, Slides } from '../../ds'
@@ -15,6 +15,15 @@ import {
   Quotation,
   TextPrincipal,
 } from './testimonies_styles'
+
+type HashMapIdToImage = {
+  [key: string]: string
+}
+
+const hashMapIdToImage: HashMapIdToImage = {
+  luizfelipeabreu: people.LuizFelipeCustomer,
+  patriciafreitas: people.PatriciaFreitasCustomer,
+}
 
 type TestimoniesProps = {
   id?: string
@@ -33,23 +42,19 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   type LeftSideProps = {
     testimony: string
     name: string
-    age: number
-    origin: string
   }
-  const LeftSide = ({ testimony, name, age, origin }: LeftSideProps) => (
+  const LeftSide = ({ testimony, name }: LeftSideProps) => (
     <BlockText>
       <Quotation src={QuotationIllustration} />
       <TextPrincipal>{testimony}</TextPrincipal>
-      <Text>
-        {name}, {age} - {origin}
-      </Text>
+      <Text>{name}</Text>
     </BlockText>
   )
   type RightSideProps = {
     image: string
   }
   const RightSide = ({ image }: RightSideProps) => (
-    <Image src={Person1} alt="Person" />
+    <Image src={image} alt="Person" />
   )
 
   return (
@@ -60,20 +65,17 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
           title={pageTestimonies.title}
         />
         <Slides
-          slides={pageTestimonies.testimonies.map(
-            ({ testimony, name, age, origin, image }) => ({
-              LeftSide: (
-                <LeftSide
-                  testimony={testimony}
-                  name={name}
-                  age={age}
-                  origin={origin}
-                />
-              ),
+          slides={pageTestimonies.testimonies
+            .map(({ id, ...itens }) => ({
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              image: hashMapIdToImage[id!],
+              ...itens,
+            }))
+            .map(({ testimony, name, image }) => ({
+              LeftSide: <LeftSide testimony={testimony} name={name} />,
               RightSide: <RightSide image={image} />,
               key: testimony.split(' ').join('-'),
-            })
-          )}
+            }))}
         />
       </Content>
     </Container>

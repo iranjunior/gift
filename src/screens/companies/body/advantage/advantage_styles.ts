@@ -92,12 +92,15 @@ export const ContainerButtons = styled.div`
     justifyContent: 'center',
     alignItens: 'center',
   })}
-  width: 336px;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100%;
     flex-wrap: wrap;
     button {
       width: 80%;
     }
+  }
+
+  button {
+    width: 190px;
   }
 `

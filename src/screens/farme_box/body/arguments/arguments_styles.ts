@@ -32,7 +32,7 @@ export const BlockText = styled.div`
 export const TextPrincipal = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.distant};
+  line-height: ${({ theme }) => theme.font.lineHeight.medium};
   text-align: start;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {

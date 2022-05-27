@@ -34,7 +34,6 @@ export const Main: React.FC<MainProps> = ({ id }) => {
             dangerouslySetInnerHTML={{ __html: initial['who-we-are'].title }}
           />
         </BlockText>
-        <Image src={ImageBoxWhoWeAre} />
       </Content>
     </Container>
   )

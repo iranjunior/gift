@@ -118,3 +118,11 @@ details > summary::-webkit-details-marker /* Safari */ {
 .cookie-consent-container {
   bottom: 40% !important;
 }
+
+.mask {
+  background-image: url(./assets/images/play.svg);
+}
+
+.mask:hover {
+  background-image: url(./assets/images/play_hover.svg);
+}

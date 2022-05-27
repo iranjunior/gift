@@ -40,11 +40,11 @@ export const Image = styled.img<ImageProps>`
 `
 
 export const BlockText = styled.div`
-  width: 420px;
+  width: 460px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
@@ -60,10 +60,9 @@ export const Text = styled.span`
   font-family: 'Inter';
 `
 export const TextPrincipal = styled.span`
-  font-size: ${({ theme }) => theme.font.sizes.display};
+  font-size: ${({ theme }) => theme.font.sizes.xxxl};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.distant};
-  text-align: center;
+  line-height: ${({ theme }) => theme.font.lineHeight.medium};
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     font-size: ${({ theme }) => theme.font.sizes.lg};

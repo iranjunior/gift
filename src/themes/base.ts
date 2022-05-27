@@ -2,6 +2,12 @@ import { Base } from './interface'
 
 export const BaseTheme: Base = {
   colors: {
+    base: {
+      default: '#FFC875',
+      dark: '#BC9457',
+      darkness: '#342B1D',
+      light: '#FFF3E2',
+    },
     neutral: {
       darkness: '#000000',
       dark: '#696969',
@@ -27,6 +33,7 @@ export const BaseTheme: Base = {
     internal: '1.3rem', // internal: '20px',
     xl: '3.75rem', // xl: '60px',
     xxl: '5rem', // xxl: '80px',
+    xxxl: '6.5rem', // xxl: '104px',
   },
   breakpoints: {
     tablet: '768px',

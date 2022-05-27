@@ -12,6 +12,7 @@ export interface Base {
     family: fontFamily
   }
   colors: {
+    base: colors
     neutral: colors
     feedback: {
       warning: string
@@ -75,6 +76,7 @@ export interface Spacing {
   md: string
   xl: string
   xxl: string
+  xxxl: string
 }
 export interface Breakpoints {
   desktop: string

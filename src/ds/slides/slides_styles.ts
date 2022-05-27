@@ -3,7 +3,7 @@ import { ContentDiv, rowItensWithGap } from '../styles/common_styles'
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${({ theme }) => theme.colors.neutral.lightness};
+  background-color: transparent;
   width: 100%;
   padding: 5% 0;
 `
@@ -22,7 +22,7 @@ type SlideProps = {
   reversed?: boolean
 }
 export const Divisor = styled.div`
-  width: 15%;
+  width: 10%;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     display: none;
@@ -54,7 +54,7 @@ export const DotIndicator = styled.div<DotIndicatorProps>`
   border-radius: 50%;
   background-color: ${(props) =>
     props.active
-      ? props.theme.primary.default
+      ? props.theme.colors.base.default
       : props.theme.colors.neutral.default};
   margin: 0.5rem;
 `

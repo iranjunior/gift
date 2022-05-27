@@ -36,17 +36,19 @@ export const ButtonAction = styled.button<ButtonActionType>`
     css`
       border-radius: ${({ theme }) => theme.spacing.quark};
       border: none;
-      background-color: ${({ theme }) => customColor || theme.primary.default};
+      background-color: ${({ theme }) =>
+        customColor || theme.colors.base.default};
 
       &:hover {
         background-color: ${({ theme }) =>
-          customColorHover || theme.primary.darkness};
-        color: ${({ theme }) => theme.primary.default};
+          customColorHover || theme.colors.base.darkness};
+        color: ${({ theme }) => theme.colors.base.default};
         opacity: ${customColor ? 0.8 : 1};
       }
 
       &:disabled {
-        background-color: ${({ theme }) => customColor || theme.primary.light};
+        background-color: ${({ theme }) =>
+          customColor || theme.colors.base.light};
         opacity: ${customColor ? 0.8 : 1};
         color: ${({ theme }) => theme.colors.neutral.light};
       }
@@ -55,19 +57,20 @@ export const ButtonAction = styled.button<ButtonActionType>`
   ${({ variant, customColor, customColorHover }) =>
     variant === 'secondary' &&
     css`
-      border: 1px solid ${({ theme }) => customColor || theme.primary.dark};
+      border: 1px solid ${({ theme }) => customColor || theme.colors.base.dark};
       background-color: none;
       border-radius: 4px;
 
       &:hover {
         background-color: ${({ theme }) =>
-          customColorHover || theme.primary.darkness};
+          customColorHover || theme.colors.base.darkness};
         color: ${({ theme }) => theme.colors.neutral.lightness};
         opacity: ${customColor ? 0.8 : 1};
       }
 
       &:disabled {
-        border-color: ${({ theme }) => customColor || theme.primary.darkness};
+        border-color: ${({ theme }) =>
+          customColor || theme.colors.base.darkness};
         opacity: ${customColor ? 0.8 : 1};
         color: ${({ theme }) => theme.colors.neutral.light};
       }
@@ -77,7 +80,7 @@ export const ButtonAction = styled.button<ButtonActionType>`
     css`
       border: none;
       background-color: transparent;
-      color: ${({ theme }) => customColor || theme.primary.darkness};
+      color: ${({ theme }) => customColor || theme.colors.base.darkness};
 
       &:hover {
         text-decoration: underline;

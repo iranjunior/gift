@@ -27,7 +27,10 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         image={images.ImagePeopleInLab}
         title={banner.title}
         subtitle={banner.subtitle}
-        button={{ text: 'Ver Vagas' }}
+        button={{
+          text: 'Ver Vagas',
+          onClick: () => window.open('https://far-me.solides.jobs/'),
+        }}
         positionImageInTablet="right"
       />
     </Container>

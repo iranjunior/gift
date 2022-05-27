@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react'
-import images from '../../../../assets/images'
+import { people } from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { HeaderCentered } from '../../../../ds'
 import { useIntersection } from '../../../../hooks/useIntersection'
@@ -13,6 +13,17 @@ import {
   Container,
   Content,
 } from './our_people_styles'
+
+type HashMapIdToImage = {
+  [key: string]: string
+}
+
+const hashMapIdToImage: HashMapIdToImage = {
+  hagabo: people.HagaboPharmaceutical,
+  carina: people.CarinaNevesPharmaceutical,
+  mariana: people.MarianaMesquitaSupport,
+  gabriella: people.GabriellaCampera,
+}
 
 type OurPeopleProps = {
   id?: string
@@ -37,10 +48,10 @@ export const OurPeople: React.FC<OurPeopleProps> = () => {
         />
         <CardsContent>
           {our_people.people.map((person) => (
-            <Card key={person.image_url}>
-              <CardImage src={images.ImagePerson} />
+            <Card key={person.name}>
+              <CardImage src={hashMapIdToImage[person.image_id]} />
               <CardTitle>{person.name}</CardTitle>
-              <CardText>{person.message}</CardText>
+              <CardText>{person.job}</CardText>
             </Card>
           ))}
         </CardsContent>

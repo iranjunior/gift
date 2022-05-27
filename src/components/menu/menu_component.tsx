@@ -22,6 +22,7 @@ import {
   Option,
   Options,
   Space,
+  Bar,
 } from './menu_styles'
 import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
 import { NavBanner } from '../navbanner'
@@ -140,6 +141,7 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
             })}
 
             <Button
+              onClick={() => window.open('https://app.farme.com.br/orcamento')}
               label={
                 (
                   Object.entries(menu).slice(

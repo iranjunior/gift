@@ -35,4 +35,14 @@ export const GlobalStyle = createGlobalStyle`
   button {
     color: ${({ theme }) => theme.primary.darkness};
   }
+
+  .mask {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0, 0.2);
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 90%;
+  }
 `

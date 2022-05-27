@@ -6,6 +6,7 @@ import { DataContext } from '../../../../context/data'
 
 import { Container } from './banner_styles'
 import { useIntersection } from '../../../../hooks/useIntersection'
+import { useNavigate } from 'react-router-dom'
 
 type BannerProps = {
   id?: string
@@ -18,6 +19,9 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
       for_companies: { banner },
     },
   } = useContext(DataContext)
+
+  const navigate = useNavigate()
+
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
@@ -27,7 +31,10 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         image={images.ImageOldWomanSited}
         title={banner.title}
         subtitle={banner.subtitle}
-        button={{ text: 'Saiba mais' }}
+        button={{
+          text: 'Saiba mais',
+          onClick: () => navigate('/para-medicos/clinica'),
+        }}
       />
     </Container>
   )

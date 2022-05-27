@@ -11,10 +11,9 @@ type hashMapType = {
 }
 
 const hashMap: hashMapType = {
-  Personalizada: images.ImageBoxPointingLeft,
-  Organizada: images.ImageBoxPointingCenter,
-  Funcional: images.ImageBoxPointingRight,
-  Segura: images.ImageHandWithDrugs,
+  Simples: images.ImageFrontBoxZoom,
+  Segura: images.ImageBoxPointingRight,
+  Completa: images.ImagePills,
 }
 
 type KnowMeProps = {

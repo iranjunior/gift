@@ -50,6 +50,7 @@ export const Options = styled.div`
   button {
     margin-left: ${({ theme }) => theme.spacing.internal};
     width: 20%;
+    font-size: ${({ theme }) => theme.font.sizes.xs};
   }
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     display: none;
@@ -72,14 +73,26 @@ export const Option = styled.div`
 `
 
 type LinkProps = {
-  highlight?: boolean
+  highlight: boolean
 }
 
 export const Link = styled.a<LinkProps>`
   color: ${({ theme }) => theme.primary.darkness};
   white-space: nowrap;
   text-decoration: none;
-  font-weight: ${({ highlight }) => (highlight ? 'bold' : 'normal')};
+
+  ${({ highlight }) =>
+    highlight &&
+    css`
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: ${({ theme }) => theme.colors.base.default};
+        margin-top: ${({ theme }) => theme.spacing.quark};
+      }
+    `}
 `
 
 export const HamburgerMenu = styled.div`
@@ -143,9 +156,14 @@ export const DropdownTitle = styled.summary<SummaryType>`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: ${({ highlight }) => (highlight ? 'bold' : 'normal')};
   font-family: ${({ theme }) => theme.font.family.default};
   white-space: nowrap;
+
+  ${({ highlight }) =>
+    highlight &&
+    css`
+      border-bottom: 2px solid ${({ theme }) => theme.colors.base.default};
+    `}
 
   &:hover {
     cursor: pointer;
@@ -154,7 +172,7 @@ export const DropdownTitle = styled.summary<SummaryType>`
   ${({ open }) =>
     open &&
     css`
-      border-bottom: 2px solid ${({ theme }) => theme.primary.default};
+      border-bottom: 2px solid ${({ theme }) => theme.colors.base.default};
     `}
 `
 export const DropdownContent = styled.div`
@@ -177,3 +195,16 @@ export const DropdownItem = styled.div`
   }
 `
 export const DropdownItemLabel = styled.span``
+
+type BarProps = {
+  show: boolean
+}
+
+export const Bar = styled.div<BarProps>`
+  display: ${({ show }) => (show ? 'block' : 'none')};
+
+  height: 2px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.base.default};
+  margin-top: 2px;
+`

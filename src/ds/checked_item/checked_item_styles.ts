@@ -3,9 +3,6 @@ import styled from 'styled-components'
 export const CheckedItemsContainer = styled.div`
   display: flex;
   gap: 1rem;
-  span {
-    font-size: ${({ theme }) => theme.font.sizes.xxs};
-  }
 `
 type TextProps = {
   color?: string
@@ -19,8 +16,8 @@ export const Text = styled.span<TextProps>`
   margin-block-end: 0;
   margin-inline-end: 0;
   margin-inline-start: 0;
-  font-size: ${({ theme }) => theme.font.sizes.sm};
-  font-family: ${({ theme }) => theme.font.family.sliver};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
+  font-family: ${({ theme }) => theme.font.family.default};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: start;
   color: ${({ theme, color }) =>

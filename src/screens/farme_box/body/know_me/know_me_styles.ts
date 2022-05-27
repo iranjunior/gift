@@ -7,4 +7,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 5% 0;
 `
-export const Content = ContentDiv
+export const Content = styled(ContentDiv)`
+  width: 100%;
+  max-width: 1080px;
+`

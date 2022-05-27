@@ -1,8 +1,15 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import { CallToAction, Footer, Menu, Testimonies } from '../../components'
+import { CallToAction, Footer, Menu } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { Main, Summary, Reasons, Values, Banner } from './body'
+import {
+  Main,
+  Summary,
+  Reasons,
+  Values,
+  Banner,
+  TestimoniesEmployee,
+} from './body'
 import { Body, Container } from './careers_styles'
 
 export const Careers = () => {
@@ -19,7 +26,7 @@ export const Careers = () => {
         <Summary id="resumo" />
         <Reasons id="razoes" />
         <Values id="valores" />
-        <Testimonies id="depoimentos" />
+        <TestimoniesEmployee id="depoimentos" />
         <Banner id="banner" />
         <Footer id="sobre" />
         <CallToAction />

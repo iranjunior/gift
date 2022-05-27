@@ -3,7 +3,7 @@ import { ContentDiv } from '../../../../ds/styles/common_styles'
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${({ theme }) => theme.colors.neutral.lightness};
+  background-color: ${({ theme }) => theme.primary.light};
   width: 100%;
   padding: 5% 0;
 `

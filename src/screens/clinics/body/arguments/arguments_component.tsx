@@ -14,6 +14,7 @@ import {
 
 import { Button } from '../../../../ds'
 import { useIntersection } from '../../../../hooks/useIntersection'
+import { useNavigate } from 'react-router-dom'
 
 type ArgumentsProps = {
   id?: string
@@ -26,6 +27,9 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       clinics: { arguments: points },
     },
   } = useContext(DataContext)
+
+  const navigate = useNavigate()
+
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
@@ -37,12 +41,16 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       {!!points[0].label_button && <Button label={points[0].label_button} />}
     </BlockText>
   )
-  const ImageFirstCard = () => <Image src={images.ImageOldManWithAPhone} />
+  const ImageFirstCard = () => (
+    <Image src={images.ImageAttendanceInNotebookFarme} />
+  )
 
   const RightSideFirstCard = () => <TextFirstCard />
   const LeftSideFirstCard = () => <ImageFirstCard />
 
-  const ImageSecondCard = () => <Image src={images.ImageWatchDoctor} />
+  const ImageSecondCard = () => (
+    <Image src={images.ImageAttendanceShowingPillsFarme} />
+  )
 
   const TextSecondCard = () => (
     <BlockText>
@@ -60,10 +68,17 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: points[2].title }} />
       <Text dangerouslySetInnerHTML={{ __html: points[2].text }} />
-      {!!points[2].label_button && <Button label={points[2].label_button} />}
+      {!!points[2].label_button && (
+        <Button
+          onClick={() => navigate('/contato/cliente')}
+          label={points[2].label_button}
+        />
+      )}
     </BlockText>
   )
-  const ImageThirdCard = () => <Image src={images.ImageManWithHeadphone} />
+  const ImageThirdCard = () => (
+    <Image src={images.ImageAttendanceCallCenterFarme} />
+  )
 
   const RightSideThirdCard = () => <TextThirdCard />
   const LeftSideThirdCard = () => <ImageThirdCard />

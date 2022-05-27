@@ -36,12 +36,12 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       <TextPrincipal dangerouslySetInnerHTML={{ __html: cards.first }} />
     </BlockText>
   )
-  const ImageFirstCard = () => <Image src={images.ImageBoxReceived} />
+  const ImageFirstCard = () => <Image src={images.ImageOldManLookingBox} />
 
   const RightSideFirstCard = () => <TextFirstCard />
   const LeftSideFirstCard = () => <ImageFirstCard />
 
-  const ImageSecondCard = () => <Image src={images.ImageBill} />
+  const ImageSecondCard = () => <Image src={images.ImageZoomBox} />
 
   const TextSecondFinal = () => (
     <BlockText>
@@ -58,7 +58,7 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
       <TextPrincipal dangerouslySetInnerHTML={{ __html: cards.third }} />
     </BlockText>
   )
-  const ImageThirdCard = () => <Image src={images.ImageOldManPhone} />
+  const ImageThirdCard = () => <Image src={images.ImageLab} />
 
   const RightSideThirdCard = () => <TextThirdCard />
   const LeftSideThirdCard = () => <ImageThirdCard />

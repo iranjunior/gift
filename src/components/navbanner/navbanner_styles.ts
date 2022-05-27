@@ -11,7 +11,7 @@ export const Container = styled.div<ContainerProps>`
 
   background-color: ${({ theme }) => theme.primary.default};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     height: auto;
   }
 `
@@ -24,14 +24,14 @@ export const Content = styled.div`
   height: 100%;
   align-items: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
     margin: ${({ theme }) => theme.spacing.xxxs} 0;
   }
 `
 export const Logo = styled.img`
   height: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     height: 15px;
   }
 `
@@ -46,7 +46,7 @@ export const Text = styled.span`
     color: ${({ theme }) => theme.colors.neutral.darkness};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 40%;
     font-size: ${({ theme }) => theme.font.sizes.xxs};
     a {
@@ -65,7 +65,7 @@ export const CloseButton = styled.button`
 
   font-weight: bold;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     right: calc(${({ theme }) => theme.spacing.internal});
   }
 `

@@ -1,6 +1,6 @@
 {
     "navbanner": {
-        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> por venda fechada! <a href=\"https://google.com\">Clique aqui e saiba mais.</a>"
+        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> por venda fechada! <a href=\"https://app.farme.com.br/indicame/publico\">Clique aqui e saiba mais.</a>"
     },
     "menu": [
         {
@@ -45,7 +45,7 @@
         },
         {
             "label": "Blog",
-            "href": "http://blog.farme",
+            "href": "https://blog.farme.com.br/",
             "context": "customers"
         },
         {
@@ -105,7 +105,7 @@
         },
         {
             "label": "Blog",
-            "href": "http://blog.farme"
+            "href": "https://blog.farme.com.br/"
         },
         {
             "label": "Contato",
@@ -131,63 +131,80 @@
     "body": {
         "home": {
             "initial": {
-                "title": "<h1>Mais do que medicamentos, um <highlight>cuidado completo</highlight></h1>",
-                "subtitle": "<p>Receba seus remédios organizados em casa a cada 30 dias aliados a um cuidado de alto nível: acompanhamento farmacêutico gratuito e personalizado em todo o tratamento.</p>"
+                "title": "<h1>Sua rotina de medicamentos <highlight>simples, segura e completa</highlight></h1>",
+                "subtitle": "<p>Receba seus remédios organizados em casa a cada 30 dias aliados a um cuidado de alto nível: acompanhamento farmacêutico gratuito em todo o tratamento.</p>"
             },
             "farme_box": {
-                "title": "Viva o seu máximo,<br />conte com a Far.me."
+                "title": "A Far.me nasceu para revolucionar<br />o mercado da saúde."
             },
             "know_me": {
                 "title": "Conheça a Far.me Box.",
-                "subtitle": "Muito mais do que uma caixa de remédios separados por dose, dia e hora. Uma inteligência que analisa cada receita para evitar possíveis efeitos adversos, interações prejudiciais e qualquer obstáculo ao sucesso do seu tratamento",
+                "subtitle": "Muito mais do que uma caixa de remédios separados por dose, dia e hora.<br responsive='only-desktop' />Um cuidado que analisa cada receita para evitar possíveis efeitos<br responsive='only-desktop' />adversos, interações prejudiciais e qualquer obstáculo ao sucesso do seu<br/>tratamento",
                 "carousel": [
                     {
-                        "label": "Personalizada",
-                        "text": "Uma caixa<br /> personalizada para a sua rotina."
-                    },
-                    {
-                        "label": "Organizada",
-                        "text": "Com separação por dia, horário e dose."
-                    },
-                    {
-                        "label": "Funcional",
-                        "text": "Com as orientações para uso dos medicamentos."
+                        "label": "Simples",
+                        "text": "Com separação por dia, horário e dose"
                     },
                     {
                         "label": "Segura",
                         "text": "Com informações de rastreabilidade e validade de cada medicamento."
+                    },
+                    {
+                        "label": "Completa",
+                        "text": "Todos os tratamentos em um só lugar para focar no que mais importa: você."
                     }
                 ]
             },
             "targets": {
-                "title": "Uma solução,<br /> diferentes necessidades.",
-                "subtitle": " Far.me Box atende a múltiplas demandas na área da saúde, oferecendo benefícios únicos para cada forma de cuidado",
+                "title": "Uma solução, <br/>diferentes necessidades.",
+                "subtitle": "A Far.me Box está presente em diversas rotinas,<br />oferecendo benefícios únicos para cada forma de cuidado.",
                 "cards": [
                     {
-                        "title": "Para quem toma medicamentos<br /> <highlight>todos os dias</highlight>",
+                        "title": "Para quem toma medicamentos <br /><highlight>todos os dias</highlight>",
                         "type": "customers",
-                        "text": "Seus medicamentos separados da forma como devem ser tomados e entregues na sua porta a cada 30 dias."
+                        "text": "Seus medicamentos separados da forma como devem ser tomados e com entrega automática a cada 30 dias."
                     },
                     {
-                        "title": "Para as <br /><highlight>instituições</highlight>",
+                        "title": "Para as <br /><highlight>instituições</highlight><br />de cuidado",
                         "type": "companies",
-                        "text": "Segurança e organização para manter o foco no paciente. Eleve a régua do cuidado sem ocupar a equipe."
+                        "text": "Segurança e organização para<br />manter o foco no paciente. Eleve a<br />régua do cuidado sem ocupar a<br />equipe."
                     },
                     {
-                        "title": "Para <br />complementar<br />o trabalho <highlight> médico</highlight>",
+                        "title": "Para <br />complementar<br />o trabalho <highlight>médico</highlight>",
                         "type": "doctors",
-                        "text": "Facilidade na adesão ao tratamento no pós-consulta e parceria farmacêutica para maiores chances de sucesso terapêutico"
+                        "text": "Facilidade na adesão ao tratamento no pós-consultório e, com isso, maiores chances de sucesso terapêutico."
+                    }
+                ]
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra,<br /> nossos Far.membros.",
+                "testimonies": [
+                    {
+                        "name": "Joana Bittencourt",
+                        "id": "joana",
+                        "testimony": "O atendimento farmacêutico é um diferencial: conseguimos tirar dúvidas, relatar sintomas, ouvir possíveis reações que podem acontecer, analisar interações e muito mais"
+                    },
+                    {
+                        "name": "Selena Fernandes",
+                        "id": "selena",
+                        "testimony": "A praticidade e tranquilidade que temos com o serviço de entrega da Box facilita muito o dia a dia dos cuidadores e familiares. É como ter o apoio de um membro da família"
+                    },
+                    {
+                        "name": "Dirceu Moraes",
+                        "id": "dirceu",
+                        "testimony": "O que mais se destaca para nós é o serviço da Clínica, oferecido com um cuidado e dedicação que encantaram toda família"
                     }
                 ]
             }
         },
         "for_customers": {
             "initial": {
-                "title": "<h1>Muito mais cuidado e comodidade para a rotina <highlight>a sua ou a de quem você ama</highlight></h1>",
+                "title": "<h1>Muito mais cuidado e comodidade para a rotina: <highlight>a sua ou a de quem você ama</highlight></h1>",
                 "subtitle": "<p>Entregamos os medicamentos que você precisa de forma programada e oferecemos apoio especializado para o máximo bem-estar no tratamento.</p>"
             },
             "how_working": {
-                "title": "Como funciona?",
+                "title": "Solução simples, segura e completa",
                 "subtitle": "Com a Far.me Box, você ou quem você ama recebem os remédios a cada 30 dias, já separados por dose, dia e horário.",
                 "arguments": [
                     {
@@ -209,7 +226,7 @@
             },
             "banner": {
                 "title": "O cuidado da sua saúde é <br />completo com a Clínica Far.me.",
-                "subtitle": "Sem taxas extras, você conta com o acompanhamento contínuo dos nossos <br/>farmacêuticos para tirar dúvidas sobre medicamentos, evitar efeitos indesejados e possíveis interações. "
+                "subtitle": "Sem taxas extras, você conta com o acompanhamento contínuo dos nossos farmacêuticos para tirar dúvidas sobre medicamentos, evitar efeitos indesejados e possíveis interações."
             },
             "advantages": {
                 "legend": "Benefícios",
@@ -232,14 +249,9 @@
                         "text": "Nada de se preocupar com a compra, o estoque e o preço de remédios todo mês. Nós cuidamos disso por você."
                     },
                     {
-                        "id": "training",
-                        "title": "Treinamentos",
-                        "text": "Com a Universidade Far.me, é só <br/>solicitar gratuitamente capacitações <br/>sobre segurança em medicação. "
-                    },
-                    {
                         "id": "support",
                         "title": "Suporte para o tratamento",
-                        "text": "Acompanhamento farmacêutico, revisão da farmacoterapia e canal de atendimento para dúvidas, tudo com a Clínica Far.me. "
+                        "text": "Acompanhamento farmacêutico, revisão da farmacoterapia e canal de atendimento para dúvidas, tudo com a Clínica Far.me."
                     }
                 ]
             },
@@ -250,7 +262,52 @@
             },
             "our_posts": {
                 "description": "Nosso blog",
-                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde"
+                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde",
+                "posts": [
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/medicamentos-fitoterapicos.png",
+                        "title": "Medicamentos Fitoterápicos: o que são, exemplos e cuidados",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/medicamentos-fitoterapicos/",
+                        "date": "24.03.2022"
+                    },
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/hemitartarato-de-zolpidem2.png",
+                        "title": "Hemitartarato de zolpidem: bula, para que serve, preço, efeitos colaterais",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/hemitartarato-de-zolpidem/",
+                        "date": "22.03.2022"
+                    },
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/ibuprofeno-600mg.png",
+                        "title": "Ibuprofeno 600mg: para que serve, efeitos colaterais e tudo o que você precisa saber",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/ibuprofeno-600mg/",
+                        "date": "17.03.2022"
+                    }
+                ]
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra,<br /> nossos Far.membros.",
+                "testimonies": [
+                    {
+                        "name": "Marisa Donato",
+                        "id": "marisadonato",
+                        "testimony": " O serviço da Far.me ocupa uma lacuna muito importante na vida de seus pacientes. Nunca vimos um acompanhamento em saúde que tivesse esse tipo de atenção com demandas individuais. Somos muito felizes de ter encontrado vocês!"
+                    },
+                    {
+                        "name": "Raimundo da Costa",
+                        "id": "raimundodacosta",
+                        "testimony": "Por muitos anos, eu usei um anti-inflamatório como tratamento, mas o remédio me dava dor gastrointestinal e poderia gerar até complicações cardíacas. Os farmacêuticos da Far.me identificaram o problema, trocaram a medicação e agora estou muito mais seguro"
+                    }
+                ]
             }
         },
         "for_companies": {
@@ -261,7 +318,7 @@
                 }
             },
             "advantage": {
-                "title": "Benefícios",
+                "title": "Solução simples, segura e completa",
                 "subtitle": "Transforme as horas gastas com a organização e dispensação dos medicamentos em tempo de qualidade para a sua equipe e seus residentes.",
                 "advantages": [
                     {
@@ -293,29 +350,7 @@
             },
             "how_working": {
                 "title": "Como funciona?",
-                "subtitle": "Com a Far.me Box, a instituição conta com acompanhamento farmacêutico de 100% das prescrições médicas. E os medicamentos de cada residente são entregues a cada 30 dias, já separados por dose, dia e horário.",
-                "arguments": [
-                    {
-                        "id": "request",
-                        "title": "Peça o seu <br />orçamento",
-                        "text": "Entre em contato pelo chat e peça o orçamento para o tratamento dos seus residentes e nós garantimos os melhores preços na soma dos seus remédios. "
-                    },
-                    {
-                        "id": "analyse",
-                        "title": "Conte com análise e atendimento farmacêutico",
-                        "text": "Em seguida, o seu orçamento é analisado pelo nosso time de especialistas e retornamos com os valores. "
-                    },
-                    {
-                        "id": "delivery",
-                        "title": "Receba os medicamentos",
-                        "text": "Após o envio das prescrições e assinatura de termo de fornecimento de medicamentos, a instituição passa a receber a box a cada 30 dias."
-                    },
-                    {
-                        "id": "attendance",
-                        "title": "Atendimento <br />proativo",
-                        "text": "A partir daí, oferecemos suporte de modo contínuo com o objetivo de oferecer possíveis melhorias no tratamento."
-                    }
-                ]
+                "subtitle": "Com a Far.me Box, a instituição conta com acompanhamento farmacêutico de 100% das prescrições médicas. E os medicamentos de cada residente são entregues a cada 30 dias, já separados por dose, dia e horário."
             },
             "banner": {
                 "title": "Complemento de alto nível para o melhor cuidado dos residentes com a Clínica Far.me",
@@ -326,21 +361,90 @@
                 "title": "Uma nova forma de<br /><highlight>cuidar dos residentes</highlight> <br />e levar mais praticidade para sua equipe.",
                 "subtitle": "Entrega programada dos medicamentos a cada 30 dias em box personalizada, já separados por dose, dia e horário."
             },
+            "arguments": [
+                {
+                    "id": "request",
+                    "title": "Peça o seu <br />orçamento",
+                    "text": "Entre em contato pelo chat e peça o orçamento para o tratamento dos seus residentes e nós garantimos os melhores preços na soma dos seus remédios. "
+                },
+                {
+                    "id": "analyse",
+                    "title": "Conte com análise e atendimento farmacêutico",
+                    "text": "Em seguida, o seu orçamento é analisado pelo nosso time de especialistas e retornamos com os valores. "
+                },
+                {
+                    "id": "delivery",
+                    "title": "Receba os medicamentos",
+                    "text": "Após o envio das prescrições e assinatura de termo de fornecimento de medicamentos, a instituição passa a receber a box a cada 30 dias."
+                },
+                {
+                    "id": "attendance",
+                    "title": "Atendimento <br />proativo",
+                    "text": "A partir daí, oferecemos suporte de modo contínuo com o objetivo de oferecer possíveis melhorias no tratamento."
+                }
+            ],
             "our_posts": {
                 "description": "Nosso blog",
-                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde"
+                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde",
+                "posts": [
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/medicamentos-fitoterapicos.png",
+                        "title": "Medicamentos Fitoterápicos: o que são, exemplos e cuidados",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/medicamentos-fitoterapicos/",
+                        "date": "24.03.2022"
+                    },
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/hemitartarato-de-zolpidem2.png",
+                        "title": "Hemitartarato de zolpidem: bula, para que serve, preço, efeitos colaterais",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/hemitartarato-de-zolpidem/",
+                        "date": "22.03.2022"
+                    },
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/ibuprofeno-600mg.png",
+                        "title": "Ibuprofeno 600mg: para que serve, efeitos colaterais e tudo o que você precisa saber",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/ibuprofeno-600mg/",
+                        "date": "17.03.2022"
+                    }
+                ]
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra, <br />nossos Far.membros. ",
+                "testimonies": [
+                    {
+                        "name": "Nadir Pessoa",
+                        "job": "enfermeira de Casa de Repouso",
+                        "image_id": "nadirpessoa",
+                        "testimony": "Nem temos palavras para agradecer o que a Clínica Far.me fez para um residente. O sr. Antônio usava um medicamento que interferia na parte motora, não estava conseguindo comer sozinho e nem se levantar... agora já senta sozinho e está todo serelepe. Coisa linda de se ver, obrigada, pessoal!"
+                    },
+                    {
+                        "name": "Tales Machado",
+                        "job": "Gestor de Instituição de Cuidado  ",
+                        "testimony": "Com a chegada da Far.me Box, minha equipe ganhou muita produtividade e tem mais tempo para se dedicar a um cuidado ainda mais completo para os residentes – tudo com o apoio da Clínica Far.me",
+                        "image_id": "talesmachado"
+                    }
+                ]
             }
         },
         "for_doctors": {
             "initial": {
                 "who-we-are": {
                     "title": "<h1>O complemento <highlight>seguro</highlight> para o tratamento dos seus pacientes no pós-consultório</h1>",
-                    "subtitle": "<p>Você prescreve o tratamento e nós ajudamos a fazer acontecer na casa do paciente. Facilitamos a adesão ao tratamento medicamentoso e realizamos a conciliação das prescrições tudo para aumentar as chances de sucesso terapêutico sem perder de vista o bem-estar.</p>"
+                    "subtitle": "<p>Você prescreve o tratamento e nós ajudamos a fazer acontecer na casa do paciente. Facilitamos a adesão ao tratamento medicamentoso e realizamos a conciliação das prescrições - tudo para aumentar as chances de sucesso terapêutico sem perder de vista o bem-estar</p>"
                 }
             },
             "how_working": {
                 "title": "Como funciona?",
-                "subtitle": "Com a Far.me Box, entregamos os medicamentos do paciente a cada 30 dias, já organizados por dose, dia e horário. É assim que facilitamos a adesão ao tratamento prescrito tudo com uma experiência única de acompanhamento farmacêutico",
+                "subtitle": "Com a Far.me Box, entregamos os medicamentos do paciente já organizados por dose, dia e horário.Assim, facilitamos a adesão ao tratamento prescrito e ainda oferecemos uma experiência única de acompanhamento farmacêutico.",
                 "arguments": [
                     {
                         "id": "prescription",
@@ -354,7 +458,7 @@
                     },
                     {
                         "id": "farmebox",
-                        "title": "Continuidade<br />no tratamento",
+                        "title": "O cuidado<br />continua.",
                         "text": "Além de praticidade e segurança na rotina dos medicamentos, seu paciente recebe apoio farmacêutico contínuo e gratuito para maior bem-estar."
                     }
                 ]
@@ -375,7 +479,36 @@
             },
             "our_posts": {
                 "description": "Nosso blog",
-                "title": "Seu guia sobre o uso seguro de medicamentos e cuidados com a saúde"
+                "title": "Um guia sobre o uso seguro de medicamentos e cuidados com a saúde",
+                "posts": [
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/medicamentos-fitoterapicos.png",
+                        "title": "Medicamentos Fitoterápicos: o que são, exemplos e cuidados",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/medicamentos-fitoterapicos/",
+                        "date": "24.03.2022"
+                    },
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/hemitartarato-de-zolpidem2.png",
+                        "title": "Hemitartarato de zolpidem: bula, para que serve, preço, efeitos colaterais",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/hemitartarato-de-zolpidem/",
+                        "date": "22.03.2022"
+                    },
+                    {
+                        "image": "https://blog.farme.com.br/wp-content/uploads/2022/03/ibuprofeno-600mg.png",
+                        "title": "Ibuprofeno 600mg: para que serve, efeitos colaterais e tudo o que você precisa saber",
+                        "avatar": "https://secure.gravatar.com/avatar/6761e6d95699cbbe75275b9e8777521b?s=96&d=mm&r=g",
+                        "author": "Charles Miler",
+                        "category": "Conteúdo Farmacêutico",
+                        "link": "https://blog.farme.com.br/ibuprofeno-600mg/",
+                        "date": "17.03.2022"
+                    }
+                ]
             },
             "doubts": {
                 "description": "Dúvidas",
@@ -410,12 +543,30 @@
                         "answer": "Para dúvidas sobre medicamentos, os clientes Far.me têm acesso ao nosso canal de atendimento farmacêutico.<br /><br />Para dúvidas sobre faturamento, assinatura e alteração de medicamentos, você sempre pode contar com o time de sucesso."
                     }
                 ]
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra, <br />nossos Far.membros. ",
+                "testimonies": [
+                    {
+                        "name": "Luís Cláudio Monteiro",
+                        "job": "Médico Geriatra",
+                        "image_id": "luisclaudio",
+                        "testimony": "A Far.me evita qualquer falha de continuidade no tratamento e gera autonomia, o que é extremamente importante, em especial no controle de doenças crônicas e pacientes idosos ou com necessidades especiais"
+                    },
+                    {
+                        "name": "Ronaldo Caetano  ",
+                        "job": "",
+                        "testimony": "Imagina não ter que correr na farmácia todo mês? Imagina não ter que perder muito tempo separando tudo por dose? Com a Far.me, eu ganhei tudo isso e abrir mão dessa correria foi definitivo pra mim e para minha saúde",
+                        "image_id": "ronaldo"
+                    }
+                ]
             }
         },
         "common_pages": {
             "numbers": {
                 "description": "Números",
-                "title": "Os impactos da Far.me ressignificando a saúde de cada vez mais pessoas",
+                "title": "Os impactos da Far.me levando o<br /> melhor estar para mais pessoas. ",
                 "message": "Pode contar com <highlight>a gente!</highlight>",
                 "infos": [
                     {
@@ -437,32 +588,14 @@
                 "title": "Com a palavra,<br /> nossos Far.membros.",
                 "testimonies": [
                     {
-                        "name": "Claudia",
-                        "age": 78,
-                        "origin": "Cliente Far.me box",
-                        "testimony": "Far.me te apoia no cuidado diário com quem você ama.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                        "name": "Luiz Felipe Abreu",
+                        "id": "luizfelipeabreu",
+                        "testimony": "A Far.me Box só falta me chamar para dizer que está na hora do remédio. Nunca mais perdi uma dose e coloquei meu tratamento em risco. Mudou minha rotina!"
                     },
                     {
-                        "name": "Maria",
-                        "age": 78,
-                        "origin": "Cliente Far.me box",
-                        "testimony": "Far.me te apoia cuidando diariamente o com quem você ama.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                    },
-                    {
-                        "name": "Jessica",
-                        "age": 92,
-                        "origin": "Cliente Far.me box",
-                        "testimony": "Far.me te apoia sempre cuidando de quem você ama.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                    },
-                    {
-                        "name": "Reinaldo",
-                        "age": 84,
-                        "origin": "Cliente Far.me box",
-                        "testimony": "Far.me te apoia diariamente cuidando com quem você ama.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                        "name": "Patrícia Freitas",
+                        "id": "patriciafreitas",
+                        "testimony": "Quando tive uma dúvida sobre suplementação alimentar, a equipe da Far.me fez um estudo na literatura científica e me orientou sobre as melhores opções. O acompanhamento é incrível!"
                     }
                 ]
             },
@@ -504,20 +637,42 @@
         "who_we_are": {
             "initial": {
                 "who-we-are": {
-                    "title": "<h1>Somos a farmácia que cria <highlight>soluções</highlight> para você viver o seu melhor estar.</h1>"
+                    "title": "<h1>Nascemos para revolucionar o mercado da saúde de forma <highlight>simples, segura e completa</highlight></h1>"
                 }
             },
             "history": {
                 "title": "E a nossa história começou com uma verdade: metade das pessoas não engajam nos seus tratamentos medicamentosos.",
-                "subtitle": "A gente sabe que isso é prejudicial pra todo mundo envolvido.<br /> Por isso, criamos um jeito de contribuir para o tratamento ser seguido, da receita ao dia a dia. Fazemos isso porque aprendemos que não é só sobre os números - tem a ver com a vida das pessoas. "
+                "subtitle": "A gente sabe que isso é prejudicial pra todo mundo envolvido. <br responsive='only-desktop' />Por isso, criamos um jeito de contribuir para o tratamento ser seguido, da receita ao dia a dia. Fazemos isso porque aprendemos que não é só sobre os números - tem a ver com a vida das pessoas. "
+            },
+            "testimonies": {
+                "testimonies_employee": [
+                    {
+                        "name": "Marina Santos",
+                        "job": "Fundadora",
+                        "testimony": "We started Oscar to create a health insurance company that behaves like a doctor in the family.",
+                        "image_id": "marina"
+                    },
+                    {
+                        "name": "Samilla",
+                        "job": "Fundadora",
+                        "testimony": "We started Oscar to create a health insurance company that behaves like a doctor in the family.",
+                        "image_id": "sammilla"
+                    },
+                    {
+                        "name": "Luciana",
+                        "job": "Fundadora",
+                        "testimony": "We started Oscar to create a health insurance company that behaves like a doctor in the family.",
+                        "image_id": "luciana"
+                    }
+                ]
             },
             "declaration": {
-                "title": "Cuidado especializado, descomplicado<br/>e integrado no seu dia a dia.",
-                "declaration": "Nascemos para facilitar o uso de remédios na rotina, melhorar a adesão ao tratamento e reduzir o desperdícios ao longo da cadeia de saúde. <br/></br/>Aliamos eficiência e acompanhamento humanizado para elevar a régua de cuidado no país.<br/><br/>Entendemos o momento de cada um e temos um time à disposição pra tirar suas dúvidas sobre o nosso processo ou sobre o próprio tratamento. <br/><br/>Atuamos em todas as pontas para garantir a melhoria do todo. Da rastreabilidade e checagem da interação dos medicamentos na sua receita até garantir que tudo chegue separadinho na sua casa, nosso trabalho foca em uma coisa: estar do seu lado, todos os dias, pensando sempre no seu melhor estar. "
+                "title": "Cuidado especializado, simplificado <br />e integrado no seu dia a dia.",
+                "declaration": "Nascemos para facilitar o uso de remédios na rotina, melhorar a adesão ao tratamento e reduzir o desperdícios ao longo da cadeia de saúde. <br/><br/>Aliamos eficiência e acompanhamento humanizado para elevar a régua de cuidado no país.<br/><br/>Entendemos o momento de cada um e temos um time à disposição pra tirar suas dúvidas sobre o nosso processo ou sobre o próprio tratamento. <br/><br/>Atuamos em todas as pontas para garantir a melhoria do todo. Da rastreabilidade e checagem da interação dos medicamentos na sua receita até garantir que tudo chegue separadinho na sua casa, nosso trabalho foca em uma coisa: estar do seu lado, todos os dias, pensando sempre no seu melhor estar. "
             },
             "arguments": {
                 "card_initial": {
-                    "title": "Cuidado especializado, descomplicado e integrado no seu dia a dia.",
+                    "title": "Rotina de medicamentos simples, segura e completa",
                     "subtitle": "Nascemos para facilitar o uso de remédios na rotina, melhorar a adesão ao tratamento e reduzir o desperdícios ao longo da cadeia de saúde. "
                 },
                 "cards": {
@@ -538,76 +693,52 @@
                 "subtitle": "Conheça quem faz da Far.me o primeiro serviço de<br /> assinatura de medicamentos e cuidado farmacêutico<br /> do país. ",
                 "people": [
                     {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                        "image_id": "hagabo",
+                        "name": "Hagabo Mathyell",
+                        "job": "Farmacêutico"
                     },
                     {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 2",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                        "image_id": "carina",
+                        "name": "Carina Neves",
+                        "job": "Farmacêutica Clinica"
                     },
                     {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 3",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                        "image_id": "mariana",
+                        "name": "Mariana Mesquita",
+                        "job": "Suporte ao Cliente"
                     },
                     {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 4",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
-                    },
-                    {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 5",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
-                    },
-                    {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 6",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
-                    },
-                    {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 7",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
-                    },
-                    {
-                        "image_url": "https://s3.amazonaws.com/farme.me/images/people/people-1.png",
-                        "name": "Nome do profissional 8",
-                        "message": "Mollit occaecat Lorem dolore mollit esse proident incididunt ex dolore magna culpa nisi ullamco enim."
+                        "image_id": "gabriella",
+                        "name": "Gabriella Campera",
+                        "job": "Analista de dados clínicos"
                     }
                 ]
             },
             "banner": {
-                "title": "Far.me é a farmácia <br/>que cuida do seu <br/>melhor estar. ",
-                "subtitle": "Entregamos seus remédios onde e quando precisar <br/>e simplificamos o cuidado com a sua saúde. "
+                "title": "Mais do que medicamentos, <br />um cuidado completo",
+                "subtitle": "Facilitamos sua rotina e priorizamos<br />o sucesso do seu tratamento."
             }
         },
         "farme_box": {
             "initial": {
-                "title": "<legend>Far.me box</legend><br /><principal>A tranquilidade que você merece pra <br/>se cuidar e organizar a sua rotina. </principal>"
+                "title": "<legend>Far.me box</legend><br /><principal>Solução <highlight>simples, segura e completa</highlight> para a sua rotina de medicamentos.</principal>"
             },
             "arguments": {
-                "title": "A solução feita pra você que faz uso de remédios todos os dias.",
+                "title": "O serviço pensado para você que faz uso de remédios todos os dias",
                 "cards": {
                     "first": "E que prefere <highlight>receber</highlight><br responsive='only-desktop' /> seu tratamento em casa do que ir à farmácia <br responsive='only-desktop' /> toda hora.",
-                    "second": "Que quer <highlight>evitar</highlight> se confundir com as doses, datas e horários de diferentes remédios. ",
+                    "second": "Que não quer mais <highlight>perder tempo</highlight> organizando os medicamentos e se confundir com as doses, datas e horário",
                     "third": "Que busca <highlight>segurança</highlight> pra seguir o tratamento do melhor jeito."
                 }
             },
-            "carousel": [
+            "carousel_images": [
                 {
-                    "label": "Orçamento",
-                    "text": "Você faz o seu<br /> orçamento."
+                    "label": "Para pacientes e familiares",
+                    "id": "customers"
                 },
                 {
-                    "label": "Análise",
-                    "text": "Nós analisamos."
-                },
-                {
-                    "label": "Entrega",
-                    "text": "Você passa <br />a receber a sua box <br />a cada 30 dias, separada por dia, horário e dose. "
+                    "label": "Para clínicas e instituições",
+                    "id": "companies"
                 }
             ],
             "reasons": {
@@ -620,7 +751,7 @@
                     },
                     {
                         "id": "customization",
-                        "title": "Personalize seu<br /> tratamento",
+                        "title": "Tratamento<br />individualizado",
                         "text": "Orçamento personalizado - com medicamentos de referência, genéricos ou similares - de acordo com a sua escolha."
                     },
                     {
@@ -634,8 +765,13 @@
                         "text": "Preço fixo, salvo<br />reajuste anual da Anvisa."
                     },
                     {
+                        "id": "lupa",
+                        "title": "Análise<br />farmacêutica",
+                        "text": "Análise das prescrições de todos os medicamentos em uso para evitar interações e efeitos indesejados."
+                    },
+                    {
                         "id": "cancel",
-                        "title": "Cancelamento grátis",
+                        "title": "Cancelamento<br/>grátis",
                         "text": "Sem taxas, fácil <br />e sem burocracia."
                     }
                 ]
@@ -795,6 +931,22 @@
             "banner": {
                 "title": "Far.me é a farmácia<br />que cuida do seu<br /><highlight>melhor estar.</highlight>",
                 "subtitle": "Entregamos seus remédios onde e quando precisar e simplificamos o cuidado com a sua saúde."
+            },
+            "testimonies": {
+                "description": "depoimentos",
+                "title": "Com a palavra,<br /> nossos Far.membros.",
+                "testimonies": [
+                    {
+                        "name": "Rosa Gomes de Paula",
+                        "id": "rosa",
+                        "testimony": "Meu pai toma vários medicamentos para epilepsia e estava com uma sonolência fora do normal. A equipe da Far.me percebeu que um dos remédios estava com a dose muito alta, causando a sedação. Obrigada por trazerem meu pai de volta!"
+                    },
+                    {
+                        "name": "Thamara Quintão",
+                        "id": "thamaraquintao",
+                        "testimony": "A Far.me faz toda a diferença porque não só facilita na hora de tomar remédios, mas também faz um acompanhamento holístico do tratamento e analisa as necessidades de forma individual"
+                    }
+                ]
             }
         },
         "careers": {
@@ -865,39 +1017,28 @@
                 "title": "Com a palavra,<br />noss@s far.mezeir@s.",
                 "testimonies": [
                     {
-                        "name": "Claudia",
-                        "age": 78,
-                        "origin": "Cliente - Far.me box",
-                        "testimony": "Voluptate mollit ad est qui officia reprehenderit anim adipisicing cupidatat cillum ea.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                        "name": "Felipe Ambrosio",
+                        "job": "Designer Gráfico",
+                        "image_id": "felipeambrosio",
+                        "testimony": "Trabalhar na Far.me me faz sentir que de fato estamos fazendo a diferença na vida de muitas pessoas, ao mesmo tempo que inovamos o mercado de saúde"
                     },
                     {
-                        "name": "Maria",
-                        "age": 78,
-                        "origin": "Clinica Esperança",
-                        "testimony": "Minim aute laboris commodo est in quis ut nulla pariatur.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                        "name": "Clara Rocha",
+                        "job": "Auxiliar de Produção Farmacêutica",
+                        "testimony": "Pertencer à Far.me é trabalhar com o coração, com a vontade de enxergar e executar a mudança na saúde de cada paciente, é acreditar em um propósito firme e em valores únicos, é fazer cada paciente se sentir especial",
+                        "image_id": "clararocha"
                     },
                     {
-                        "name": "Pedro",
-                        "age": 71,
-                        "origin": "Clinica Abraço",
-                        "testimony": "Lorem et est velit dolor.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                        "name": "Pedro Motta",
+                        "job": "Head de Tecnologia",
+                        "testimony": "Trabalhar na Far.me é ter a oportunidade de efetivamente conseguir impactar positivamente a VIDA das pessoas. É poder se sentir parte e poder contribuir nas melhores soluções que buscamos para nossos clientes",
+                        "image_id": "pedromotta"
                     },
                     {
-                        "name": "Ricardo",
-                        "age": 32,
-                        "origin": "Colaborador Far.me",
-                        "testimony": "Velit nostrud aute cillum tempor irure commodo.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
-                    },
-                    {
-                        "name": "Josafa",
-                        "age": 27,
-                        "origin": "Cliente -  Far.me box",
-                        "testimony": "Consequat ullamco in consectetur irure dolore anim veniam sunt ut.",
-                        "image": "https://s3.amazonaws.com/far.me/images/testimonies/claudia.jpg"
+                        "name": "Rafaela Stanigher",
+                        "job": "OPS",
+                        "testimony": "Far.me te apoia no cuidado diário com quem você ama",
+                        "image_id": "rafaelastanigher"
                     }
                 ]
             },
@@ -920,7 +1061,7 @@
     "footer": {
         "about": {
             "title": "Sobre nós",
-            "text": "Criamos soluções inovadoras para facilitar o correto tratamento medicamentoso e ressignificar a relação das pessoas com sua saúde e qualidade de vida.<br /><br />Viva o seu máximo, conte com a Far.me"
+            "text": "Criamos soluções para que o tratamento medicamentoso seja seguido e as pessoas se sintam mais tranquilas e seguras no dia a dia.<br /><br />Viva seu melhor estar, conte com a Far.me."
         },
         "invite": "<highlight>Se interessou? </highlight><br />É só preencher o formulário e retornaremos em breve",
         "contacts": {
@@ -942,15 +1083,11 @@
                 "links": [
                     {
                         "title": "Far.me Box",
-                        "href": "https://far.me/far-me-boxes"
+                        "href": "/para-medicos/farme-box"
                     },
                     {
                         "title": "Clinica PSP",
                         "href": "/para-medicos/psp"
-                    },
-                    {
-                        "title": "Far.me Mensal",
-                        "href": "https://far.me/far-me-boxes"
                     }
                 ]
             },
@@ -959,19 +1096,19 @@
                 "links": [
                     {
                         "title": "Quem somos",
-                        "href": "https://far.me/far-me-boxes"
+                        "href": "/para-clientes/quem-somos"
                     },
                     {
                         "title": "Carreiras",
-                        "href": "https://far.me/far-me-boxes"
+                        "href": "/para-clientes/carreiras"
                     },
                     {
                         "title": "Blog",
-                        "href": "https://far.me/far-me-boxes"
+                        "href": "https://blog.farme.com.br/"
                     },
                     {
                         "title": "Contato",
-                        "href": "https://far.me/far-me-boxes"
+                        "href": "/contato"
                     }
                 ]
             },
@@ -980,15 +1117,7 @@
                 "links": [
                     {
                         "title": "Termos e políticas ",
-                        "href": "https://far.me/far-me-boxes"
-                    },
-                    {
-                        "title": "Política de privacidade",
-                        "href": "https://far.me/far-me-boxes"
-                    },
-                    {
-                        "title": "Política de Qualidade",
-                        "href": "https://far.me/far-me-boxes"
+                        "href": "https://assets.farme.com.br/pdfs/farme_protecao_dados.pdf"
                     }
                 ]
             },
@@ -996,20 +1125,20 @@
                 "title": "Últimos posts",
                 "links": [
                     {
-                        "title": "Noticia 1",
-                        "href": "https://far.me/far-me-boxes"
+                        "title": "Medicamentos Fitoterápicos: o que são, exemplos e cuidados",
+                        "href": "https://blog.farme.com.br/medicamentos-fitoterapicos/"
                     },
                     {
-                        "title": "Noticia 2",
-                        "href": "https://far.me/far-me-boxes"
+                        "title": "Hemitartarato de zolpidem: bula, para que serve, preço, efeitos colaterais",
+                        "href": "https://blog.farme.com.br/hemitartarato-de-zolpidem/"
                     },
                     {
-                        "title": "Noticia 3",
-                        "href": "https://far.me/far-me-boxes"
+                        "title": "Ibuprofeno 600mg: para que serve, efeitos colaterais e tudo o que você precisa saber",
+                        "href": "https://blog.farme.com.br/ibuprofeno-600mg/"
                     },
                     {
-                        "title": "Noticia 4",
-                        "href": "https://far.me/far-me-boxes"
+                        "title": "Formas farmacêuticas: quais são as principais e qual a sua importância?",
+                        "href": "https://blog.farme.com.br/formas-farmaceuticas/"
                     }
                 ]
             }

@@ -33,6 +33,8 @@ import {
 } from './footer_styles'
 import { DataContext } from '../../context/data'
 import { Button } from '../../ds'
+import { useTheme } from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 type FooterProps = {
   id?: string
@@ -41,6 +43,9 @@ type FooterProps = {
 
 export const Footer: React.FC<FooterProps> = ({ id }) => {
   const { footer, units } = useContext(DataContext)
+  const theme = useTheme()
+
+  const navigate = useNavigate()
 
   return (
     <Container id={id}>
@@ -58,7 +63,11 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
           <AboutRequestTitle
             dangerouslySetInnerHTML={{ __html: footer.invite }}
           />
-          <Button label="Preencher formulário" />
+          <Button
+            customColorHover={theme.colors.neutral.lightness}
+            onClick={() => window.open('https://app.farme.com.br/orcamento')}
+            label="Preencher formulário"
+          />
         </AboutRequestContainer>
         <AboutContactsContainer>
           <AboutContactsTitle>{footer.contacts.title}</AboutContactsTitle>
@@ -73,13 +82,23 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
             </AboutContactsPhoneContainer>
           ))}
           <AboutContactsSocialMedias>
-            <AboutContactsSocialMediasLogo>
+            <AboutContactsSocialMediasLogo
+              onClick={() => window.open('https://www.facebook.com/somosfarme')}
+            >
               <ImageFacebookLogo />
             </AboutContactsSocialMediasLogo>
-            <AboutContactsSocialMediasLogo>
+            <AboutContactsSocialMediasLogo
+              onClick={() =>
+                window.open('https://www.instagram.com/somosfarme/')
+              }
+            >
               <ImageInstagramLogo />
             </AboutContactsSocialMediasLogo>
-            <AboutContactsSocialMediasLogo>
+            <AboutContactsSocialMediasLogo
+              onClick={() =>
+                window.open('https://www.linkedin.com/company/farme/')
+              }
+            >
               <ImageLinkedinLogo />
             </AboutContactsSocialMediasLogo>
           </AboutContactsSocialMedias>

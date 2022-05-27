@@ -11,9 +11,8 @@ type hashMapType = {
 }
 
 const hashMap: hashMapType = {
-  Orçamento: images.ImageOldWomanInComputer,
-  Análise: images.ImagePeopleInStore,
-  Entrega: images.ImagePersonReceivedBox,
+  customers: images.ImageRoadClinicsToFarme,
+  companies: images.ImageRoadCompaniesToFarme,
 }
 
 type KnowMeProps = {
@@ -24,22 +23,25 @@ type KnowMeProps = {
 export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
   const {
     body: {
-      farme_box: { carousel },
+      farme_box: { carousel_images },
     },
   } = useContext(DataContext)
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
   const buildTabs = () =>
-    carousel.map(({ label, ...props }) => ({
-      image: hashMap[label],
-      label,
+    carousel_images.map(({ id, ...props }) => ({
+      image: hashMap[id],
       ...props,
     }))
   return (
     <Container ref={ref} id={id}>
       <Content ref={ref}>
-        <Carrousel content={buildTabs()} />
+        <Carrousel
+          onlyImagens
+          content={buildTabs()}
+          imageSizeInTablet="contain"
+        />
       </Content>
     </Container>
   )

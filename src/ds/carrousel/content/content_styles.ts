@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Text = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xxl};
@@ -93,21 +93,44 @@ export const Container = styled.div`
     margin: 0 16px;
   }
 `
-export const ContainerCard = styled.div`
+
+type ContainerCardProps = {
+  onlyImagens?: boolean
+}
+
+export const ContainerCard = styled.div<ContainerCardProps>`
   height: 560px;
   width: 100%;
   max-width: 1080px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
+
   border-radius: ${({ theme }) => theme.spacing.nano};
   background-color: transparent;
   align-items: center;
 
+  ${({ onlyImagens }) =>
+    onlyImagens === true
+      ? css`
+          display: flex;
+        `
+      : css`
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: 1fr;
+        `}
+
   @media (width: ${({ theme }) => theme.breakpoints.desktop}),
     (max-width: 1080px) and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop}) {
+    theme.breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr;
+
+    ${({ onlyImagens }) =>
+      onlyImagens === true
+        ? css`
+            display: flex;
+          `
+        : css`
+            grid-template-columns: 1fr 1fr;
+          `}
 
     div {
       width: 100%;
@@ -115,12 +138,19 @@ export const ContainerCard = styled.div`
   }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
-    display: grid;
-    grid-template-columns: none;
-    grid-auto-rows: none;
     height: auto;
     padding: 0;
     margin: 0;
+    ${({ onlyImagens }) =>
+      onlyImagens === true
+        ? css`
+            display: flex;
+          `
+        : css`
+            display: grid;
+            grid-template-columns: none;
+            grid-auto-rows: none;
+          `}
   }
 `
 

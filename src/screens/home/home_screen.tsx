@@ -1,15 +1,8 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import {
-  CallToAction,
-  Doubt,
-  Footer,
-  Menu,
-  Numbers,
-  Testimonies,
-} from '../../components'
+import { CallToAction, Doubt, Footer, Menu, Numbers } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
-import { Main, FarMeBox, KnowMe, Targets } from './body'
+import { Main, FarMeBox, KnowMe, Targets, Testimonies } from './body'
 
 import { Body, Container } from './home_styles'
 

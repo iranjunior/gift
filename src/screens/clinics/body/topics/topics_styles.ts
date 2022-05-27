@@ -10,7 +10,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.primary.light};
 `
 export const BlockText = styled.div`
-  width: 35%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -26,6 +26,7 @@ export const Content = styled.div`
   display: flex;
   height: 480px;
   width: 85%;
+  max-width: 1080px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -36,6 +37,8 @@ export const Content = styled.div`
   }
 `
 export const TextPrincipal = styled.div`
+  line-height: 350%;
+
   *:not(legend) {
     font-size: ${({ theme }) => theme.font.sizes.xxl};
     font-family: ${({ theme }) => theme.font.family.sliver};
@@ -55,6 +58,9 @@ export const TextPrincipal = styled.div`
         theme.breakpoints.desktop} - 1px)) {
       font-size: ${({ theme }) => theme.font.sizes.sm};
     }
+  }
+  highlight {
+    font-family: ${({ theme }) => theme.font.family.highlight};
   }
 `
 

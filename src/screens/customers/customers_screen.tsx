@@ -1,12 +1,5 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import {
-  Footer,
-  Menu,
-  Numbers,
-  Testimonies,
-  Doubt,
-  CallToAction,
-} from '../../components'
+import { Footer, Menu, Numbers, Doubt, CallToAction } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
 import {
@@ -16,6 +9,7 @@ import {
   Advantage,
   CardProduct,
   OurPosts,
+  Testimonies,
 } from './body'
 
 import { Body, Container } from './customers_styles'

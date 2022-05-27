@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 
 export const Subtitle = styled.span`
-  font-size: ${({ theme }) => theme.font.sizes.xxxs};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
   font-family: ${({ theme }) => theme.font.family.sliver};
   text-transform: uppercase;
 `

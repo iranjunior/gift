@@ -16,7 +16,7 @@ export const BlockText = styled.div`
   ${columnItensWithGap({
     gap: '1rem',
     justifyContent: 'center',
-    alignItens: 'center',
+    alignItens: 'flex-start',
   })}
   padding: 0 60px;
 
@@ -32,6 +32,10 @@ export const BlockText = styled.div`
       font-size: ${({ theme }) => theme.font.sizes.xxs};
       margin-top: ${({ theme }) => theme.spacing.internal};
     }
+  }
+
+  button {
+    width: 60%;
   }
 `
 
@@ -49,7 +53,7 @@ export const Text = styled.span`
 export const TextPrincipal = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.distant};
+  line-height: ${({ theme }) => theme.font.lineHeight.medium};
   text-align: start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

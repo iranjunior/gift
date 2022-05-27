@@ -46,6 +46,7 @@ export const ContentCardText = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.xxs};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: center;
+  width: 90%;
 `
 
 export const ContainerButtons = styled.div`

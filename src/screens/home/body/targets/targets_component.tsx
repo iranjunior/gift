@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { DataContext } from '../../../../context/data'
 
 import { Card, HeaderCentered } from '../../../../ds'
@@ -17,6 +18,8 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
       home: { targets },
     },
   } = useContext(DataContext)
+  const navigate = useNavigate()
+
   useIntersection(ref, '100px', true)
 
   return (
@@ -31,6 +34,17 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
               description={content.text}
               title={content.title}
               type={content.type as 'doctors' | 'companies' | 'customers'}
+              onClick={() => {
+                if (content.type === 'doctors') {
+                  navigate('/para-medicos')
+                }
+                if (content.type === 'companies') {
+                  navigate('/para-instituicoes')
+                }
+                if (content.type === 'customers') {
+                  navigate('/para-clientes')
+                }
+              }}
             />
           ))}
         </Cards>
