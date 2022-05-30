@@ -143,13 +143,13 @@ export const Divisor = styled.hr`
 `
 
 export const AboutSectionsContainer = styled.div`
-  display: flex;
   width: 90%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: flex-start;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 2rem;
+    grid-template-columns: 1fr;
   }
 `
 export const AboutSection = styled.div`
@@ -171,7 +171,7 @@ export const AboutSectionTitle = styled.span`
 `
 export const AboutSectionLink = styled.a`
   color: ${({ theme }) => theme.colors.base.default};
-  font-size: ${({ theme }) => theme.font.sizes.xxs};
+  font-size: ${({ theme }) => theme.font.sizes.xs};
   line-height: ${({ theme }) => theme.font.lineHeight.distant};
   margin: ${({ theme }) => theme.spacing.nano} 0;
 `
@@ -179,7 +179,7 @@ export const AboutLegalInformationContainer = styled.div`
   width: 90%;
   gap: 2.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     grid-template-columns: 1fr;

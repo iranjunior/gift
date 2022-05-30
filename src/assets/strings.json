@@ -1148,8 +1148,11 @@
         {
             "localization": "Belo Horizonte - MG",
             "infos": [
-                "Av. Cristiano Machado, 640 - Belo Horizonte - MG ",
-                "CNPJ 25.228.539/0001-23 Autorização de Funcionamento - Processo: 355030801-477-000362-1-8",
+                "Razão Social: FAR.ME FARMACOTERAPIA OTIMIZADA LTDA",
+                "Nome Fantasia: FAR.ME",
+                "Av. Cristiano Machado, 640 - Belo Horizonte - MG",
+                "CNPJ 25.228.539/0001-23",
+                "Autorização de Funcionamento: 355030801-477-000362-1-8",
                 "Autorização/MS: 0.12469.2",
                 "Farmacêutica Responsável: João Carlos Ribeiro Angelon - CRF SP 74626",
                 "Telefone: 11 94052 2689",
@@ -1160,10 +1163,14 @@
         {
             "localization": "São Paulo - SP",
             "infos": [
-                "Alameda Joaquim Eugênio de Lima, 198",
-                "CNPJ: 03.153.196/0001-42 Alvará Sanitário: 2019080718 Autorização de Funcionamento da Empresa (AFE): 7.48850.4",
-                "Farmacêutica Responsável: Fernanda Castanheira de Freitas - CRF MG 40.004",
-                "Telefone: 31 98371 9337",
+                "Razão Social: DROGARIA SANTA CRUZ PAULISTA LTDA",
+                "Nome Fantasia: FAR.ME",
+                "Rua Artur Prado, 513 - Bela Vista - São Paulo - SP",
+                "CNPJ SP: 03.153.196/0001-42",
+                "Autorização de Funcionamento: 25351.217027/2002-51",
+                "Autorização/MS: 0.12469.2",
+                "Farmacêutico Responsável: Douglas Ganzarolli Ribeiro da Silva - CRF: SP 104527",
+                "Telefone: 11 94052 2689",
                 "E-mail: contato@farme.com.br",
                 "Horário de funcionamento: Segunda a Sexta de 09:00h às 18:00h"
             ]

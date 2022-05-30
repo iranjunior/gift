@@ -22,7 +22,7 @@ export const LeftSideContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  background-color: ${({ theme }) => theme.primary.light};
+  background-color: ${({ theme }) => theme.colors.base.light};
   padding: 2rem;
   border-radius: ${({ theme }) => theme.spacing.nano} 0 0
     ${({ theme }) => theme.spacing.nano};
@@ -68,7 +68,7 @@ export const LeftSideSubtitle = styled.span`
 `
 
 export const RightSideContainer = styled.div`
-  background-color: ${({ theme }) => theme.primary.light};
+  background-color: ${({ theme }) => theme.colors.base.default};
   height: 100%;
   width: 100%;
   border-radius: 0 ${({ theme }) => theme.spacing.nano}
