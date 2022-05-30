@@ -43,6 +43,6 @@ export const GlobalStyle = createGlobalStyle`
     position: absolute;
     z-index: 100;
     height: 100%;
-    width: 90%;
+    width: 100%;
   }
 `
