@@ -16,6 +16,7 @@ import {
   Image,
 } from './card_product_styles'
 import { useIntersection } from '../../../../hooks/useIntersection'
+import { addingCurrentQueryParams } from '../../../../components/helpers/url_parser'
 
 type CardProductProps = {
   id?: string
@@ -45,7 +46,12 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
       </LeftSideHeader>
       <Button
         label="Saiba mais"
-        onClick={() => window.open('/para-clientes/farme-box', '_self')}
+        onClick={() =>
+          window.open(
+            addingCurrentQueryParams('/para-clientes/farme-box'),
+            '_self'
+          )
+        }
       />
     </LeftSideContainer>
   )

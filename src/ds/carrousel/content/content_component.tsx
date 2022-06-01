@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTheme } from 'styled-components'
+import { addingCurrentQueryParams } from '../../../components/helpers/url_parser'
 import { Button, ButtonType } from '../../button'
 
 import {
@@ -32,7 +33,11 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
       <Text dangerouslySetInnerHTML={{ __html: title! }} />
       <ActionWrap>
         <Button
-          onClick={() => window.open('https://app.farme.com.br/orcamento')}
+          onClick={() =>
+            window.open(
+              addingCurrentQueryParams('https://app.farme.com.br/orcamento')
+            )
+          }
           customColor={colors.neutral.lightness}
           label="Faça o seu orçamento"
         ></Button>

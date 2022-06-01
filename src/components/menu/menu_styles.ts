@@ -60,6 +60,11 @@ export const OptionsContainer = styled.div`
     font-size: ${({ theme }) => theme.font.sizes.xs};
     max-width: 260px;
     width: 100%;
+
+    @media (min-width: calc(${({ theme }) =>
+        theme.breakpoints.desktop} - 200px)) {
+      padding: 0 3rem;
+    }
   }
 `
 

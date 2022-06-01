@@ -35,6 +35,7 @@ import { DataContext } from '../../context/data'
 import { Button } from '../../ds'
 import { useTheme } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
+import { addingCurrentQueryParams } from '../helpers/url_parser'
 
 type FooterProps = {
   id?: string
@@ -65,7 +66,11 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
           />
           <Button
             customColorHover={theme.colors.neutral.lightness}
-            onClick={() => window.open('https://app.farme.com.br/orcamento')}
+            onClick={() =>
+              window.open(
+                addingCurrentQueryParams('https://app.farme.com.br/orcamento')
+              )
+            }
             label="Preencher formulário"
           />
         </AboutRequestContainer>

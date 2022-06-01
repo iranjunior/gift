@@ -6,6 +6,7 @@ import { DataContext } from '../../../../context/data'
 
 import { Container } from './banner_styles'
 import { useIntersection } from '../../../../hooks/useIntersection'
+import { addingCurrentQueryParams } from '../../../../components/helpers/url_parser'
 
 type BannerProps = {
   id?: string
@@ -30,7 +31,11 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         subtitle={banner.subtitle}
         button={{
           text: 'Saiba mais',
-          onClick: () => window.open('/para-medicos/clinica', '_self'),
+          onClick: () =>
+            window.open(
+              addingCurrentQueryParams('/para-medicos/clinica'),
+              '_self'
+            ),
         }}
       />
     </Container>

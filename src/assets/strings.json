@@ -1,6 +1,7 @@
 {
     "navbanner": {
-        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> por venda fechada! <a href=\"https://app.farme.com.br/indicame/publico\">Clique aqui e saiba mais.</a>"
+        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> por venda fechada! <a>Clique aqui e saiba mais.</a>",
+        "href": "https://app.farme.com.br/indicame/publico"
     },
     "menu": [
         {

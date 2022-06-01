@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Button } from '../../../ds'
 
 import LogoFarMe from '../../../assets/images/logotype.svg'
@@ -26,6 +25,7 @@ import {
 } from './menu_for_mobile_styles'
 import { MenuModal } from '../menu_modal'
 import { NavBanner } from '../../navbanner'
+import { addingCurrentQueryParams } from '../../helpers/url_parser'
 
 type OptionMobile = {
   isExpansive: boolean
@@ -53,7 +53,6 @@ const MenuForMobileComponent = ({ wasScrolled }: MenuComponentProps) => {
       href,
     })),
   })
-  const navigate = useNavigate()
 
   const MenuIcon = () => {
     if (itensMobile.subSectionActive) {
@@ -72,7 +71,10 @@ const MenuForMobileComponent = ({ wasScrolled }: MenuComponentProps) => {
       <ContainerBar show={!showModal} fixed={!!wasScrolled}>
         <NavBanner />
         <ContentBar>
-          <Logo onClick={() => navigate('/')} src={LogoFarMe} />
+          <Logo
+            onClick={() => window.open(addingCurrentQueryParams('/'), '_self')}
+            src={LogoFarMe}
+          />
           <HamburgerMenu
             onClick={() => {
               if (itensMobile.subSectionActive) {
@@ -101,7 +103,12 @@ const MenuForMobileComponent = ({ wasScrolled }: MenuComponentProps) => {
             <ContainerBar show={showModal} fixed={false}>
               <NavBanner />
               <ContentBar>
-                <Logo onClick={() => navigate('/')} src={LogoFarMe} />
+                <Logo
+                  onClick={() =>
+                    window.open(addingCurrentQueryParams('/'), '_self')
+                  }
+                  src={LogoFarMe}
+                />
                 <HamburgerMenu
                   onClick={() => {
                     if (itensMobile.subSectionActive) {
@@ -152,7 +159,7 @@ const MenuForMobileComponent = ({ wasScrolled }: MenuComponentProps) => {
                         ) : (
                           <Link
                             highlight={!!isCurrentPage(value)}
-                            href={value.href}
+                            href={addingCurrentQueryParams(value.href || '')}
                           >
                             {value.label}
                           </Link>
@@ -161,7 +168,16 @@ const MenuForMobileComponent = ({ wasScrolled }: MenuComponentProps) => {
                     ))}
                   </OptionsMain>
                   <ButtonContainer>
-                    <Button label={lastItem.label || ''} />
+                    <Button
+                      onClick={() =>
+                        window.open(
+                          addingCurrentQueryParams(
+                            'https://app.farme.com.br/orcamento'
+                          )
+                        )
+                      }
+                      label={lastItem.label || ''}
+                    />
                   </ButtonContainer>
                 </Options>
               </Content>

@@ -26,6 +26,7 @@ import {
 import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
 import { NavBanner } from '../navbanner'
 import { useOutsideClick } from '../../hooks/useOutsideClick'
+import { addingCurrentQueryParams } from '../helpers/url_parser'
 
 type CTAType = {
   label: string
@@ -79,7 +80,7 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
   }
 
   const onClickOption = (option: OptionType) => {
-    window.open(option.href, '_self')
+    window.open(addingCurrentQueryParams(option.href), '_self')
   }
   const isNotDesktop = window.innerWidth < 1024
 
@@ -89,7 +90,7 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
   const onClickDropdown = (isSanctionable: boolean, option: OptionType) => {
     if (isSanctionable) onClickOption(option)
     else {
-      window.open(option.href, '_self')
+      window.open(addingCurrentQueryParams(option.href), '_self')
     }
   }
   const updateOpenCollapsible = (key: string, action?: boolean) => {
@@ -104,7 +105,10 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
       <Container fixed={!!wasScrolled}>
         <NavBanner />
         <Content>
-          <Logo onClick={() => window.open('/', '_self')} src={LogoFarMe} />
+          <Logo
+            onClick={() => window.open(addingCurrentQueryParams('/'), '_self')}
+            src={LogoFarMe}
+          />
           <OptionsContainer>
             <Options>
               {menu.slice(0, menu.length - 1).map((value, index, menuList) => {
@@ -149,7 +153,10 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
                   </DropdownContainer>
                 ) : (
                   <Option key={value.href}>
-                    <Link highlight={!!isCurrentPage(value)} href={value.href}>
+                    <Link
+                      highlight={!!isCurrentPage(value)}
+                      href={addingCurrentQueryParams(value.href || '')}
+                    >
                       {value.label}
                     </Link>
                   </Option>
@@ -157,7 +164,11 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
               })}
             </Options>
             <Button
-              onClick={() => window.open('https://app.farme.com.br/orcamento')}
+              onClick={() =>
+                window.open(
+                  addingCurrentQueryParams('https://app.farme.com.br/orcamento')
+                )
+              }
               label={
                 (
                   Object.entries(menu).slice(

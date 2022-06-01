@@ -19,6 +19,7 @@ import {
 } from './how_working_styles'
 import { HeaderCentered, Button, ButtonType } from '../../../../ds'
 import { useIntersection } from '../../../../hooks/useIntersection'
+import { addingCurrentQueryParams } from '../../../../components/helpers/url_parser'
 
 type HowWorkingProps = {
   id?: string
@@ -71,7 +72,11 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
         <ContainerButtons>
           <Button
             label="Faça o seu orçamento"
-            onClick={() => window.open('https://farme.com.br/orcamento')}
+            onClick={() =>
+              window.open(
+                addingCurrentQueryParams('https://farme.com.br/orcamento')
+              )
+            }
           />
           <TextInformative>sem compromisso</TextInformative>
         </ContainerButtons>

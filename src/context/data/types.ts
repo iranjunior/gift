@@ -354,11 +354,11 @@ export interface WhoWeAreArguments {
 }
 
 export interface TentacledCards {
-    first:  Navbanner;
-    second: Navbanner;
+    first:  First;
+    second: First;
 }
 
-export interface Navbanner {
+export interface First {
     text: string;
 }
 
@@ -432,6 +432,11 @@ export interface MenuForMobile {
     href?:    string;
     options?: Option[];
     isCTA?:   boolean;
+}
+
+export interface Navbanner {
+    text: string;
+    href: string;
 }
 
 export interface Unit {
@@ -879,10 +884,10 @@ const typeMap: any = {
         { json: "card_final", js: "card_final", typ: r("InitialClass") },
     ], false),
     "TentacledCards": o([
-        { json: "first", js: "first", typ: r("Navbanner") },
-        { json: "second", js: "second", typ: r("Navbanner") },
+        { json: "first", js: "first", typ: r("First") },
+        { json: "second", js: "second", typ: r("First") },
     ], false),
-    "Navbanner": o([
+    "First": o([
         { json: "text", js: "text", typ: "" },
     ], false),
     "Declaration": o([
@@ -943,6 +948,10 @@ const typeMap: any = {
         { json: "href", js: "href", typ: u(undefined, "") },
         { json: "options", js: "options", typ: u(undefined, a(r("Option"))) },
         { json: "isCTA", js: "isCTA", typ: u(undefined, true) },
+    ], false),
+    "Navbanner": o([
+        { json: "text", js: "text", typ: "" },
+        { json: "href", js: "href", typ: "" },
     ], false),
     "Unit": o([
         { json: "localization", js: "localization", typ: "" },

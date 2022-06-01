@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { addingCurrentQueryParams } from '../../../../components/helpers/url_parser'
 import { DataContext } from '../../../../context/data'
 
 import { Card, HeaderCentered } from '../../../../ds'
@@ -18,7 +18,6 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
       home: { targets },
     },
   } = useContext(DataContext)
-  const navigate = useNavigate()
 
   useIntersection(ref, '100px', true)
 
@@ -36,13 +35,22 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
               type={content.type as 'doctors' | 'companies' | 'customers'}
               onClick={() => {
                 if (content.type === 'doctors') {
-                  window.open('/para-medicos', '_self')
+                  window.open(
+                    addingCurrentQueryParams('/para-medicos'),
+                    '_self'
+                  )
                 }
                 if (content.type === 'companies') {
-                  window.open('/para-instituicoes', '_self')
+                  window.open(
+                    addingCurrentQueryParams('/para-instituicoes'),
+                    '_self'
+                  )
                 }
                 if (content.type === 'customers') {
-                  window.open('/para-clientes', '_self')
+                  window.open(
+                    addingCurrentQueryParams('/para-clientes'),
+                    '_self'
+                  )
                 }
               }}
             />
