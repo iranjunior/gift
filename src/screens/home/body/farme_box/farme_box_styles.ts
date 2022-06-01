@@ -11,6 +11,5 @@ export const Container = styled.div`
 export const Content = ContentDiv
 
 export const Video = styled.video`
-  max-width: 1080px;
   width: 100%;
 `

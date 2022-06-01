@@ -13,7 +13,7 @@ export const Container = styled.div`
 `
 export const BlockText = styled.div`
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -40,6 +40,11 @@ export const Content = styled.div`
     height: auto;
     flex-wrap: wrap;
   }
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    max-width: 1200px {
+    margin: 5% 0;
+  }
 `
 
 export const Text = styled.div`
@@ -60,7 +65,7 @@ export const TextPrincipal = styled.div`
   flex-direction: column;
 
   *:not(highlight) {
-    font-size: ${({ theme }) => theme.font.sizes.xl};
+    font-size: ${({ theme }) => theme.font.sizes.xxl};
     font-family: ${({ theme }) => theme.font.family.sliver};
     font-weight: normal;
     margin: 0;
@@ -70,7 +75,7 @@ export const TextPrincipal = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
     *:not(highlight) {
-      font-size: ${({ theme }) => theme.font.sizes.xl};
+      font-size: ${({ theme }) => theme.font.sizes.xxl};
       font-family: ${({ theme }) => theme.font.family.sliver};
       font-weight: normal;
       margin: 0;
@@ -85,6 +90,6 @@ export const TextPrincipal = styled.div`
   }
 `
 export const Video = styled.video`
-  max-width: 622px;
+  max-width: 700px;
   width: 90%;
 `

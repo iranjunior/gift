@@ -26,34 +26,61 @@ export const Content = styled.div`
   flex-direction: row;
   width: 95%;
   justify-content: space-between;
-  margin: 0 ${({ theme }) => theme.spacing.internal};
+  align-items: center;
+  margin: 0 auto;
   height: 64px;
   padding: ${({ theme }) => theme.spacing.internal} 0;
+
+  @media (min-width: calc(${({ theme }) =>
+      theme.breakpoints.desktop} - 1px)) and (max-width: 1200px) {
+    width: 100%;
+    margin: 0;
+  }
 `
 
 export const Logo = styled.img`
   height: 64px;
+  cursor: pointer;
 `
 export const Space = styled.div`
   flex-grow: 1;
 `
+
+export const OptionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  @media (min-width: calc(${({ theme }) =>
+      theme.breakpoints.desktop} - 1px)) and (max-width: 1200px) {
+    gap: 0.5rem;
+  }
+  button {
+    font-size: ${({ theme }) => theme.font.sizes.xs};
+    max-width: 260px;
+    width: 100%;
+  }
+`
+
 export const Options = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
+  gap: 2rem;
+
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
   }
 
-  button {
-    margin-left: ${({ theme }) => theme.spacing.internal};
-    width: 20%;
-    font-size: ${({ theme }) => theme.font.sizes.xs};
-  }
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     display: none;
+  }
+
+  @media (min-width: calc(${({ theme }) =>
+      theme.breakpoints.desktop} - 1px)) and (max-width: 1200px) {
+    gap: 0.5rem;
   }
 `
 
@@ -77,22 +104,18 @@ type LinkProps = {
 }
 
 export const Link = styled.a<LinkProps>`
-  color: ${({ theme }) => theme.primary.darkness};
+  color: #2c2f30;
   white-space: nowrap;
   text-decoration: none;
 
   ${({ highlight }) =>
     highlight &&
     css`
-      &:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: ${({ theme }) => theme.colors.base.default};
-        margin-top: ${({ theme }) => theme.spacing.quark};
-      }
+      border-bottom: 2px solid ${({ theme }) => theme.colors.base.default};
     `}
+  &:hover {
+    border-bottom: 2px solid ${({ theme }) => theme.colors.base.default};
+  }
 `
 
 export const HamburgerMenu = styled.div`
@@ -132,7 +155,11 @@ export const LogoMobileContainer = styled.div`
   align-items: center;
 `
 
-export const DropdownContainer = styled.details`
+type DropdownContainerProps = {
+  open: boolean
+}
+
+export const DropdownContainer = styled.div<DropdownContainerProps>`
   margin: 0 ${({ theme }) => theme.spacing.nano};
   position: relative;
 
@@ -151,13 +178,14 @@ type SummaryType = {
   highlight: boolean
 }
 
-export const DropdownTitle = styled.summary<SummaryType>`
+export const DropdownTitle = styled.div<SummaryType>`
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: ${({ theme }) => theme.font.family.default};
   white-space: nowrap;
+  color: #2c2f30;
 
   ${({ highlight }) =>
     highlight &&
@@ -175,7 +203,7 @@ export const DropdownTitle = styled.summary<SummaryType>`
       border-bottom: 2px solid ${({ theme }) => theme.colors.base.default};
     `}
 `
-export const DropdownContent = styled.div`
+export const DropdownContent = styled.div<DropdownContainerProps>`
   position: absolute;
   left: -${({ theme }) => theme.spacing.nano};
   top: ${({ theme }) => theme.spacing.sm};
@@ -183,7 +211,7 @@ export const DropdownContent = styled.div`
   z-index: 200;
   background-color: ${({ theme }) => theme.primary.default};
   border-radius: ${({ theme }) => theme.spacing.nano};
-  display: flex;
+  display: ${({ open }) => (open ? 'flex' : 'none')};
   flex-flow: column;
 `
 export const DropdownItem = styled.div`

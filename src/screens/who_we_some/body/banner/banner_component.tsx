@@ -27,7 +27,10 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         image={images.ImageBannerOlderWoman}
         title={banner.title}
         subtitle={banner.subtitle}
-        button={{ text: 'Faça um orçamento' }}
+        button={{
+          text: 'Faça um orçamento',
+          onClick: () => window.open('https://app.farme.com.br/orcamento'),
+        }}
         positionImageInTablet="right"
       />
     </Container>

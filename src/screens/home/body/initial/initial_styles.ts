@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -29,13 +30,18 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 5% 0 0 10%;
+  margin: 5% 0 5% 10%;
   display: flex;
   height: 500px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    max-width: 1200px {
+    margin: 5% 0;
+  }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 1rem;
@@ -60,7 +66,7 @@ export const Text = styled.div`
 `
 export const TextPrincipal = styled.div`
   *:not(highlight) {
-    font-size: ${({ theme }) => theme.font.sizes.xl};
+    font-size: ${({ theme }) => theme.font.sizes.xxl};
     font-family: ${({ theme }) => theme.font.family.sliver};
     font-weight: normal;
     margin: 0;
@@ -70,7 +76,7 @@ export const TextPrincipal = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
     *:not(highlight) {
-      font-size: ${({ theme }) => theme.font.sizes.xl};
+      font-size: ${({ theme }) => theme.font.sizes.xxl};
       font-family: ${({ theme }) => theme.font.family.sliver};
       font-weight: normal;
       margin: 0;
@@ -93,5 +99,10 @@ export const Image = styled.img`
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
     height: auto;
+  }
+
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}, max-width: 1200px) {
+    height: 85%;
   }
 `

@@ -186,3 +186,6 @@ export const RightSide = styled.div`
     height: 280px;
   }
 `
+export const TextInformative = styled.span`
+  margin-left: ${({ theme }) => theme.spacing.sm};
+`

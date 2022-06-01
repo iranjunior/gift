@@ -25,7 +25,7 @@ export const rowItensWithGap = (args: columnItensWithGapArgs) => css`
 export const ContentDiv = styled.div`
   margin: 0 auto;
   ${columnItensWithGap({
-    gap: '8rem',
+    gap: '5rem',
     alignItens: 'center',
     justifyContent: 'center',
   })}

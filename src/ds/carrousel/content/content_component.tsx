@@ -10,6 +10,7 @@ import {
   ContainerCard,
   LeftSide,
   RightSide,
+  TextInformative,
 } from './content_styles'
 
 export type CarrouselContentProps = {
@@ -35,7 +36,7 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
           customColor={colors.neutral.lightness}
           label="Faça o seu orçamento"
         ></Button>
-        <Button label="sem compromisso" type={ButtonType.Ghost}></Button>
+        <TextInformative> sem compromisso</TextInformative>
       </ActionWrap>
     </>
   )

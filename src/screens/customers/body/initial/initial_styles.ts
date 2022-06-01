@@ -28,7 +28,6 @@ export const BlockImage = styled.div``
 export const Content = styled.div`
   margin: 5%;
   display: flex;
-  height: 400px;
   width: 100%;
   max-width: 1120px;
   justify-content: space-between;
@@ -83,9 +82,7 @@ export const TextPrincipal = styled.div`
 `
 
 export const Image = styled.img`
-  height: 100%;
-  width: 100%;
-  max-width: 540px;
+  height: 600px;
   object-fit: cover;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {

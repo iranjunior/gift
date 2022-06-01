@@ -15,6 +15,7 @@ import {
   ContentCardText,
   ContentCardTitle,
   ContainerButtons,
+  TextInformative,
 } from './how_working_styles'
 import { HeaderCentered, Button, ButtonType } from '../../../../ds'
 import { useIntersection } from '../../../../hooks/useIntersection'
@@ -72,7 +73,7 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
             label="Faça o seu orçamento"
             onClick={() => window.open('https://farme.com.br/orcamento')}
           />
-          <Button label="sem compromisso" type={ButtonType.Ghost} />
+          <TextInformative>sem compromisso</TextInformative>
         </ContainerButtons>
       </Content>
     </Container>

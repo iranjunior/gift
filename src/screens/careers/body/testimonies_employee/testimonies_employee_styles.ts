@@ -31,8 +31,14 @@ export const BlockText = styled.div`
 `
 export const BlockImage = styled.div``
 
-export const Text = styled.span`
+export const Text = styled.span<TextPrincipalProps>`
   font-size: ${({ theme }) => theme.font.sizes.xs};
+  font-size: ${({ size, theme }) => {
+    if (size > 40) {
+      return theme.font.sizes.xxs
+    }
+    return theme.font.sizes.xs
+  }};
   line-height: 22px;
   letter-spacing: 2%;
   font-family: 'Inter';

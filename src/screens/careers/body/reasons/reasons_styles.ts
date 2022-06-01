@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import {
   ContentDiv,
   columnItensWithGap,
-  rowItensWithGap,
 } from '../../../../ds/styles/common_styles'
 
 export const Container = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
-  padding: 5% 0;
+  padding-top: 2%;
+  padding-bottom: 8%;
 `
 export const Content = ContentDiv
 

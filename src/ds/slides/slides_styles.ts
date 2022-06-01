@@ -27,6 +27,9 @@ export const Divisor = styled.div`
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     display: none;
   }
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 2%;
+  }
 `
 export const Slide = styled.div<SlideProps>`
   display: ${(props) => (props.hidden ? 'none' : 'flex')};

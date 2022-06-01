@@ -57,7 +57,7 @@ export const Text = styled.div`
 `
 export const TextPrincipal = styled.div`
   *:not(highlight) {
-    font-size: ${({ theme }) => theme.font.sizes.xl};
+    font-size: ${({ theme }) => theme.font.sizes.xxl};
     font-family: ${({ theme }) => theme.font.family.sliver};
     font-weight: normal;
     margin: 0;
@@ -67,7 +67,7 @@ export const TextPrincipal = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
     *:not(highlight) {
-      font-size: ${({ theme }) => theme.font.sizes.xl};
+      font-size: ${({ theme }) => theme.font.sizes.xxl};
       font-family: ${({ theme }) => theme.font.family.sliver};
       font-weight: normal;
       margin: 0;

@@ -30,7 +30,7 @@ export const Content = styled.div`
   }
 `
 export const Logo = styled.img`
-  height: 50%;
+  height: 40%;
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     height: 15px;
   }

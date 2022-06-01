@@ -23,7 +23,7 @@ export const LeftSideContainer = styled.div`
   justify-content: space-between;
   height: 100%;
   background-color: ${({ theme }) => theme.primary.light};
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: ${({ theme }) => theme.spacing.nano} 0 0
     ${({ theme }) => theme.spacing.nano};
   button {

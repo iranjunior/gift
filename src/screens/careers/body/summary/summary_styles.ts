@@ -15,7 +15,7 @@ export const Content = ContentDiv
 export const BlockText = styled.div`
   width: 640px;
   ${columnItensWithGap({
-    gap: '1rem',
+    gap: '2rem',
     justifyContent: 'center',
     alignItens: 'flex-start',
   })}
@@ -48,7 +48,7 @@ export const TextPrincipal = styled.span`
 export const Highlight = styled.span`
   font-size: ${({ theme }) => theme.font.sizes.display};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.distant};
+  line-height: ${({ theme }) => theme.font.lineHeight.medium};
   text-align: start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

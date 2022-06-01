@@ -28,7 +28,10 @@ export const Banner: React.FC<BannerProps> = ({ id }) => {
         title={banner.title}
         subtitle={banner.subtitle}
         highlights={banner.highlight}
-        button={{ text: 'Saiba mais' }}
+        button={{
+          text: 'Saiba mais',
+          onClick: () => window.open('/para-medicos/clinica', '_self'),
+        }}
         positionImageInTablet="right"
       />
     </Container>

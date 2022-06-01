@@ -36,13 +36,13 @@ export const Targets: React.FC<TargetsProps> = ({ id }) => {
               type={content.type as 'doctors' | 'companies' | 'customers'}
               onClick={() => {
                 if (content.type === 'doctors') {
-                  navigate('/para-medicos')
+                  window.open('/para-medicos', '_self')
                 }
                 if (content.type === 'companies') {
-                  navigate('/para-instituicoes')
+                  window.open('/para-instituicoes', '_self')
                 }
                 if (content.type === 'customers') {
-                  navigate('/para-clientes')
+                  window.open('/para-clientes', '_self')
                 }
               }}
             />

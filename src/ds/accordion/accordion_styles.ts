@@ -6,6 +6,7 @@ export const Container = styled.details`
   border-radius: 8px;
   padding: ${({ theme }) => theme.spacing.internal};
   margin: ${({ theme }) => theme.spacing.nano} 0;
+  cursor: pointer;
 `
 export const Title = styled.summary`
   width: 100%;

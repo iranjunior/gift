@@ -16,7 +16,6 @@ import {
   Image,
 } from './card_product_styles'
 import { useIntersection } from '../../../../hooks/useIntersection'
-import { useNavigate } from 'react-router-dom'
 
 type CardProductProps = {
   id?: string
@@ -30,7 +29,6 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
     },
   } = useContext(DataContext)
 
-  const navigate = useNavigate()
   const ref = useRef(null as unknown as HTMLDivElement)
   useIntersection(ref, '100px', true)
 
@@ -46,14 +44,14 @@ export const CardProduct: React.FC<CardProductProps> = ({ id }) => {
         />
       </LeftSideHeader>
       <Button
-        onClick={() => navigate('/para-clientes/farme-box')}
+        onClick={() => window.open('/para-clientes/farme-box', '_self')}
         label="Saiba mais"
       />
     </LeftSideContainer>
   )
   const RightSide = () => (
     <RightSideContainer>
-      <Image src={images.ImageBoxPointingLeft} />
+      <Image src={images.ImagePills} />
     </RightSideContainer>
   )
 

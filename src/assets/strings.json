@@ -14,11 +14,6 @@
             "context": "customers"
         },
         {
-            "label": "Clínica",
-            "href": "/para-medicos/clinica",
-            "context": "doctors"
-        },
-        {
             "label": "Carreiras",
             "href": "/para-clientes/carreiras",
             "context": "customers"
@@ -42,6 +37,11 @@
                     "isSanctionable": true
                 }
             ]
+        },
+        {
+            "label": "Clínica",
+            "href": "/para-medicos/clinica",
+            "context": "doctors"
         },
         {
             "label": "Blog",
@@ -79,10 +79,6 @@
             "href": "/para-clientes/farme-box"
         },
         {
-            "label": "Clínica",
-            "href": "/para-medicos/clinica"
-        },
-        {
             "label": "Carreiras",
             "href": "/para-clientes/carreiras"
         },
@@ -102,6 +98,10 @@
                     "href": "/para-medicos"
                 }
             ]
+        },
+        {
+            "label": "Clínica",
+            "href": "/para-medicos/clinica"
         },
         {
             "label": "Blog",
@@ -649,19 +649,19 @@
                     {
                         "name": "Marina Santos",
                         "job": "Fundadora",
-                        "testimony": "We started Oscar to create a health insurance company that behaves like a doctor in the family.",
+                        "testimony": "O grande sonho de uma farmacêutica está se realizando: impactar positivamente tantas vidas e revolucionar o mercado de saúde. Criamos a Farme pensando em você, seja bem-vindo!",
                         "image_id": "marina"
                     },
                     {
                         "name": "Samilla",
                         "job": "Fundadora",
-                        "testimony": "We started Oscar to create a health insurance company that behaves like a doctor in the family.",
+                        "testimony": "A Far.me já nasceu sonhando grande partindo de uma dor real e extensa. Somos inconformados com a maneira que o mercado de saúde atua e estamos mudando o cenário. Dia a dia. Far.membro a Far.membro. Trabalhamos para entregar a melhor experiência de farmácia do Brasil e nossa comunidade diz que estamos no caminho certo.",
                         "image_id": "sammilla"
                     },
                     {
                         "name": "Luciana",
                         "job": "Fundadora",
-                        "testimony": "We started Oscar to create a health insurance company that behaves like a doctor in the family.",
+                        "testimony": "Se for difícil a gente faz. Se for impossível, nos dê 5 minutos a mais que a gente resolve.",
                         "image_id": "luciana"
                     }
                 ]

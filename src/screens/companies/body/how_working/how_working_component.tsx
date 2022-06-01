@@ -47,10 +47,10 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
         <div
           style={{
             position: 'relative',
-            width: '90%',
+            width: '100%',
+            maxWidth: '1080px',
           }}
           id="video-container"
-          onClickCapture={() => console.log('onClickCapture')}
         >
           <div
             style={{
@@ -65,8 +65,9 @@ export const HowWorking: React.FC<HowWorkingProps> = ({ id }) => {
             autoPlay
             muted
             typeof="video/mp4"
-            src={videos.VideoFarMeBox}
-          />
+            src="https://assets.farme.com.br/videos/farme.mp4"
+            id="video"
+          ></Video>
         </div>
       </Content>
     </Container>

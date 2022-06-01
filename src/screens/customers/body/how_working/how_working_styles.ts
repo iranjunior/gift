@@ -55,7 +55,11 @@ export const ContainerButtons = styled.div`
     justifyContent: 'center',
     alignItens: 'center',
   })}
-  width: 336px;
+
+  button {
+    padding: 0 2rem;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100%;
     flex-wrap: wrap;
@@ -63,4 +67,9 @@ export const ContainerButtons = styled.div`
       width: 80%;
     }
   }
+`
+
+export const TextInformative = styled.span`
+  margin-left: ${({ theme }) => theme.spacing.sm};
+  font-size: ${({ theme }) => theme.font.sizes.xxs};
 `

@@ -90,11 +90,12 @@ export const ContainerButtons = styled.div`
     justifyContent: 'center',
     alignItens: 'center',
   })}
-  width: 336px;
+
   flex-wrap: wrap;
 
   button {
     font-size: ${({ theme }) => theme.font.sizes.xxs};
+    padding: 0 2rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -108,4 +109,8 @@ export const ContainerButtons = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin: ${({ theme }) => theme.spacing.nano} auto;
   }
+`
+export const TextInformative = styled.span`
+  margin-left: ${({ theme }) => theme.spacing.sm};
+  font-size: ${({ theme }) => theme.font.sizes.xxs};
 `

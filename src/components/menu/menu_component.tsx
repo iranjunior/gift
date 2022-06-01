@@ -21,12 +21,11 @@ import {
   DropdownItemLabel,
   Option,
   Options,
-  Space,
-  Bar,
+  OptionsContainer,
 } from './menu_styles'
 import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
 import { NavBanner } from '../navbanner'
-import { useIntersection } from '../../hooks/useIntersection'
+import { useOutsideClick } from '../../hooks/useOutsideClick'
 
 type CTAType = {
   label: string
@@ -58,8 +57,17 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
     {}
   )
   const { menu } = useContext(DataContext)
-  const navigate = useNavigate()
+  const DropdownContainerRef = useRef(null as unknown as HTMLDivElement)
+  const DropdownContentSegmentRef = useRef(null as unknown as HTMLDivElement)
+  const DropdownContentContactRef = useRef(null as unknown as HTMLDivElement)
   const location = useLocation()
+
+  const listRefs = [DropdownContentSegmentRef, DropdownContentContactRef]
+  useOutsideClick(DropdownContainerRef, listRefs, () =>
+    setOpenCollapsible((prev) =>
+      Object.fromEntries(Object.entries(prev).map(([key]) => [key, false]))
+    )
+  )
   const state = location.state as StateType
   const path = location.pathname
 
@@ -71,7 +79,7 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
   }
 
   const onClickOption = (option: OptionType) => {
-    navigate(option.href, { state: { activeSection: option.label } })
+    window.open(option.href, '_self')
   }
   const isNotDesktop = window.innerWidth < 1024
 
@@ -81,65 +89,73 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
   const onClickDropdown = (isSanctionable: boolean, option: OptionType) => {
     if (isSanctionable) onClickOption(option)
     else {
-      updateOpenCollapsible(option.label)
-      navigate(option.href)
+      window.open(option.href, '_self')
     }
   }
-  const updateOpenCollapsible = (key: string) =>
+  const updateOpenCollapsible = (key: string, action?: boolean) => {
     setOpenCollapsible((prev) => ({
       ...prev,
-      [key]: !prev[key],
+      [key]: action || !prev[key],
     }))
+  }
 
   return (
     <>
       <Container fixed={!!wasScrolled}>
         <NavBanner />
         <Content>
-          <Logo onClick={() => navigate('/')} src={LogoFarMe} />
-          <Space />
-          <Options>
-            {menu.slice(0, menu.length - 1).map((value) => {
-              const isSanctionable = value.options?.every(
-                ({ isSanctionable }) => isSanctionable ?? false
-              )
-              return value.options ? (
-                <DropdownContainer
-                  className="collapsible"
-                  key={value.label}
-                  onClick={() => updateOpenCollapsible(value.label)}
-                >
-                  <DropdownTitle
+          <Logo onClick={() => window.open('/', '_self')} src={LogoFarMe} />
+          <OptionsContainer>
+            <Options>
+              {menu.slice(0, menu.length - 1).map((value, index, menuList) => {
+                const isSanctionable = value.options?.every(
+                  ({ isSanctionable }) => isSanctionable ?? false
+                )
+                return value.options ? (
+                  <DropdownContainer
+                    className="collapsible"
+                    key={value.label}
                     open={openCollapsible[value.label]}
-                    highlight={!!activeSection && !!isSanctionable}
-                    className="collapsible-title"
+                    onClick={() => updateOpenCollapsible(value.label)}
+                    onMouseEnter={() =>
+                      updateOpenCollapsible(value.label, true)
+                    }
+                    ref={DropdownContainerRef}
                   >
-                    {isSanctionable
-                      ? activeSection ?? value.label
-                      : value.label}
-                  </DropdownTitle>
-                  <DropdownContent>
-                    {value.options.map((option) => (
-                      <DropdownItem
-                        onClick={() =>
-                          onClickDropdown(!!isSanctionable, option)
-                        }
-                        key={option.href}
-                      >
-                        <DropdownItemLabel>{option.label}</DropdownItemLabel>
-                      </DropdownItem>
-                    ))}
-                  </DropdownContent>
-                </DropdownContainer>
-              ) : (
-                <Option key={value.href}>
-                  <Link highlight={!!isCurrentPage(value)} href={value.href}>
-                    {value.label}
-                  </Link>
-                </Option>
-              )
-            })}
-
+                    <DropdownTitle
+                      open={openCollapsible[value.label]}
+                      highlight={!!activeSection && !!isSanctionable}
+                      className="collapsible-title"
+                    >
+                      {isSanctionable
+                        ? activeSection ?? value.label
+                        : value.label}
+                    </DropdownTitle>
+                    <DropdownContent
+                      open={openCollapsible[value.label]}
+                      ref={listRefs[index === menuList.length - 1 ? 1 : 0]}
+                    >
+                      {value.options.map((option) => (
+                        <DropdownItem
+                          onClick={() =>
+                            onClickDropdown(!!isSanctionable, option)
+                          }
+                          key={option.href}
+                        >
+                          <DropdownItemLabel>{option.label}</DropdownItemLabel>
+                        </DropdownItem>
+                      ))}
+                    </DropdownContent>
+                  </DropdownContainer>
+                ) : (
+                  <Option key={value.href}>
+                    <Link highlight={!!isCurrentPage(value)} href={value.href}>
+                      {value.label}
+                    </Link>
+                  </Option>
+                )
+              })}
+            </Options>
             <Button
               onClick={() => window.open('https://app.farme.com.br/orcamento')}
               label={
@@ -151,7 +167,7 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
                 )?.label || ''
               }
             />
-          </Options>
+          </OptionsContainer>
         </Content>
       </Container>
     </>

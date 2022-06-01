@@ -34,7 +34,7 @@ export default {
   ImageBoxPlusMao: require('./images/box_mao.png'),
   ImageFrontBoxZoom: require('./images/front_box_zoom.png'),
   ImagePills: require('./images/pills.png'),
-  ImageBannerWhoWeSome: require('./images/img_banner_quem_somos.png'),
+  ImageBannerWhoWeSome: require('./images/img_banner_quem_somos.jpg'),
   ImageMosaicFarme: require('./images/mosaic_farme.png'),
   ImageCheckingBoxesFarme: require('./images/checking_boxes.png'),
   ImageOldManLookingBox: require('./images/old_man_looking_box.png'),

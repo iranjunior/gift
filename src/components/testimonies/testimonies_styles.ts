@@ -50,7 +50,8 @@ type ImageProps = {
 }
 
 export const Image = styled.img<ImageProps>`
-  height: 100%;
+  height: 50%;
+  width: 50%;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 64px;
     height: 64px;

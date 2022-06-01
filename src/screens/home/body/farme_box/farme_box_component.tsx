@@ -43,10 +43,10 @@ export const FarMeBox: React.FC<FarMeBoxProps> = ({ id, ...props }) => {
         <div
           style={{
             position: 'relative',
-            width: '90%',
+            width: '100%',
+            maxWidth: '1080px',
           }}
           id="video-container"
-          onClickCapture={() => console.log('onClickCapture')}
         >
           <div
             style={{
@@ -61,7 +61,7 @@ export const FarMeBox: React.FC<FarMeBoxProps> = ({ id, ...props }) => {
             autoPlay
             muted
             typeof="video/mp4"
-            src={videos.VideoFarMeBox}
+            src="https://assets.farme.com.br/videos/farme.mp4"
             id="video"
           ></Video>
         </div>

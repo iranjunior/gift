@@ -17,6 +17,7 @@ import {
   ContainerCards,
   ContainerButtons,
   Main,
+  TextInformative,
 } from './reasons_styles'
 import { Button, ButtonType, HeaderCentered } from '../../../../ds'
 import { useIntersection } from '../../../../hooks/useIntersection'
@@ -75,7 +76,7 @@ export const Reasons: React.FC<ReasonsProps> = ({ id }) => {
           </ContainerCards>
           <ContainerButtons>
             <Button label="Faça o seu orçamento" />
-            <Button label="sem compromisso" type={ButtonType.Ghost} />
+            <TextInformative>sem compromisso</TextInformative>
           </ContainerButtons>
         </Main>
       </Content>

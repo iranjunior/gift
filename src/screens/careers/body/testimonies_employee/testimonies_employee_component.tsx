@@ -52,7 +52,7 @@ export const TestimoniesEmployee: React.FC<TestimoniesEmployeeProps> = ({
     <BlockText>
       <Quotation src={QuotationIllustration} />
       <TextPrincipal size={testimony.length}>{testimony}</TextPrincipal>
-      <Text>
+      <Text size={`${name} - ${job}`.length}>
         {name} - {job}
       </Text>
     </BlockText>

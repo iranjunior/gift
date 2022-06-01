@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { columnItensWithGap } from '../../ds/styles/common_styles'
 
 export const Container = styled.div`
-  ${columnItensWithGap({ gap: '8rem', alignItens: 'center' })}
+  ${columnItensWithGap({ gap: '5rem', alignItens: 'center' })}
   background-color: ${({ theme }) => theme.colors.neutral.lightness};
   width: 100%;
   padding: 5% 0;

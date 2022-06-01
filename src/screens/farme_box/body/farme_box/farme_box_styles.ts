@@ -11,8 +11,7 @@ export const Container = styled.div`
 export const Content = ContentDiv
 
 export const Video = styled.video`
-  max-width: 1080px;
-  width: 90%;
+  width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin: ${({ theme }) => theme.spacing.nano} auto;

@@ -13,6 +13,7 @@ export const Container = styled.div`
 export const Content = styled(ContentDiv)`
   margin: 0 auto;
   padding: 0;
+  gap: 3rem;
 `
 
 export const Main = styled.div`

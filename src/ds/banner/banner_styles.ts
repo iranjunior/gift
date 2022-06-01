@@ -30,7 +30,8 @@ export const BlockText = styled.div`
   flex-direction: column;
   gap: 1rem;
   button {
-    width: 200px;
+    margin-top: 1rem;
+    width: 260px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

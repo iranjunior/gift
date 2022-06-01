@@ -5,7 +5,7 @@ export const Container = styled.footer`
   display: flex;
   background-color: ${({ theme }) => theme.colors.base.darkness};
   width: 100%;
-  padding: 5% 0;
+  padding: 2% 0;
   flex-direction: column;
   align-items: center;
 
@@ -16,8 +16,7 @@ export const Container = styled.footer`
 export const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  padding: 0 5%;
-  gap: 2rem;
+  width: 90%;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     grid-template-columns: 1fr;
   }
@@ -77,6 +76,7 @@ export const AboutRequestTitle = styled.span`
   color: ${({ theme }) => theme.colors.base.light};
   font-size: ${({ theme }) => theme.font.sizes.xl};
   font-family: ${({ theme }) => theme.font.family.sliver};
+  max-width: 80%;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     font-size: ${({ theme }) => theme.font.sizes.lg};
@@ -177,12 +177,12 @@ export const AboutSectionLink = styled.a`
 `
 export const AboutLegalInformationContainer = styled.div`
   width: 90%;
-  gap: 2.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 `
 export const AboutLegalInformationSection = styled.div`
