@@ -121,10 +121,10 @@ export interface Topics {
 export interface CommonPages {
     numbers:     Numbers;
     testimonies: ClinicsTestimonies;
-    doubts:      Doubts;
+    doubts:      CommonPagesDoubts;
 }
 
-export interface Doubts {
+export interface CommonPagesDoubts {
     description: string;
     title:       string;
     doubts:      Doubt[];
@@ -145,6 +145,7 @@ export interface Numbers {
 export interface Info {
     legend: string;
     value:  number;
+    isMore: boolean;
 }
 
 export interface BodyContact {
@@ -159,6 +160,7 @@ export interface FarmeBox {
     reasons:                 Reasons;
     farme_box:               FarmeBoxClass;
     pharmaceutical_analysis: PharmaceuticalAnalysis;
+    doubts:                  FarmeBoxDoubts;
     banner:                  InitialClass;
     testimonies:             FarmeBoxTestimonies;
 }
@@ -177,6 +179,10 @@ export interface PurpleCards {
 export interface CarouselImage {
     label: string;
     id:    string;
+}
+
+export interface FarmeBoxDoubts {
+    doubts: Doubt[];
 }
 
 export interface PharmaceuticalAnalysis {
@@ -268,7 +274,7 @@ export interface ForDoctors {
     banner:       ForDoctorsBanner;
     card_product: CardProduct;
     our_posts:    OurPosts;
-    doubts:       Doubts;
+    doubts:       CommonPagesDoubts;
     testimonies:  CareersTestimonies;
 }
 
@@ -687,9 +693,9 @@ const typeMap: any = {
     "CommonPages": o([
         { json: "numbers", js: "numbers", typ: r("Numbers") },
         { json: "testimonies", js: "testimonies", typ: r("ClinicsTestimonies") },
-        { json: "doubts", js: "doubts", typ: r("Doubts") },
+        { json: "doubts", js: "doubts", typ: r("CommonPagesDoubts") },
     ], false),
-    "Doubts": o([
+    "CommonPagesDoubts": o([
         { json: "description", js: "description", typ: "" },
         { json: "title", js: "title", typ: "" },
         { json: "doubts", js: "doubts", typ: a(r("Doubt")) },
@@ -707,6 +713,7 @@ const typeMap: any = {
     "Info": o([
         { json: "legend", js: "legend", typ: "" },
         { json: "value", js: "value", typ: 0 },
+        { json: "isMore", js: "isMore", typ: true },
     ], false),
     "BodyContact": o([
         { json: "for_leads", js: "for_leads", typ: r("InitialClass") },
@@ -719,6 +726,7 @@ const typeMap: any = {
         { json: "reasons", js: "reasons", typ: r("Reasons") },
         { json: "farme_box", js: "farme_box", typ: r("FarmeBoxClass") },
         { json: "pharmaceutical_analysis", js: "pharmaceutical_analysis", typ: r("PharmaceuticalAnalysis") },
+        { json: "doubts", js: "doubts", typ: r("FarmeBoxDoubts") },
         { json: "banner", js: "banner", typ: r("InitialClass") },
         { json: "testimonies", js: "testimonies", typ: r("FarmeBoxTestimonies") },
     ], false),
@@ -734,6 +742,9 @@ const typeMap: any = {
     "CarouselImage": o([
         { json: "label", js: "label", typ: "" },
         { json: "id", js: "id", typ: "" },
+    ], false),
+    "FarmeBoxDoubts": o([
+        { json: "doubts", js: "doubts", typ: a(r("Doubt")) },
     ], false),
     "PharmaceuticalAnalysis": o([
         { json: "card", js: "card", typ: r("InitialClass") },
@@ -812,7 +823,7 @@ const typeMap: any = {
         { json: "banner", js: "banner", typ: r("ForDoctorsBanner") },
         { json: "card_product", js: "card_product", typ: r("CardProduct") },
         { json: "our_posts", js: "our_posts", typ: r("OurPosts") },
-        { json: "doubts", js: "doubts", typ: r("Doubts") },
+        { json: "doubts", js: "doubts", typ: r("CommonPagesDoubts") },
         { json: "testimonies", js: "testimonies", typ: r("CareersTestimonies") },
     ], false),
     "ForDoctorsBanner": o([

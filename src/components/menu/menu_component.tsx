@@ -1,5 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import React, {
+  MutableRefObject,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
+import { useLocation } from 'react-router-dom'
 import { Button } from '../../ds'
 
 import LogoFarMe from '../../assets/images/logotype.svg'
@@ -21,7 +27,6 @@ import {
   DropdownItemLabel,
   Option,
   Options,
-  OptionsContainer,
 } from './menu_styles'
 import { MenuForMobile } from './for_mobile/menu_for_mobile_component'
 import { NavBanner } from '../navbanner'
@@ -38,7 +43,14 @@ type StateType = {
   activeSection?: string
 }
 type OpenCollapsibleType = {
-  [key: string]: boolean
+  pages: {
+    onHover: boolean
+    onClick: boolean
+  }
+  contact: {
+    onHover: boolean
+    onClick: boolean
+  }
 }
 type HashMapPathToSection = {
   [key: string]: string
@@ -54,19 +66,40 @@ type MenuComponentProps = {
 }
 
 const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
-  const [openCollapsible, setOpenCollapsible] = useState<OpenCollapsibleType>(
-    {}
-  )
+  const [openCollapsible, setOpenCollapsible] = useState<OpenCollapsibleType>({
+    pages: {
+      onHover: false,
+      onClick: false,
+    },
+    contact: {
+      onHover: false,
+      onClick: false,
+    },
+  })
   const { menu } = useContext(DataContext)
-  const DropdownContainerRef = useRef(null as unknown as HTMLDivElement)
+  const DropdownContainerPagesRef = useRef(null as unknown as HTMLDivElement)
+  const DropdownContainerContactsRef = useRef(null as unknown as HTMLDivElement)
   const DropdownContentSegmentRef = useRef(null as unknown as HTMLDivElement)
   const DropdownContentContactRef = useRef(null as unknown as HTMLDivElement)
   const location = useLocation()
 
   const listRefs = [DropdownContentSegmentRef, DropdownContentContactRef]
-  useOutsideClick(DropdownContainerRef, listRefs, () =>
-    setOpenCollapsible((prev) =>
-      Object.fromEntries(Object.entries(prev).map(([key]) => [key, false]))
+  const listContainersRefs = [
+    DropdownContainerPagesRef,
+    DropdownContainerContactsRef,
+  ]
+  listContainersRefs.map((ref) =>
+    useOutsideClick(ref, listRefs, () =>
+      setOpenCollapsible((prev) => ({
+        pages: {
+          onHover: prev.pages.onHover,
+          onClick: prev.pages.onClick ? false : prev.pages.onClick,
+        },
+        contact: {
+          onHover: prev.contact.onHover,
+          onClick: prev.contact.onClick ? false : prev.contact.onClick,
+        },
+      }))
     )
   )
   const state = location.state as StateType
@@ -93,13 +126,75 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
       window.open(addingCurrentQueryParams(option.href), '_self')
     }
   }
-  const updateOpenCollapsible = (key: string, action?: boolean) => {
+  const updateOpenCollapsible = (
+    key: 'pages' | 'contact',
+    origin: 'click' | 'hover',
+    action: boolean
+  ) => {
     setOpenCollapsible((prev) => ({
       ...prev,
-      [key]: action || !prev[key],
+      [key]: {
+        onHover: origin === 'hover' ? action : prev[key]?.onHover ?? false,
+        onClick: origin === 'click' ? action : prev[key]?.onClick ?? false,
+      },
     }))
   }
 
+  useEffect(() => {
+    window.addEventListener('mousemove', (event) => {
+      if (
+        // verify if the mouse is inside the dropdown container
+        (DropdownContainerPagesRef?.current.getBoundingClientRect().left <=
+          event.x &&
+          DropdownContainerPagesRef?.current.getBoundingClientRect().right >=
+            event.x &&
+          DropdownContainerPagesRef?.current.getBoundingClientRect().top <=
+            event.y &&
+          DropdownContainerPagesRef?.current.getBoundingClientRect().bottom +
+            30 >=
+            event.y) ||
+        // verify if the mouse is inside the dropdown content
+        (DropdownContentSegmentRef?.current.getBoundingClientRect().left <=
+          event.x &&
+          DropdownContentSegmentRef?.current.getBoundingClientRect().right >=
+            event.x &&
+          DropdownContentSegmentRef?.current.getBoundingClientRect().top <=
+            event.y &&
+          DropdownContentSegmentRef?.current.getBoundingClientRect().bottom >=
+            event.y)
+      ) {
+        updateOpenCollapsible('pages', 'hover', true)
+      } else {
+        updateOpenCollapsible('pages', 'hover', false)
+      }
+
+      if (
+        // verify if the mouse is inside the dropdown container
+        (DropdownContainerContactsRef?.current.getBoundingClientRect().left <=
+          event.x &&
+          DropdownContainerContactsRef?.current.getBoundingClientRect().right >=
+            event.x &&
+          DropdownContainerContactsRef?.current.getBoundingClientRect().top <=
+            event.y &&
+          DropdownContainerContactsRef?.current.getBoundingClientRect().bottom +
+            30 >=
+            event.y) ||
+        // verify if the mouse is inside the dropdown content
+        (DropdownContentContactRef?.current.getBoundingClientRect().left <=
+          event.x &&
+          DropdownContentContactRef?.current.getBoundingClientRect().right >=
+            event.x &&
+          DropdownContentContactRef?.current.getBoundingClientRect().top <=
+            event.y &&
+          DropdownContentContactRef?.current.getBoundingClientRect().bottom >=
+            event.y)
+      ) {
+        updateOpenCollapsible('contact', 'hover', true)
+      } else {
+        updateOpenCollapsible('contact', 'hover', false)
+      }
+    })
+  }, [])
   return (
     <>
       <Container fixed={!!wasScrolled}>
@@ -109,76 +204,108 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
             onClick={() => window.open(addingCurrentQueryParams('/'), '_self')}
             src={LogoFarMe}
           />
-          <OptionsContainer>
-            <Options>
-              {menu.slice(0, menu.length - 1).map((value, index, menuList) => {
-                const isSanctionable = value.options?.every(
-                  ({ isSanctionable }) => isSanctionable ?? false
-                )
-                return value.options ? (
-                  <DropdownContainer
-                    className="collapsible"
-                    key={value.label}
-                    open={openCollapsible[value.label]}
-                    onClick={() => updateOpenCollapsible(value.label)}
-                    onMouseEnter={() =>
-                      updateOpenCollapsible(value.label, true)
+          <Options>
+            {menu.slice(0, menu.length - 1).map((value, index, menuList) => {
+              const isSanctionable = value.options?.every(
+                ({ isSanctionable }) => isSanctionable ?? false
+              )
+              const refContainer =
+                listContainersRefs[index === menuList.length - 1 ? 1 : 0]
+              return value.options ? (
+                <DropdownContainer
+                  className="collapsible"
+                  key={value.label}
+                  open={
+                    Object.values(
+                      refContainer === DropdownContainerPagesRef
+                        ? openCollapsible['pages']
+                        : openCollapsible['contact']
+                    )?.some((e) => e === true) ?? false
+                  }
+                  onClick={() =>
+                    updateOpenCollapsible(
+                      refContainer === DropdownContainerPagesRef
+                        ? 'pages'
+                        : 'contact',
+                      'click',
+                      true
+                    )
+                  }
+                  onMouseOver={() =>
+                    updateOpenCollapsible(
+                      refContainer === DropdownContainerPagesRef
+                        ? 'pages'
+                        : 'contact',
+                      'hover',
+                      true
+                    )
+                  }
+                  ref={refContainer}
+                >
+                  <DropdownTitle
+                    open={
+                      Object.values(
+                        refContainer === DropdownContainerPagesRef
+                          ? openCollapsible['pages']
+                          : openCollapsible['contact']
+                      )?.some((e) => e === true) ?? false
                     }
-                    ref={DropdownContainerRef}
+                    highlight={!!activeSection && !!isSanctionable}
+                    className="collapsible-title"
                   >
-                    <DropdownTitle
-                      open={openCollapsible[value.label]}
-                      highlight={!!activeSection && !!isSanctionable}
-                      className="collapsible-title"
-                    >
-                      {isSanctionable
-                        ? activeSection ?? value.label
-                        : value.label}
-                    </DropdownTitle>
-                    <DropdownContent
-                      open={openCollapsible[value.label]}
-                      ref={listRefs[index === menuList.length - 1 ? 1 : 0]}
-                    >
-                      {value.options.map((option) => (
-                        <DropdownItem
-                          onClick={() =>
-                            onClickDropdown(!!isSanctionable, option)
-                          }
-                          key={option.href}
-                        >
-                          <DropdownItemLabel>{option.label}</DropdownItemLabel>
-                        </DropdownItem>
-                      ))}
-                    </DropdownContent>
-                  </DropdownContainer>
-                ) : (
-                  <Option key={value.href}>
-                    <Link
-                      highlight={!!isCurrentPage(value)}
-                      href={addingCurrentQueryParams(value.href || '')}
-                    >
-                      {value.label}
-                    </Link>
-                  </Option>
-                )
-              })}
-            </Options>
-            <Button
-              onClick={() =>
-                window.open(
-                  addingCurrentQueryParams('https://app.farme.com.br/orcamento')
-                )
-              }
-              label={
-                (
-                  Object.entries(menu).slice(
-                    Object.entries(menu).length - 1,
-                    Object.entries(menu).length
-                  )[0][1] as unknown as CTAType
-                )?.label || ''
-              }
-            />
-          </OptionsContainer>
+                    {isSanctionable
+                      ? activeSection ?? value.label
+                      : value.label}
+                  </DropdownTitle>
+                  <DropdownContent
+                    open={
+                      Object.values(
+                        refContainer === DropdownContainerPagesRef
+                          ? openCollapsible['pages']
+                          : openCollapsible['contact']
+                      )?.some((e) => e === true) ?? false
+                    }
+                    ref={listRefs[index === menuList.length - 1 ? 1 : 0]}
+                  >
+                    {value.options.map((option) => (
+                      <DropdownItem
+                        onClick={() =>
+                          onClickDropdown(!!isSanctionable, option)
+                        }
+                        key={option.href}
+                      >
+                        <DropdownItemLabel>{option.label}</DropdownItemLabel>
+                      </DropdownItem>
+                    ))}
+                  </DropdownContent>
+                </DropdownContainer>
+              ) : (
+                <Option key={value.href}>
+                  <Link
+                    highlight={!!isCurrentPage(value)}
+                    href={addingCurrentQueryParams(value.href || '')}
+                  >
+                    {value.label}
+                  </Link>
+                </Option>
+              )
+            })}
+          </Options>
+          <Button
+            onClick={() =>
+              window.open(
+                addingCurrentQueryParams('https://app.farme.com.br/orcamento')
+              )
+            }
+            label={
+              (
+                Object.entries(menu).slice(
+                  Object.entries(menu).length - 1,
+                  Object.entries(menu).length
+                )[0][1] as unknown as CTAType
+              )?.label || ''
+            }
+          />
         </Content>
       </Container>
     </>

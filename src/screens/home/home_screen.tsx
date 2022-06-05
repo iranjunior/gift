@@ -24,7 +24,7 @@ export const Home = () => {
         <Testimonies id="depoimentos" />
         <Doubt id="duvidas-frequentes" />
         <Footer id="sobre" />
-        <CallToAction />
+        {/* <CallToAction /> */}
       </Body>
     </Container>
   )

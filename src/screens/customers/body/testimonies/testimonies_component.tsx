@@ -46,7 +46,7 @@ export const Testimonies: React.FC<TestimoniesProps> = ({ id }) => {
   const LeftSide = ({ testimony, name }: LeftSideProps) => (
     <BlockText>
       <Quotation src={QuotationIllustration} />
-      <TextPrincipal>{testimony}</TextPrincipal>
+      <TextPrincipal size={testimony.length}>{testimony}</TextPrincipal>
       <Text>{name}</Text>
     </BlockText>
   )

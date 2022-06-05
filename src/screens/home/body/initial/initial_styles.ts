@@ -23,6 +23,13 @@ export const BlockText = styled.div`
     max-width: 100%;
     margin: 0 5%;
   }
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1080px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    width: 50%;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin-bottom: ${({ theme }) => theme.spacing.internal};
   }
@@ -41,6 +48,12 @@ export const Content = styled.div`
   @media (width: ${({ theme }) => theme.breakpoints.desktop}),
     max-width: 1200px {
     margin: 5% 0;
+  }
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1080px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    margin: 5% 5%;
   }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
@@ -95,7 +108,11 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
-
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1080px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    width: 50%;
+  }
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
     height: auto;

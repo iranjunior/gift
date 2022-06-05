@@ -16,9 +16,14 @@ export const Container = styled.footer`
 export const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  width: 90%;
+  width: 70%;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     grid-template-columns: 1fr;
+  }
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    width: 90%;
   }
 `
 
@@ -124,14 +129,8 @@ export const AboutContactsSocialMedias = styled.div`
 `
 export const AboutContactsSocialMediasLogo = styled.div`
   height: ${({ theme }) => theme.spacing.xxs};
-  svg {
-    stroke: ${({ theme }) => theme.colors.base.dark};
-    fill: ${({ theme }) => theme.colors.base.default};
-    path {
-      fill: ${({ theme }) => theme.colors.base.default};
-      stroke: ${({ theme }) => theme.colors.base.dark};
-    }
-  }
+
+  cursor: pointer;
 `
 
 export const Divisor = styled.hr`
@@ -143,13 +142,19 @@ export const Divisor = styled.hr`
 `
 
 export const AboutSectionsContainer = styled.div`
-  width: 90%;
+  width: 70%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: flex-start;
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 2rem;
     grid-template-columns: 1fr;
+  }
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    width: 90%;
   }
 `
 export const AboutSection = styled.div`
@@ -176,13 +181,19 @@ export const AboutSectionLink = styled.a`
   margin: ${({ theme }) => theme.spacing.nano} 0;
 `
 export const AboutLegalInformationContainer = styled.div`
-  width: 90%;
+  width: 70%;
   display: grid;
   grid-template-columns: 2fr 2fr;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    width: 90%;
   }
 `
 export const AboutLegalInformationSection = styled.div`

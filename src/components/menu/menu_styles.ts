@@ -36,6 +36,23 @@ export const Content = styled.div`
     width: 100%;
     margin: 0;
   }
+
+  button {
+    font-size: ${({ theme }) => theme.font.sizes.xs};
+    max-width: 260px;
+    width: 100%;
+
+    @media (min-width: calc(${({ theme }) =>
+        theme.breakpoints.desktop} - 200px)) {
+      padding: 0 3rem;
+    }
+
+    @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+      (max-width: 1200px) and (min-width: ${({ theme }) =>
+        theme.breakpoints.desktop}) {
+      font-size: ${({ theme }) => theme.font.sizes.xxs};
+    }
+  }
 `
 
 export const Logo = styled.img`
@@ -112,6 +129,12 @@ export const Link = styled.a<LinkProps>`
   color: #2c2f30;
   white-space: nowrap;
   text-decoration: none;
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+  }
 
   ${({ highlight }) =>
     highlight &&
@@ -207,13 +230,18 @@ export const DropdownTitle = styled.div<SummaryType>`
     css`
       border-bottom: 2px solid ${({ theme }) => theme.colors.base.default};
     `}
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+      (max-width: 1200px) and (min-width: ${({ theme }) =>
+    theme.breakpoints.desktop}) {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+  }
 `
 export const DropdownContent = styled.div<DropdownContainerProps>`
   position: absolute;
   left: -${({ theme }) => theme.spacing.nano};
   top: ${({ theme }) => theme.spacing.sm};
   width: 240px;
-  z-index: 200;
   background-color: ${({ theme }) => theme.primary.default};
   border-radius: ${({ theme }) => theme.spacing.nano};
   display: ${({ open }) => (open ? 'flex' : 'none')};
@@ -225,6 +253,12 @@ export const DropdownItem = styled.div`
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) => theme.primary.light}4d;
+  }
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
   }
 `
 export const DropdownItemLabel = styled.span``

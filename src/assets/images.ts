@@ -50,6 +50,7 @@ export default {
   ImageWifeAndHusband: require('./images/wife_and_husband.png'),
   ImagePillsStackInHand: require('./images/pills_stack_in_hand.png'),
   ImageDoctorAtPhone: require('./images/doctor_at_phone.png'),
+  ImageRightPointerBanner: require('./images/box_right_pointer_banner.png'),
 }
 
 export const people = {

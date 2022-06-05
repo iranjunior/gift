@@ -4,6 +4,7 @@ import { ReactComponent as ImageLogo } from '../../assets/images/logo_yellow.svg
 import { ReactComponent as ImageLinkedinLogo } from '../../assets/images/linkedin_logo.svg'
 import { ReactComponent as ImageInstagramLogo } from '../../assets/images/instagram_logo.svg'
 import { ReactComponent as ImageFacebookLogo } from '../../assets/images/facebook_logo.svg'
+import { ReactComponent as ImageWhatsappLogo } from '../../assets/images/whatsapp_logo.svg'
 
 import {
   AboutContactsContainer,
@@ -105,6 +106,13 @@ export const Footer: React.FC<FooterProps> = ({ id }) => {
               }
             >
               <ImageLinkedinLogo />
+            </AboutContactsSocialMediasLogo>
+            <AboutContactsSocialMediasLogo
+              onClick={() =>
+                window.open('https://api.whatsapp.com/send?phone=5531983722426')
+              }
+            >
+              <ImageWhatsappLogo />
             </AboutContactsSocialMediasLogo>
           </AboutContactsSocialMedias>
         </AboutContactsContainer>

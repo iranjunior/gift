@@ -13,7 +13,7 @@ export const Container = styled.div`
 `
 export const BlockText = styled.div`
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -26,7 +26,7 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 8% 15%;
+  margin: 8% 10%;
   display: flex;
   height: 400px;
   width: 100%;

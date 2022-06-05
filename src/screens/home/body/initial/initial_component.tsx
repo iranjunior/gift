@@ -34,7 +34,7 @@ export const Main: React.FC<MainProps> = ({ id, ...props }) => {
           <TextPrincipal dangerouslySetInnerHTML={{ __html: initial.title }} />
           <Text dangerouslySetInnerHTML={{ __html: initial.subtitle }}></Text>
         </BlockText>
-        <Image src={images.ImageBoxPlusMao} />
+        <Image src={images.ImageRightPointerBanner} />
       </Content>
     </Container>
   )

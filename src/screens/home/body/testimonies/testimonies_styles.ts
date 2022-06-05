@@ -12,7 +12,7 @@ export const Content = styled(ContentDiv)`
   gap: 2rem;
 `
 export const BlockText = styled.div`
-  width: 518px;
+  width: 420px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -35,10 +35,25 @@ export const Text = styled.span`
   letter-spacing: 2%;
   font-family: 'Inter';
 `
-export const TextPrincipal = styled.span`
-  font-size: ${({ theme }) => theme.font.sizes.lg};
+type TextPrincipalProps = {
+  size: number
+}
+
+export const TextPrincipal = styled.span<TextPrincipalProps>`
+  font-size: ${({ size, theme }) => {
+    if (size > 200) {
+      return theme.font.sizes.md
+    }
+    if (size > 140) {
+      return theme.font.sizes.ml
+    }
+    if (size > 80) {
+      return theme.font.sizes.lg
+    }
+    return theme.font.sizes.xl
+  }};
   font-family: ${({ theme }) => theme.font.family.sliver};
-  line-height: ${({ theme }) => theme.font.lineHeight.medium};
+  line-height: ${({ theme }) => theme.font.lineHeight.distant};
   text-align: center;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {

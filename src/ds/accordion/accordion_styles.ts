@@ -20,4 +20,7 @@ export const Title = styled.summary`
 export const Answer = styled.p`
   font-size: ${({ theme }) => theme.font.sizes.xs};
   line-height: ${({ theme }) => theme.font.lineHeight.medium};
+  a {
+    color: ${({ theme }) => theme.colors.neutral.darkness};
+  }
 `

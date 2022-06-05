@@ -120,4 +120,11 @@ export const Contact = styled.a`
   font-family: ${({ theme }) => theme.font.family.sliver};
   margin-left: ${({ theme }) => theme.spacing.internal};
   color: ${({ theme }) => theme.colors.neutral.darkness};
+
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `

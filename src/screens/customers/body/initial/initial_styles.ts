@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -21,18 +22,26 @@ export const BlockText = styled.div`
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
+    max-width: 100%;
   }
 `
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 5%;
+  margin: 0 5%;
   display: flex;
   width: 100%;
   max-width: 1120px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    margin: 0;
+    margin-left: 5%;
+  }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     gap: 1rem;
@@ -82,7 +91,7 @@ export const TextPrincipal = styled.div`
 `
 
 export const Image = styled.img`
-  height: 600px;
+  height: 700px;
   object-fit: cover;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {

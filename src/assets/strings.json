@@ -15,7 +15,7 @@
             "context": "customers"
         },
         {
-            "label": "Carreiras",
+            "label": "Trabalhe com a gente",
             "href": "/para-clientes/carreiras",
             "context": "customers"
         },
@@ -571,16 +571,19 @@
                 "message": "Pode contar com <highlight>a gente!</highlight>",
                 "infos": [
                     {
-                        "legend": "Colaboradores.",
-                        "value": 70
+                        "legend": "Vidas <br/>impactadas",
+                        "value": 10000,
+                        "isMore": true
                     },
                     {
-                        "legend": "Far.me Boxes produzidas.",
-                        "value": 7000
+                        "legend": "NPS (Índice de <br/>Satisfação dos Clientes)",
+                        "value": 95,
+                        "isMore": false
                     },
                     {
-                        "legend": "vidas impactadas.",
-                        "value": 3000
+                        "legend": "Far.me Boxes <br/>produzidas",
+                        "value": 17000,
+                        "isMore": true
                     }
                 ]
             },
@@ -606,7 +609,7 @@
                 "doubts": [
                     {
                         "title": "Como pedir a Far.me Box? ",
-                        "answer": "É só clicar aqui e fazer o seu orçamento para receber o contato de um de nossos vendedores. "
+                        "answer": "É só <a href=\"https://app.farme.com.br/orcamento\" >clicar aqui</a> e fazer o seu orçamento para receber o contato de um de nossos vendedores. "
                     },
                     {
                         "title": "Qual é o preço da Far.me Box? ",
@@ -785,6 +788,38 @@
                     "title": "Análise farmacêutica",
                     "subtitle": "Análise das prescrições de todos os medicamentos em uso para evitar interações e efeitos indesejados.<br />Feita via inteligência artificial em software para máxima precisão."
                 }
+            },
+            "doubts": {
+                "doubts": [
+                    {
+                        "title": "Recorrência",
+                        "answer": "Você pede uma vez e recebe todos os meses seus medicamentos, antes da sua Box do mês anterior acabar."
+                    },
+                    {
+                        "title": "Unitarização dos medicamentos",
+                        "answer": "Separamos os seus medicamentos de acordo com a dose, o dia e o horário de uso, com máxima fidelidade à prescrição médica."
+                    },
+                    {
+                        "title": "Rastreabilidade e Segurança",
+                        "answer": "Temos um processo rigoroso de múltiplos pontos de checagem na confecção da Box, o OCTO.CHECK System. Além disso, somos certificados pela ISO 9001: desde a entrada até a entrega dos medicamentos, garantimos a segurança e a rastreabilidade de todos os produtos. "
+                    },
+                    {
+                        "title": "Necessidade de prescrição",
+                        "answer": "Na hora de solicitar a Box, o envio digital da receita médica não é obrigatório: só exigimos a prescrição no caso de medicamentos de uso controlado. Nesse caso, agendamos um horário para a coleta gratuita da receita para maior comodidade. <br /><br />No entanto, reforçamos que o envio da receita é sempre positivo para a análise completa do tratamento, identificando possíveis interações e sugestões de melhorias por parte dos nossos farmacêuticos clínicos. "
+                    },
+                    {
+                        "title": "Formas de Pagamento",
+                        "answer": "Pagamento digital via cartão de crédito, boleto ou PIX."
+                    },
+                    {
+                        "title": "Preço e Orçamento",
+                        "answer": "O valor da assinatura vai variar conforme os medicamentos solicitados – lembrando que você paga somente pelos próprios medicamentos. Trabalhamos com preços fixos (salvo o reajuste anual da Anvisa) e orçamento personalizado: você pode optar entre produtos de referência, genéricos ou similares.  "
+                    },
+                    {
+                        "title": "Informações importantes",
+                        "answer": "No caso de quaisquer alterações da receita médica, nosso time está disponível para realizar os ajustes da forma mais adequada. Basta entrar em contato!<br /><br />Para tirar dúvidas sobre o uso de medicamentos, questões financeiras e de assinatura, é só falar com a gente pelo número (31) 98371-9425."
+                    }
+                ]
             },
             "banner": {
                 "title": "E com a <highlight>Clínica Far.me</highlight>, o seu<br /> cuidado com a saúde vai além. ",
@@ -1100,16 +1135,16 @@
                         "href": "/para-clientes/quem-somos"
                     },
                     {
-                        "title": "Carreiras",
-                        "href": "/para-clientes/carreiras"
-                    },
-                    {
                         "title": "Blog",
                         "href": "https://blog.farme.com.br/"
                     },
                     {
                         "title": "Contato",
                         "href": "/contato"
+                    },
+                    {
+                        "title": "Trabalhe com a gente",
+                        "href": "/para-clientes/carreiras"
                     }
                 ]
             },

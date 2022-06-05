@@ -33,8 +33,10 @@ export const Numbers: React.FC<NumbersProps> = ({ id }) => {
         <BlockNumbers>
           {numbers.infos.map((info) => (
             <BlockNumber key={info.legend}>
-              <NumberAnimated valueFinal={info.value} />
-              <SubtitleNumber>{info.legend}</SubtitleNumber>
+              <NumberAnimated valueFinal={info.value} isMore={info.isMore} />
+              <SubtitleNumber
+                dangerouslySetInnerHTML={{ __html: info.legend }}
+              />
             </BlockNumber>
           ))}
         </BlockNumbers>
@@ -46,9 +48,10 @@ export const Numbers: React.FC<NumbersProps> = ({ id }) => {
 
 type NumberAnimatedProps = {
   valueFinal: number
+  isMore: boolean
 }
 
-const NumberAnimated = ({ valueFinal }: NumberAnimatedProps) => {
+const NumberAnimated = ({ valueFinal, isMore }: NumberAnimatedProps) => {
   const ref = useRef(null as unknown as HTMLSpanElement)
   const [value, setValue] = useState(0)
   const inViewport = useIntersection(ref, '0px')
@@ -57,10 +60,10 @@ const NumberAnimated = ({ valueFinal }: NumberAnimatedProps) => {
     const interval = async () => {
       await new Promise(() => {
         setTimeout(() => {
-          if (valueFinal > 5000) {
+          if (valueFinal > 15000) {
+            setValue(value + 191)
+          } else if (valueFinal >= 10000) {
             setValue(value + 101)
-          } else if (valueFinal > 1000) {
-            setValue(value + 51)
           } else {
             setValue(value + 1)
           }
@@ -84,7 +87,15 @@ const NumberAnimated = ({ valueFinal }: NumberAnimatedProps) => {
 
   return (
     <Number ref={ref} id={`aminated-number-${valueFinal}`}>
-      +{value}
+      {isMore && '+'}
+      {transformNumberToString(value)}
     </Number>
   )
+}
+
+const transformNumberToString = (value: number) => {
+  if (value >= 1000) {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+  }
+  return value.toString()
 }

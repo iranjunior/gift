@@ -1,11 +1,5 @@
 import React, { useContext, useLayoutEffect } from 'react'
-import {
-  Footer,
-  Menu,
-  Doubt,
-  Testimonies,
-  CallToAction,
-} from '../../components'
+import { Footer, Menu, Testimonies, CallToAction } from '../../components'
 import { SubjectContext } from '../../context/subject'
 import { Subject } from '../../context/subject/subject'
 import {
@@ -14,8 +8,8 @@ import {
   KnowMe,
   Reasons,
   FarMeBox as FarMeBoxComponent,
-  PharmaceuticalAnalysis,
   Banner,
+  Doubt,
 } from './body'
 import { Body, Container } from './farme_box_styles'
 
