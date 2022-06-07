@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react'
 
-import images from '../../../../assets/images'
+import videos from '../../../../assets/videos'
 import { DataContext } from '../../../../context/data'
 import { useIntersection } from '../../../../hooks/useIntersection'
 
@@ -8,7 +8,7 @@ import {
   Container,
   Content,
   Text,
-  Image,
+  Video,
   TextPrincipal,
   BlockText,
 } from './initial_styles'
@@ -34,7 +34,9 @@ export const Main: React.FC<MainProps> = ({ id, ...props }) => {
           <TextPrincipal dangerouslySetInnerHTML={{ __html: initial.title }} />
           <Text dangerouslySetInnerHTML={{ __html: initial.subtitle }}></Text>
         </BlockText>
-        <Image src={images.ImageRightPointerBanner} />
+        <Video autoPlay muted loop>
+          <source src={videos.VideoInstitutionFarMeBox} type="video/mp4" />
+        </Video>
       </Content>
     </Container>
   )

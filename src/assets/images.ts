@@ -51,6 +51,7 @@ export default {
   ImagePillsStackInHand: require('./images/pills_stack_in_hand.png'),
   ImageDoctorAtPhone: require('./images/doctor_at_phone.png'),
   ImageRightPointerBanner: require('./images/box_right_pointer_banner.png'),
+  ImageBoxRotate: require('./images/box_rotate.png'),
 }
 
 export const people = {

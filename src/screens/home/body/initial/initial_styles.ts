@@ -41,7 +41,7 @@ export const Content = styled.div`
   display: flex;
   height: 500px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 
@@ -121,5 +121,17 @@ export const Image = styled.img`
   @media (min-width: ${({ theme }) =>
       theme.breakpoints.desktop}, max-width: 1200px) {
     height: 85%;
+  }
+`
+
+export const Video = styled.video`
+  max-width: 888px;
+  width: 100%;
+
+  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
+    (max-width: 1200px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
+    width: 50%;
+    height: auto;
   }
 `

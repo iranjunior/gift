@@ -28,13 +28,16 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 0 5%;
+  margin: 5% 20%;
   display: flex;
   width: 100%;
-  max-width: 1120px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+
+  @media (max-width: 1800px) and (min-width: 1200px) {
+    margin: 5% 5%;
+  }
 
   @media (width: ${({ theme }) => theme.breakpoints.desktop}),
     (max-width: 1200px) and (min-width: ${({ theme }) =>
@@ -44,6 +47,7 @@ export const Content = styled.div`
   }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
+    margin: 0 5%;
     gap: 1rem;
     height: auto;
     flex-wrap: wrap;
@@ -91,8 +95,9 @@ export const TextPrincipal = styled.div`
 `
 
 export const Image = styled.img`
-  height: 700px;
   object-fit: cover;
+  height: 100%;
+  max-height: 600px;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;

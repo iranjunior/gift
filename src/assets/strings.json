@@ -1,6 +1,6 @@
 {
     "navbanner": {
-        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> por venda fechada! <a>Clique aqui e saiba mais.</a>",
+        "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> a cada assinatura realizada! <a>Clique aqui e saiba mais.</a>",
         "href": "https://app.farme.com.br/indicame/publico"
     },
     "menu": [
@@ -12,11 +12,6 @@
         {
             "label": "Far.me Box",
             "href": "/para-clientes/farme-box",
-            "context": "customers"
-        },
-        {
-            "label": "Trabalhe com a gente",
-            "href": "/para-clientes/carreiras",
             "context": "customers"
         },
         {
@@ -65,7 +60,7 @@
             ]
         },
         {
-            "label": "Faça seu orçamento",
+            "label": "Monte sua box",
             "href": "https://farme.com.br/orcamento",
             "isCTA": true
         }
@@ -78,10 +73,6 @@
         {
             "label": "Far.me Box",
             "href": "/para-clientes/farme-box"
-        },
-        {
-            "label": "Carreiras",
-            "href": "/para-clientes/carreiras"
         },
         {
             "label": "Para Quem",
@@ -709,7 +700,7 @@
                     {
                         "image_id": "mariana",
                         "name": "Mariana Mesquita",
-                        "job": "Suporte ao Cliente"
+                        "job": "Sucesso do Cliente"
                     },
                     {
                         "image_id": "gabriella",
@@ -1101,12 +1092,8 @@
         },
         "invite": "<highlight>Se interessou? </highlight><br />É só preencher o formulário e retornaremos em breve",
         "contacts": {
-            "title": "Se preferir, liga pra gente!",
+            "title": "Se preferir, fale com a gente!",
             "contacts": [
-                {
-                    "location": "Belo Horizonte - MG",
-                    "phone": "31 2528 4229 | 31 98372 3906"
-                },
                 {
                     "location": "São Paulo - SP",
                     "phone": "11 3289 8232"
