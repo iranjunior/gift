@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Router } from './routes'
 import { DataProvider } from './context/data'
 import { SubjectProvider, SubjectContext } from './context/subject'
@@ -44,6 +44,7 @@ function App() {
         </SubjectContext.Consumer>
       </SubjectProvider>
     </DataProvider>
+    // <h1>teste</h1>
   )
 }
 
