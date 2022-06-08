@@ -29,7 +29,6 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
   onlyImagens,
   backgroundColor,
 }) => {
-  console.log('imageSizeInTablet', imageSizeInTablet)
   const { colors } = useTheme()
   const LeftSideContent = () => (
     <>

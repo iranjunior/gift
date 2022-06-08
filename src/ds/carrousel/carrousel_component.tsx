@@ -25,8 +25,6 @@ export const Carrousel: React.FC<CarrouselProps> = ({
 }) => {
   const [active, setActive] = useState(content[0])
 
-  console.log('active.imageSizeInTablet', active.sizeInTablet)
-  console.log('active', active)
   return (
     <Container>
       <Tabs>

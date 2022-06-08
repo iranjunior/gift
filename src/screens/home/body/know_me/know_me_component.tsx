@@ -42,7 +42,7 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id, ...props }) => {
       label,
       ...props,
     }))
-  console.log('buildTabs()', buildTabs())
+  buildTabs()
   return (
     <Container ref={ref} {...props} id={id}>
       <Content ref={ref}>

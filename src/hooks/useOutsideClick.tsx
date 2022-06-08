@@ -10,12 +10,10 @@ export const useOutsideClick = (
      * Alert if clicked on outside of element
      */
     function handleClickOutside(event: MouseEvent) {
-      console.log(
-        excluderef.some(
-          (ref) => ref.current && ref.current.contains(event.target as Node)
-        )
+      excluderef.some(
+        (ref) => ref.current && ref.current.contains(event.target as Node)
       )
-
+      
       if (
         ref.current &&
         !ref.current.contains(event.target as Node) &&
