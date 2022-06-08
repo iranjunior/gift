@@ -27,7 +27,7 @@ export const BlockText = styled.div`
 export const BlockImage = styled.div``
 
 export const Content = styled.div`
-  margin: 8% 10%;
+  margin: 4% 10%;
   display: flex;
   height: 580px;
   width: 100%;

@@ -11,6 +11,7 @@ export const Container = styled.footer`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     padding-bottom: ${({ theme }) => theme.spacing.xxl};
+    padding-top: ${({ theme }) => theme.spacing.xl};
   }
 `
 export const AboutContainer = styled.div`

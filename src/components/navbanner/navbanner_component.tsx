@@ -8,7 +8,7 @@ import { addingCurrentQueryParams } from '../helpers/url_parser'
 
 export const NavBanner = () => {
   const {
-    navbanner: { text, href },
+    navbanner: { text, href, target },
   } = useContext(DataContext)
   const [shouldShowBanner, setShouldShowBanner] = useSession()
   return (
@@ -19,7 +19,7 @@ export const NavBanner = () => {
           dangerouslySetInnerHTML={{
             __html: text.replace(
               '<a>',
-              `<a href="${addingCurrentQueryParams(href)}" >`
+              `<a href="${addingCurrentQueryParams(href)}"  href="${target}">`
             ),
           }}
         />

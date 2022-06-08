@@ -38,7 +38,6 @@ export const Arguments: React.FC<ArgumentsProps> = ({ id }) => {
     <BlockText>
       <TextPrincipal dangerouslySetInnerHTML={{ __html: points[0].title }} />
       <Text dangerouslySetInnerHTML={{ __html: points[0].text }} />
-      {!!points[0].label_button && <Button label={points[0].label_button} />}
     </BlockText>
   )
   const ImageFirstCard = () => (

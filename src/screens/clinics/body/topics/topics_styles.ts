@@ -88,6 +88,7 @@ export const Image = styled.img`
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
     height: auto;
+    margin-top: ${({ theme }) => theme.spacing.xl};
   }
 `
 

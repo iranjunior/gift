@@ -17,8 +17,9 @@ import {
 export type CarrouselContentProps = {
   title?: string
   image: string
-  imageSizeInTablet?: 'cover' | 'contain'
+  imageSizeInTablet?: 'cover' | 'contain' | 'auto'
   onlyImagens?: boolean
+  backgroundColor?: string
 }
 
 export const CarrouselContent: React.FC<CarrouselContentProps> = ({
@@ -26,7 +27,9 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
   image,
   imageSizeInTablet,
   onlyImagens,
+  backgroundColor,
 }) => {
+  console.log('imageSizeInTablet', imageSizeInTablet)
   const { colors } = useTheme()
   const LeftSideContent = () => (
     <>
@@ -52,7 +55,10 @@ export const CarrouselContent: React.FC<CarrouselContentProps> = ({
 
   return (
     <Container>
-      <ContainerCard onlyImagens={onlyImagens}>
+      <ContainerCard
+        onlyImagens={onlyImagens}
+        backgroundColor={backgroundColor}
+      >
         {onlyImagens ? (
           <Image src={image} sizeInTablet={imageSizeInTablet} />
         ) : (

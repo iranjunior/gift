@@ -284,6 +284,7 @@ const MenuComponent = ({ wasScrolled }: MenuComponentProps) => {
                   <Link
                     highlight={!!isCurrentPage(value)}
                     href={addingCurrentQueryParams(value.href || '')}
+                    target={value.target}
                   >
                     {value.label}
                   </Link>

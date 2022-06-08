@@ -33,8 +33,12 @@ export const Tabs = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    margin: 0;
     margin-top: ${({ theme }) => theme.spacing.nano};
     margin-bottom: ${({ theme }) => theme.spacing.nano};
+    overflow: unset;
+    width: auto;
+    gap: ${({ theme }) => theme.spacing.xxxs};
   }
   ::-webkit-scrollbar {
     display: none;
@@ -69,7 +73,8 @@ export const Tab = styled.div`
   margin: 0 ${({ theme }) => theme.spacing.nano};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-    min-width: 120px;
+    width: auto;
+    margin: 0;
   }
 
   &:hover {

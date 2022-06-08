@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Button } from '../../../ds'
 
-import LogoFarMe from '../../../assets/images/logotype.svg'
+import LogoFarMe from '../../../assets/images/logo_farme_without_spaces.svg'
 import { ReactComponent as CloseIcon } from '../../../assets/images/close_icon.svg'
 import { ReactComponent as HamburguerIcon } from '../../../assets/images/hamburger_icon.svg'
 import { ReactComponent as ChevronIcon } from '../../../assets/images/chevron.svg'

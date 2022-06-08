@@ -52,6 +52,7 @@ export default {
   ImageDoctorAtPhone: require('./images/doctor_at_phone.png'),
   ImageRightPointerBanner: require('./images/box_right_pointer_banner.png'),
   ImageBoxRotate: require('./images/box_rotate.png'),
+  ImageCarinaNeves: require('./images/carina_neves.png'),
 }
 
 export const people = {

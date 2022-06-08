@@ -52,7 +52,7 @@ export const ContentBar = styled.div`
 `
 
 export const Logo = styled.img`
-  height: 64px;
+  height: 28px;
 `
 
 export const Options = styled.div`

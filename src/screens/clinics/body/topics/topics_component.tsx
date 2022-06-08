@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react'
 import { useTheme } from 'styled-components'
 
-import { people } from '../../../../assets/images'
+import images from '../../../../assets/images'
 import { DataContext } from '../../../../context/data'
 import { CheckedItem } from '../../../../ds/checked_item'
 import { useIntersection } from '../../../../hooks/useIntersection'
@@ -47,7 +47,7 @@ export const Topics: React.FC<TopicsProps> = ({ id }) => {
             ))}
           </TopicsContainer>
         </BlockText>
-        <Image src={people.CarinaNevesPharmaceutical} />
+        <Image src={images.ImageCarinaNeves} />
       </Content>
     </Container>
   )

@@ -57,7 +57,7 @@ export const TextPrincipal = styled.span`
   text-align: start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.font.sizes.sm};
+    font-size: ${({ theme }) => theme.font.sizes.md};
   }
 `
 type ImageProps = {

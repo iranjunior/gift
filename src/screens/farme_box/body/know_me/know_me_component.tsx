@@ -39,6 +39,7 @@ export const KnowMe: React.FC<KnowMeProps> = ({ id }) => {
       <Content ref={ref}>
         <Carrousel
           onlyImagens
+          backgroundColor="#FFF3E2"
           content={buildTabs()}
           imageSizeInTablet="contain"
         />

@@ -32,6 +32,12 @@ export const ActionWrap = styled.div`
     width: 100%;
     padding: 0;
   }
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop})) {
+    justify-content: center;
+    span {
+      margin: 0;
+    }
+  }
 
   button {
     width: 187px;
@@ -53,7 +59,7 @@ export const ActionWrap = styled.div`
 `
 type ImageProps = {
   src: string
-  sizeInTablet?: 'cover' | 'contain'
+  sizeInTablet?: 'cover' | 'contain' | 'auto'
 }
 
 export const Image = styled.div<ImageProps>`
@@ -96,6 +102,7 @@ export const Container = styled.div`
 
 type ContainerCardProps = {
   onlyImagens?: boolean
+  backgroundColor?: string
 }
 
 export const ContainerCard = styled.div<ContainerCardProps>`
@@ -104,7 +111,8 @@ export const ContainerCard = styled.div<ContainerCardProps>`
   max-width: 1080px;
 
   border-radius: ${({ theme }) => theme.spacing.nano};
-  background-color: transparent;
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor ?? 'transparent'};
   align-items: center;
 
   ${({ onlyImagens }) =>

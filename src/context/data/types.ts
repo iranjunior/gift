@@ -424,6 +424,7 @@ export interface Menu {
     href?:    string;
     context?: string;
     options?: Option[];
+    target?:  string;
     isCTA?:   boolean;
 }
 
@@ -437,12 +438,14 @@ export interface MenuForMobile {
     label:    string;
     href?:    string;
     options?: Option[];
+    target?:  string;
     isCTA?:   boolean;
 }
 
 export interface Navbanner {
-    text: string;
-    href: string;
+    text:   string;
+    href:   string;
+    target: string;
 }
 
 export interface Unit {
@@ -947,6 +950,7 @@ const typeMap: any = {
         { json: "href", js: "href", typ: u(undefined, "") },
         { json: "context", js: "context", typ: u(undefined, "") },
         { json: "options", js: "options", typ: u(undefined, a(r("Option"))) },
+        { json: "target", js: "target", typ: u(undefined, "") },
         { json: "isCTA", js: "isCTA", typ: u(undefined, true) },
     ], false),
     "Option": o([
@@ -958,11 +962,13 @@ const typeMap: any = {
         { json: "label", js: "label", typ: "" },
         { json: "href", js: "href", typ: u(undefined, "") },
         { json: "options", js: "options", typ: u(undefined, a(r("Option"))) },
+        { json: "target", js: "target", typ: u(undefined, "") },
         { json: "isCTA", js: "isCTA", typ: u(undefined, true) },
     ], false),
     "Navbanner": o([
         { json: "text", js: "text", typ: "" },
         { json: "href", js: "href", typ: "" },
+        { json: "target", js: "target", typ: "" },
     ], false),
     "Unit": o([
         { json: "localization", js: "localization", typ: "" },

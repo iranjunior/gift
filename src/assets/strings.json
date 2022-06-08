@@ -1,7 +1,8 @@
 {
     "navbanner": {
         "text": "Indique a Far.me Box e ganhe <strong>R$ 75</strong> a cada assinatura realizada! <a>Clique aqui e saiba mais.</a>",
-        "href": "https://app.farme.com.br/indicame/publico"
+        "href": "https://app.farme.com.br/indicame/publico",
+        "target": "_blank"
     },
     "menu": [
         {
@@ -42,7 +43,8 @@
         {
             "label": "Blog",
             "href": "https://blog.farme.com.br/",
-            "context": "customers"
+            "context": "customers",
+            "target": "_blank"
         },
         {
             "label": "Contato",
@@ -62,7 +64,8 @@
         {
             "label": "Monte sua box",
             "href": "https://farme.com.br/orcamento",
-            "isCTA": true
+            "isCTA": true,
+            "target": "_blank"
         }
     ],
     "menu_for_mobile": [
@@ -97,7 +100,8 @@
         },
         {
             "label": "Blog",
-            "href": "https://blog.farme.com.br/"
+            "href": "https://blog.farme.com.br/",
+            "target": "_blank"
         },
         {
             "label": "Contato",
@@ -117,7 +121,8 @@
         {
             "label": "Faça seu orçamento",
             "href": "https://farme.com.br/orcamento",
-            "isCTA": true
+            "isCTA": true,
+            "target": "_blank"
         }
     ],
     "body": {
@@ -722,7 +727,7 @@
                 "title": "O serviço pensado para você que faz uso de remédios todos os dias",
                 "cards": {
                     "first": "E que prefere <highlight>receber</highlight><br responsive='only-desktop' /> seu tratamento em casa do que ir à farmácia <br responsive='only-desktop' /> toda hora.",
-                    "second": "Que não quer mais <highlight>perder tempo</highlight> organizando os medicamentos e se confundir com as doses, datas e horário",
+                    "second": "Que não quer mais <highlight>perder tempo</highlight> organizando os medicamentos e se confundir com as doses, datas e horários.",
                     "third": "Que busca <highlight>segurança</highlight> pra seguir o tratamento do melhor jeito."
                 }
             },
@@ -1081,7 +1086,7 @@
             },
             "for_customers": {
                 "title": "Já é um Far.membro?",
-                "subtitle": "Se tiver alguma dúvida, utilize os nossos canais de comunicação."
+                "subtitle": "Se tiver alguma dúvida sobre o uso dos medicamentos, sintomas e interações, entre em contato com a Clínica Far.me."
             }
         }
     },
@@ -1094,6 +1099,10 @@
         "contacts": {
             "title": "Se preferir, fale com a gente!",
             "contacts": [
+                {
+                    "location": "Belo Horizonte - MG",
+                    "phone": "31 98372 3906"
+                },
                 {
                     "location": "São Paulo - SP",
                     "phone": "11 3289 8232"

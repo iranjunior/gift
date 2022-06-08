@@ -3,25 +3,30 @@ import React, { useState } from 'react'
 import { CarrouselContent } from './content/content_component'
 import { Container, Tabs, TabTitle, TabBar, Tab } from './carrousel_styles'
 
-type Props = {
+export type Content = {
   label: string
   image: string
   text?: string
+  sizeInTablet?: 'cover' | 'contain' | 'auto'
 }
 
 type CarrouselProps = {
-  content: Array<Props>
-  imageSizeInTablet?: 'cover' | 'contain'
+  content: Array<Content>
+  imageSizeInTablet?: 'cover' | 'contain' | 'auto'
   onlyImagens?: boolean
+  backgroundColor?: string
 }
 
 export const Carrousel: React.FC<CarrouselProps> = ({
   content,
   imageSizeInTablet,
   onlyImagens,
+  backgroundColor,
 }) => {
   const [active, setActive] = useState(content[0])
 
+  console.log('active.imageSizeInTablet', active.sizeInTablet)
+  console.log('active', active)
   return (
     <Container>
       <Tabs>
@@ -34,9 +39,12 @@ export const Carrousel: React.FC<CarrouselProps> = ({
       </Tabs>
       <CarrouselContent
         onlyImagens={onlyImagens}
+        backgroundColor={backgroundColor}
         title={active.text}
         image={active.image}
-        imageSizeInTablet={imageSizeInTablet}
+        imageSizeInTablet={
+          active.sizeInTablet ? active.sizeInTablet : imageSizeInTablet
+        }
       />
     </Container>
   )
