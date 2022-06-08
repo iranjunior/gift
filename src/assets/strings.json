@@ -578,7 +578,7 @@
                     },
                     {
                         "legend": "Far.me Boxes <br/>produzidas",
-                        "value": 17000,
+                        "value": 20000,
                         "isMore": true
                     }
                 ]
@@ -1086,7 +1086,7 @@
             },
             "for_customers": {
                 "title": "Já é um Far.membro?",
-                "subtitle": "Se tiver alguma dúvida sobre o uso dos medicamentos, sintomas e interações, entre em contato com a Clínica Far.me."
+                "subtitle": "Se tiver alguma dúvida sobre o uso dos medicamentos, sintomas e interações, entre em contato no WhatsApp da Clínica Far.me."
             }
         }
     },
