@@ -11,5 +11,12 @@ export const Container = styled.div`
 export const Content = ContentDiv
 
 export const Video = styled.video`
+  height: 100%;
   width: 100%;
+`
+export const VideoContainer = styled.div`
+  position: relative;
+  height: 100%;
+  width: auto;
+  max-height: 540px;
 `

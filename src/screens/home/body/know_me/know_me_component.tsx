@@ -12,7 +12,7 @@ type hashMapType = {
 }
 
 const hashMap: hashMapType = {
-  Simples: images.ImageFrontBoxZoom,
+  Simples: images.ImageBoxZoomIn,
   Segura: images.ImageBoxPointingRight,
   Completa: images.ImagePills,
 }

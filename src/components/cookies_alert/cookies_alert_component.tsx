@@ -57,7 +57,7 @@ export const CookiesAlertComponent = () => {
             color: '#000',
             fontWeight: 'bold',
           }}
-          href="https://assets.farme.com.br/pdfs/farme_cookies.pdf"
+          href="https://www.far.me/aviso-de-cookies"
         >
           Política de Privacidade
         </a>

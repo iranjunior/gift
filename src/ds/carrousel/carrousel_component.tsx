@@ -27,7 +27,7 @@ export const Carrousel: React.FC<CarrouselProps> = ({
 
   return (
     <Container>
-      <Tabs>
+      <Tabs itensCount={content.length}>
         {content.map((tab) => (
           <Tab onClick={() => setActive(tab)} key={tab.label}>
             <TabTitle active={active.label == tab.label}>{tab.label}</TabTitle>

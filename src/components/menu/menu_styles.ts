@@ -239,6 +239,7 @@ export const DropdownTitle = styled.div<SummaryType>`
 `
 export const DropdownContent = styled.div<DropdownContainerProps>`
   position: absolute;
+  z-index: 10;
   left: -${({ theme }) => theme.spacing.nano};
   top: ${({ theme }) => theme.spacing.sm};
   width: 240px;

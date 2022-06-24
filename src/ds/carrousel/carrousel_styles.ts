@@ -7,39 +7,35 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 100vw;
-  }
-  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
-    (max-width: 1080px) and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop}) {
-    width: 95vw;
-  }
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin-top: ${({ theme }) => theme.spacing.nano};
     margin-bottom: ${({ theme }) => theme.spacing.nano};
-    width: 95vw;
   }
 `
 
-export const Tabs = styled.div`
-  display: flex;
-  justify-content: space-between;
+type TabsProps = {
+  itensCount: number
+}
 
-  overflow: scroll;
+export const Tabs = styled.div<TabsProps>`
+  display: grid;
+  grid-template-columns: ${({ itensCount }) =>
+    Array(itensCount)
+      .fill('1fr')
+      .reduce((current, accumulator) => `${accumulator} ${current}`)};
+  width: 100%;
+  max-width: 100%;
+  gap: ${({ theme }) => theme.spacing.xxxs};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 95%;
+    max-width: 95%;
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     margin: 0px ${({ theme }) => theme.spacing.xxxs};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-    margin: 0;
-    margin-top: ${({ theme }) => theme.spacing.nano};
-    margin-bottom: ${({ theme }) => theme.spacing.nano};
-    overflow: unset;
-    width: auto;
-    gap: ${({ theme }) => theme.spacing.xxxs};
-  }
   ::-webkit-scrollbar {
     display: none;
   }
@@ -73,7 +69,7 @@ export const Tab = styled.div`
   margin: 0 ${({ theme }) => theme.spacing.nano};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-    width: auto;
+    width: 100%;
     margin: 0;
   }
 
@@ -98,6 +94,9 @@ export const TabTitle = styled.span<TabProps>`
   font-family: ${({ theme }) => theme.font.family.sliver};
   color: ${({ theme, active }) =>
     active ? theme.colors.neutral.darkness : theme.colors.neutral.default};
+  @media (max-width: 375px) {
+    font-size: ${({ theme }) => theme.font.sizes.sm};
+  }
 `
 
 export const TabBar = styled.div<TabProps>`
@@ -105,7 +104,4 @@ export const TabBar = styled.div<TabProps>`
   width: 100%;
   background-color: ${({ theme, active }) =>
     active ? theme.colors.neutral.darkness : theme.colors.neutral.default};
-  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-    min-width: 120px;
-  }
 `

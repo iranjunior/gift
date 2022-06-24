@@ -53,6 +53,7 @@ export default {
   ImageRightPointerBanner: require('./images/box_right_pointer_banner.png'),
   ImageBoxRotate: require('./images/box_rotate.png'),
   ImageCarinaNeves: require('./images/carina_neves.png'),
+  ImageBoxZoomIn: require('./images/saquinho_box.png'),
 }
 
 export const people = {

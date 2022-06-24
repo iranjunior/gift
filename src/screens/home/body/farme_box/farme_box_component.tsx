@@ -4,7 +4,7 @@ import { HeaderCentered } from '../../../../ds'
 import { DataContext } from '../../../../context/data'
 import videos from '../../../../assets/videos'
 
-import { Container, Content, Video } from './farme_box_styles'
+import { Container, Content, Video, VideoContainer } from './farme_box_styles'
 import { useIntersection } from '../../../../hooks/useIntersection'
 
 type FarMeBoxProps = {
@@ -40,14 +40,7 @@ export const FarMeBox: React.FC<FarMeBoxProps> = ({ id, ...props }) => {
     <Container ref={ref} {...props} id={id}>
       <Content ref={ref}>
         <HeaderCentered title={pageFarmeBox.title} />
-        <div
-          style={{
-            position: 'relative',
-            width: '100%',
-            maxWidth: '1080px',
-          }}
-          id="video-container"
-        >
+        <VideoContainer id="video-container">
           <div
             style={{
               display: showControl ? 'block' : 'none',
@@ -64,7 +57,7 @@ export const FarMeBox: React.FC<FarMeBoxProps> = ({ id, ...props }) => {
             src="https://assets.farme.com.br/videos/farme.mp4"
             id="video"
           ></Video>
-        </div>
+        </VideoContainer>
       </Content>
     </Container>
   )

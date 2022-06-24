@@ -196,4 +196,5 @@ export const RightSide = styled.div`
 `
 export const TextInformative = styled.span`
   margin-left: ${({ theme }) => theme.spacing.sm};
+  font-size: ${({ theme }) => theme.font.sizes.xxs};
 `

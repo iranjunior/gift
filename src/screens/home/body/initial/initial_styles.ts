@@ -12,7 +12,7 @@ export const Container = styled.div`
   }
 `
 export const BlockText = styled.div`
-  width: 100%;
+  width: 30%;
   max-width: 420px;
   display: flex;
   flex-direction: column;
@@ -22,12 +22,6 @@ export const BlockText = styled.div`
     width: 100%;
     max-width: 100%;
     margin: 0 5%;
-  }
-
-  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
-    (max-width: 1080px) and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop}) {
-    width: 50%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
@@ -47,13 +41,11 @@ export const Content = styled.div`
 
   @media (width: ${({ theme }) => theme.breakpoints.desktop}),
     max-width: 1200px {
-    margin: 5% 0;
   }
-
-  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
-    (max-width: 1080px) and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop}) {
-    margin: 5% 5%;
+  @media (max-width: 1440px) and (min-width: 1316px) {
+  }
+  @media (max-width: 1315px) and (min-width: 1024px) {
+    margin: 5% 0 5% 5%;
   }
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
@@ -84,9 +76,15 @@ export const TextPrincipal = styled.div`
     font-weight: normal;
     margin: 0;
     line-height: ${({ theme }) => theme.font.lineHeight.medium};
+    @media (max-width: 1440px) and (min-width: 1316px) {
+      font-size: ${({ theme }) => theme.font.sizes.xl};
+    }
+    @media (max-width: 1315px) and (min-width: 1023px) {
+      font-size: ${({ theme }) => theme.font.sizes.lg};
+    }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.desktop} - 1px)) {
     width: 100%;
     *:not(highlight) {
       font-size: ${({ theme }) => theme.font.sizes.xxl};
@@ -128,10 +126,8 @@ export const Video = styled.video`
   max-width: 888px;
   width: 100%;
 
-  @media (width: ${({ theme }) => theme.breakpoints.desktop}),
-    (max-width: 1200px) and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop}) {
-    width: 50%;
+  @media (max-width: 1315px) and (min-width: 1023px) {
+    width: 55%;
     height: auto;
   }
 `
