@@ -1,6 +1,0 @@
-export { Main } from './initial'
-export { HowWorking } from './how_working'
-export { Banner } from './banner'
-export { CardProduct } from './card_product'
-export { OurPosts } from './our_posts'
-export { TestimoniesEmployee } from './testimonies_employee'

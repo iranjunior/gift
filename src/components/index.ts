@@ -1,7 +1,0 @@
-export { NavBanner } from './navbanner'
-export { Menu } from './menu'
-export { Footer } from './footer'
-export { Doubt } from './doubt'
-export { Numbers } from './numbers'
-export { Testimonies } from './testimonies'
-export { CallToAction } from './call_to_action'

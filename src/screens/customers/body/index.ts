@@ -1,7 +1,0 @@
-export { Main } from './initial'
-export { HowWorking } from './how_working'
-export { Banner } from './banner'
-export { Advantage } from './advantage'
-export { CardProduct } from './card_product'
-export { OurPosts } from './our_posts'
-export { Testimonies } from './testimonies'
